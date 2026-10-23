@@ -148,4 +148,4 @@ Website (tjm.art, Astro, `vermillionaurora`): PR only, TJ approves before merge.
 5. **Local tools you need:** Node 20+, npm, Python 3 with Pillow, Playwright (Chromium) for audits, `wrangler`. Blender 4.2.3 only if you rebuild the ostrich.
 6. **Ask TJ if missing:** the original hi-res paintings (not on the box), screenshots referenced on cards, and any approval for non-preview changes.
 
-When you start, first (a) unzip and `git init`, (b) `npm install && npm run build` in `play-tags/`, (c) open the preview and click through to see the current state, then begin with item 1.
+When you start, first (a) clone `timothyjosephmurphy/gallery-source` (no zip needed), (b) `npm install && npm run build` in `play-tags/`, (c) open the preview and click through to see the current state, then begin with item 1.
