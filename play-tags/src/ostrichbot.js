@@ -42,7 +42,7 @@ export function skinOstrich(D, low) {
   loader.load(BASE + (low ? 'ostrich-lod1.glb' : 'ostrich-lod0.glb'), gltf => {
     const m = gltf.scene; m.traverse(o => { if (o.name) api.nodes[o.name] = o; if (o.isMesh) { o.frustumCulled = false; window.__ostrichBot.meshes++; const g = o.geometry; window.__ostrichBot.tris += (g.index ? g.index.count : g.attributes.position.count) / 3; if (o.material) { o.material.side = THREE.DoubleSide; } } });
     holder.add(m); { holder.updateMatrixWorld(true); const wy = new THREE.Vector3(), v = new THREE.Vector3(); holder.getWorldPosition(wy); let mn = 1e9; m.traverse(o => { if (o.isMesh) { o.geometry.computeBoundingBox(); const bb = o.geometry.boundingBox; for (const y of [bb.min.y, bb.max.y]) for (const x of [bb.min.x, bb.max.x]) for (const z of [bb.min.z, bb.max.z]) { v.set(x, y, z).applyMatrix4(o.matrixWorld); mn = Math.min(mn, v.y); } } }); S.minY = (mn - wy.y) / holder.scale.x; /* lowest vertex of the rest pose, in holder units: the feet stand on the floor */ window.__ostrichBot.minY = S.minY; } api.mixer = new THREE.AnimationMixer(m); for (const c of gltf.animations) api.actions[c.name] = api.mixer.clipAction(c);
-    window.__ostrichBot.clips = gltf.animations.map(c => c.name); api.ready = true; window.__ostrichBot.ready = true; api.play('Hover', 0); api.mixer.update(0.01);
+    window.__ostrichBot.clips = gltf.animations.map(c => c.name); api.ready = true; window.__ostrichBot.ready = true; api.play('Walk', 0, 0.0001); api.mixer.update(0.01);
   }, undefined, err => { api.failed = true; window.__ostrichBot.error = String(err && err.message || err); holder.visible = false; D.__duck = null; skinDuck(D, low); });
   D.__duck = api; return api;
 }
