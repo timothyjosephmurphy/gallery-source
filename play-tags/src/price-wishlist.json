@@ -1,0 +1,41 @@
+{
+ "note": "#298 (TJ): originals TJ wants for sale. Display ONLY follows live shop + checkout data (gallery-core tools/shop.py); this list is checked by tools/pricecheck.mjs, never used to fake a price. Add rows as: id (or exact title) -> USD price.",
+ "items": [
+  {
+   "id": "book-art-e4bbfe556c3c847d9c90",
+   "title": "Nick Szabo @NickSzabo4",
+   "price": 1000
+  },
+  {
+   "id": "book-art-0735a5fb0eb1c613b658",
+   "title": "Michael Saylor @saylor",
+   "price": 1000
+  },
+  {
+   "id": "book-art-ff6db6906f0ed48ccc3a",
+   "title": "Sedona Monuments",
+   "price": 300
+  },
+  {
+   "id": "book-art-b7a9cd259d8ac51a236b",
+   "title": "Rescued Hummingbird",
+   "price": 200
+  },
+  {
+   "id": "archived-painting-367",
+   "title": "Josie, The Redheaded Libertarian",
+   "price": 300
+  },
+  {
+   "id": "book-art-65bf0ecd265f1fd96e4a",
+   "title": "Sedona: Bell Rock 1",
+   "price": 300
+  },
+  {
+   "id": "book-art-7a498f39e7a66a2e8eb5",
+   "title": "Nico @BITVOLT",
+   "price": 200,
+   "basis": "same size as Dorian Nakamoto (painting-portrait-in-gold, 13.9x15 in, live $200); Nico listed 13.4x15 in. Confirm with TJ."
+  }
+ ]
+}

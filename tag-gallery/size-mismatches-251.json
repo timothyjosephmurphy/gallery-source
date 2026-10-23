@@ -1,0 +1,3016 @@
+[
+ {
+  "id": "book-art-9ae261289a3bce952c6f",
+  "title": "Lisa Climbing Tahoma at Sunrise from Denny Blaine prototype",
+  "listed_m": [
+   1.143,
+   1.829
+  ],
+  "image_px": [
+   960,
+   368
+  ],
+  "hung_m": [
+   1.829,
+   0.701
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-6e6d7ac51608e0b7f10f",
+  "title": "Moonrise in Santa Monica, photo credit: Paul Murphy",
+  "listed_m": [
+   0.61,
+   0.381
+  ],
+  "image_px": [
+   628,
+   1000
+  ],
+  "hung_m": [
+   0.383,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "rice-paddies-in-vietnam",
+  "title": "Rice paddies in Vietnam, Photo Credit: Daniel Goldsmith",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   558,
+   308
+  ],
+  "hung_m": [
+   0.61,
+   0.336
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "book-art-94e2edf9a24c90950489",
+  "title": "Inside album cover for Yes: Close to the Edge",
+  "listed_m": [
+   0.61,
+   1.143
+  ],
+  "image_px": [
+   960,
+   469
+  ],
+  "hung_m": [
+   1.143,
+   0.558
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "sunrise-on-tahoma-from-denny-blaine",
+  "title": "Sunrise on Tahoma from Denny Blaine with meditation self-portrait",
+  "listed_m": [
+   1.143,
+   0.381
+  ],
+  "image_px": [
+   1000,
+   250
+  ],
+  "hung_m": [
+   1.143,
+   0.286
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "painting-lightburst",
+  "title": "Revelation",
+  "listed_m": [
+   0.61,
+   1.219
+  ],
+  "image_px": [
+   288,
+   600
+  ],
+  "hung_m": [
+   0.585,
+   1.219
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "painting-festival-portrait",
+  "title": "The Bounty of Satoshi: Wonder",
+  "listed_m": [
+   0.61,
+   1.219
+  ],
+  "image_px": [
+   960,
+   1951
+  ],
+  "hung_m": [
+   0.6,
+   1.219
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "painting-phoenix-rising",
+  "title": "The Bounty of Satoshi: Achievement",
+  "listed_m": [
+   0.61,
+   1.219
+  ],
+  "image_px": [
+   960,
+   1974
+  ],
+  "hung_m": [
+   0.593,
+   1.219
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "archived-painting-img-1612",
+  "title": "Bounty of Satoshi: Achievement",
+  "listed_m": [
+   0.61,
+   1.219
+  ],
+  "image_px": [
+   960,
+   1721
+  ],
+  "hung_m": [
+   0.68,
+   1.219
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "painting-portrait-with-cheese",
+  "title": "Brekkie @BVBTC with polished Bitcoin B",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   558,
+   310
+  ],
+  "hung_m": [
+   0.61,
+   0.339
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "book-art-a26ad79970ed645ce1a9",
+  "title": "Brekkie @BVBTC",
+  "listed_m": [
+   0.61,
+   0.381
+  ],
+  "image_px": [
+   355,
+   586
+  ],
+  "hung_m": [
+   0.369,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "painting-studio-figure",
+  "title": "Brekkie @BVBTC hoisting a sculpture in progress",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   480,
+   358
+  ],
+  "hung_m": [
+   0.61,
+   0.455
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "book-art-1fb8762b7bf8fce0d0f9",
+  "title": "Brekkie @BVBTC meditating on uncut stone",
+  "listed_m": [
+   0.381,
+   0.305
+  ],
+  "image_px": [
+   352,
+   488
+  ],
+  "hung_m": [
+   0.275,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "lake-in-the-north-cascades",
+  "title": "Lake in the North Cascades",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   357,
+   635
+  ],
+  "hung_m": [
+   0.343,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-502372c530af5261540c",
+  "title": "Waterfall in Olympic Peninsula",
+  "listed_m": [
+   0.61,
+   0.203
+  ],
+  "image_px": [
+   1000,
+   306
+  ],
+  "hung_m": [
+   0.61,
+   0.187
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-85d951d0a1ea09ef4aa6",
+  "title": "Mt. Shuksan from the Mt. Baker Trail",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   734,
+   409
+  ],
+  "hung_m": [
+   0.61,
+   0.34
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "archived-painting-249",
+  "title": "Lake in North Cascades",
+  "listed_m": [
+   0.33,
+   0.61
+  ],
+  "image_px": [
+   960,
+   1793
+  ],
+  "hung_m": [
+   0.326,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-311b1c39d98767f359b5",
+  "title": "Myself on fire",
+  "listed_m": [
+   0.127,
+   0.102
+  ],
+  "image_px": [
+   358,
+   478
+  ],
+  "hung_m": [
+   0.095,
+   0.127
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-0f696788184bbba1d236",
+  "title": "Myself",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   621,
+   1000
+  ],
+  "hung_m": [
+   0.237,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-c4a5109c84daedd78291",
+  "title": "Dawn and I in San Pancho",
+  "listed_m": [
+   1.219,
+   0.61
+  ],
+  "image_px": [
+   1000,
+   537
+  ],
+  "hung_m": [
+   1.219,
+   0.655
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-471daf14a8bb7883f114",
+  "title": "Myself in Skandasana on Playa de los Muertos at Dawn in Puerto Vallarta",
+  "listed_m": [
+   1.219,
+   0.61
+  ],
+  "image_px": [
+   960,
+   516
+  ],
+  "hung_m": [
+   1.219,
+   0.655
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-87cf2a732259b313f5ab",
+  "title": "Sunrise in Puerto Vallarta",
+  "listed_m": [
+   0.61,
+   0.381
+  ],
+  "image_px": [
+   568,
+   1000
+  ],
+  "hung_m": [
+   0.346,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "archived-painting-66",
+  "title": "Flamenco Guitarist in Zihuatanejo",
+  "listed_m": [
+   0.66,
+   0.559
+  ],
+  "image_px": [
+   960,
+   790
+  ],
+  "hung_m": [
+   0.66,
+   0.543
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-14d2876a55c720cbc908",
+  "title": "Jane and Sid in Zihuatanejo",
+  "listed_m": [
+   0.61,
+   0.61
+  ],
+  "image_px": [
+   960,
+   679
+  ],
+  "hung_m": [
+   0.61,
+   0.431
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "michael-and-katie-in-yelapa",
+  "title": "Romance in Yelapa",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   744,
+   1056
+  ],
+  "hung_m": [
+   0.429,
+   0.61
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "book-art-b7410a9f4340e559e4f4",
+  "title": "Dawn in Zihuatanejo",
+  "listed_m": [
+   0.61,
+   0.381
+  ],
+  "image_px": [
+   553,
+   1000
+  ],
+  "hung_m": [
+   0.337,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "joaquim-in-zihuatanejo",
+  "title": "Joaquim in Zihuatanejo",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   360,
+   456
+  ],
+  "hung_m": [
+   0.481,
+   0.61
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "book-art-93957f4169bc931e0a52",
+  "title": "Katie, Julie, and Dawn in Zihuatanejo at Sunset",
+  "listed_m": [
+   1.219,
+   0.61
+  ],
+  "image_px": [
+   1000,
+   423
+  ],
+  "hung_m": [
+   1.219,
+   0.516
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-9c7b9d41bee5615f1d7f",
+  "title": "Dawn in hammock at sunset in Zihuatanejo",
+  "listed_m": [
+   0.61,
+   0.381
+  ],
+  "image_px": [
+   784,
+   472
+  ],
+  "hung_m": [
+   0.61,
+   0.367
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "painting-golden-coast",
+  "title": "Sunset in the Strait of Juan de Fuca, Patos Island 1",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   960,
+   1794
+  ],
+  "hung_m": [
+   0.326,
+   0.61
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "painting-sunset-silhouette",
+  "title": "Sunset in the Strait of Juan de Fuca, Sucia Island",
+  "listed_m": [
+   0.61,
+   0.381
+  ],
+  "image_px": [
+   960,
+   536
+  ],
+  "hung_m": [
+   0.61,
+   0.34
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "book-art-d1399111a441ed91feaa",
+  "title": "Sunset in the Strait of Juan de Fuca, Patos Island 2",
+  "listed_m": [
+   0.61,
+   0.381
+  ],
+  "image_px": [
+   550,
+   1000
+  ],
+  "hung_m": [
+   0.335,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-50a7984f819bec72d1c7",
+  "title": "Myself Painting on Mt Baker near Goat Lake",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   192,
+   256
+  ],
+  "hung_m": [
+   0.286,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "painting-moonlit-water",
+  "title": "Moonrise Over the Cascades",
+  "listed_m": [
+   0.305,
+   0.584
+  ],
+  "image_px": [
+   960,
+   1952
+  ],
+  "hung_m": [
+   0.287,
+   0.584
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "burning-man-temple-2022-daytime",
+  "title": "Burning Man Temple 2022: Daytime",
+  "listed_m": [
+   1.143,
+   0.61
+  ],
+  "image_px": [
+   960,
+   465
+  ],
+  "hung_m": [
+   1.143,
+   0.554
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "burning-man-temple-2022-blue",
+  "title": "Burning Man Temple 2022: Blue",
+  "listed_m": [
+   1.143,
+   0.61
+  ],
+  "image_px": [
+   1600,
+   795
+  ],
+  "hung_m": [
+   1.143,
+   0.568
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "burning-man-temple-2022-pink",
+  "title": "Burning Man Temple 2022: Pink",
+  "listed_m": [
+   1.143,
+   0.61
+  ],
+  "image_px": [
+   960,
+   488
+  ],
+  "hung_m": [
+   1.143,
+   0.581
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "burning-man-temple-2022-flame",
+  "title": "Burning Man Temple 2022: Flame",
+  "listed_m": [
+   1.143,
+   0.61
+  ],
+  "image_px": [
+   960,
+   481
+  ],
+  "hung_m": [
+   1.143,
+   0.573
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-3a9cba708a8045364e82",
+  "title": "Dawn and her father Pete at Burning Man",
+  "listed_m": [
+   0.61,
+   0.381
+  ],
+  "image_px": [
+   960,
+   510
+  ],
+  "hung_m": [
+   0.61,
+   0.324
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "archived-painting-18",
+  "title": "Mayan Warrior",
+  "listed_m": [
+   1.13,
+   0.61
+  ],
+  "image_px": [
+   960,
+   471
+  ],
+  "hung_m": [
+   1.13,
+   0.555
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-4c6fb3817fed4e5a6195",
+  "title": "Painting in Black Rock City",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   960,
+   838
+  ],
+  "hung_m": [
+   0.381,
+   0.333
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-64a80ece808ac08d4877",
+  "title": "Sunrise on Playa",
+  "listed_m": [
+   0.61,
+   0.61
+  ],
+  "image_px": [
+   436,
+   465
+  ],
+  "hung_m": [
+   0.572,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-e97329411fa8b273b508",
+  "title": "Sunrise in Traverse City, photo credit: Paul Murphy",
+  "listed_m": [
+   0.61,
+   0.381
+  ],
+  "image_px": [
+   613,
+   1000
+  ],
+  "hung_m": [
+   0.374,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-9b6b4f1ce8b283e14b21",
+  "title": "Sunrise from Punta El Zonte Hostel — 2",
+  "listed_m": [
+   0.61,
+   1.143
+  ],
+  "image_px": [
+   471,
+   947
+  ],
+  "hung_m": [
+   0.568,
+   1.143
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "sunrise-in-el-zonte-large",
+  "title": "Sunrise in El Zonte (Large)",
+  "listed_m": [
+   0.914,
+   1.219
+  ],
+  "image_px": [
+   960,
+   1325
+  ],
+  "hung_m": [
+   0.883,
+   1.219
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "archived-painting-438",
+  "title": "Sunrise at Bass Coast 2023 #4",
+  "listed_m": [
+   0.591,
+   0.375
+  ],
+  "image_px": [
+   960,
+   536
+  ],
+  "hung_m": [
+   0.591,
+   0.33
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "book-art-04f4a52773ffd19b4f67",
+  "title": "Travis at Bass Coast",
+  "listed_m": [
+   0.61,
+   0.381
+  ],
+  "image_px": [
+   375,
+   628
+  ],
+  "hung_m": [
+   0.364,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-54ff45104a57a68d4beb",
+  "title": "Neil at Bass Coast",
+  "listed_m": [
+   0.61,
+   0.61
+  ],
+  "image_px": [
+   460,
+   467
+  ],
+  "hung_m": [
+   0.6,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "archived-painting-22",
+  "title": "Devo & Katie @ Bass Coast",
+  "listed_m": [
+   1.143,
+   0.61
+  ],
+  "image_px": [
+   960,
+   460
+  ],
+  "hung_m": [
+   1.143,
+   0.548
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "archived-painting-90",
+  "title": "Sienna Dawn at Bass Coast",
+  "listed_m": [
+   0.375,
+   0.591
+  ],
+  "image_px": [
+   960,
+   1682
+  ],
+  "hung_m": [
+   0.337,
+   0.591
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "book-art-614d5b68dbe5052e302a",
+  "title": "Devo at Bass Coast",
+  "listed_m": [
+   0.61,
+   0.61
+  ],
+  "image_px": [
+   701,
+   641
+  ],
+  "hung_m": [
+   0.61,
+   0.557
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-0d7df713c5f0f67733ae",
+  "title": "Dawn at Bass Coast",
+  "listed_m": [
+   0.61,
+   0.381
+  ],
+  "image_px": [
+   409,
+   740
+  ],
+  "hung_m": [
+   0.337,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-4350a257e5a6a5e75a31",
+  "title": "Michael at Bass Coast",
+  "listed_m": [
+   0.61,
+   0.61
+  ],
+  "image_px": [
+   595,
+   541
+  ],
+  "hung_m": [
+   0.61,
+   0.554
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-3cd6b3fb3e356c4b1d1d",
+  "title": "Tiana and Michael at Bass Coast",
+  "listed_m": [
+   0.61,
+   0.381
+  ],
+  "image_px": [
+   639,
+   1000
+  ],
+  "hung_m": [
+   0.39,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "archived-painting-20",
+  "title": "The Temple, the Lighting #2",
+  "listed_m": [
+   1.143,
+   0.61
+  ],
+  "image_px": [
+   960,
+   475
+  ],
+  "hung_m": [
+   1.143,
+   0.566
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-0a80f9a5da0d39edc80f",
+  "title": "Mother Ruth",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   703,
+   1000
+  ],
+  "hung_m": [
+   0.429,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-02b06cbfebb63c2794d9",
+  "title": "Me, Chelsea, Grandpa",
+  "listed_m": [
+   0.61,
+   0.381
+  ],
+  "image_px": [
+   401,
+   748
+  ],
+  "hung_m": [
+   0.327,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "archived-painting-img-1608",
+  "title": "My Dad, Paul Murphy",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   960,
+   1713
+  ],
+  "hung_m": [
+   0.342,
+   0.61
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "grandpa-howard",
+  "title": "Grandpa Howard",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   308,
+   556
+  ],
+  "hung_m": [
+   0.338,
+   0.61
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "myself-my-mother-ruth-my-grandpa-howard",
+  "title": "Myself, my mother Ruth, my grandpa Howard",
+  "listed_m": [
+   0.61,
+   0.381
+  ],
+  "image_px": [
+   558,
+   308
+  ],
+  "hung_m": [
+   0.61,
+   0.336
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "book-art-1a843fe4506374e2f33e",
+  "title": "Sister Chelsea and I",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   1000,
+   658
+  ],
+  "hung_m": [
+   0.381,
+   0.251
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-a526883c6ca5fefe7402",
+  "title": "Brother Jack",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   555,
+   1000
+  ],
+  "hung_m": [
+   0.338,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-466dc684227286c40502",
+  "title": "Sister Claire",
+  "listed_m": [
+   0.381,
+   0.305
+  ],
+  "image_px": [
+   675,
+   1000
+  ],
+  "hung_m": [
+   0.257,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "painting-couple-in-color",
+  "title": "Aunt Fran and Cousin Hillary",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   960,
+   632
+  ],
+  "hung_m": [
+   0.61,
+   0.401
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-82127d1886ae57d5cb6e",
+  "title": "Father Paul",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   703,
+   1000
+  ],
+  "hung_m": [
+   0.429,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-5cdcafbf4759d14a793f",
+  "title": "Cousin Tina and Aunt Michelle",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   1000,
+   667
+  ],
+  "hung_m": [
+   0.381,
+   0.254
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-c347459aa3f77f7213ae",
+  "title": "Mike and Julie in Leon",
+  "listed_m": [
+   0.305,
+   0.61
+  ],
+  "image_px": [
+   960,
+   528
+  ],
+  "hung_m": [
+   0.61,
+   0.335
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "daniel-portrait-1",
+  "title": "Daniel — portrait 1",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   304,
+   570
+  ],
+  "hung_m": [
+   0.325,
+   0.61
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "archived-painting-241",
+  "title": "On a Trip with Elsa",
+  "listed_m": [
+   0.66,
+   0.521
+  ],
+  "image_px": [
+   960,
+   731
+  ],
+  "hung_m": [
+   0.66,
+   0.503
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-b50262c37f44843487ae",
+  "title": "Catherine",
+  "listed_m": [
+   0.61,
+   0.61
+  ],
+  "image_px": [
+   411,
+   438
+  ],
+  "hung_m": [
+   0.572,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-92fdb3112257f4fb66e8",
+  "title": "Catherine and Owen",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   651,
+   365
+  ],
+  "hung_m": [
+   0.61,
+   0.342
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "archived-painting-301",
+  "title": "Catherine #1",
+  "listed_m": [
+   0.559,
+   0.61
+  ],
+  "image_px": [
+   960,
+   1031
+  ],
+  "hung_m": [
+   0.568,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-7bce6e3509027d1f7a0b",
+  "title": "Catherine dance series — study 4",
+  "listed_m": [
+   2.438,
+   0.61
+  ],
+  "image_px": [
+   468,
+   1000
+  ],
+  "hung_m": [
+   1.141,
+   2.438
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-5a462e9705ba39d756a2",
+  "title": "Ser at Pacific Bitcoin Festival",
+  "listed_m": [
+   0.61,
+   0.381
+  ],
+  "image_px": [
+   366,
+   693
+  ],
+  "hung_m": [
+   0.322,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "archived-painting-15",
+  "title": "Symbiosis #1",
+  "listed_m": [
+   1.13,
+   0.61
+  ],
+  "image_px": [
+   960,
+   456
+  ],
+  "hung_m": [
+   1.13,
+   0.537
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "book-art-a6a2c048812a41cee4e4",
+  "title": "Benny and Kermit, P, Culhane, Bob — portrait 4",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   576,
+   420
+  ],
+  "hung_m": [
+   0.381,
+   0.278
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-d95085ce3029e490bb31",
+  "title": "Cory Klippsten @coryklippsten",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   397,
+   460
+  ],
+  "hung_m": [
+   0.329,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "older-work-bitcoin-voices-original-4",
+  "title": "TJ Michael Saylor",
+  "listed_m": [
+   0.305,
+   0.406
+  ],
+  "image_px": [
+   960,
+   1598
+  ],
+  "hung_m": [
+   0.244,
+   0.406
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "older-work-nakamoto-hayek-original-1",
+  "title": "TJ Dorian Nakamoto",
+  "listed_m": [
+   0.279,
+   0.305
+  ],
+  "image_px": [
+   960,
+   1029
+  ],
+  "hung_m": [
+   0.284,
+   0.305
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-27fee33e69f262ecfacb",
+  "title": "Sedona: Bell Rock 2",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   759,
+   1000
+  ],
+  "hung_m": [
+   0.289,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-65bf0ecd265f1fd96e4a",
+  "title": "Sedona: Bell Rock 1",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   1000,
+   738
+  ],
+  "hung_m": [
+   0.381,
+   0.281
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-ff6db6906f0ed48ccc3a",
+  "title": "Sedona Monuments",
+  "listed_m": [
+   0.61,
+   0.381
+  ],
+  "image_px": [
+   960,
+   718
+  ],
+  "hung_m": [
+   0.61,
+   0.456
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-b7a9cd259d8ac51a236b",
+  "title": "Rescued Hummingbird",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   1000,
+   744
+  ],
+  "hung_m": [
+   0.61,
+   0.454
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "honeybadger-and-cub-with-genesis-block",
+  "title": "Honeybadger and Cub with Genesis Block",
+  "listed_m": [
+   1,
+   0.7
+  ],
+  "image_px": [
+   960,
+   1371
+  ],
+  "hung_m": [
+   0.7,
+   1
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-616ff8378f27047b4a91",
+  "title": "Jasmine in Austin",
+  "listed_m": [
+   0.381,
+   0.305
+  ],
+  "image_px": [
+   921,
+   1000
+  ],
+  "hung_m": [
+   0.351,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-1ff2691533c9a9d8b091",
+  "title": "Tianna and child in Austin",
+  "listed_m": [
+   0.381,
+   0.305
+  ],
+  "image_px": [
+   689,
+   782
+  ],
+  "hung_m": [
+   0.336,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "sunset-in-el-tunco-el-salvador",
+  "title": "Sunset in El Tunco, El Salvador",
+  "listed_m": [
+   0.305,
+   0.127
+  ],
+  "image_px": [
+   702,
+   242
+  ],
+  "hung_m": [
+   0.305,
+   0.105
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "sunset-in-el-zonte-el-salvador",
+  "title": "Sunset in El Zonte, El Salvador",
+  "listed_m": [
+   0.61,
+   0.711
+  ],
+  "image_px": [
+   290,
+   592
+  ],
+  "hung_m": [
+   0.348,
+   0.711
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "archived-painting-246",
+  "title": "Sunset from Atami, El Salvador #1",
+  "listed_m": [
+   0.343,
+   0.654
+  ],
+  "image_px": [
+   960,
+   1697
+  ],
+  "hung_m": [
+   0.37,
+   0.654
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "archived-painting-247",
+  "title": "Sunset from Atami, El Salvador #3",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   960,
+   1480
+  ],
+  "hung_m": [
+   0.395,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "painting-insect-garden",
+  "title": "El Salvador: Past - Chase Toole Collab",
+  "listed_m": [
+   0.61,
+   1.219
+  ],
+  "image_px": [
+   578,
+   298
+  ],
+  "hung_m": [
+   1.219,
+   0.629
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "painting-emergence",
+  "title": "El Salvador: Present - Chase Toole Collab",
+  "listed_m": [
+   0.61,
+   1.219
+  ],
+  "image_px": [
+   434,
+   360
+  ],
+  "hung_m": [
+   1.219,
+   1.011
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "painting-twin-dragons",
+  "title": "El Salvador: Future - Chase Toole Collab",
+  "listed_m": [
+   0.61,
+   1.219
+  ],
+  "image_px": [
+   578,
+   298
+  ],
+  "hung_m": [
+   1.219,
+   0.629
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "painting-shoreline-at-dusk",
+  "title": "El Zonte at Dawn",
+  "listed_m": [
+   1.219,
+   0.61
+  ],
+  "image_px": [
+   960,
+   454
+  ],
+  "hung_m": [
+   1.219,
+   0.577
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "el-zonte-at-sunrise",
+  "title": "Sunrise from Punta El Zonte Hostel",
+  "listed_m": [
+   0.61,
+   1.219
+  ],
+  "image_px": [
+   960,
+   1890
+  ],
+  "hung_m": [
+   0.619,
+   1.219
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "el-zonte-before-dawn",
+  "title": "El Zonte Before Dawn",
+  "listed_m": [
+   1.219,
+   0.61
+  ],
+  "image_px": [
+   960,
+   458
+  ],
+  "hung_m": [
+   1.219,
+   0.582
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "painting-clouds-over-water",
+  "title": "El Salvador",
+  "listed_m": [
+   0.203,
+   0.406
+  ],
+  "image_px": [
+   320,
+   536
+  ],
+  "hung_m": [
+   0.243,
+   0.406
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "painting-portrait-in-green",
+  "title": "Chase Toole",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   960,
+   1152
+  ],
+  "hung_m": [
+   0.318,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-df8db0bc08adfeae5829",
+  "title": "Izzy and Sienna in Austin",
+  "listed_m": [
+   0.381,
+   0.305
+  ],
+  "image_px": [
+   715,
+   509
+  ],
+  "hung_m": [
+   0.381,
+   0.271
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-c33709aeb2717b0c53de",
+  "title": "Fiona and Joe in Austin",
+  "listed_m": [
+   0.286,
+   0.305
+  ],
+  "image_px": [
+   602,
+   474
+  ],
+  "hung_m": [
+   0.305,
+   0.24
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-4a03ad4df3ef51a39639",
+  "title": "Sienna and Michael in Austin",
+  "listed_m": [
+   0.381,
+   0.305
+  ],
+  "image_px": [
+   706,
+   786
+  ],
+  "hung_m": [
+   0.342,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "older-work-beach-sunsets-original-1",
+  "title": "TJ Beach Sunset 310",
+  "listed_m": [
+   0.178,
+   0.127
+  ],
+  "image_px": [
+   960,
+   713
+  ],
+  "hung_m": [
+   0.178,
+   0.132
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "older-work-sunset-ridge-strips-original-5",
+  "title": "TJ Sunset Ridge Strip 173",
+  "listed_m": [
+   0.305,
+   0.114
+  ],
+  "image_px": [
+   960,
+   335
+  ],
+  "hung_m": [
+   0.305,
+   0.106
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "older-work-sunset-ridge-strips-original-6",
+  "title": "TJ Sunset Ridge Strip 158",
+  "listed_m": [
+   0.305,
+   0.114
+  ],
+  "image_px": [
+   960,
+   293
+  ],
+  "hung_m": [
+   0.305,
+   0.093
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "book-art-edbfc2a7fff1189141f6",
+  "title": "Laura in Maui at Halehaku Point",
+  "listed_m": [
+   0.305,
+   0.305
+  ],
+  "image_px": [
+   364,
+   433
+  ],
+  "hung_m": [
+   0.256,
+   0.305
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-4bf5a04e40e7d8341378",
+  "title": "Laura in Maui at Ahihi Kinau natural reserve",
+  "listed_m": [
+   0.305,
+   0.305
+  ],
+  "image_px": [
+   421,
+   381
+  ],
+  "hung_m": [
+   0.305,
+   0.276
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-f7e73a57e2af01359446",
+  "title": "Sunrise on Table Mountain",
+  "listed_m": [
+   0.381,
+   0.305
+  ],
+  "image_px": [
+   1000,
+   753
+  ],
+  "hung_m": [
+   0.381,
+   0.287
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-9fc2e730b10c7b8c333b",
+  "title": "Table Mountain",
+  "listed_m": [
+   0.381,
+   0.305
+  ],
+  "image_px": [
+   1000,
+   768
+  ],
+  "hung_m": [
+   0.381,
+   0.293
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-9f546bff5102042a3ad4",
+  "title": "Sunset on the Twelve Apostles",
+  "listed_m": [
+   0.381,
+   0.305
+  ],
+  "image_px": [
+   1000,
+   738
+  ],
+  "hung_m": [
+   0.381,
+   0.281
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-56e40e02275a8767a802",
+  "title": "Sunset on Camps Bay from Lion's Head",
+  "listed_m": [
+   0.381,
+   0.305
+  ],
+  "image_px": [
+   1000,
+   750
+  ],
+  "hung_m": [
+   0.381,
+   0.286
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-fe853b565936ef8b2e73",
+  "title": "Sunset on Lion's Head",
+  "listed_m": [
+   0.381,
+   0.305
+  ],
+  "image_px": [
+   1000,
+   717
+  ],
+  "hung_m": [
+   0.381,
+   0.273
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "older-work-beach-sunsets-original-3",
+  "title": "TJ Beach Sunset 309",
+  "listed_m": [
+   0.178,
+   0.127
+  ],
+  "image_px": [
+   960,
+   697
+  ],
+  "hung_m": [
+   0.178,
+   0.129
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "older-work-beach-sunsets-original-2",
+  "title": "TJ Beach Sunset 311",
+  "listed_m": [
+   0.178,
+   0.127
+  ],
+  "image_px": [
+   960,
+   698
+  ],
+  "hung_m": [
+   0.178,
+   0.129
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "older-work-sunset-ridge-strips-original-3",
+  "title": "TJ Sunset Ridge Strip 159",
+  "listed_m": [
+   0.305,
+   0.114
+  ],
+  "image_px": [
+   960,
+   307
+  ],
+  "hung_m": [
+   0.305,
+   0.097
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "book-art-e589c9375e23d1de4748",
+  "title": "Sunset in Greece, Photo Credit: Chelsea Murphy",
+  "listed_m": [
+   0.61,
+   0.381
+  ],
+  "image_px": [
+   960,
+   530
+  ],
+  "hung_m": [
+   0.61,
+   0.337
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "older-work-sunset-ridge-strips-original-4",
+  "title": "TJ Sunset Ridge Strip 164",
+  "listed_m": [
+   0.305,
+   0.114
+  ],
+  "image_px": [
+   960,
+   307
+  ],
+  "hung_m": [
+   0.305,
+   0.097
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "older-work-sunset-ridge-strips-original-2",
+  "title": "TJ Sunset Ridge Strip 165",
+  "listed_m": [
+   0.305,
+   0.114
+  ],
+  "image_px": [
+   960,
+   302
+  ],
+  "hung_m": [
+   0.305,
+   0.096
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "older-work-sunset-ridge-strips-original-1",
+  "title": "TJ Sunset Ridge Strip 174",
+  "listed_m": [
+   0.305,
+   0.114
+  ],
+  "image_px": [
+   960,
+   317
+  ],
+  "hung_m": [
+   0.305,
+   0.101
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "warszawska-syrenka",
+  "title": "Warszawska Syrenka",
+  "listed_m": [
+   1,
+   0.7
+  ],
+  "image_px": [
+   960,
+   1371
+  ],
+  "hung_m": [
+   0.7,
+   1
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "coined-in-watercolor-film-poster",
+  "title": "Coined in Watercolor Film Poster",
+  "listed_m": [
+   0.7,
+   1
+  ],
+  "image_px": [
+   724,
+   1084
+  ],
+  "hung_m": [
+   0.668,
+   1
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-044d157c01c7bb07eeab",
+  "title": "Carla @carlabitcoin",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   485,
+   621
+  ],
+  "hung_m": [
+   0.476,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-4a0bb9cdd6c404c4e77c",
+  "title": "Scarlette Melon @Scarlette_melon",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   703,
+   1000
+  ],
+  "hung_m": [
+   0.268,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-c04c7e48687fe35e65f5",
+  "title": "Maya Parbhoe @MayaPar25",
+  "listed_m": [
+   0.381,
+   0.305
+  ],
+  "image_px": [
+   917,
+   1000
+  ],
+  "hung_m": [
+   0.349,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-43a3f16ac35df7262254",
+  "title": "Valerie B Love @djvalerieblove",
+  "listed_m": [
+   0.305,
+   0.305
+  ],
+  "image_px": [
+   872,
+   1000
+  ],
+  "hung_m": [
+   0.266,
+   0.305
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "painting-portrait-in-gold",
+  "title": "Dorian Nakamoto",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   960,
+   1037
+  ],
+  "hung_m": [
+   0.353,
+   0.381
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "book-art-b38b9ae1893908d604da",
+  "title": "Alejandra Guajardo @MissBitcoin_sv",
+  "listed_m": [
+   0.381,
+   0.305
+  ],
+  "image_px": [
+   360,
+   400
+  ],
+  "hung_m": [
+   0.343,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-b57fc2205e7bce68d524",
+  "title": "Peter St. Onge @profstonge",
+  "listed_m": [
+   0.381,
+   0.305
+  ],
+  "image_px": [
+   658,
+   752
+  ],
+  "hung_m": [
+   0.333,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-ec22daff29e72f16eb76",
+  "title": "Tomer Strolight @TomerStrolight",
+  "listed_m": [
+   0.61,
+   0.61
+  ],
+  "image_px": [
+   872,
+   1000
+  ],
+  "hung_m": [
+   0.532,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-504e3fafdacd7c9bbcd0",
+  "title": "Osisipho Filane @FilaneSisipho",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   696,
+   1000
+  ],
+  "hung_m": [
+   0.265,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "painting-chef-in-white",
+  "title": "Jimmy Song @jimmysong",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   360,
+   648
+  ],
+  "hung_m": [
+   0.339,
+   0.61
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "book-art-e4bbfe556c3c847d9c90",
+  "title": "Nick Szabo @NickSzabo4",
+  "listed_m": [
+   0.61,
+   0.61
+  ],
+  "image_px": [
+   613,
+   635
+  ],
+  "hung_m": [
+   0.588,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-deb92de6e72f7b3ce951",
+  "title": "Untitled — Bitcoiners, page 64",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   910,
+   1000
+  ],
+  "hung_m": [
+   0.347,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-4afb5cab4bdbe1ff6845",
+  "title": "Viv @btcviv",
+  "listed_m": [
+   0.381,
+   0.305
+  ],
+  "image_px": [
+   708,
+   778
+  ],
+  "hung_m": [
+   0.347,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-0735a5fb0eb1c613b658",
+  "title": "Michael Saylor @saylor",
+  "listed_m": [
+   0.61,
+   0.61
+  ],
+  "image_px": [
+   560,
+   690
+  ],
+  "hung_m": [
+   0.495,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-6ef848d3ccb6b48184ab",
+  "title": "Walker @WalkerAmerica",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   459,
+   578
+  ],
+  "hung_m": [
+   0.484,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-4d53927ad111f0259402",
+  "title": "Scott Dedels @LanternBitcoin",
+  "listed_m": [
+   0.381,
+   0.305
+  ],
+  "image_px": [
+   676,
+   755
+  ],
+  "hung_m": [
+   0.341,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-0ee2717bc04e65d0507e",
+  "title": "Kushboo Kullar @DrKhushboo_K",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   910,
+   1000
+  ],
+  "hung_m": [
+   0.347,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-d6e03f6907615dac3797",
+  "title": "Marisa Angeli @MarisaJeanArt",
+  "listed_m": [
+   0.61,
+   0.61
+  ],
+  "image_px": [
+   603,
+   694
+  ],
+  "hung_m": [
+   0.53,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-7a498f39e7a66a2e8eb5",
+  "title": "Nico @BITVOLT",
+  "listed_m": [
+   0.381,
+   0.305
+  ],
+  "image_px": [
+   690,
+   774
+  ],
+  "hung_m": [
+   0.34,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-6bcf18417734a8e3010a",
+  "title": "Dawn in her Flight Helmet",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   391,
+   545
+  ],
+  "hung_m": [
+   0.273,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-d1a4ee225dafe10ba934",
+  "title": "Hank",
+  "listed_m": [
+   0.381,
+   0.305
+  ],
+  "image_px": [
+   249,
+   359
+  ],
+  "hung_m": [
+   0.264,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "painting-guitarist",
+  "title": "Girl Tuning Guitar",
+  "listed_m": [
+   0.381,
+   0.305
+  ],
+  "image_px": [
+   960,
+   1102
+  ],
+  "hung_m": [
+   0.332,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-8137549f4fe7a3a1b90d",
+  "title": "Colin and Craig",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   913,
+   628
+  ],
+  "hung_m": [
+   0.61,
+   0.419
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-1143b08e177333e43dc7",
+  "title": "Kristine",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   842,
+   1000
+  ],
+  "hung_m": [
+   0.321,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-44161b6b117af79e3df4",
+  "title": "Sergey",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   900,
+   1000
+  ],
+  "hung_m": [
+   0.343,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "painting-figures-in-wheatfield",
+  "title": "The Mother of Kiev",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   960,
+   1777
+  ],
+  "hung_m": [
+   0.329,
+   0.61
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "painting-sunflower-woman",
+  "title": "Vision of Ukraine at Peace",
+  "listed_m": [
+   0.61,
+   0.381
+  ],
+  "image_px": [
+   960,
+   523
+  ],
+  "hung_m": [
+   0.61,
+   0.332
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "painting-portrait-in-blue-light",
+  "title": "MJ",
+  "listed_m": [
+   0.381,
+   0.305
+  ],
+  "image_px": [
+   960,
+   1088
+  ],
+  "hung_m": [
+   0.336,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-a627c7b7d19ace6b3e51",
+  "title": "John",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   882,
+   1000
+  ],
+  "hung_m": [
+   0.336,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-64cfd389b3dbb5cde532",
+  "title": "Loree",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   842,
+   1000
+  ],
+  "hung_m": [
+   0.321,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-28bec44600b36ed0766f",
+  "title": "Julia's baby shower",
+  "listed_m": [
+   0.61,
+   0.889
+  ],
+  "image_px": [
+   812,
+   1000
+  ],
+  "hung_m": [
+   0.722,
+   0.889
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-9c77e540218eab97ba3d",
+  "title": "Lisa on the floor",
+  "listed_m": [
+   0.61,
+   0.889
+  ],
+  "image_px": [
+   484,
+   372
+  ],
+  "hung_m": [
+   0.889,
+   0.683
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-0c4b161071524e23d519",
+  "title": "Dawn Clowning",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   750,
+   1000
+  ],
+  "hung_m": [
+   0.286,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "girl-wearing-flower-crown",
+  "title": "Girl Wearing Flower Crown",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   308,
+   560
+  ],
+  "hung_m": [
+   0.335,
+   0.61
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "book-art-db933efcbc4fbe01c841",
+  "title": "Steve",
+  "listed_m": [
+   0.381,
+   0.305
+  ],
+  "image_px": [
+   652,
+   1000
+  ],
+  "hung_m": [
+   0.248,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-76b81da2337321bf158d",
+  "title": "Mathew \"Fu\" Furst, owner of Grandma's House in Denver",
+  "listed_m": [
+   0.61,
+   0.381
+  ],
+  "image_px": [
+   403,
+   719
+  ],
+  "hung_m": [
+   0.342,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-029f45a5fbfd6c90212e",
+  "title": "Mikyla, Mandy, and Guin",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   555,
+   1000
+  ],
+  "hung_m": [
+   0.338,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-37fe572d9bb47cab3bc7",
+  "title": "Brothers",
+  "listed_m": [
+   0.381,
+   0.305
+  ],
+  "image_px": [
+   530,
+   605
+  ],
+  "hung_m": [
+   0.334,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-0e4564564eee5d70c105",
+  "title": "Sergey winning at poker",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   360,
+   418
+  ],
+  "hung_m": [
+   0.328,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-7123da0440d527299914",
+  "title": "Charlie and Pepper's wedding",
+  "listed_m": [
+   0.381,
+   0.61
+  ],
+  "image_px": [
+   580,
+   787
+  ],
+  "hung_m": [
+   0.449,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "painting-portrait-with-hat",
+  "title": "Sunrise on Rainier with Eagle",
+  "listed_m": [
+   1.524,
+   0.559
+  ],
+  "image_px": [
+   960,
+   268
+  ],
+  "hung_m": [
+   1.524,
+   0.425
+  ],
+  "photoShapeList": true
+ },
+ {
+  "id": "sunrise-on-rainier-from-denny-blaine",
+  "title": "Sunrise on Rainier from Denny Blaine",
+  "listed_m": [
+   1.829,
+   1.143
+  ],
+  "image_px": [
+   1000,
+   383
+  ],
+  "hung_m": [
+   1.829,
+   0.7
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "lisa-climbing-tahoma-at-sunrise-from-denny-blaine",
+  "title": "Lisa Climbing Tahoma at Sunrise from Denny Blaine",
+  "listed_m": [
+   1.829,
+   1.143
+  ],
+  "image_px": [
+   1000,
+   750
+  ],
+  "hung_m": [
+   1.829,
+   1.372
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-deb3358c321671dae1fc",
+  "title": "Sunrise on Tahoma with motorcycles",
+  "listed_m": [
+   0.61,
+   1.143
+  ],
+  "image_px": [
+   542,
+   1000
+  ],
+  "hung_m": [
+   0.62,
+   1.143
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-74a736000a32427842b1",
+  "title": "Laura and Cafécito on paddleboard in Lake Washington",
+  "listed_m": [
+   0.61,
+   0.889
+  ],
+  "image_px": [
+   960,
+   855
+  ],
+  "hung_m": [
+   0.889,
+   0.792
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-164f60d23032b0f718de",
+  "title": "Pagoda in Botanical Garden",
+  "listed_m": [
+   0.61,
+   0.203
+  ],
+  "image_px": [
+   309,
+   1000
+  ],
+  "hung_m": [
+   0.188,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-ded6b759e667e3c2a313",
+  "title": "Sunrise on Puget Sound",
+  "listed_m": [
+   0.61,
+   0.381
+  ],
+  "image_px": [
+   543,
+   1000
+  ],
+  "hung_m": [
+   0.331,
+   0.61
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-ffffb682294d4b12c35e",
+  "title": "Meditating in Gas Works Park on Solstice 2016",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   972,
+   582
+  ],
+  "hung_m": [
+   0.381,
+   0.228
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "meditating-at-denny-blaine-on-solstice-2015",
+  "title": "Meditating at Denny Blaine on Solstice 2015",
+  "listed_m": [
+   0.61,
+   1.143
+  ],
+  "image_px": [
+   420,
+   729
+  ],
+  "hung_m": [
+   0.659,
+   1.143
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "meditation-at-denny-blaine",
+  "title": "Meditation at Denny Blaine",
+  "listed_m": [
+   0.406,
+   0.584
+  ],
+  "image_px": [
+   960,
+   1339
+  ],
+  "hung_m": [
+   0.419,
+   0.584
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "archived-painting-53",
+  "title": "Self Portrait, Meditation at Denny Blaine",
+  "listed_m": [
+   0.61,
+   1.143
+  ],
+  "image_px": [
+   960,
+   1842
+  ],
+  "hung_m": [
+   0.596,
+   1.143
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-19d9a8360c1f1df745d6",
+  "title": "Myself at Denny Blaine",
+  "listed_m": [
+   0.305,
+   0.381
+  ],
+  "image_px": [
+   601,
+   846
+  ],
+  "hung_m": [
+   0.271,
+   0.381
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-b01b8695b2528cb850a3",
+  "title": "Dawn on Mt. Vesper from Denny Blaine",
+  "listed_m": [
+   0.61,
+   1.143
+  ],
+  "image_px": [
+   900,
+   442
+  ],
+  "hung_m": [
+   1.143,
+   0.561
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "book-art-d78badff7e21472c00b8",
+  "title": "Sunrise on Tahoma from Denny Blaine with Eagle catching fish",
+  "listed_m": [
+   0.914,
+   1.829
+  ],
+  "image_px": [
+   1000,
+   354
+  ],
+  "hung_m": [
+   1.829,
+   0.647
+  ],
+  "photoShapeList": false
+ },
+ {
+  "id": "sunset-in-el-zonte-el-salvador",
+  "title": "Sunset in El Zonte, El Salvador",
+  "listed_m": [
+   0.348,
+   0.711
+  ],
+  "hung_m": [
+   0.597,
+   1.219
+  ],
+  "override": "TJ-directed Oct 22 (#288): uniform scale to match the height of Sunrise from Punta El Zonte Hostel (0.619x1.219); 0.022 m narrower"
+ },
+ {
+  "id": "painting-insect-garden",
+  "title": "El Salvador: Past - Chase Toole Collab",
+  "listed_m": [
+   1.219,
+   0.629
+  ],
+  "hung_m": [
+   1.959,
+   1.011
+  ],
+  "override": "TJ Oct 22 (#288): same height as Present; uniform scale"
+ },
+ {
+  "id": "painting-twin-dragons",
+  "title": "El Salvador: Future - Chase Toole Collab",
+  "listed_m": [
+   1.219,
+   0.629
+  ],
+  "hung_m": [
+   1.959,
+   1.011
+  ],
+  "override": "TJ Oct 22 (#288): same height as Present; uniform scale"
+ },
+ {
+  "id": "lisa-climbing-tahoma-at-sunrise-from-denny-blaine",
+  "title": "Lisa Climbing Tahoma at Sunrise from Denny Blaine",
+  "listed_m": [
+   1.829,
+   1.372
+  ],
+  "image_px": [
+   868,
+   364
+  ],
+  "hung_m": [
+   1.733,
+   0.727
+  ],
+  "override": "TJ Oct 22 (#288): photo cropped to the painted area; listed 4:3 matched the photo incl. mat and wall, so size follows the cropped shape"
+ }
+]

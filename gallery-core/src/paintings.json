@@ -1,0 +1,74 @@
+[
+ {
+  "slug": "strawberry-point-1",
+  "title": "Strawberry Point Hiking Trip #1",
+  "price": null,
+  "status": "inquiry",
+  "url": "https://tjm.art/products/strawberry-point-1/",
+  "img": "art/strawberry-point-1.jpg",
+  "source": "https://img.tjm.art/display/strawberry-point-1-1600.webp"
+ },
+ {
+  "slug": "strawberry-point-2",
+  "title": "Strawberry Point Hiking Trip #2",
+  "price": null,
+  "status": "inquiry",
+  "url": "https://tjm.art/products/strawberry-point-2/",
+  "img": "art/strawberry-point-2.jpg",
+  "source": "https://img.tjm.art/display/strawberry-point-2-d1401313-1600.webp"
+ },
+ {
+  "slug": "archived-painting-1",
+  "title": "Painting #1",
+  "price": "$400",
+  "status": "available",
+  "url": "https://tjm.art/products/archived-painting-1/",
+  "img": "art/archived-painting-1.jpg",
+  "source": "https://media.vermillionaurora.com/images/Archive/IMG_1660.jpg"
+ },
+ {
+  "slug": "archived-painting-15",
+  "title": "Symbiosis #1",
+  "price": "$1,000",
+  "status": "available",
+  "url": "https://tjm.art/products/archived-painting-15/",
+  "img": "art/archived-painting-15.jpg",
+  "source": "https://media.vermillionaurora.com/images/Archive/IMG_1643.jpg"
+ },
+ {
+  "slug": "archived-painting-2",
+  "title": "Painting #2",
+  "price": "$400",
+  "status": "available",
+  "url": "https://tjm.art/products/archived-painting-2/",
+  "img": "art/archived-painting-2.jpg",
+  "source": "https://media.vermillionaurora.com/images/Archive/IMG_1657.jpg"
+ },
+ {
+  "slug": "archived-painting-22",
+  "title": "Devo & Katie @ Bass Coast",
+  "price": "$1,000",
+  "status": "available",
+  "url": "https://tjm.art/products/archived-painting-22/",
+  "img": "art/archived-painting-22.jpg",
+  "source": "https://media.vermillionaurora.com/images/Archive/IMG_1651.jpg"
+ },
+ {
+  "slug": "archived-painting-133",
+  "title": "Devo in Front of the Mayan Warrior",
+  "price": null,
+  "status": "sold",
+  "url": "https://tjm.art/products/archived-painting-133/",
+  "img": "art/archived-painting-133.jpg",
+  "source": "https://media.vermillionaurora.com/images/Archive/IMG_1620.jpg"
+ },
+ {
+  "slug": "archived-painting-18",
+  "title": "Mayan Warrior",
+  "price": null,
+  "status": "sold",
+  "url": "https://tjm.art/products/archived-painting-18/",
+  "img": "art/archived-painting-18.jpg",
+  "source": "https://media.vermillionaurora.com/images/Archive/IMG_1645.jpg"
+ }
+]

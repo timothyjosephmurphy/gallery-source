@@ -1,0 +1,63 @@
+{
+  "card": "studio-tracker #293",
+  "generated": "2026-10-22",
+  "source": "https://tjm.art/testimonials/api/approved (public feed behind tjm.art/testimonials, GET only; feed updatedAt 2026-10-20T16:33:05.126Z)",
+  "note": "Public fields only: name, place (city), pin lat/lng as published (2-decimal, city level), painting title, quote excerpt (first ~140 chars, cut at a word). No photos. No prices.",
+  "pins": [
+    {
+      "id": "t-20261018-21557b4ee6b8",
+      "name": "Jack M.",
+      "place": "Kent, OH",
+      "lat": 41.15,
+      "lng": -81.36,
+      "painting": "Brothers Hike Mt. Rainer",
+      "quote_excerpt": "This was a commission from TJ Murphy from a hike that we did together on Mt. Rainier. This was a large format watercolor painting that..."
+    },
+    {
+      "id": "t-20261014-ee936c2ac75b",
+      "name": "Paul Murphy",
+      "place": "Minneapolis, MN",
+      "lat": 44.98,
+      "lng": -93.27,
+      "painting": "Father & Son",
+      "quote_excerpt": "This portrait painting is from our road trip across the country. TJs ability to capture the eyes is remarkable.  It hangs on a wall in my..."
+    },
+    {
+      "id": "t-20261009-2e99f4b2bfb2",
+      "name": "Paul Murphy",
+      "place": "Minneapolis, MN",
+      "lat": 44.98,
+      "lng": -93.27,
+      "painting": "Reaching Through the Clouds",
+      "quote_excerpt": "This painting inspires me to look up through the clouds, beyond what you think your limitations are."
+    },
+    {
+      "id": "t-20261009-fc4afdefa9e1",
+      "name": "Brian D",
+      "place": "Seattle, WA",
+      "lat": 47.6,
+      "lng": -122.33,
+      "painting": "Cormorant Presiding over Sunset on Puget Sound",
+      "quote_excerpt": "I provided TJ with one of my favorite scenes from living in Seattle that I try to see as much as possible: sunset over the Olympics in the..."
+    },
+    {
+      "id": "t-20261008-3c951fb12421",
+      "name": "A collector",
+      "place": "Melbourne,Florida",
+      "lat": 28.08,
+      "lng": -80.61,
+      "painting": "Ukrainian girl with flower headress",
+      "quote_excerpt": "This painting was purchased via an auction from which the proceeds helped Ukrainians in need. For me it represents beauty and innocence. It..."
+    },
+    {
+      "id": "t-20261008-b0e8eb1e1530",
+      "name": "Paul Murphy",
+      "place": "St. Anthony, MN",
+      "lat": 45.0205,
+      "lng": -93.218,
+      "painting": "Sunset El Salvador",
+      "quote_excerpt": "This paint hangs in my living room.  It inspires me to continue my own pursuit in water color.  It’s statement brings me to the beauty...",
+      "note": "Moved to St. Anthony Village (Minneapolis area) Oct 22 2026 at TJ request"
+    }
+  ]
+}

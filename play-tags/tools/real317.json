@@ -1,0 +1,933 @@
+{
+"book-art-a2e53a8418a8d84f3dc5": {
+"err": "no display image",
+"urls": []
+},
+"book-art-e3293c73dbb01f94b39b": {
+"err": "no display image",
+"urls": []
+},
+"older-work-ammous-livera-original-1": {
+"url": "https://img.tjm.art/display/older-work-ammous-livera-1.jpg",
+"px": [
+1600,
+1678
+],
+"all": [
+"https://img.tjm.art/display/older-work-ammous-livera-1.jpg"
+],
+"w480": [
+480,
+503
+],
+"w960": [
+960,
+1007
+],
+"dev": 0.039
+},
+"older-work-ammous-livera-original-2": {
+"url": "https://img.tjm.art/display/older-work-ammous-livera-2.jpg",
+"px": [
+1600,
+1741
+],
+"all": [
+"https://img.tjm.art/display/older-work-ammous-livera-2.jpg"
+],
+"w480": [
+480,
+522
+],
+"w960": [
+960,
+1045
+],
+"dev": 0.003
+},
+"older-work-fernandez-moran-pysh-original-1": {
+"url": "https://img.tjm.art/display/older-work-fernandez-moran-pysh-1.jpg",
+"px": [
+1600,
+1658
+],
+"all": [
+"https://img.tjm.art/display/older-work-fernandez-moran-pysh-1.jpg"
+],
+"w480": [
+480,
+497
+],
+"w960": [
+960,
+995
+],
+"dev": 0.05
+},
+"older-work-fernandez-moran-pysh-original-2": {
+"url": "https://img.tjm.art/display/older-work-fernandez-moran-pysh-2.jpg",
+"px": [
+1600,
+1676
+],
+"all": [
+"https://img.tjm.art/display/older-work-fernandez-moran-pysh-2.jpg"
+],
+"w480": [
+480,
+503
+],
+"w960": [
+960,
+1006
+],
+"dev": 0.04
+},
+"older-work-fernandez-moran-pysh-original-3": {
+"url": "https://img.tjm.art/display/older-work-fernandez-moran-pysh-3.jpg",
+"px": [
+1600,
+1694
+],
+"all": [
+"https://img.tjm.art/display/older-work-fernandez-moran-pysh-3.jpg"
+],
+"w480": [
+480,
+508
+],
+"w960": [
+960,
+1016
+],
+"dev": 0.029
+},
+"older-work-figen-pnut-swoll-original-1": {
+"url": "https://img.tjm.art/display/older-work-figen-pnut-swoll-1.jpg",
+"px": [
+1174,
+1218
+],
+"all": [
+"https://img.tjm.art/display/older-work-figen-pnut-swoll-1.jpg"
+],
+"w480": [
+480,
+498
+],
+"w960": [
+960,
+996
+],
+"dev": 0.049
+},
+"older-work-figen-pnut-swoll-original-2": {
+"url": "https://img.tjm.art/display/older-work-figen-pnut-swoll-2.jpg",
+"px": [
+1063,
+1208
+],
+"all": [
+"https://img.tjm.art/display/older-work-figen-pnut-swoll-2.jpg"
+],
+"w480": [
+480,
+545
+],
+"w960": [
+960,
+1091
+],
+"dev": 0.042
+},
+"older-work-figen-pnut-swoll-original-3": {
+"url": "https://img.tjm.art/display/older-work-figen-pnut-swoll-3.jpg",
+"px": [
+1154,
+1246
+],
+"all": [
+"https://img.tjm.art/display/older-work-figen-pnut-swoll-3.jpg"
+],
+"w480": [
+480,
+518
+],
+"w960": [
+960,
+1037
+],
+"dev": 0.01
+},
+"older-work-forest-triptych-original-1": {
+"url": "https://img.tjm.art/display/older-work-forest-triptych-1-62cf81a2.jpg",
+"px": [
+1185,
+5270
+],
+"all": [
+"https://img.tjm.art/display/older-work-forest-triptych-1-62cf81a2.jpg"
+],
+"w480": [
+480,
+2135
+],
+"w960": [
+960,
+4269
+],
+"dev": 0.149
+},
+"older-work-forest-triptych-original-2": {
+"url": "https://img.tjm.art/display/older-work-forest-triptych-2-dfccfbad.jpg",
+"px": [
+1274,
+5666
+],
+"all": [
+"https://img.tjm.art/display/older-work-forest-triptych-2-dfccfbad.jpg"
+],
+"w480": [
+480,
+2135
+],
+"w960": [
+960,
+4270
+],
+"dev": 0.149
+},
+"older-work-forest-triptych-original-3": {
+"url": "https://img.tjm.art/display/older-work-forest-triptych-3.jpg",
+"px": [
+1369,
+6088
+],
+"all": [
+"https://img.tjm.art/display/older-work-forest-triptych-3.jpg"
+],
+"w480": [
+480,
+2135
+],
+"w960": [
+960,
+4269
+],
+"dev": 0.149
+},
+"older-work-hayek-stark-gomez-el-bawab-original-1": {
+"url": "https://img.tjm.art/display/older-work-hayek-stark-gomez-el-bawab-1.jpg",
+"px": [
+1569,
+2060
+],
+"all": [
+"https://img.tjm.art/display/older-work-hayek-stark-gomez-el-bawab-1.jpg"
+],
+"w480": [
+480,
+630
+],
+"w960": [
+960,
+1260
+],
+"dev": 0.099
+},
+"older-work-hayek-stark-gomez-el-bawab-original-2": {
+"url": "https://img.tjm.art/display/older-work-hayek-stark-gomez-el-bawab-2.jpg",
+"px": [
+1600,
+1913
+],
+"all": [
+"https://img.tjm.art/display/older-work-hayek-stark-gomez-el-bawab-2.jpg"
+],
+"w480": [
+480,
+574
+],
+"w960": [
+960,
+1148
+],
+"dev": 0.001
+},
+"older-work-hayek-stark-gomez-el-bawab-original-3": {
+"url": "https://img.tjm.art/display/older-work-hayek-stark-gomez-el-bawab-3.jpg",
+"px": [
+1563,
+1939
+],
+"all": [
+"https://img.tjm.art/display/older-work-hayek-stark-gomez-el-bawab-3.jpg"
+],
+"w480": [
+480,
+595
+],
+"w960": [
+960,
+1191
+],
+"dev": 0.039
+},
+"older-work-hayek-stark-gomez-el-bawab-original-4": {
+"url": "https://img.tjm.art/display/older-work-hayek-stark-gomez-el-bawab-4.jpg",
+"px": [
+1456,
+1836
+],
+"all": [
+"https://img.tjm.art/display/older-work-hayek-stark-gomez-el-bawab-4.jpg"
+],
+"w480": [
+480,
+605
+],
+"w960": [
+960,
+1211
+],
+"dev": 0.056
+},
+"older-work-hummingbird-feeder-190": {
+"url": "https://img.tjm.art/display/older-work-hummingbird-feeder-190-1600.webp",
+"px": [
+1235,
+1736
+],
+"all": [
+"https://img.tjm.art/display/older-work-hummingbird-feeder-190-1600.webp"
+],
+"dev": 0.158
+},
+"older-work-lake-hillside-color-wheel-original-1": {
+"url": "https://img.tjm.art/display/older-work-lake-hillside-color-wheel-1.jpg",
+"px": [
+1600,
+1084
+],
+"all": [
+"https://img.tjm.art/display/older-work-lake-hillside-color-wheel-1.jpg"
+],
+"w480": [
+480,
+325
+],
+"w960": [
+960,
+650
+],
+"dev": 0.052
+},
+"older-work-lake-hillside-color-wheel-original-2": {
+"url": "https://img.tjm.art/display/older-work-lake-hillside-color-wheel-2.jpg",
+"px": [
+1600,
+1123
+],
+"all": [
+"https://img.tjm.art/display/older-work-lake-hillside-color-wheel-2.jpg"
+],
+"w480": [
+480,
+337
+],
+"w960": [
+960,
+674
+],
+"dev": 0.017
+},
+"older-work-lake-hillside-color-wheel-original-3": {
+"url": "https://img.tjm.art/display/older-work-lake-hillside-color-wheel-3.jpg",
+"px": [
+1600,
+1263
+],
+"all": [
+"https://img.tjm.art/display/older-work-lake-hillside-color-wheel-3.jpg"
+],
+"w480": [
+480,
+379
+],
+"w960": [
+960,
+758
+],
+"dev": 0.105
+},
+"older-work-legend-of-billy-buff-original-1": {
+"url": "https://img.tjm.art/display/older-work-legend-of-billy-buff-1.jpg",
+"px": [
+1600,
+2235
+],
+"all": [
+"https://img.tjm.art/display/older-work-legend-of-billy-buff-1.jpg"
+],
+"w480": [
+480,
+671
+],
+"w960": [
+960,
+1341
+],
+"dev": 0.086
+},
+"older-work-legend-of-billy-buff-original-2": {
+"url": "https://img.tjm.art/display/older-work-legend-of-billy-buff-2.jpg",
+"px": [
+1600,
+2291
+],
+"all": [
+"https://img.tjm.art/display/older-work-legend-of-billy-buff-2.jpg"
+],
+"w480": [
+480,
+687
+],
+"w960": [
+960,
+1375
+],
+"dev": 0.114
+},
+"older-work-mountain-layers-original-1": {
+"url": "https://img.tjm.art/display/older-work-mountain-layers-1.jpg",
+"px": [
+1018,
+789
+],
+"all": [
+"https://img.tjm.art/display/older-work-mountain-layers-1.jpg"
+],
+"w480": [
+480,
+372
+],
+"w960": [
+960,
+744
+],
+"dev": 0.085
+},
+"older-work-mountain-layers-original-2": {
+"url": "https://img.tjm.art/display/older-work-mountain-layers-2.jpg",
+"px": [
+1136,
+758
+],
+"all": [
+"https://img.tjm.art/display/older-work-mountain-layers-2.jpg"
+],
+"w480": [
+480,
+320
+],
+"w960": [
+960,
+641
+],
+"dev": 0.066
+},
+"older-work-mountain-layers-original-3": {
+"url": "https://img.tjm.art/display/older-work-mountain-layers-3.jpg",
+"px": [
+1179,
+750
+],
+"all": [
+"https://img.tjm.art/display/older-work-mountain-layers-3.jpg"
+],
+"w480": [
+480,
+305
+],
+"w960": [
+960,
+611
+],
+"dev": 0.109
+},
+"older-work-mountain-layers-original-4": {
+"url": "https://img.tjm.art/display/older-work-mountain-layers-4.jpg",
+"px": [
+1144,
+787
+],
+"all": [
+"https://img.tjm.art/display/older-work-mountain-layers-4.jpg"
+],
+"w480": [
+480,
+330
+],
+"w960": [
+960,
+660
+],
+"dev": 0.037
+},
+"older-work-pitchers-original-1": {
+"url": "https://img.tjm.art/display/older-work-pitchers-1.jpg",
+"px": [
+1582,
+1038
+],
+"all": [
+"https://img.tjm.art/display/older-work-pitchers-1.jpg"
+],
+"w480": [
+480,
+315
+],
+"w960": [
+960,
+630
+],
+"dev": 0.016
+},
+"older-work-pitchers-original-2": {
+"url": "https://img.tjm.art/display/older-work-pitchers-2.jpg",
+"px": [
+1600,
+2300
+],
+"all": [
+"https://img.tjm.art/display/older-work-pitchers-2.jpg"
+],
+"w480": [
+480,
+690
+],
+"w960": [
+960,
+1380
+],
+"dev": 0.042
+},
+"older-work-portraits-319-329-original-1": {
+"url": "https://img.tjm.art/display/older-work-portraits-319-329-1.jpg",
+"px": [
+1600,
+1919
+],
+"all": [
+"https://img.tjm.art/display/older-work-portraits-319-329-1.jpg"
+],
+"w480": [
+480,
+576
+],
+"w960": [
+960,
+1151
+],
+"dev": 0.004
+},
+"older-work-portraits-319-329-original-2": {
+"url": "https://img.tjm.art/display/older-work-portraits-319-329-2.jpg",
+"px": [
+1566,
+2034
+],
+"all": [
+"https://img.tjm.art/display/older-work-portraits-319-329-2.jpg"
+],
+"w480": [
+480,
+623
+],
+"w960": [
+960,
+1247
+],
+"dev": 0.087
+},
+"older-work-portraits-319-329-original-3": {
+"url": "https://img.tjm.art/display/older-work-portraits-319-329-3.jpg",
+"px": [
+1600,
+1863
+],
+"all": [
+"https://img.tjm.art/display/older-work-portraits-319-329-3.jpg"
+],
+"w480": [
+480,
+559
+],
+"w960": [
+960,
+1118
+],
+"dev": 0.025
+},
+"older-work-portraits-319-329-original-4": {
+"url": "https://img.tjm.art/display/older-work-portraits-319-329-4.jpg",
+"px": [
+1600,
+2024
+],
+"all": [
+"https://img.tjm.art/display/older-work-portraits-319-329-4.jpg"
+],
+"w480": [
+480,
+607
+],
+"w960": [
+960,
+1215
+],
+"dev": 0.059
+},
+"older-work-provibes-sandwiches-original-1": {
+"url": "https://img.tjm.art/display/older-work-provibes-sandwiches-1.jpg",
+"px": [
+1600,
+1127
+],
+"all": [
+"https://img.tjm.art/display/older-work-provibes-sandwiches-1.jpg"
+],
+"w480": [
+480,
+338
+],
+"w960": [
+960,
+676
+],
+"dev": 0.006
+},
+"older-work-provibes-sandwiches-original-2": {
+"url": "https://img.tjm.art/display/older-work-provibes-sandwiches-2.jpg",
+"px": [
+1600,
+1136
+],
+"all": [
+"https://img.tjm.art/display/older-work-provibes-sandwiches-2.jpg"
+],
+"w480": [
+480,
+341
+],
+"w960": [
+960,
+681
+],
+"dev": 0.014
+},
+"older-work-ridge-strips-unindexed-original-1": {
+"url": "https://img.tjm.art/display/older-work-ridge-strips-unindexed-1.jpg",
+"px": [
+1600,
+501
+],
+"all": [
+"https://img.tjm.art/display/older-work-ridge-strips-unindexed-1.jpg"
+],
+"w480": [
+480,
+150
+],
+"w960": [
+960,
+301
+],
+"dev": 0.165
+},
+"older-work-ridge-strips-unindexed-original-2": {
+"url": "https://img.tjm.art/display/older-work-ridge-strips-unindexed-2.jpg",
+"px": [
+1600,
+477
+],
+"all": [
+"https://img.tjm.art/display/older-work-ridge-strips-unindexed-2.jpg"
+],
+"w480": [
+480,
+143
+],
+"w960": [
+960,
+286
+],
+"dev": 0.205
+},
+"older-work-ridge-strips-unindexed-original-3": {
+"url": "https://img.tjm.art/display/older-work-ridge-strips-unindexed-3.jpg",
+"px": [
+1600,
+499
+],
+"all": [
+"https://img.tjm.art/display/older-work-ridge-strips-unindexed-3.jpg"
+],
+"w480": [
+480,
+150
+],
+"w960": [
+960,
+299
+],
+"dev": 0.168
+},
+"older-work-ridge-strips-unindexed-original-4": {
+"url": "https://img.tjm.art/display/older-work-ridge-strips-unindexed-4.jpg",
+"px": [
+1600,
+481
+],
+"all": [
+"https://img.tjm.art/display/older-work-ridge-strips-unindexed-4.jpg"
+],
+"w480": [
+480,
+144
+],
+"w960": [
+960,
+289
+],
+"dev": 0.198
+},
+"older-work-ridge-strips-unindexed-original-5": {
+"url": "https://img.tjm.art/display/older-work-ridge-strips-unindexed-5.jpg",
+"px": [
+1600,
+512
+],
+"all": [
+"https://img.tjm.art/display/older-work-ridge-strips-unindexed-5.jpg"
+],
+"w480": [
+480,
+154
+],
+"w960": [
+960,
+307
+],
+"dev": 0.147
+},
+"older-work-ridge-strips-unindexed-original-6": {
+"url": "https://img.tjm.art/display/older-work-ridge-strips-unindexed-6.jpg",
+"px": [
+1600,
+530
+],
+"all": [
+"https://img.tjm.art/display/older-work-ridge-strips-unindexed-6.jpg"
+],
+"w480": [
+480,
+159
+],
+"w960": [
+960,
+318
+],
+"dev": 0.117
+},
+"older-work-ridge-strips-unindexed-original-7": {
+"url": "https://img.tjm.art/display/older-work-ridge-strips-unindexed-7.jpg",
+"px": [
+1600,
+497
+],
+"all": [
+"https://img.tjm.art/display/older-work-ridge-strips-unindexed-7.jpg"
+],
+"w480": [
+480,
+149
+],
+"w960": [
+960,
+298
+],
+"dev": 0.172
+},
+"older-work-rochard-martinez-original-1": {
+"url": "https://img.tjm.art/display/older-work-rochard-martinez-1.jpg",
+"px": [
+1176,
+1221
+],
+"all": [
+"https://img.tjm.art/display/older-work-rochard-martinez-1.jpg"
+],
+"w480": [
+480,
+498
+],
+"w960": [
+960,
+997
+],
+"dev": 0.048
+},
+"older-work-rochard-martinez-original-2": {
+"url": "https://img.tjm.art/display/older-work-rochard-martinez-2.jpg",
+"px": [
+1091,
+1203
+],
+"all": [
+"https://img.tjm.art/display/older-work-rochard-martinez-2.jpg"
+],
+"w480": [
+480,
+529
+],
+"w960": [
+960,
+1059
+],
+"dev": 0.011
+},
+"older-work-rochard-martinez-original-3": {
+"url": "https://img.tjm.art/display/older-work-rochard-martinez-3.jpg",
+"px": [
+1107,
+1231
+],
+"all": [
+"https://img.tjm.art/display/older-work-rochard-martinez-3.jpg"
+],
+"w480": [
+480,
+534
+],
+"w960": [
+960,
+1068
+],
+"dev": 0.019
+},
+"older-work-shore-figures-original-1": {
+"url": "https://img.tjm.art/display/older-work-shore-figures-1.jpg",
+"px": [
+1600,
+1467
+],
+"all": [
+"https://img.tjm.art/display/older-work-shore-figures-1.jpg"
+],
+"w480": [
+480,
+440
+],
+"w960": [
+960,
+880
+],
+"dev": 0.026
+},
+"older-work-shore-figures-original-2": {
+"url": "https://img.tjm.art/display/older-work-shore-figures-2.jpg",
+"px": [
+1600,
+1459
+],
+"all": [
+"https://img.tjm.art/display/older-work-shore-figures-2.jpg"
+],
+"w480": [
+480,
+438
+],
+"w960": [
+960,
+876
+],
+"dev": 0.031
+},
+"older-work-shore-figures-original-3": {
+"url": "https://img.tjm.art/display/older-work-shore-figures-3.jpg",
+"px": [
+1564,
+1447
+],
+"all": [
+"https://img.tjm.art/display/older-work-shore-figures-3.jpg"
+],
+"w480": [
+480,
+444
+],
+"w960": [
+960,
+888
+],
+"dev": 0.017
+},
+"older-work-yakes-todd-dickerson-original-1": {
+"url": "https://img.tjm.art/display/older-work-yakes-todd-dickerson-1.jpg",
+"px": [
+1600,
+1927
+],
+"all": [
+"https://img.tjm.art/display/older-work-yakes-todd-dickerson-1.jpg"
+],
+"w480": [
+480,
+578
+],
+"w960": [
+960,
+1156
+],
+"dev": 0.008
+},
+"older-work-yakes-todd-dickerson-original-2": {
+"url": "https://img.tjm.art/display/older-work-yakes-todd-dickerson-2.jpg",
+"px": [
+1600,
+2294
+],
+"all": [
+"https://img.tjm.art/display/older-work-yakes-todd-dickerson-2.jpg"
+],
+"w480": [
+480,
+688
+],
+"w960": [
+960,
+1377
+],
+"dev": 0.2
+},
+"older-work-yakes-todd-dickerson-original-3": {
+"url": "https://img.tjm.art/display/older-work-yakes-todd-dickerson-3.jpg",
+"px": [
+1600,
+1888
+],
+"all": [
+"https://img.tjm.art/display/older-work-yakes-todd-dickerson-3.jpg"
+],
+"w480": [
+480,
+566
+],
+"w960": [
+960,
+1133
+],
+"dev": 0.012
+}
+}

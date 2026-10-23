@@ -1,0 +1,3298 @@
+{
+  "generated": "2026-10-22",
+  "sources": [
+    "studio-tracker #309 comment 6352709826 (list, URLs, sizes)",
+    "studio-tracker #310 (Paul room, 38 paul-murphy-painting-*)",
+    "live tjm.art product pages (GET only) for image URLs and medium"
+  ],
+  "note": "No prices in this file (public copy). No plaque wording exists on the cards: plaque.text is the card title verbatim.",
+  "paintings": [
+    {
+      "book_caption_measurement": null,
+      "slug": "archived-painting-19",
+      "kind": "archived",
+      "title": "The Temple, Daytime",
+      "url": "https://tjm.art/products/archived-painting-19/",
+      "size_in": {
+        "w": 45.0,
+        "h": 24.0,
+        "unit": "in",
+        "source": "TJ confirmed Oct 22 2026: 45 wide x 24 tall"
+      },
+      "plaque": {
+        "text": "The Temple, Daytime · watercolor pastel · 45 × 24 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "The Temple, Daytime",
+          "watercolor pastel",
+          "45 × 24 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/display/archived-painting-19-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "archived-painting-433",
+      "kind": "archived",
+      "title": "Sunrise at Bass Coast 2023 #1",
+      "url": "https://tjm.art/products/archived-painting-433/",
+      "size_in": {
+        "w": 23.25,
+        "h": 14.75,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Sunrise at Bass Coast 2023 #1 · watercolor pastel · 23.25 × 14.75 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Sunrise at Bass Coast 2023 #1",
+          "watercolor pastel",
+          "23.25 × 14.75 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/display/archived-painting-433-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "archived-painting-436",
+      "kind": "archived",
+      "title": "Sunrise at Bass Coast 2023 #2",
+      "url": "https://tjm.art/products/archived-painting-436/",
+      "size_in": {
+        "w": 13.75,
+        "h": 24.75,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Sunrise at Bass Coast 2023 #2 · watercolor pastel · 13.75 × 24.75 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Sunrise at Bass Coast 2023 #2",
+          "watercolor pastel",
+          "13.75 × 24.75 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/display/archived-painting-436-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "archived-painting-437",
+      "kind": "archived",
+      "title": "Sunrise at Bass Coast 2023 #3",
+      "url": "https://tjm.art/products/archived-painting-437/",
+      "size_in": {
+        "w": 23.25,
+        "h": 14.75,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Sunrise at Bass Coast 2023 #3 · watercolor pastel · 23.25 × 14.75 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Sunrise at Bass Coast 2023 #3",
+          "watercolor pastel",
+          "23.25 × 14.75 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/display/archived-painting-437-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "book-art-103c2ba59ca485e56a86",
+      "kind": "book-art",
+      "title": "El Salvador",
+      "url": "https://tjm.art/products/book-art-103c2ba59ca485e56a86/",
+      "size_in": null,
+      "plaque": {
+        "text": "El Salvador · watercolor pastel",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "El Salvador",
+          "watercolor pastel"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/book-art-103c2ba59ca485e56a86-4cd34dd6d0.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": [
+        "size not listed on #309 card or on the product page; needs TJ/true size (card says use image aspect + placeholder)"
+      ]
+    },
+    {
+      "book_caption_measurement": "24x45",
+      "slug": "book-art-67cc9a4d5823eca2182e",
+      "kind": "book-art",
+      "title": "Katie and Devo at Bass Coast",
+      "url": "https://tjm.art/products/book-art-67cc9a4d5823eca2182e/",
+      "size_in": null,
+      "plaque": {
+        "text": "Katie and Devo at Bass Coast · watercolor pastel",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Katie and Devo at Bass Coast",
+          "watercolor pastel"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/book-art-67cc9a4d5823eca2182e-f8d2726532.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": [
+        "size not listed on #309 card or on the product page; needs TJ/true size (card says use image aspect + placeholder)",
+        "book caption measurement 24x45 (unit not specified in book, from vermillionaurora catalog/book-products.json); not on card or live page, so not used as size_in. TJ to confirm."
+      ]
+    },
+    {
+      "book_caption_measurement": "36x45",
+      "slug": "book-art-7599e02b4ff7013e7261",
+      "kind": "book-art",
+      "title": "Sunrise from Punta El Zonte Hostel",
+      "url": "https://tjm.art/products/book-art-7599e02b4ff7013e7261/",
+      "size_in": null,
+      "plaque": {
+        "text": "Sunrise from Punta El Zonte Hostel · watercolor pastel",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Sunrise from Punta El Zonte Hostel",
+          "watercolor pastel"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/book-art-7599e02b4ff7013e7261-b9bb809a1b.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": [
+        "size not listed on #309 card or on the product page; needs TJ/true size (card says use image aspect + placeholder)",
+        "book caption measurement 36x45 (unit not specified in book, from vermillionaurora catalog/book-products.json); not on card or live page, so not used as size_in. TJ to confirm."
+      ]
+    },
+    {
+      "book_caption_measurement": "24x15",
+      "slug": "book-art-9a4b9331f62350fa36fc",
+      "kind": "book-art",
+      "title": "Sunrise at Bass Coast, Merritt, BC 1",
+      "url": "https://tjm.art/products/book-art-9a4b9331f62350fa36fc/",
+      "size_in": null,
+      "plaque": {
+        "text": "Sunrise at Bass Coast, Merritt, BC 1 · watercolor pastel",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Sunrise at Bass Coast, Merritt, BC 1",
+          "watercolor pastel"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/book-art-9a4b9331f62350fa36fc-ba2945a681.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": [
+        "size not listed on #309 card or on the product page; needs TJ/true size (card says use image aspect + placeholder)",
+        "book caption measurement 24x15 (unit not specified in book, from vermillionaurora catalog/book-products.json); not on card or live page, so not used as size_in. TJ to confirm."
+      ]
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "book-art-a2e53a8418a8d84f3dc5",
+      "kind": "book-art",
+      "title": "El Salvador",
+      "url": "https://tjm.art/products/book-art-a2e53a8418a8d84f3dc5/",
+      "size_in": null,
+      "plaque": {
+        "text": "El Salvador · watercolor pastel",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "El Salvador",
+          "watercolor pastel"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/book-art-a2e53a8418a8d84f3dc5-998603a8bd.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": [
+        "size not listed on #309 card or on the product page; needs TJ/true size (card says use image aspect + placeholder)"
+      ]
+    },
+    {
+      "book_caption_measurement": "24x15",
+      "slug": "book-art-c198f09bc8ddad18ed1e",
+      "kind": "book-art",
+      "title": "Sunrise at Bass Coast, Merritt, BC 2",
+      "url": "https://tjm.art/products/book-art-c198f09bc8ddad18ed1e/",
+      "size_in": null,
+      "plaque": {
+        "text": "Sunrise at Bass Coast, Merritt, BC 2 · watercolor pastel",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Sunrise at Bass Coast, Merritt, BC 2",
+          "watercolor pastel"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/book-art-c198f09bc8ddad18ed1e-39af24e7a3.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": [
+        "size not listed on #309 card or on the product page; needs TJ/true size (card says use image aspect + placeholder)",
+        "book caption measurement 24x15 (unit not specified in book, from vermillionaurora catalog/book-products.json); not on card or live page, so not used as size_in. TJ to confirm."
+      ]
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "book-art-e3293c73dbb01f94b39b",
+      "kind": "book-art",
+      "title": "El Salvador",
+      "url": "https://tjm.art/products/book-art-e3293c73dbb01f94b39b/",
+      "size_in": null,
+      "plaque": {
+        "text": "El Salvador · watercolor pastel",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "El Salvador",
+          "watercolor pastel"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/book-art-e3293c73dbb01f94b39b-319aa1314d.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": [
+        "size not listed on #309 card or on the product page; needs TJ/true size (card says use image aspect + placeholder)"
+      ]
+    },
+    {
+      "book_caption_measurement": "25x15",
+      "slug": "book-art-fc89b36cb40743a90fa8",
+      "kind": "book-art",
+      "title": "El Salvador",
+      "url": "https://tjm.art/products/book-art-fc89b36cb40743a90fa8/",
+      "size_in": null,
+      "plaque": {
+        "text": "El Salvador · watercolor pastel",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "El Salvador",
+          "watercolor pastel"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/book-art-fc89b36cb40743a90fa8-80285e5c7e.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": [
+        "size not listed on #309 card or on the product page; needs TJ/true size (card says use image aspect + placeholder)",
+        "book caption measurement 25x15 (unit not specified in book, from vermillionaurora catalog/book-products.json); not on card or live page, so not used as size_in. TJ to confirm."
+      ]
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "cormorant-presiding-over-sunset-on-puget-sound",
+      "kind": "standalone",
+      "title": "Cormorant Presiding over Sunset on Puget Sound",
+      "url": "https://tjm.art/products/cormorant-presiding-over-sunset-on-puget-sound/",
+      "size_in": {
+        "w": 60.0,
+        "h": 40.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Cormorant Presiding over Sunset on Puget Sound · watercolor pastel · 60 × 40 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Cormorant Presiding over Sunset on Puget Sound",
+          "watercolor pastel",
+          "60 × 40 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default; page says original is a mural in a private garden, so medium unknown",
+      "image_url": "https://img.tjm.art/display/cormorant-over-puget-sound-hires-8892d0a33e-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": [
+        "medium not stated; page describes it as a mural in a private garden. TJ to confirm medium."
+      ]
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-ammous-livera-original-1",
+      "kind": "older-work",
+      "title": "TJ Saifedean Ammous 355",
+      "url": "https://tjm.art/products/older-work-ammous-livera-original-1/",
+      "size_in": {
+        "w": 11.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Saifedean Ammous 355 · watercolor pastel · 11 × 12 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Saifedean Ammous 355",
+          "watercolor pastel",
+          "11 × 12 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-ammous-livera-original-1-fe4cee0edb.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-ammous-livera-original-2",
+      "kind": "older-work",
+      "title": "TJ Stephan Livera 356",
+      "url": "https://tjm.art/products/older-work-ammous-livera-original-2/",
+      "size_in": {
+        "w": 11.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Stephan Livera 356 · watercolor pastel · 11 × 12 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Stephan Livera 356",
+          "watercolor pastel",
+          "11 × 12 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-ammous-livera-original-2-1ef92d4447.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-fernandez-moran-pysh-original-1",
+      "kind": "older-work",
+      "title": "TJ Akin Fernandez 351",
+      "url": "https://tjm.art/products/older-work-fernandez-moran-pysh-original-1/",
+      "size_in": {
+        "w": 11.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Akin Fernandez 351 · watercolor pastel · 11 × 12 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Akin Fernandez 351",
+          "watercolor pastel",
+          "11 × 12 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-fernandez-moran-pysh-original-1-fc90e6561e.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-fernandez-moran-pysh-original-2",
+      "kind": "older-work",
+      "title": "TJ Nico Moran 345",
+      "url": "https://tjm.art/products/older-work-fernandez-moran-pysh-original-2/",
+      "size_in": {
+        "w": 11.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Nico Moran 345 · watercolor pastel · 11 × 12 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Nico Moran 345",
+          "watercolor pastel",
+          "11 × 12 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-fernandez-moran-pysh-original-2-42e81f1455.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-fernandez-moran-pysh-original-3",
+      "kind": "older-work",
+      "title": "TJ Preston Pysh 344",
+      "url": "https://tjm.art/products/older-work-fernandez-moran-pysh-original-3/",
+      "size_in": {
+        "w": 11.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Preston Pysh 344 · watercolor pastel · 11 × 12 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Preston Pysh 344",
+          "watercolor pastel",
+          "11 × 12 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-fernandez-moran-pysh-original-3-acaa4ac9ea.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-figen-pnut-swoll-original-1",
+      "kind": "older-work",
+      "title": "TJ Figen 341",
+      "url": "https://tjm.art/products/older-work-figen-pnut-swoll-original-1/",
+      "size_in": {
+        "w": 11.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Figen 341 · watercolor pastel · 11 × 12 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Figen 341",
+          "watercolor pastel",
+          "11 × 12 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-figen-pnut-swoll-original-1-4b3fa44318.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-figen-pnut-swoll-original-2",
+      "kind": "older-work",
+      "title": "TJ PNut Window 338",
+      "url": "https://tjm.art/products/older-work-figen-pnut-swoll-original-2/",
+      "size_in": {
+        "w": 11.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ PNut Window 338 · watercolor pastel · 11 × 12 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ PNut Window 338",
+          "watercolor pastel",
+          "11 × 12 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-figen-pnut-swoll-original-2-731edb2ddd.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-figen-pnut-swoll-original-3",
+      "kind": "older-work",
+      "title": "TJ Joey Swoll 340",
+      "url": "https://tjm.art/products/older-work-figen-pnut-swoll-original-3/",
+      "size_in": {
+        "w": 11.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Joey Swoll 340 · watercolor pastel · 11 × 12 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Joey Swoll 340",
+          "watercolor pastel",
+          "11 × 12 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-figen-pnut-swoll-original-3-984508e8b0.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-forest-triptych-original-1",
+      "kind": "older-work",
+      "title": "TJ Forest 303",
+      "url": "https://tjm.art/products/older-work-forest-triptych-original-1/",
+      "size_in": {
+        "w": 7.75,
+        "h": 30.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Forest 303 · watercolor pastel · 7.75 × 30 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Forest 303",
+          "watercolor pastel",
+          "7.75 × 30 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-forest-triptych-original-1-59fd69346f.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-forest-triptych-original-2",
+      "kind": "older-work",
+      "title": "TJ Forest 302",
+      "url": "https://tjm.art/products/older-work-forest-triptych-original-2/",
+      "size_in": {
+        "w": 7.75,
+        "h": 30.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Forest 302 · watercolor pastel · 7.75 × 30 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Forest 302",
+          "watercolor pastel",
+          "7.75 × 30 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-forest-triptych-original-2-0a854f27d3.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-forest-triptych-original-3",
+      "kind": "older-work",
+      "title": "TJ Forest 304",
+      "url": "https://tjm.art/products/older-work-forest-triptych-original-3/",
+      "size_in": {
+        "w": 7.75,
+        "h": 30.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Forest 304 · watercolor pastel · 7.75 × 30 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Forest 304",
+          "watercolor pastel",
+          "7.75 × 30 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-forest-triptych-original-3-4f5245aa24.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-hayek-stark-gomez-el-bawab-original-1",
+      "kind": "older-work",
+      "title": "TJ F.A. Hayek 336",
+      "url": "https://tjm.art/products/older-work-hayek-stark-gomez-el-bawab-original-1/",
+      "size_in": {
+        "w": 9.0,
+        "h": 10.75,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ F.A. Hayek 336 · watercolor pastel · 9 × 10.75 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ F.A. Hayek 336",
+          "watercolor pastel",
+          "9 × 10.75 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-hayek-stark-gomez-el-bawab-original-1-50a0d95d8b.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-hayek-stark-gomez-el-bawab-original-2",
+      "kind": "older-work",
+      "title": "TJ Elizabeth Stark 335",
+      "url": "https://tjm.art/products/older-work-hayek-stark-gomez-el-bawab-original-2/",
+      "size_in": {
+        "w": 9.0,
+        "h": 10.75,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Elizabeth Stark 335 · watercolor pastel · 9 × 10.75 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Elizabeth Stark 335",
+          "watercolor pastel",
+          "9 × 10.75 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-hayek-stark-gomez-el-bawab-original-2-d221fc9b0c.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-hayek-stark-gomez-el-bawab-original-3",
+      "kind": "older-work",
+      "title": "TJ Rodrigo Gomez 334",
+      "url": "https://tjm.art/products/older-work-hayek-stark-gomez-el-bawab-original-3/",
+      "size_in": {
+        "w": 9.0,
+        "h": 10.75,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Rodrigo Gomez 334 · watercolor pastel · 9 × 10.75 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Rodrigo Gomez 334",
+          "watercolor pastel",
+          "9 × 10.75 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-hayek-stark-gomez-el-bawab-original-3-1547d28e27.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-hayek-stark-gomez-el-bawab-original-4",
+      "kind": "older-work",
+      "title": "TJ Noor El Bawab 333",
+      "url": "https://tjm.art/products/older-work-hayek-stark-gomez-el-bawab-original-4/",
+      "size_in": {
+        "w": 9.0,
+        "h": 10.75,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Noor El Bawab 333 · watercolor pastel · 9 × 10.75 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Noor El Bawab 333",
+          "watercolor pastel",
+          "9 × 10.75 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-hayek-stark-gomez-el-bawab-original-4-1460020b19.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-hummingbird-feeder-190",
+      "kind": "older-work",
+      "title": "TJ Hummingbird Feeder 190",
+      "url": "https://tjm.art/products/older-work-hummingbird-feeder-190/",
+      "size_in": {
+        "w": 7.0,
+        "h": 8.5,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Hummingbird Feeder 190 · watercolor pastel · 7 × 8.5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Hummingbird Feeder 190",
+          "watercolor pastel",
+          "7 × 8.5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/display/older-work-hummingbird-feeder-190-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-lake-hillside-color-wheel-original-1",
+      "kind": "older-work",
+      "title": "TJ Mountain Lake 145",
+      "url": "https://tjm.art/products/older-work-lake-hillside-color-wheel-original-1/",
+      "size_in": {
+        "w": 7.0,
+        "h": 5.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Mountain Lake 145 · watercolor pastel · 7 × 5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Mountain Lake 145",
+          "watercolor pastel",
+          "7 × 5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-lake-hillside-color-wheel-original-1-29f03a2302.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-lake-hillside-color-wheel-original-2",
+      "kind": "older-work",
+      "title": "TJ Golden Hillside 141",
+      "url": "https://tjm.art/products/older-work-lake-hillside-color-wheel-original-2/",
+      "size_in": {
+        "w": 7.0,
+        "h": 5.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Golden Hillside 141 · watercolor pastel · 7 × 5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Golden Hillside 141",
+          "watercolor pastel",
+          "7 × 5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-lake-hillside-color-wheel-original-2-70b3ccdf2b.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-lake-hillside-color-wheel-original-3",
+      "kind": "older-work",
+      "title": "TJ Color Wheel Study 184",
+      "url": "https://tjm.art/products/older-work-lake-hillside-color-wheel-original-3/",
+      "size_in": {
+        "w": 7.0,
+        "h": 5.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Color Wheel Study 184 · watercolor pastel · 7 × 5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Color Wheel Study 184",
+          "watercolor pastel",
+          "7 × 5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-lake-hillside-color-wheel-original-3-6fd9278381.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-legend-of-billy-buff-original-1",
+      "kind": "older-work",
+      "title": "TJ The Legend of Billy Buff 2",
+      "url": "https://tjm.art/products/older-work-legend-of-billy-buff-original-1/",
+      "size_in": {
+        "w": 10.5,
+        "h": 13.5,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ The Legend of Billy Buff 2 · watercolor pastel · 10.5 × 13.5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ The Legend of Billy Buff 2",
+          "watercolor pastel",
+          "10.5 × 13.5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-legend-of-billy-buff-original-1-0003ea9cfa.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-legend-of-billy-buff-original-2",
+      "kind": "older-work",
+      "title": "TJ The Legend of Billy Buff 1",
+      "url": "https://tjm.art/products/older-work-legend-of-billy-buff-original-2/",
+      "size_in": {
+        "w": 10.5,
+        "h": 13.5,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ The Legend of Billy Buff 1 · watercolor pastel · 10.5 × 13.5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ The Legend of Billy Buff 1",
+          "watercolor pastel",
+          "10.5 × 13.5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-legend-of-billy-buff-original-2-1899d7fb37.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-mountain-layers-original-1",
+      "kind": "older-work",
+      "title": "TJ Blue Mountain Layers 185",
+      "url": "https://tjm.art/products/older-work-mountain-layers-original-1/",
+      "size_in": {
+        "w": 7.0,
+        "h": 5.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Blue Mountain Layers 185 · watercolor pastel · 7 × 5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Blue Mountain Layers 185",
+          "watercolor pastel",
+          "7 × 5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-mountain-layers-original-1-273695f4f4.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-mountain-layers-original-2",
+      "kind": "older-work",
+      "title": "TJ Orange Mountain Layers 186",
+      "url": "https://tjm.art/products/older-work-mountain-layers-original-2/",
+      "size_in": {
+        "w": 7.0,
+        "h": 5.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Orange Mountain Layers 186 · watercolor pastel · 7 × 5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Orange Mountain Layers 186",
+          "watercolor pastel",
+          "7 × 5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-mountain-layers-original-2-015201f530.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-mountain-layers-original-3",
+      "kind": "older-work",
+      "title": "TJ Red Mountain Layers 156",
+      "url": "https://tjm.art/products/older-work-mountain-layers-original-3/",
+      "size_in": {
+        "w": 7.0,
+        "h": 5.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Red Mountain Layers 156 · watercolor pastel · 7 × 5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Red Mountain Layers 156",
+          "watercolor pastel",
+          "7 × 5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-mountain-layers-original-3-d04ef664a1.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-mountain-layers-original-4",
+      "kind": "older-work",
+      "title": "TJ Golden Mountain Layers 153",
+      "url": "https://tjm.art/products/older-work-mountain-layers-original-4/",
+      "size_in": {
+        "w": 7.0,
+        "h": 5.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Golden Mountain Layers 153 · watercolor pastel · 7 × 5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Golden Mountain Layers 153",
+          "watercolor pastel",
+          "7 × 5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-mountain-layers-original-4-3775713f12.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-pitchers-original-1",
+      "kind": "older-work",
+      "title": "TJ Two Pitchers 188",
+      "url": "https://tjm.art/products/older-work-pitchers-original-1/",
+      "size_in": {
+        "w": 9.0,
+        "h": 6.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Two Pitchers 188 · watercolor pastel · 9 × 6 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Two Pitchers 188",
+          "watercolor pastel",
+          "9 × 6 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-pitchers-original-1-6ac7e6136f.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-pitchers-original-2",
+      "kind": "older-work",
+      "title": "TJ Blue Pitcher 187",
+      "url": "https://tjm.art/products/older-work-pitchers-original-2/",
+      "size_in": {
+        "w": 6.0,
+        "h": 9.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Blue Pitcher 187 · watercolor pastel · 6 × 9 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Blue Pitcher 187",
+          "watercolor pastel",
+          "6 × 9 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-pitchers-original-2-fa33667cf8.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-portraits-319-329-original-1",
+      "kind": "older-work",
+      "title": "TJ Bernard Parah 329",
+      "url": "https://tjm.art/products/older-work-portraits-319-329-original-1/",
+      "size_in": {
+        "w": 9.0,
+        "h": 10.75,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Bernard Parah 329 · watercolor pastel · 9 × 10.75 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Bernard Parah 329",
+          "watercolor pastel",
+          "9 × 10.75 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-portraits-319-329-original-1-ee72025a3b.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-portraits-319-329-original-2",
+      "kind": "older-work",
+      "title": "TJ José 328",
+      "url": "https://tjm.art/products/older-work-portraits-319-329-original-2/",
+      "size_in": {
+        "w": 9.0,
+        "h": 10.75,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ José 328 · watercolor pastel · 9 × 10.75 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ José 328",
+          "watercolor pastel",
+          "9 × 10.75 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-portraits-319-329-original-2-2dc4ac12b2.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-portraits-319-329-original-3",
+      "kind": "older-work",
+      "title": "TJ Andreas Antonopoulos 327",
+      "url": "https://tjm.art/products/older-work-portraits-319-329-original-3/",
+      "size_in": {
+        "w": 9.0,
+        "h": 10.75,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Andreas Antonopoulos 327 · watercolor pastel · 9 × 10.75 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Andreas Antonopoulos 327",
+          "watercolor pastel",
+          "9 × 10.75 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-portraits-319-329-original-3-1c5f01552b.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-portraits-319-329-original-4",
+      "kind": "older-work",
+      "title": "TJ Portrait with Glasses 319",
+      "url": "https://tjm.art/products/older-work-portraits-319-329-original-4/",
+      "size_in": {
+        "w": 9.0,
+        "h": 10.75,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Portrait with Glasses 319 · watercolor pastel · 9 × 10.75 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Portrait with Glasses 319",
+          "watercolor pastel",
+          "9 × 10.75 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-portraits-319-329-original-4-970720ac54.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-provibes-sandwiches-original-1",
+      "kind": "older-work",
+      "title": "TJ Devo and Sarah Sandwich (L)",
+      "url": "https://tjm.art/products/older-work-provibes-sandwiches-original-1/",
+      "size_in": {
+        "w": 17.5,
+        "h": 12.25,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Devo and Sarah Sandwich (L) · watercolor pastel · 17.5 × 12.25 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Devo and Sarah Sandwich (L)",
+          "watercolor pastel",
+          "17.5 × 12.25 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-provibes-sandwiches-original-1-a5e94075ac.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-provibes-sandwiches-original-2",
+      "kind": "older-work",
+      "title": "TJ Devo and Sarah Sandwich (R)",
+      "url": "https://tjm.art/products/older-work-provibes-sandwiches-original-2/",
+      "size_in": {
+        "w": 17.5,
+        "h": 12.25,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Devo and Sarah Sandwich (R) · watercolor pastel · 17.5 × 12.25 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Devo and Sarah Sandwich (R)",
+          "watercolor pastel",
+          "17.5 × 12.25 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-provibes-sandwiches-original-2-78cc130a7e.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-ridge-strips-unindexed-original-1",
+      "kind": "older-work",
+      "title": "TJ Ridge Strip Study A",
+      "url": "https://tjm.art/products/older-work-ridge-strips-unindexed-original-1/",
+      "size_in": {
+        "w": 12.0,
+        "h": 4.5,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Ridge Strip Study A · watercolor pastel · 12 × 4.5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Ridge Strip Study A",
+          "watercolor pastel",
+          "12 × 4.5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-ridge-strips-unindexed-original-1-48e74e056c.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-ridge-strips-unindexed-original-2",
+      "kind": "older-work",
+      "title": "TJ Ridge Strip Study B",
+      "url": "https://tjm.art/products/older-work-ridge-strips-unindexed-original-2/",
+      "size_in": {
+        "w": 12.0,
+        "h": 4.5,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Ridge Strip Study B · watercolor pastel · 12 × 4.5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Ridge Strip Study B",
+          "watercolor pastel",
+          "12 × 4.5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-ridge-strips-unindexed-original-2-ea9d64c830.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-ridge-strips-unindexed-original-3",
+      "kind": "older-work",
+      "title": "TJ Ridge Strip Study C",
+      "url": "https://tjm.art/products/older-work-ridge-strips-unindexed-original-3/",
+      "size_in": {
+        "w": 12.0,
+        "h": 4.5,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Ridge Strip Study C · watercolor pastel · 12 × 4.5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Ridge Strip Study C",
+          "watercolor pastel",
+          "12 × 4.5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-ridge-strips-unindexed-original-3-6e0201a48b.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-ridge-strips-unindexed-original-4",
+      "kind": "older-work",
+      "title": "TJ Ridge Strip Study D",
+      "url": "https://tjm.art/products/older-work-ridge-strips-unindexed-original-4/",
+      "size_in": {
+        "w": 12.0,
+        "h": 4.5,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Ridge Strip Study D · watercolor pastel · 12 × 4.5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Ridge Strip Study D",
+          "watercolor pastel",
+          "12 × 4.5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-ridge-strips-unindexed-original-4-a0b0babb09.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-ridge-strips-unindexed-original-5",
+      "kind": "older-work",
+      "title": "TJ Ridge Strip Study E",
+      "url": "https://tjm.art/products/older-work-ridge-strips-unindexed-original-5/",
+      "size_in": {
+        "w": 12.0,
+        "h": 4.5,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Ridge Strip Study E · watercolor pastel · 12 × 4.5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Ridge Strip Study E",
+          "watercolor pastel",
+          "12 × 4.5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-ridge-strips-unindexed-original-5-bf5fcbf857.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-ridge-strips-unindexed-original-6",
+      "kind": "older-work",
+      "title": "TJ Ridge Strip Study F",
+      "url": "https://tjm.art/products/older-work-ridge-strips-unindexed-original-6/",
+      "size_in": {
+        "w": 12.0,
+        "h": 4.5,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Ridge Strip Study F · watercolor pastel · 12 × 4.5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Ridge Strip Study F",
+          "watercolor pastel",
+          "12 × 4.5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-ridge-strips-unindexed-original-6-ba4017d594.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-ridge-strips-unindexed-original-7",
+      "kind": "older-work",
+      "title": "TJ Ridge Strip Study G",
+      "url": "https://tjm.art/products/older-work-ridge-strips-unindexed-original-7/",
+      "size_in": {
+        "w": 12.0,
+        "h": 4.5,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Ridge Strip Study G · watercolor pastel · 12 × 4.5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Ridge Strip Study G",
+          "watercolor pastel",
+          "12 × 4.5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-ridge-strips-unindexed-original-7-7cdd2e30a4.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-rochard-martinez-original-1",
+      "kind": "older-work",
+      "title": "TJ Pierre Rochard 359",
+      "url": "https://tjm.art/products/older-work-rochard-martinez-original-1/",
+      "size_in": {
+        "w": 11.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Pierre Rochard 359 · watercolor pastel · 11 × 12 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Pierre Rochard 359",
+          "watercolor pastel",
+          "11 × 12 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-rochard-martinez-original-1-91c6a257e3.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-rochard-martinez-original-2",
+      "kind": "older-work",
+      "title": "TJ Morgen Rochard 358",
+      "url": "https://tjm.art/products/older-work-rochard-martinez-original-2/",
+      "size_in": {
+        "w": 11.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Morgen Rochard 358 · watercolor pastel · 11 × 12 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Morgen Rochard 358",
+          "watercolor pastel",
+          "11 × 12 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-rochard-martinez-original-2-1380f7efdb.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-rochard-martinez-original-3",
+      "kind": "older-work",
+      "title": "TJ Aixa Martinez 347",
+      "url": "https://tjm.art/products/older-work-rochard-martinez-original-3/",
+      "size_in": {
+        "w": 11.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Aixa Martinez 347 · watercolor pastel · 11 × 12 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Aixa Martinez 347",
+          "watercolor pastel",
+          "11 × 12 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-rochard-martinez-original-3-5227074de1.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-shore-figures-original-1",
+      "kind": "older-work",
+      "title": "TJ Figures on a Shore 179",
+      "url": "https://tjm.art/products/older-work-shore-figures-original-1/",
+      "size_in": {
+        "w": 4.25,
+        "h": 4.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Figures on a Shore 179 · watercolor pastel · 4.25 × 4 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Figures on a Shore 179",
+          "watercolor pastel",
+          "4.25 × 4 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-shore-figures-original-1-23f280514e.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-shore-figures-original-2",
+      "kind": "older-work",
+      "title": "TJ Wading Figure 181",
+      "url": "https://tjm.art/products/older-work-shore-figures-original-2/",
+      "size_in": {
+        "w": 4.25,
+        "h": 4.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Wading Figure 181 · watercolor pastel · 4.25 × 4 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Wading Figure 181",
+          "watercolor pastel",
+          "4.25 × 4 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-shore-figures-original-2-4a4191ef9e.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-shore-figures-original-3",
+      "kind": "older-work",
+      "title": "TJ Crab on Beach 180",
+      "url": "https://tjm.art/products/older-work-shore-figures-original-3/",
+      "size_in": {
+        "w": 4.25,
+        "h": 4.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Crab on Beach 180 · watercolor pastel · 4.25 × 4 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Crab on Beach 180",
+          "watercolor pastel",
+          "4.25 × 4 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-shore-figures-original-3-678f2c397c.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-yakes-todd-dickerson-original-1",
+      "kind": "older-work",
+      "title": "TJ Eric Yakes 330",
+      "url": "https://tjm.art/products/older-work-yakes-todd-dickerson-original-1/",
+      "size_in": {
+        "w": 9.0,
+        "h": 10.75,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Eric Yakes 330 · watercolor pastel · 9 × 10.75 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Eric Yakes 330",
+          "watercolor pastel",
+          "9 × 10.75 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-yakes-todd-dickerson-original-1-888b0edae0.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-yakes-todd-dickerson-original-2",
+      "kind": "older-work",
+      "title": "TJ Peter Todd 331",
+      "url": "https://tjm.art/products/older-work-yakes-todd-dickerson-original-2/",
+      "size_in": {
+        "w": 9.0,
+        "h": 10.75,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Peter Todd 331 · watercolor pastel · 9 × 10.75 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Peter Todd 331",
+          "watercolor pastel",
+          "9 × 10.75 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-yakes-todd-dickerson-original-2-7762ae9c5e.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "older-work-yakes-todd-dickerson-original-3",
+      "kind": "older-work",
+      "title": "TJ Desiree Dickerson 332",
+      "url": "https://tjm.art/products/older-work-yakes-todd-dickerson-original-3/",
+      "size_in": {
+        "w": 9.0,
+        "h": 10.75,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "TJ Desiree Dickerson 332 · watercolor pastel · 9 × 10.75 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "TJ Desiree Dickerson 332",
+          "watercolor pastel",
+          "9 × 10.75 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "default (brief); not stated on product page",
+      "image_url": "https://img.tjm.art/social/older-work-yakes-todd-dickerson-original-3-643ad96b37.jpg",
+      "image_source": "img.tjm.art/social (og:image jpg only; no display webp on page)",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-1",
+      "kind": "paul-murphy",
+      "title": "Tipi",
+      "url": "https://tjm.art/products/paul-murphy-painting-1/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Tipi · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Tipi",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7409-0fa34a2167-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-11",
+      "kind": "paul-murphy",
+      "title": "Puerto Rico Beach",
+      "url": "https://tjm.art/products/paul-murphy-painting-11/",
+      "size_in": {
+        "w": 18.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Puerto Rico Beach · watercolor on Arches cold press paper · 18 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Puerto Rico Beach",
+          "watercolor on Arches cold press paper",
+          "18 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7419-557227faa6-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-14",
+      "kind": "paul-murphy",
+      "title": "Eagle from Photo 1",
+      "url": "https://tjm.art/products/paul-murphy-painting-14/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Eagle from Photo 1 · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Eagle from Photo 1",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7422-aae68ef946-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-15",
+      "kind": "paul-murphy",
+      "title": "Eagle from Photo 2",
+      "url": "https://tjm.art/products/paul-murphy-painting-15/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Eagle from Photo 2 · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Eagle from Photo 2",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7423-5b3a3b962b-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-2",
+      "kind": "paul-murphy",
+      "title": "Leo/Bear Constellation",
+      "url": "https://tjm.art/products/paul-murphy-painting-2/",
+      "size_in": {
+        "w": 16.0,
+        "h": 36.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Leo/Bear Constellation · watercolor on Arches cold press paper · 16 × 36 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Leo/Bear Constellation",
+          "watercolor on Arches cold press paper",
+          "16 × 36 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7410-584f64c8bd-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-23",
+      "kind": "paul-murphy",
+      "title": "My Ego",
+      "url": "https://tjm.art/products/paul-murphy-painting-23/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "My Ego · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "My Ego",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7431-2474d1c98b-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-24",
+      "kind": "paul-murphy",
+      "title": "Beach Eglin AFB",
+      "url": "https://tjm.art/products/paul-murphy-painting-24/",
+      "size_in": {
+        "w": 11.0,
+        "h": 20.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Beach Eglin AFB · watercolor on Arches cold press paper · 11 × 20 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Beach Eglin AFB",
+          "watercolor on Arches cold press paper",
+          "11 × 20 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7432-208d146577-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-25",
+      "kind": "paul-murphy",
+      "title": "Spiritual Sedona Mountains 1",
+      "url": "https://tjm.art/products/paul-murphy-painting-25/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Spiritual Sedona Mountains 1 · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Spiritual Sedona Mountains 1",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7433-2454c1f02f-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-27",
+      "kind": "paul-murphy",
+      "title": "Spiritual Sedona Mountains 2",
+      "url": "https://tjm.art/products/paul-murphy-painting-27/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Spiritual Sedona Mountains 2 · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Spiritual Sedona Mountains 2",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7435-eaa5241813-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-28",
+      "kind": "paul-murphy",
+      "title": "Spiritual Sedona Mountains 3",
+      "url": "https://tjm.art/products/paul-murphy-painting-28/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Spiritual Sedona Mountains 3 · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Spiritual Sedona Mountains 3",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7436-d0f3d8e306-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-3",
+      "kind": "paul-murphy",
+      "title": "Rebel Loon/MN ICE Protest",
+      "url": "https://tjm.art/products/paul-murphy-painting-3/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Rebel Loon/MN ICE Protest · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Rebel Loon/MN ICE Protest",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7411-63efce1364-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-34",
+      "kind": "paul-murphy",
+      "title": "Spiritual Sedona Mountains 4",
+      "url": "https://tjm.art/products/paul-murphy-painting-34/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Spiritual Sedona Mountains 4 · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Spiritual Sedona Mountains 4",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7442-285a0903a5-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-35",
+      "kind": "paul-murphy",
+      "title": "Spiritual Sedona Mountains 5",
+      "url": "https://tjm.art/products/paul-murphy-painting-35/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Spiritual Sedona Mountains 5 · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Spiritual Sedona Mountains 5",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7443-24dfc6ae02-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-38",
+      "kind": "paul-murphy",
+      "title": "Spiritual Sedona Mountains 6",
+      "url": "https://tjm.art/products/paul-murphy-painting-38/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Spiritual Sedona Mountains 6 · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Spiritual Sedona Mountains 6",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7446-542b8b7c1b-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-39",
+      "kind": "paul-murphy",
+      "title": "Spiritual Sedona Mountains 7",
+      "url": "https://tjm.art/products/paul-murphy-painting-39/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Spiritual Sedona Mountains 7 · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Spiritual Sedona Mountains 7",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7447-e980d52fb3-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-40",
+      "kind": "paul-murphy",
+      "title": "Spiritual Sedona Mountains 8",
+      "url": "https://tjm.art/products/paul-murphy-painting-40/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Spiritual Sedona Mountains 8 · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Spiritual Sedona Mountains 8",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7448-f5733b0a94-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-41",
+      "kind": "paul-murphy",
+      "title": "Spiritual Sedona Mountains 9",
+      "url": "https://tjm.art/products/paul-murphy-painting-41/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Spiritual Sedona Mountains 9 · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Spiritual Sedona Mountains 9",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7449-5cad476c77-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-43",
+      "kind": "paul-murphy",
+      "title": "Spiritual Sedona Mountains 10",
+      "url": "https://tjm.art/products/paul-murphy-painting-43/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Spiritual Sedona Mountains 10 · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Spiritual Sedona Mountains 10",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7451-29fd462229-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-44",
+      "kind": "paul-murphy",
+      "title": "Spiritual Sedona Mountains 11",
+      "url": "https://tjm.art/products/paul-murphy-painting-44/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Spiritual Sedona Mountains 11 · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Spiritual Sedona Mountains 11",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7452-ed4f351eae-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-45",
+      "kind": "paul-murphy",
+      "title": "Spiritual Sedona Mountains 12",
+      "url": "https://tjm.art/products/paul-murphy-painting-45/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Spiritual Sedona Mountains 12 · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Spiritual Sedona Mountains 12",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7453-a44f71e3b3-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-51",
+      "kind": "paul-murphy",
+      "title": "Puerto Rico Waterfront",
+      "url": "https://tjm.art/products/paul-murphy-painting-51/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Puerto Rico Waterfront · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Puerto Rico Waterfront",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7459-b83c215765-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-55",
+      "kind": "paul-murphy",
+      "title": "Pyramid from Photo",
+      "url": "https://tjm.art/products/paul-murphy-painting-55/",
+      "size_in": {
+        "w": 12.0,
+        "h": 10.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Pyramid from Photo · watercolor on Arches cold press paper · 12 × 10 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Pyramid from Photo",
+          "watercolor on Arches cold press paper",
+          "12 × 10 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7463-30bf7a842e-1353.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-56",
+      "kind": "paul-murphy",
+      "title": "Peach Preserves",
+      "url": "https://tjm.art/products/paul-murphy-painting-56/",
+      "size_in": {
+        "w": 18.0,
+        "h": 18.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Peach Preserves · watercolor on Arches cold press paper · 18 × 18 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Peach Preserves",
+          "watercolor on Arches cold press paper",
+          "18 × 18 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7464-0e8746b5fb-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-57",
+      "kind": "paul-murphy",
+      "title": "Lady in Gold",
+      "url": "https://tjm.art/products/paul-murphy-painting-57/",
+      "size_in": {
+        "w": 16.0,
+        "h": 36.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Lady in Gold · watercolor on Arches cold press paper · 16 × 36 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Lady in Gold",
+          "watercolor on Arches cold press paper",
+          "16 × 36 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7466-a004ca0ed5-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-6",
+      "kind": "paul-murphy",
+      "title": "Son TJ Sedona",
+      "url": "https://tjm.art/products/paul-murphy-painting-6/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Son TJ Sedona · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Son TJ Sedona",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7414-8e4a2838e2-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-62",
+      "kind": "paul-murphy",
+      "title": "Waiting on Your Ship",
+      "url": "https://tjm.art/products/paul-murphy-painting-62/",
+      "size_in": {
+        "w": 17.0,
+        "h": 14.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Waiting on Your Ship · watercolor on Arches cold press paper · 17 × 14 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Waiting on Your Ship",
+          "watercolor on Arches cold press paper",
+          "17 × 14 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7471-4f2f69a7aa-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-63",
+      "kind": "paul-murphy",
+      "title": "Slot Canyon Face",
+      "url": "https://tjm.art/products/paul-murphy-painting-63/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Slot Canyon Face · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Slot Canyon Face",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7472-a572b95e53-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-64",
+      "kind": "paul-murphy",
+      "title": "Slot Canyon Arizona",
+      "url": "https://tjm.art/products/paul-murphy-painting-64/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Slot Canyon Arizona · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Slot Canyon Arizona",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7473-3c89a12cfa-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-65",
+      "kind": "paul-murphy",
+      "title": "Phoenix",
+      "url": "https://tjm.art/products/paul-murphy-painting-65/",
+      "size_in": {
+        "w": 16.0,
+        "h": 10.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Phoenix · watercolor on Arches cold press paper · 16 × 10 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Phoenix",
+          "watercolor on Arches cold press paper",
+          "16 × 10 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7474-463fba5d9c-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-7",
+      "kind": "paul-murphy",
+      "title": "Slot Canyon",
+      "url": "https://tjm.art/products/paul-murphy-painting-7/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Slot Canyon · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Slot Canyon",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7415-ee306ee6e3-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-72",
+      "kind": "paul-murphy",
+      "title": "Dancing Wolf on Moon",
+      "url": "https://tjm.art/products/paul-murphy-painting-72/",
+      "size_in": {
+        "w": 13.0,
+        "h": 20.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Dancing Wolf on Moon · watercolor on Arches cold press paper · 13 × 20 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Dancing Wolf on Moon",
+          "watercolor on Arches cold press paper",
+          "13 × 20 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7481-5a3cacb17d-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-73",
+      "kind": "paul-murphy",
+      "title": "Sunset Tree",
+      "url": "https://tjm.art/products/paul-murphy-painting-73/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Sunset Tree · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Sunset Tree",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7482-dfc3cb6316-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-74",
+      "kind": "paul-murphy",
+      "title": "Music Notes of the Universe",
+      "url": "https://tjm.art/products/paul-murphy-painting-74/",
+      "size_in": {
+        "w": 13.0,
+        "h": 15.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Music Notes of the Universe · watercolor on Arches cold press paper · 13 × 15 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Music Notes of the Universe",
+          "watercolor on Arches cold press paper",
+          "13 × 15 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7483-8b73fe88bb-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-8",
+      "kind": "paul-murphy",
+      "title": "Arizona Slot Cave",
+      "url": "https://tjm.art/products/paul-murphy-painting-8/",
+      "size_in": {
+        "w": 10.0,
+        "h": 12.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Arizona Slot Cave · watercolor on Arches cold press paper · 10 × 12 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Arizona Slot Cave",
+          "watercolor on Arches cold press paper",
+          "10 × 12 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7416-e5a91e0a1b-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-83",
+      "kind": "paul-murphy",
+      "title": "Soul Connections 1",
+      "url": "https://tjm.art/products/paul-murphy-painting-83/",
+      "size_in": {
+        "w": 8.0,
+        "h": 10.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Soul Connections 1 · watercolor on Arches cold press paper · 8 × 10 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Soul Connections 1",
+          "watercolor on Arches cold press paper",
+          "8 × 10 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7492-63df2f1329-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-84",
+      "kind": "paul-murphy",
+      "title": "Soul Connections 2",
+      "url": "https://tjm.art/products/paul-murphy-painting-84/",
+      "size_in": {
+        "w": 8.0,
+        "h": 10.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Soul Connections 2 · watercolor on Arches cold press paper · 8 × 10 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Soul Connections 2",
+          "watercolor on Arches cold press paper",
+          "8 × 10 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7493-3c3ea31e09-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-85",
+      "kind": "paul-murphy",
+      "title": "Soul Connections 3",
+      "url": "https://tjm.art/products/paul-murphy-painting-85/",
+      "size_in": {
+        "w": 8.0,
+        "h": 10.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Soul Connections 3 · watercolor on Arches cold press paper · 8 × 10 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Soul Connections 3",
+          "watercolor on Arches cold press paper",
+          "8 × 10 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7494-b3703fb35e-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "paul-murphy-painting-86",
+      "kind": "paul-murphy",
+      "title": "My Tipi, on Grand Traverse Bay",
+      "url": "https://tjm.art/products/paul-murphy-painting-86/",
+      "size_in": {
+        "w": 13.0,
+        "h": 20.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "My Tipi, on Grand Traverse Bay · watercolor on Arches cold press paper · 13 × 20 in",
+        "artist": "Paul Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "My Tipi, on Grand Traverse Bay",
+          "watercolor on Arches cold press paper",
+          "13 × 20 in"
+        ]
+      },
+      "medium": "watercolor on Arches cold press paper",
+      "medium_source": "TJ confirmed Oct 22 2026",
+      "image_url": "https://img.tjm.art/display/img-7496-2761ee4fe6-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "strawberry-point-1",
+      "kind": "strawberry-point",
+      "title": "Strawberry Point Backpacking Trip #1",
+      "url": "https://tjm.art/products/strawberry-point-1/",
+      "size_in": {
+        "w": 15.0,
+        "h": 15.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Strawberry Point Backpacking Trip #1 · watercolor pastel · 15 × 15 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Strawberry Point Backpacking Trip #1",
+          "watercolor pastel",
+          "15 × 15 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "product page",
+      "image_url": "https://img.tjm.art/display/strawberry-point-1-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "strawberry-point-10",
+      "kind": "strawberry-point",
+      "title": "Strawberry Point Backpacking Trip #10",
+      "url": "https://tjm.art/products/strawberry-point-10/",
+      "size_in": {
+        "w": 7.5,
+        "h": 7.5,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Strawberry Point Backpacking Trip #10 · watercolor pastel · 7.5 × 7.5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Strawberry Point Backpacking Trip #10",
+          "watercolor pastel",
+          "7.5 × 7.5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "product page",
+      "image_url": "https://img.tjm.art/display/strawberry-point-10-4c8f16e5-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "strawberry-point-11",
+      "kind": "strawberry-point",
+      "title": "Strawberry Point Backpacking Trip #11",
+      "url": "https://tjm.art/products/strawberry-point-11/",
+      "size_in": {
+        "w": 9.75,
+        "h": 9.75,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Strawberry Point Backpacking Trip #11 · watercolor pastel · 9.75 × 9.75 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Strawberry Point Backpacking Trip #11",
+          "watercolor pastel",
+          "9.75 × 9.75 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "product page",
+      "image_url": "https://img.tjm.art/display/strawberry-point-11-59634d47-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "strawberry-point-12",
+      "kind": "strawberry-point",
+      "title": "Strawberry Point Backpacking Trip #12",
+      "url": "https://tjm.art/products/strawberry-point-12/",
+      "size_in": {
+        "w": 9.75,
+        "h": 9.75,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Strawberry Point Backpacking Trip #12 · watercolor pastel · 9.75 × 9.75 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Strawberry Point Backpacking Trip #12",
+          "watercolor pastel",
+          "9.75 × 9.75 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "product page",
+      "image_url": "https://img.tjm.art/display/strawberry-point-12-36e436a0-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "strawberry-point-13",
+      "kind": "strawberry-point",
+      "title": "Strawberry Point Backpacking Trip #13",
+      "url": "https://tjm.art/products/strawberry-point-13/",
+      "size_in": {
+        "w": 9.75,
+        "h": 9.75,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Strawberry Point Backpacking Trip #13 · watercolor pastel · 9.75 × 9.75 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Strawberry Point Backpacking Trip #13",
+          "watercolor pastel",
+          "9.75 × 9.75 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "product page",
+      "image_url": "https://img.tjm.art/display/strawberry-point-13-e933e140-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "strawberry-point-14",
+      "kind": "strawberry-point",
+      "title": "Strawberry Point Backpacking Trip #14",
+      "url": "https://tjm.art/products/strawberry-point-14/",
+      "size_in": {
+        "w": 9.75,
+        "h": 9.75,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Strawberry Point Backpacking Trip #14 · watercolor pastel · 9.75 × 9.75 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Strawberry Point Backpacking Trip #14",
+          "watercolor pastel",
+          "9.75 × 9.75 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "product page",
+      "image_url": "https://img.tjm.art/display/strawberry-point-14-b2280ae9-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "strawberry-point-15",
+      "kind": "strawberry-point",
+      "title": "Strawberry Point Backpacking Trip #15",
+      "url": "https://tjm.art/products/strawberry-point-15/",
+      "size_in": {
+        "w": 7.5,
+        "h": 7.5,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Strawberry Point Backpacking Trip #15 · watercolor pastel · 7.5 × 7.5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Strawberry Point Backpacking Trip #15",
+          "watercolor pastel",
+          "7.5 × 7.5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "product page",
+      "image_url": "https://img.tjm.art/display/strawberry-point-15-073f92b9-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "strawberry-point-2",
+      "kind": "strawberry-point",
+      "title": "Strawberry Point Backpacking Trip #2",
+      "url": "https://tjm.art/products/strawberry-point-2/",
+      "size_in": {
+        "w": 15.0,
+        "h": 15.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Strawberry Point Backpacking Trip #2 · watercolor pastel · 15 × 15 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Strawberry Point Backpacking Trip #2",
+          "watercolor pastel",
+          "15 × 15 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "product page",
+      "image_url": "https://img.tjm.art/display/strawberry-point-2-d1401313-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "strawberry-point-3",
+      "kind": "strawberry-point",
+      "title": "Strawberry Point Backpacking Trip #3",
+      "url": "https://tjm.art/products/strawberry-point-3/",
+      "size_in": {
+        "w": 15.0,
+        "h": 15.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Strawberry Point Backpacking Trip #3 · watercolor pastel · 15 × 15 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Strawberry Point Backpacking Trip #3",
+          "watercolor pastel",
+          "15 × 15 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "product page",
+      "image_url": "https://img.tjm.art/display/strawberry-point-3-3ad850c1-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "strawberry-point-4",
+      "kind": "strawberry-point",
+      "title": "Strawberry Point Backpacking Trip #4",
+      "url": "https://tjm.art/products/strawberry-point-4/",
+      "size_in": {
+        "w": 5.0,
+        "h": 5.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Strawberry Point Backpacking Trip #4 · watercolor pastel · 5 × 5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Strawberry Point Backpacking Trip #4",
+          "watercolor pastel",
+          "5 × 5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "product page",
+      "image_url": "https://img.tjm.art/display/strawberry-point-4-897857fb-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "strawberry-point-5",
+      "kind": "strawberry-point",
+      "title": "Strawberry Point Backpacking Trip #5",
+      "url": "https://tjm.art/products/strawberry-point-5/",
+      "size_in": {
+        "w": 5.0,
+        "h": 5.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Strawberry Point Backpacking Trip #5 · watercolor pastel · 5 × 5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Strawberry Point Backpacking Trip #5",
+          "watercolor pastel",
+          "5 × 5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "product page",
+      "image_url": "https://img.tjm.art/display/strawberry-point-5-7592f1f1-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "strawberry-point-6",
+      "kind": "strawberry-point",
+      "title": "Strawberry Point Backpacking Trip #6",
+      "url": "https://tjm.art/products/strawberry-point-6/",
+      "size_in": {
+        "w": 5.0,
+        "h": 5.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Strawberry Point Backpacking Trip #6 · watercolor pastel · 5 × 5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Strawberry Point Backpacking Trip #6",
+          "watercolor pastel",
+          "5 × 5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "product page",
+      "image_url": "https://img.tjm.art/display/strawberry-point-6-17e3a2c3-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "strawberry-point-7",
+      "kind": "strawberry-point",
+      "title": "Strawberry Point Backpacking Trip #7",
+      "url": "https://tjm.art/products/strawberry-point-7/",
+      "size_in": {
+        "w": 5.0,
+        "h": 5.0,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Strawberry Point Backpacking Trip #7 · watercolor pastel · 5 × 5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Strawberry Point Backpacking Trip #7",
+          "watercolor pastel",
+          "5 × 5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "product page",
+      "image_url": "https://img.tjm.art/display/strawberry-point-7-2dff5146-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "strawberry-point-8",
+      "kind": "strawberry-point",
+      "title": "Strawberry Point Backpacking Trip #8",
+      "url": "https://tjm.art/products/strawberry-point-8/",
+      "size_in": {
+        "w": 7.5,
+        "h": 7.5,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Strawberry Point Backpacking Trip #8 · watercolor pastel · 7.5 × 7.5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Strawberry Point Backpacking Trip #8",
+          "watercolor pastel",
+          "7.5 × 7.5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "product page",
+      "image_url": "https://img.tjm.art/display/strawberry-point-8-fa71535b-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    },
+    {
+      "book_caption_measurement": null,
+      "slug": "strawberry-point-9",
+      "kind": "strawberry-point",
+      "title": "Strawberry Point Backpacking Trip #9",
+      "url": "https://tjm.art/products/strawberry-point-9/",
+      "size_in": {
+        "w": 7.5,
+        "h": 7.5,
+        "unit": "in",
+        "source": "#309 comment 6352709826 (W x H)"
+      },
+      "plaque": {
+        "text": "Strawberry Point Backpacking Trip #9 · watercolor pastel · 7.5 × 7.5 in",
+        "artist": "TJ Murphy",
+        "source": "TJ via Studio manager Oct 22 2026: title, medium and size",
+        "lines": [
+          "Strawberry Point Backpacking Trip #9",
+          "watercolor pastel",
+          "7.5 × 7.5 in"
+        ]
+      },
+      "medium": "watercolor pastel",
+      "medium_source": "product page",
+      "image_url": "https://img.tjm.art/display/strawberry-point-9-0a07239b-1600.webp",
+      "image_source": "img.tjm.art/display",
+      "flags": []
+    }
+  ],
+  "group_pages_not_hung": [
+    {
+      "title": "Ammous and Livera",
+      "url": "https://tjm.art/products/older-work-ammous-livera/",
+      "note": "multi-painting group/set page; each piece has its own record, do not hang"
+    },
+    {
+      "title": "Fernandez, Moran and Pysh",
+      "url": "https://tjm.art/products/older-work-fernandez-moran-pysh/",
+      "note": "multi-painting group/set page; each piece has its own record, do not hang"
+    },
+    {
+      "title": "Figen, PNut and Joey Swoll",
+      "url": "https://tjm.art/products/older-work-figen-pnut-swoll/",
+      "note": "multi-painting group/set page; each piece has its own record, do not hang"
+    },
+    {
+      "title": "Forest Triptych",
+      "url": "https://tjm.art/products/older-work-forest-triptych/",
+      "note": "multi-painting group/set page; each piece has its own record, do not hang"
+    },
+    {
+      "title": "Hayek, Stark, Gomez and El Bawab",
+      "url": "https://tjm.art/products/older-work-hayek-stark-gomez-el-bawab/",
+      "note": "multi-painting group/set page; each piece has its own record, do not hang"
+    },
+    {
+      "title": "Lake, Hillside and Color Wheel",
+      "url": "https://tjm.art/products/older-work-lake-hillside-color-wheel/",
+      "note": "multi-painting group/set page; each piece has its own record, do not hang"
+    },
+    {
+      "title": "The Legend of Billy Buff",
+      "url": "https://tjm.art/products/older-work-legend-of-billy-buff/",
+      "note": "multi-painting group/set page; each piece has its own record, do not hang"
+    },
+    {
+      "title": "Mountain Layers Studies",
+      "url": "https://tjm.art/products/older-work-mountain-layers/",
+      "note": "multi-painting group/set page; each piece has its own record, do not hang"
+    },
+    {
+      "title": "Pitcher Still Lifes",
+      "url": "https://tjm.art/products/older-work-pitchers/",
+      "note": "multi-painting group/set page; each piece has its own record, do not hang"
+    },
+    {
+      "title": "Parah, José, Antonopoulos and #319",
+      "url": "https://tjm.art/products/older-work-portraits-319-329/",
+      "note": "multi-painting group/set page; each piece has its own record, do not hang"
+    },
+    {
+      "title": "Provibes Reunion Sandwich Portraits",
+      "url": "https://tjm.art/products/older-work-provibes-sandwiches/",
+      "note": "multi-painting group/set page; each piece has its own record, do not hang"
+    },
+    {
+      "title": "Ridge Strip Studies (unindexed)",
+      "url": "https://tjm.art/products/older-work-ridge-strips-unindexed/",
+      "note": "multi-painting group/set page; each piece has its own record, do not hang"
+    },
+    {
+      "title": "Pierre Rochard, Morgen Rochard and Aixa Martinez",
+      "url": "https://tjm.art/products/older-work-rochard-martinez/",
+      "note": "multi-painting group/set page; each piece has its own record, do not hang"
+    },
+    {
+      "title": "Figures on a Shore Triptych",
+      "url": "https://tjm.art/products/older-work-shore-figures/",
+      "note": "multi-painting group/set page; each piece has its own record, do not hang"
+    },
+    {
+      "title": "Yakes, Todd and Dickerson",
+      "url": "https://tjm.art/products/older-work-yakes-todd-dickerson/",
+      "note": "multi-painting group/set page; each piece has its own record, do not hang"
+    },
+    {
+      "title": "Strawberry Point Backpacking Trip #4–7",
+      "url": "https://tjm.art/products/strawberry-point-set-a/",
+      "note": "multi-painting group/set page; each piece has its own record, do not hang"
+    },
+    {
+      "title": "Strawberry Point Backpacking Trip #8–10",
+      "url": "https://tjm.art/products/strawberry-point-set-b/",
+      "note": "multi-painting group/set page; each piece has its own record, do not hang"
+    },
+    {
+      "title": "Strawberry Point Backpacking Trip #11–14",
+      "url": "https://tjm.art/products/strawberry-point-set-c/",
+      "note": "multi-painting group/set page; each piece has its own record, do not hang"
+    }
+  ]
+}

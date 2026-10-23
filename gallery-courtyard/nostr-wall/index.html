@@ -1,0 +1,10 @@
+<!doctype html><meta charset="utf-8"><title>Nostr wall test</title>
+<body style="background:#222;color:#ddd;font-family:system-ui">
+<h1>Nostr wall test</h1><div id="list">Loading…</div><div id="cv"></div>
+<script type="module">
+import { getNotes, renderNotesToCanvas } from './nostr-wall.js';
+const notes = await getNotes({ limit: 10 });
+const list = document.getElementById('list'); list.textContent = '';
+for (const n of notes) { const a = document.createElement('a'); a.href = n.url; a.textContent = `${new Date(n.createdAt*1000).toLocaleString()} ⚡${n.zaps} — ${n.content.slice(0,80)}`; a.style.display='block'; list.append(a); }
+document.getElementById('cv').append(renderNotesToCanvas(notes, { width: 768, height: 768 }));
+</script>

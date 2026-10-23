@@ -1,0 +1,79 @@
+{
+  "card": "studio-tracker #298",
+  "generated": "2026-10-22",
+  "currency": "USD",
+  "note": "In-game prices only (TJ's wishlist from #298). The live tjm.art shop and checkout still list all 7 as not for sale as of this check (GET only), so these must not be shown as buyable until the shop listing is updated.",
+  "items": [
+    {
+      "slug": "book-art-e4bbfe556c3c847d9c90",
+      "title": "Nick Szabo @NickSzabo4",
+      "url": "https://tjm.art/products/book-art-e4bbfe556c3c847d9c90/",
+      "price": 1000,
+      "basis": "TJ, #298 body (1:33 PM PT)"
+    },
+    {
+      "slug": "book-art-0735a5fb0eb1c613b658",
+      "title": "Michael Saylor @saylor",
+      "url": "https://tjm.art/products/book-art-0735a5fb0eb1c613b658/",
+      "price": 1000,
+      "basis": "TJ, #298 body (1:33 PM PT)"
+    },
+    {
+      "slug": "book-art-ff6db6906f0ed48ccc3a",
+      "title": "Sedona Monuments",
+      "url": "https://tjm.art/products/book-art-ff6db6906f0ed48ccc3a/",
+      "price": 300,
+      "basis": "TJ, #298 comment 1:35 PM PT (screenshot; speech-to-text garbled the title)"
+    },
+    {
+      "slug": "book-art-65bf0ecd265f1fd96e4a",
+      "title": "Sedona: Bell Rock 1",
+      "url": "https://tjm.art/products/book-art-65bf0ecd265f1fd96e4a/",
+      "price": 300,
+      "basis": "TJ, #298 comment 1:37 PM PT: same price as Sedona Monuments"
+    },
+    {
+      "slug": "archived-painting-367",
+      "title": "Josie, The Redheaded Libertarian",
+      "url": "https://tjm.art/products/archived-painting-367/",
+      "price": 300,
+      "basis": "TJ, #298 comment 1:37 PM PT"
+    },
+    {
+      "slug": "book-art-b7a9cd259d8ac51a236b",
+      "title": "Rescued Hummingbird",
+      "url": "https://tjm.art/products/book-art-b7a9cd259d8ac51a236b/",
+      "price": 200,
+      "basis": "TJ, #298 comment 1:35 PM PT; reconfirmed in 3:29 PM correction"
+    },
+    {
+      "slug": "book-art-7a498f39e7a66a2e8eb5",
+      "title": "Nico @BITVOLT",
+      "url": "https://tjm.art/products/book-art-7a498f39e7a66a2e8eb5/",
+      "price": 200,
+      "basis": "TJ confirmed $200 on Oct 22 2026",
+      "working": {
+        "nico_size_in": "15 x 12 (book caption 'Nico @BITVOLT 15 x 12', watercolor-portraits p.51; unit not stated in the book, treated as inches; the shop has no size field for it)",
+        "same_size_priced_portraits": [
+          {
+            "title": "Dorian Nakamoto",
+            "slug": "painting-portrait-in-gold",
+            "size_in": "12 x 15 (W x H)",
+            "live_price": 200
+          },
+          {
+            "title": "Chase Toole",
+            "slug": "painting-portrait-in-green",
+            "size_in": "12 x 15 (W x H)",
+            "live_price": 200
+          }
+        ],
+        "unpriced_same_size": [
+          "MJ (painting-portrait-in-blue-light, 15 x 12, not for sale)",
+          "Girl Tuning Guitar (painting-guitarist, 15 x 12, not for sale)"
+        ],
+        "result": "12 x 15 and 15 x 12 are the same size rotated; both priced matches are $200 on the live shop, so Nico = $200."
+      }
+    }
+  ]
+}

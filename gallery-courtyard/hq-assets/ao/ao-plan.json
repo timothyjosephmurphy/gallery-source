@@ -1,0 +1,13 @@
+{
+ "note": "ao-plan-*.webp covers world x in [x0,x0+size], z in [z0,z0+size] metres. Sample u=(x-x0)/size, v=(z-z0)/size with texture.flipY=false (image row 0 = z0). White=unoccluded, darker=occluded; use as multiply (aoMap with uv remap, a planar-projected overlay, or onBeforeCompile).",
+ "x0": -42.0,
+ "z0": -29.0,
+ "size": 72.0,
+ "px": {
+  "floor_desktop": 2048,
+  "floor_phone": 1024,
+  "ceiling_desktop": 1024,
+  "ceiling_phone": 512
+ },
+ "recipe": "walls rasterised (0.16 m) from play-tags makeWorld(layout.tags); occlusion=1-k1*exp(-d/0.28)-k2*exp(-d/1.25)-k3*exp(-d/4); rooms k=(.60,.24,.10), open courts k=(.40,.12,0); ceiling k=(.50,.22,.10) over rooms only"
+}

@@ -1,0 +1,73 @@
+{
+ "source": "https://tjm.art/testimonials/api/approved",
+ "fetchedAt": "2026-10-23T19:59:22.391Z",
+ "updatedAt": "2026-10-20T16:33:05.126Z",
+ "items": [
+  {
+   "id": "t-20261018-21557b4ee6b8",
+   "name": "Jack M.",
+   "city": "Kent, OH",
+   "pin": [
+    41.15,
+    -81.36
+   ],
+   "painting": "Brothers Hike Mt. Rainer",
+   "quote": "This was a commission from TJ Murphy from a hike that we did together on Mt. Rainier. This was a large format watercolor painting that incorporates coordinating colors that have a unique and special look in multiple lighting situations. In the pictures, it is framed under museum quality glass for the best viewing experience and preservation."
+  },
+  {
+   "id": "t-20261014-ee936c2ac75b",
+   "name": "Paul Murphy",
+   "city": "Minneapolis, MN",
+   "pin": [
+    44.98,
+    -93.27
+   ],
+   "painting": "Father & Son",
+   "quote": "This portrait painting is from our road trip across the country. TJs ability to capture the eyes is remarkable. It hangs on a wall in my living room and warms my heart every time I walk by it."
+  },
+  {
+   "id": "t-20261009-2e99f4b2bfb2",
+   "name": "Paul Murphy",
+   "city": "Minneapolis, MN",
+   "pin": [
+    44.98,
+    -93.27
+   ],
+   "painting": "Reaching Through the Clouds",
+   "quote": "This painting inspires me to look up through the clouds, beyond what you think your limitations are."
+  },
+  {
+   "id": "t-20261009-fc4afdefa9e1",
+   "name": "Brian D",
+   "city": "Seattle, WA",
+   "pin": [
+    47.6,
+    -122.33
+   ],
+   "painting": "Cormorant Presiding over Sunset on Puget Sound",
+   "quote": "I provided TJ with one of my favorite scenes from living in Seattle that I try to see as much as possible: sunset over the Olympics in the Summer. He turned it into a beautiful waterproof mural for our home patio. Every day I love seeing it, and it brings a part of our PNW landscape into my home. We have other art pieces from him as well with similar scenes, but this one really stands out and made our outdoor space r"
+  },
+  {
+   "id": "t-20261008-3c951fb12421",
+   "name": "A collector",
+   "city": "Melbourne ,Florida",
+   "pin": [
+    28.08,
+    -80.61
+   ],
+   "painting": "Ukrainian girl with flower headress",
+   "quote": "This painting was purchased via an auction from which the proceeds helped Ukrainians in need. For me it represents beauty and innocence. It is located in one of the guest rooms in my home. Many friends and family have commented on how lovely the painting is, the sweet and gentle features of the girls face, and the pleasing color palette."
+  },
+  {
+   "id": "t-20261008-b0e8eb1e1530",
+   "name": "Paul Murphy",
+   "city": "St Anthony, MN",
+   "pin": [
+    45.69,
+    -94.61
+   ],
+   "painting": "Sunset El Salvador",
+   "quote": "This paint hangs in my living room. It inspires me to continue my own pursuit in water color. It’s statement brings me to the beauty found in the nature of our universe."
+  }
+ ]
+}

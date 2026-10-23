@@ -1,0 +1,141 @@
+{
+ "note": "#299 shared split list: an image that shows several paintings is replaced on the wall by one frame per shop product (each product's own shop photo, listed size, own plaque and buy state). Galleries apply it at build time; the composite products stay in the shop untouched.",
+ "splits": [
+  {
+   "from": "older-work-bitcoin-voices",
+   "parts": [
+    {
+     "id": "older-work-bitcoin-voices-original-1",
+     "title": "TJ Jack Mallers",
+     "url": "https://tjm.art/products/older-work-bitcoin-voices-original-1/",
+     "img": "tjm/wall-paintings/older-work-bitcoin-voices-original-1-b220032d08-960.webp",
+     "hi": "https://tjm.art/wall-paintings/older-work-bitcoin-voices-original-1-b220032d08-960.webp",
+     "listedIn": [
+      7.25,
+      11.75
+     ],
+     "w": 0.1493,
+     "h": 0.2984,
+     "imagePx": [
+      1078,
+      2155
+     ],
+     "aspectNote": "photo 0.500 vs listed 0.617: fitted inside the listed size, not stretched"
+    },
+    {
+     "id": "older-work-bitcoin-voices-original-2",
+     "title": "TJ Natalie Brunell",
+     "url": "https://tjm.art/products/older-work-bitcoin-voices-original-2/",
+     "img": "tjm/wall-paintings/older-work-bitcoin-voices-original-2-4ed30b3321-960.webp",
+     "hi": "https://tjm.art/wall-paintings/older-work-bitcoin-voices-original-2-4ed30b3321-960.webp",
+     "listedIn": [
+      7.25,
+      11.75
+     ],
+     "w": 0.1636,
+     "h": 0.2984,
+     "imagePx": [
+      1380,
+      2518
+     ],
+     "aspectNote": "photo 0.548 vs listed 0.617: fitted inside the listed size, not stretched"
+    },
+    {
+     "id": "older-work-bitcoin-voices-original-3",
+     "title": "TJ Peter McCormack",
+     "url": "https://tjm.art/products/older-work-bitcoin-voices-original-3/",
+     "img": "tjm/wall-paintings/older-work-bitcoin-voices-original-3-744a8ac405-960.webp",
+     "hi": "https://tjm.art/wall-paintings/older-work-bitcoin-voices-original-3-744a8ac405-960.webp",
+     "listedIn": [
+      12,
+      16
+     ],
+     "w": 0.2564,
+     "h": 0.4064,
+     "imagePx": [
+      1462,
+      2317
+     ],
+     "aspectNote": "photo 0.631 vs listed 0.750: fitted inside the listed size, not stretched"
+    },
+    {
+     "id": "older-work-bitcoin-voices-original-4",
+     "existing": true
+    }
+   ]
+  },
+  {
+   "from": "older-work-nakamoto-hayek",
+   "parts": [
+    {
+     "id": "older-work-nakamoto-hayek-original-1",
+     "existing": true
+    },
+    {
+     "id": "older-work-nakamoto-hayek-original-2",
+     "title": "TJ Hayek 339",
+     "url": "https://tjm.art/products/older-work-nakamoto-hayek-original-2/",
+     "img": "tjm/wall-paintings/older-work-nakamoto-hayek-original-2-ac8ceaa163-960.webp",
+     "hi": "https://tjm.art/wall-paintings/older-work-nakamoto-hayek-original-2-ac8ceaa163-960.webp",
+     "listedIn": [
+      11,
+      12
+     ],
+     "w": 0.2678,
+     "h": 0.3048,
+     "imagePx": [
+      1600,
+      1821
+     ],
+     "aspectNote": null
+    }
+   ]
+  },
+  {
+   "from": "older-work-sunset-ridge-strips",
+   "parts": [
+    {
+     "id": "older-work-sunset-ridge-strips-original-1",
+     "existing": true
+    },
+    {
+     "id": "older-work-sunset-ridge-strips-original-2",
+     "existing": true
+    },
+    {
+     "id": "older-work-sunset-ridge-strips-original-3",
+     "existing": true
+    },
+    {
+     "id": "older-work-sunset-ridge-strips-original-4",
+     "existing": true
+    },
+    {
+     "id": "older-work-sunset-ridge-strips-original-5",
+     "existing": true
+    },
+    {
+     "id": "older-work-sunset-ridge-strips-original-6",
+     "existing": true
+    }
+   ]
+  },
+  {
+   "from": "older-work-beach-sunsets",
+   "parts": [
+    {
+     "id": "older-work-beach-sunsets-original-1",
+     "existing": true
+    },
+    {
+     "id": "older-work-beach-sunsets-original-2",
+     "existing": true
+    },
+    {
+     "id": "older-work-beach-sunsets-original-3",
+     "existing": true
+    }
+   ]
+  }
+ ]
+}

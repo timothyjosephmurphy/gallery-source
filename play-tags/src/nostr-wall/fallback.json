@@ -1,0 +1,9 @@
+[
+  {
+    "id": "9073d02139427606a97c6d14968e2dbe3fdb803f9e842a57b5ee64dfc8d97e02",
+    "createdAt": 1792615149,
+    "content": "I made my 3D gallery code public today. It's called Relay Gate.\n\nRight now it reads an artist's website and pulls in the work. Next it will hang that work in a gallery you can walk through, with gates to other artists' galleries, over Nostr.\n\nEarly days, MIT licensed.\nhttps://github.com/timothyjosephmurphy/relaygate\n\nWalk my gallery: https://tjm.art/play",
+    "zaps": 0,
+    "url": "https://njump.me/note1jpeaqgfegfmqd2tud52fdr3dhclahqpln6zz54a4aejdljxe0cpq8tgkc7"
+  }
+]

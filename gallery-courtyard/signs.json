@@ -1,0 +1,169 @@
+{
+ "coords": "floor texture: center (1024,1024) of 2048; apothem = 0.47*2048 px; angle 0 = +x, increasing toward +y (clockwise on screen)",
+ "signs": [
+  {
+   "id": "room-01",
+   "label": "Landscapes \u00b7 Tahoma / Rainier \u00b7 Denny Blaine",
+   "text": "Landscapes",
+   "file": "sign-room-01-landscapes.webp",
+   "angleDeg": 15,
+   "radiusFracApothem": 0.8,
+   "bandFracApothem": 0.12,
+   "spanDeg": 24.0,
+   "radiusPxFloor2048": 770.0,
+   "note": "angle from center, 0=+x (texture right), increasing toward +y (texture down); texture top = outward"
+  },
+  {
+   "id": "room-02",
+   "label": "Brekkie Bitcoin B \u00b7 Bounty of Satoshi \u00b7 Bitcoiners",
+   "text": "Brekkie Bitcoin B",
+   "file": "sign-room-02-brekkie-bitcoin-b.webp",
+   "angleDeg": 45,
+   "radiusFracApothem": 0.8,
+   "bandFracApothem": 0.12,
+   "spanDeg": 24.0,
+   "radiusPxFloor2048": 770.0,
+   "note": "angle from center, 0=+x (texture right), increasing toward +y (texture down); texture top = outward"
+  },
+  {
+   "id": "room-03",
+   "label": "Mexico \u00b7 Pacific Northwest",
+   "text": "Mexico",
+   "file": "sign-room-03-mexico.webp",
+   "angleDeg": 75,
+   "radiusFracApothem": 0.8,
+   "bandFracApothem": 0.12,
+   "spanDeg": 24.0,
+   "radiusPxFloor2048": 770.0,
+   "note": "angle from center, 0=+x (texture right), increasing toward +y (texture down); texture top = outward"
+  },
+  {
+   "id": "room-04",
+   "label": "Festival \u00b7 Bass Coast \u00b7 Burning Man",
+   "text": "Festival",
+   "file": "sign-room-04-festival.webp",
+   "angleDeg": 105,
+   "radiusFracApothem": 0.8,
+   "bandFracApothem": 0.12,
+   "spanDeg": 24.0,
+   "radiusPxFloor2048": 770.0,
+   "note": "angle from center, 0=+x (texture right), increasing toward +y (texture down); texture top = outward"
+  },
+  {
+   "id": "room-05",
+   "label": "Family",
+   "text": "Family",
+   "file": "sign-room-05-family.webp",
+   "angleDeg": 135,
+   "radiusFracApothem": 0.8,
+   "bandFracApothem": 0.12,
+   "spanDeg": 24.0,
+   "radiusPxFloor2048": 770.0,
+   "note": "angle from center, 0=+x (texture right), increasing toward +y (texture down); texture top = outward"
+  },
+  {
+   "id": "room-06",
+   "label": "Catherine dance series \u00b7 Portrait",
+   "text": "Catherine dance series",
+   "file": "sign-room-06-catherine-dance-series.webp",
+   "angleDeg": 165,
+   "radiusFracApothem": 0.8,
+   "bandFracApothem": 0.12,
+   "spanDeg": 24.0,
+   "radiusPxFloor2048": 770.0,
+   "note": "angle from center, 0=+x (texture right), increasing toward +y (texture down); texture top = outward"
+  },
+  {
+   "id": "room-07",
+   "label": "Bitcoiners",
+   "text": "Bitcoiners",
+   "file": "sign-room-07-bitcoiners.webp",
+   "angleDeg": 195,
+   "radiusFracApothem": 0.8,
+   "bandFracApothem": 0.12,
+   "spanDeg": 24.0,
+   "radiusPxFloor2048": 770.0,
+   "note": "angle from center, 0=+x (texture right), increasing toward +y (texture down); texture top = outward"
+  },
+  {
+   "id": "room-08",
+   "label": "El Salvador \u00b7 Sunset",
+   "text": "El Salvador",
+   "file": "sign-room-08-el-salvador.webp",
+   "angleDeg": 225,
+   "radiusFracApothem": 0.8,
+   "bandFracApothem": 0.12,
+   "spanDeg": 24.0,
+   "radiusPxFloor2048": 770.0,
+   "note": "angle from center, 0=+x (texture right), increasing toward +y (texture down); texture top = outward"
+  },
+  {
+   "id": "room-09",
+   "label": "Sunset",
+   "text": "Sunset",
+   "file": "sign-room-09-sunset.webp",
+   "angleDeg": 255,
+   "radiusFracApothem": 0.8,
+   "bandFracApothem": 0.12,
+   "spanDeg": 24.0,
+   "radiusPxFloor2048": 770.0,
+   "note": "angle from center, 0=+x (texture right), increasing toward +y (texture down); texture top = outward"
+  },
+  {
+   "id": "room-10",
+   "label": "Bitcoiners",
+   "text": "Bitcoiners",
+   "file": "sign-room-10-bitcoiners.webp",
+   "angleDeg": 285,
+   "radiusFracApothem": 0.8,
+   "bandFracApothem": 0.12,
+   "spanDeg": 24.0,
+   "radiusPxFloor2048": 770.0,
+   "note": "angle from center, 0=+x (texture right), increasing toward +y (texture down); texture top = outward"
+  },
+  {
+   "id": "room-11",
+   "label": "Portrait",
+   "text": "Portrait",
+   "file": "sign-room-11-portrait.webp",
+   "angleDeg": 315,
+   "radiusFracApothem": 0.8,
+   "bandFracApothem": 0.12,
+   "spanDeg": 24.0,
+   "radiusPxFloor2048": 770.0,
+   "note": "angle from center, 0=+x (texture right), increasing toward +y (texture down); texture top = outward"
+  },
+  {
+   "id": "room-12",
+   "label": "Seattle \u00b7 Denny Blaine \u00b7 Pacific Northwest",
+   "text": "Seattle",
+   "file": "sign-room-12-seattle.webp",
+   "angleDeg": 345,
+   "radiusFracApothem": 0.8,
+   "bandFracApothem": 0.12,
+   "spanDeg": 24.0,
+   "radiusPxFloor2048": 770.0,
+   "note": "angle from center, 0=+x (texture right), increasing toward +y (texture down); texture top = outward"
+  }
+ ],
+ "checkouts": [
+  {
+   "id": "checkout-east",
+   "angleDeg": 0,
+   "radiusFracApothem": 0.97,
+   "radiusPxFloor2048": 933.7,
+   "ringFile": "checkout-ring.webp",
+   "ringDiameterFracApothem": 0.2,
+   "clearance": "0.12 apothem to the nearest wall faces; 0.02 apothem past the outer corners of the adjacent signs (345\u00b0 and 15\u00b0)"
+  },
+  {
+   "id": "checkout-west",
+   "angleDeg": 180,
+   "radiusFracApothem": 0.97,
+   "radiusPxFloor2048": 933.7,
+   "ringFile": "checkout-ring.webp",
+   "ringDiameterFracApothem": 0.2,
+   "clearance": "0.12 apothem to the nearest wall faces; 0.02 apothem past the outer corners of the adjacent signs (345\u00b0 and 15\u00b0)"
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+/* Shared minimap (studio-tracker #251). Original "survey plate" styling. */
+.mm-wrap{position:fixed;z-index:40;display:flex;flex-direction:column;align-items:flex-start;gap:4px;pointer-events:none}
+.mm-wrap .mm-plate{pointer-events:none;border-radius:10px;background:#0b1418d9;border:1px solid #6fd6c455;box-shadow:0 4px 14px #0007;display:block}
+.mm-wrap.mm-off .mm-plate{display:none}
+.mm-wrap .mm-btn{pointer-events:auto;font:700 11px/1 system-ui,sans-serif;letter-spacing:.6px;color:#d8f5ef;background:#0b1418cc;border:1px solid #6fd6c477;border-radius:12px;padding:6px 9px;cursor:pointer;touch-action:manipulation;-webkit-user-select:none;user-select:none}
+.mm-wrap .mm-btn:focus-visible{outline:2px solid #ffd27a}
+.mm-wrap.mm-right{align-items:flex-end}
+.mm-wrap.mm-up{flex-direction:column-reverse}

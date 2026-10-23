@@ -1,0 +1,466 @@
+{
+ "raw_float_pre_encode": {
+  "walls/wall-plaster.webp": [
+   1.56,
+   1.52,
+   1.88
+  ],
+  "walls/wall-plaster.phone.webp": [
+   1.98,
+   1.86,
+   2.3
+  ],
+  "walls/wall-ashlar.webp": [
+   8.25,
+   4.69,
+   10.75
+  ],
+  "walls/wall-ashlar.phone.webp": [
+   4.99,
+   4.53,
+   7.39
+  ],
+  "floors/floor-flagstone.webp": [
+   4.28,
+   4.07,
+   4.89
+  ],
+  "floors/floor-flagstone.phone.webp": [
+   5.01,
+   4.54,
+   6.67
+  ],
+  "floors/floor-planks.webp": [
+   1.92,
+   6.0,
+   43.01
+  ],
+  "floors/floor-planks.phone.webp": [
+   1.77,
+   11.04,
+   53.57
+  ],
+  "floors/floor-terrazzo.webp": [
+   2.87,
+   2.73,
+   4.77
+  ],
+  "floors/floor-terrazzo.phone.webp": [
+   5.3,
+   4.8,
+   8.19
+  ],
+  "ceilings/ceiling-coffer.webp": [
+   0.37,
+   1.08,
+   6.55
+  ],
+  "ceilings/ceiling-coffer.phone.webp": [
+   0.53,
+   2.04,
+   12.9
+  ],
+  "ceilings/ceiling-plaster.webp": [
+   2.28,
+   2.18,
+   2.49
+  ],
+  "ceilings/ceiling-plaster.phone.webp": [
+   1.57,
+   1.5,
+   1.8
+  ],
+  "props/prop-brass.webp": [
+   0.19,
+   0.17,
+   0.28
+  ],
+  "props/prop-brass.phone.webp": [
+   0.37,
+   0.31,
+   0.52
+  ],
+  "props/prop-walnut.webp": [
+   0.08,
+   0.1,
+   0.13
+  ],
+  "props/prop-walnut.phone.webp": [
+   0.17,
+   0.2,
+   0.24
+  ],
+  "props/prop-marble.webp": [
+   2.33,
+   2.37,
+   2.74
+  ],
+  "props/prop-marble.phone.webp": [
+   2.36,
+   2.28,
+   3.11
+  ],
+  "props/prop-linen.webp": [
+   27.1,
+   5.13,
+   31.58
+  ],
+  "props/prop-linen.phone.webp": [
+   18.39,
+   7.04,
+   22.38
+  ],
+  "props/prop-felt.webp": [
+   7.16,
+   7.12,
+   7.82
+  ],
+  "props/prop-felt.phone.webp": [
+   5.4,
+   5.21,
+   5.66
+  ],
+  "sky/sky-pnw-day.webp": [
+   0.87,
+   0.93,
+   1.33
+  ],
+  "sky/sky-pnw-day.phone.webp": [
+   0.59,
+   0.75,
+   1.59
+  ],
+  "sky/sky-pnw-sunset.webp": [
+   0.88,
+   0.96,
+   1.59
+  ],
+  "sky/sky-pnw-sunset.phone.webp": [
+   0.58,
+   0.79,
+   2.09
+  ],
+  "exterior/ext-stucco.webp": [
+   3.72,
+   3.52,
+   4.02
+  ],
+  "exterior/ext-stucco.phone.webp": [
+   2.83,
+   2.7,
+   3.06
+  ],
+  "exterior/ext-travertine.webp": [
+   3.93,
+   4.21,
+   4.72
+  ],
+  "exterior/ext-travertine.phone.webp": [
+   4.95,
+   4.54,
+   5.82
+  ],
+  "exterior/ext-paving.webp": [
+   8.39,
+   4.59,
+   8.94
+  ],
+  "exterior/ext-paving.phone.webp": [
+   6.08,
+   3.59,
+   12.63
+  ],
+  "exterior/ext-gravel.webp": [
+   11.28,
+   11.61,
+   13.5
+  ],
+  "exterior/ext-gravel.phone.webp": [
+   13.18,
+   13.13,
+   16.19
+  ],
+  "exterior/ext-lawn.webp": [
+   12.25,
+   11.99,
+   12.99
+  ],
+  "exterior/ext-lawn.phone.webp": [
+   10.23,
+   10.02,
+   10.99
+  ],
+  "exterior/ext-foliage.webp": [
+   8.03,
+   7.24,
+   9.46
+  ],
+  "exterior/ext-foliage.phone.webp": [
+   10.89,
+   10.09,
+   13.37
+  ],
+  "exterior/ext-roof-tile.webp": [
+   12.52,
+   3.16,
+   16.03
+  ],
+  "exterior/ext-roof-tile.phone.webp": [
+   11.41,
+   2.96,
+   14.49
+  ],
+  "exterior/ext-cornice-clay.webp": [
+   3.51,
+   3.44,
+   4.0
+  ],
+  "exterior/ext-cornice-clay.phone.webp": [
+   3.34,
+   3.19,
+   4.01
+  ],
+  "exterior/ext-trim-slate.webp": [
+   3.09,
+   3.18,
+   5.49
+  ],
+  "exterior/ext-trim-slate.phone.webp": [
+   3.37,
+   3.24,
+   6.2
+  ]
+ },
+ "decoded_webp": {
+  "ceilings/ceiling-coffer.webp": [
+   0.84,
+   1.05,
+   6.99
+  ],
+  "ceilings/ceiling-coffer.phone.webp": [
+   1.14,
+   2.04,
+   13.58
+  ],
+  "ceilings/ceiling-plaster.webp": [
+   2.4,
+   1.73,
+   2.58
+  ],
+  "ceilings/ceiling-plaster.phone.webp": [
+   1.59,
+   0.79,
+   1.14
+  ],
+  "exterior/ext-cornice-clay.webp": [
+   4.29,
+   2.93,
+   4.22
+  ],
+  "exterior/ext-cornice-clay.phone.webp": [
+   4.26,
+   2.71,
+   4.01
+  ],
+  "exterior/ext-foliage.webp": [
+   11.34,
+   8.13,
+   11.1
+  ],
+  "exterior/ext-foliage.phone.webp": [
+   13.68,
+   11.48,
+   14.84
+  ],
+  "exterior/ext-gravel.webp": [
+   13.19,
+   11.44,
+   13.88
+  ],
+  "exterior/ext-gravel.phone.webp": [
+   15.17,
+   12.96,
+   17.38
+  ],
+  "exterior/ext-lawn.webp": [
+   15.37,
+   14.04,
+   15.93
+  ],
+  "exterior/ext-lawn.phone.webp": [
+   12.32,
+   11.27,
+   13.24
+  ],
+  "exterior/ext-paving.webp": [
+   8.86,
+   4.32,
+   9.35
+  ],
+  "exterior/ext-paving.phone.webp": [
+   3.74,
+   2.84,
+   7.05
+  ],
+  "exterior/ext-roof-tile.webp": [
+   35.56,
+   2.63,
+   46.26
+  ],
+  "exterior/ext-roof-tile.phone.webp": [
+   11.61,
+   2.49,
+   11.81
+  ],
+  "exterior/ext-stucco.webp": [
+   4.09,
+   2.95,
+   4.2
+  ],
+  "exterior/ext-stucco.phone.webp": [
+   2.54,
+   1.22,
+   1.65
+  ],
+  "exterior/ext-travertine.webp": [
+   4.63,
+   3.97,
+   5.12
+  ],
+  "exterior/ext-travertine.phone.webp": [
+   3.89,
+   2.81,
+   4.45
+  ],
+  "exterior/ext-trim-slate.webp": [
+   1.82,
+   0.75,
+   1.67
+  ],
+  "exterior/ext-trim-slate.phone.webp": [
+   2.15,
+   0.88,
+   1.88
+  ],
+  "floors/floor-flagstone.webp": [
+   4.85,
+   4.11,
+   5.3
+  ],
+  "floors/floor-flagstone.phone.webp": [
+   5.25,
+   4.56,
+   6.8
+  ],
+  "floors/floor-planks.webp": [
+   1.28,
+   0.4,
+   3.31
+  ],
+  "floors/floor-planks.phone.webp": [
+   1.44,
+   0.74,
+   6.12
+  ],
+  "floors/floor-terrazzo.webp": [
+   4.04,
+   2.94,
+   5.18
+  ],
+  "floors/floor-terrazzo.phone.webp": [
+   6.6,
+   4.88,
+   8.16
+  ],
+  "props/prop-brass.webp": [
+   1.38,
+   0.29,
+   1.19
+  ],
+  "props/prop-brass.phone.webp": [
+   1.65,
+   0.45,
+   1.62
+  ],
+  "props/prop-felt.webp": [
+   7.27,
+   6.85,
+   7.69
+  ],
+  "props/prop-felt.phone.webp": [
+   5.55,
+   5.0,
+   5.65
+  ],
+  "props/prop-linen.webp": [
+   27.24,
+   5.03,
+   32.0
+  ],
+  "props/prop-linen.phone.webp": [
+   18.73,
+   7.08,
+   23.07
+  ],
+  "props/prop-marble.webp": [
+   2.66,
+   2.14,
+   2.96
+  ],
+  "props/prop-marble.phone.webp": [
+   2.45,
+   1.72,
+   3.05
+  ],
+  "props/prop-walnut.webp": [
+   1.16,
+   0.21,
+   0.89
+  ],
+  "props/prop-walnut.phone.webp": [
+   1.39,
+   0.33,
+   1.26
+  ],
+  "sky/sky-pnw-day.webp": [
+   1.15,
+   0.42,
+   1.35
+  ],
+  "sky/sky-pnw-day.phone.webp": [
+   1.37,
+   0.63,
+   2.21
+  ],
+  "sky/sky-pnw-sunset.webp": [
+   0.95,
+   0.45,
+   1.78
+  ],
+  "sky/sky-pnw-sunset.phone.webp": [
+   1.18,
+   0.7,
+   2.88
+  ],
+  "walls/wall-ashlar.webp": [
+   5.5,
+   4.78,
+   6.64
+  ],
+  "walls/wall-ashlar.phone.webp": [
+   5.36,
+   4.57,
+   7.29
+  ],
+  "walls/wall-plaster.webp": [
+   2.22,
+   1.45,
+   2.38
+  ],
+  "walls/wall-plaster.phone.webp": [
+   2.22,
+   1.36,
+   2.22
+  ]
+ }
+}
