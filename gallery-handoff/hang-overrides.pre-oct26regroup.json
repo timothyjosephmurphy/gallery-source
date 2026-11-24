@@ -1,0 +1,1257 @@
+{
+ "note": "TJ Oct 22 (#288): exclusions and re-hangs applied on top of tools/catalog.py output by tools/apply-overrides.py. Source data untouched; no layout PUT/DELETE.",
+ "exclude": [
+  "archived-painting-217",
+  "archived-painting-img-1608",
+  "book-art-0c4b161071524e23d519",
+  "book-art-1d0517e85d349222c362",
+  "book-art-3a9cba708a8045364e82",
+  "book-art-3cd6b3fb3e356c4b1d1d",
+  "book-art-50a7984f819bec72d1c7",
+  "book-art-55829535637cd4974a88",
+  "book-art-7a498f39e7a66a2e8eb5",
+  "book-art-93957f4169bc931e0a52",
+  "book-art-9ae261289a3bce952c6f",
+  "book-art-9b6b4f1ce8b283e14b21",
+  "book-art-9c77e540218eab97ba3d",
+  "book-art-9c7b9d41bee5615f1d7f",
+  "book-art-a6a2c048812a41cee4e4",
+  "book-art-b50262c37f44843487ae",
+  "book-art-b7410a9f4340e559e4f4",
+  "book-art-c4a5109c84daedd78291",
+  "book-art-cb92d1d647c6f92403c7",
+  "book-art-d1a4ee225dafe10ba934",
+  "book-art-d78badff7e21472c00b8",
+  "book-art-f91504eaa0ab6b936c29",
+  "burning-man-temple-2022-blue",
+  "burning-man-temple-2022-daytime",
+  "meditating-at-denny-blaine-on-solstice-2015",
+  "painting-clouds-over-water",
+  "lake-in-the-north-cascades"
+ ],
+ "walls": {
+  "room-10/0": {
+   "fromIds": [
+    "warszawska-syrenka",
+    "coined-in-watercolor-film-poster"
+   ]
+  },
+  "room-12/4": {
+   "fromIds": [
+    "meditation-at-denny-blaine",
+    "archived-painting-53"
+   ]
+  },
+  "room-08/0": {
+   "fromIds": [
+    "el-zonte-before-dawn",
+    "painting-shoreline-at-dusk"
+   ]
+  },
+  "room-08/2": {
+   "fromIds": [
+    "sunset-in-el-zonte-el-salvador",
+    "sunset-in-el-tunco-el-salvador"
+   ]
+  },
+  "room-08/3": {
+   "fromIds": [
+    "painting-insect-garden",
+    "painting-twin-dragons"
+   ]
+  },
+  "room-03/3": {
+   "fromIds": [
+    "book-art-87cf2a732259b313f5ab",
+    "joaquim-in-zihuatanejo"
+   ]
+  },
+  "room-09/3": {
+   "fromIds": [
+    "older-work-beach-sunsets-original-2",
+    "older-work-sunset-ridge-strips-original-2"
+   ]
+  },
+  "room-06/5": {
+   "fromIds": [
+    "daniel-portrait-1",
+    "archived-painting-76"
+   ]
+  },
+  "room-04/4": {
+   "fromIds": [
+    "burning-man-temple-2022-daytime",
+    "archived-painting-18"
+   ]
+  },
+  "room-04/0": {
+   "fromIds": [
+    "book-art-54ff45104a57a68d4beb",
+    "book-art-f367882aaeb0e32471eb"
+   ]
+  },
+  "room-01/1": {
+   "fromIds": [
+    "book-art-6e6d7ac51608e0b7f10f",
+    "rice-paddies-in-vietnam"
+   ]
+  },
+  "room-06/2": {
+   "fromIds": [
+    "book-art-9209f1fd7d47f373597f",
+    "archived-painting-73"
+   ]
+  }
+ },
+ "hang": [
+  {
+   "id": "book-art-e4bbfe556c3c847d9c90",
+   "wall": "room-10/0",
+   "s": -2.296,
+   "y": 1.584,
+   "plaqueS": -1.812,
+   "note": "grid top-left: Nick Szabo",
+   "col": "grid-szabo-marisa",
+   "pos": 1
+  },
+  {
+   "id": "book-art-0735a5fb0eb1c613b658",
+   "wall": "room-10/0",
+   "s": -1.356,
+   "y": 1.584,
+   "plaqueS": -0.9,
+   "note": "grid top-right: Michael Saylor",
+   "col": "grid-saylor-tomer",
+   "pos": 1
+  },
+  {
+   "id": "book-art-d6e03f6907615dac3797",
+   "wall": "room-10/0",
+   "s": -2.296,
+   "y": 0.854,
+   "plaqueS": -1.812,
+   "plaqueY": 0.854,
+   "note": "grid bottom-left: Marisa Angeli",
+   "col": "grid-szabo-marisa",
+   "pos": 2
+  },
+  {
+   "id": "book-art-ec22daff29e72f16eb76",
+   "wall": "room-10/0",
+   "s": -1.356,
+   "y": 0.854,
+   "plaqueS": -0.9,
+   "plaqueY": 0.854,
+   "note": "grid bottom-right: Tomer Strolight",
+   "col": "grid-saylor-tomer",
+   "pos": 2
+  },
+  {
+   "id": "honeybadger-and-cub-with-genesis-block",
+   "wall": "room-11/5",
+   "s": 0.3,
+   "y": 1.219,
+   "plaqueS": 0.8500000000000001,
+   "note": "#1022 Ukraine row on the Mother of Kyiv wall: trio 1"
+  },
+  {
+   "id": "coined-in-watercolor-film-poster",
+   "wall": "room-11/5",
+   "s": 1.4,
+   "y": 1.219,
+   "plaqueS": 1.95,
+   "note": "#1022 Ukraine row on the Mother of Kyiv wall: trio 2"
+  },
+  {
+   "id": "warszawska-syrenka",
+   "wall": "room-11/5",
+   "s": 2.5,
+   "y": 1.219,
+   "plaqueS": 3.05,
+   "note": "#1022 Ukraine row on the Mother of Kyiv wall: trio 3"
+  },
+  {
+   "id": "meditation-at-denny-blaine",
+   "wall": "room-12/4",
+   "s": -0.75,
+   "y": 1.219,
+   "plaqueS": -0.34,
+   "note": "close the gap"
+  },
+  {
+   "id": "archived-painting-53",
+   "wall": "room-12/4",
+   "s": 0.25,
+   "y": 1.219,
+   "plaqueS": 0.75,
+   "note": "close the gap"
+  },
+  {
+   "id": "el-zonte-at-sunrise",
+   "wall": "room-08/2",
+   "s": -2.74,
+   "y": 1.219,
+   "plaqueS": -2.22,
+   "note": "El Zonte group 1 (tall)"
+  },
+  {
+   "id": "el-zonte-before-dawn",
+   "wall": "room-08/2",
+   "s": -1.4,
+   "y": 1.219,
+   "plaqueS": -0.58,
+   "note": "El Zonte group 2 (wide)"
+  },
+  {
+   "id": "sunset-in-el-tunco-el-salvador",
+   "wall": "room-08/2",
+   "s": -0.22,
+   "y": 1.219,
+   "plaqueS": 0.145,
+   "note": "El Tunco, center on the salon line"
+  },
+  {
+   "id": "painting-shoreline-at-dusk",
+   "wall": "room-08/2",
+   "s": 0.965,
+   "y": 1.219,
+   "plaqueS": 1.785,
+   "note": "El Zonte group 4 (wide)"
+  },
+  {
+   "id": "sunset-in-el-zonte-el-salvador",
+   "wall": "room-08/2",
+   "s": 2.29,
+   "y": 1.219,
+   "plaqueS": 2.8,
+   "note": "El Zonte group 5 (tall, scaled)"
+  },
+  {
+   "id": "book-art-e6f013fae1925ab77100",
+   "wall": "room-08/0",
+   "s": -2.235,
+   "y": 1.219,
+   "plaqueS": -1.9,
+   "note": "Atami (moved out of the El Tunco stack)"
+  },
+  {
+   "id": "painting-insect-garden",
+   "wall": "room-08/3",
+   "s": -1.929,
+   "y": 1.219,
+   "plaqueS": -0.779,
+   "note": "Past (scaled)"
+  },
+  {
+   "id": "painting-emergence",
+   "wall": "room-08/3",
+   "s": 0.0,
+   "y": 1.219,
+   "plaqueS": 0.7795,
+   "note": "Present"
+  },
+  {
+   "id": "painting-twin-dragons",
+   "wall": "room-08/3",
+   "s": 1.929,
+   "y": 1.219,
+   "plaqueS": 0.98,
+   "note": "Future (scaled): no room for a plaque beside it between Present and the corner column; title shown on scan",
+   "noPlaque": true
+  },
+  {
+   "id": "archived-painting-75",
+   "wall": "room-03/3",
+   "s": 1.162,
+   "y": 1.219,
+   "plaqueS": 1.476,
+   "note": "Juliet portrait into the Mexico room"
+  },
+  {
+   "id": "older-work-beach-sunsets-original-2",
+   "wall": "room-09/3",
+   "s": -2.75,
+   "y": 1.219,
+   "plaqueS": -2.45,
+   "note": "Miami trio 1: TJ Beach Sunset 311"
+  },
+  {
+   "id": "older-work-beach-sunsets-original-3",
+   "wall": "room-09/3",
+   "s": -2.08,
+   "y": 1.219,
+   "plaqueS": -1.78,
+   "note": "Miami trio 2: TJ Beach Sunset 309"
+  },
+  {
+   "id": "older-work-beach-sunsets-original-1",
+   "wall": "room-09/3",
+   "s": -1.41,
+   "y": 1.219,
+   "plaqueS": -1.11,
+   "note": "Miami trio 3: TJ Beach Sunset 310"
+  },
+  {
+   "id": "book-art-56e40e02275a8767a802",
+   "wall": "room-09/3",
+   "s": -0.55,
+   "y": 1.219,
+   "plaqueS": -0.15,
+   "note": "Camps Bay out of the old stack"
+  },
+  {
+   "id": "archived-painting-76",
+   "wall": "room-06/5",
+   "s": 0.25,
+   "y": 1.219,
+   "plaqueS": 0.57,
+   "note": "rebalance"
+  },
+  {
+   "id": "book-art-0d7df713c5f0f67733ae",
+   "wall": "room-04/0",
+   "s": -2.1225,
+   "y": 1.219,
+   "plaqueS": -1.62,
+   "plaqueY": 1.45,
+   "note": "#299 2x2 grid of squares, tall portraits either side: tall left: Dawn"
+  },
+  {
+   "id": "book-art-54ff45104a57a68d4beb",
+   "wall": "room-04/0",
+   "s": -0.913,
+   "y": 1.716,
+   "plaqueS": -0.206,
+   "plaqueY": 1.45,
+   "note": "#299 2x2 grid of squares, tall portraits either side: grid top-left: Neil",
+   "col": "grid-neil-devo",
+   "pos": 1
+  },
+  {
+   "id": "book-art-614d5b68dbe5052e302a",
+   "wall": "room-04/0",
+   "s": -0.913,
+   "y": 0.722,
+   "plaqueS": -0.206,
+   "plaqueY": 0.722,
+   "note": "#299 2x2 grid of squares, tall portraits either side: grid bottom-left: Devo",
+   "col": "grid-neil-devo",
+   "pos": 2
+  },
+  {
+   "id": "book-art-f367882aaeb0e32471eb",
+   "wall": "room-04/0",
+   "s": 0.501,
+   "y": 1.716,
+   "plaqueS": 1.208,
+   "plaqueY": 1.45,
+   "note": "#299 2x2 grid of squares, tall portraits either side: grid top-right: Jennica",
+   "col": "grid-jennica-michael",
+   "pos": 1
+  },
+  {
+   "id": "book-art-4350a257e5a6a5e75a31",
+   "wall": "room-04/0",
+   "s": 0.501,
+   "y": 0.722,
+   "plaqueS": 1.208,
+   "plaqueY": 0.722,
+   "note": "#299 2x2 grid of squares, tall portraits either side: grid bottom-right: Michael",
+   "col": "grid-jennica-michael",
+   "pos": 2
+  },
+  {
+   "id": "book-art-04f4a52773ffd19b4f67",
+   "wall": "room-04/0",
+   "s": 1.731,
+   "y": 1.219,
+   "plaqueS": 2.254,
+   "plaqueY": 1.45,
+   "note": "#299 2x2 grid of squares, tall portraits either side: tall right: Travis"
+  },
+  {
+   "id": "daniel-portrait-1",
+   "wall": "room-01/1",
+   "s": -0.1,
+   "y": 1.219,
+   "plaqueS": -0.05,
+   "note": "#299 triptych left"
+  },
+  {
+   "id": "rice-paddies-in-vietnam",
+   "wall": "room-01/1",
+   "s": 0.646,
+   "y": 1.219,
+   "plaqueS": 0.7,
+   "note": "#299 triptych centre"
+  },
+  {
+   "id": "book-art-7df006b029abcb751da2",
+   "wall": "room-01/1",
+   "s": 1.4,
+   "y": 1.219,
+   "plaqueS": 1.45,
+   "note": "#299 triptych right"
+  },
+  {
+   "id": "book-art-6e6d7ac51608e0b7f10f",
+   "wall": "room-06/5",
+   "s": -1.635,
+   "y": 1.219,
+   "plaqueS": -1.252,
+   "note": "#299 Moonrise moved into Daniel's old slot so the triptych fits at 1.5x on room-01 w1"
+  },
+  {
+   "id": "book-art-82127d1886ae57d5cb6e",
+   "wall": "room-05/0",
+   "s": -1.9,
+   "y": 1.219,
+   "plaqueS": -1.35,
+   "note": "#1022 fixes: Father Paul (kept copy) next to Ruth; My Dad, Paul Murphy copy removed"
+  },
+  {
+   "id": "painting-portrait-with-hat",
+   "wall": "room-12/4",
+   "s": 1.49,
+   "y": 1.219,
+   "plaqueS": 2.04,
+   "note": "#315 (TJ): Sunrise on Rainier with Eagle 60x22 in, top of the pair (replaces the #299 72 in enlargement)",
+   "col": "rainier-pair",
+   "pos": 1
+  },
+  {
+   "id": "sunrise-on-rainier-from-denny-blaine",
+   "wall": "room-12/1",
+   "s": 0.0,
+   "y": 1.219,
+   "plaqueS": 0.55,
+   "note": "#1022 fixes: big Rainier hangs alone, centred"
+  },
+  {
+   "id": "book-art-b01b8695b2528cb850a3",
+   "wall": "room-03/4",
+   "s": 0.0,
+   "y": 1.219,
+   "plaqueS": 0.55,
+   "note": "#1022 fixes: Dawn on Mt. Vesper to a blank wall of its own"
+  },
+  {
+   "id": "archived-painting-19",
+   "wall": "room-04/4",
+   "s": -0.8,
+   "y": 1.219,
+   "plaqueS": -0.25,
+   "note": "#309 The Temple, Daytime (archived-painting-19, 45 x 24 in per TJ via Studio manager; same painting as burning-man-temple-2022-daytime) top-left of the temple 2x2",
+   "col": "temple-a",
+   "pos": 1
+  },
+  {
+   "id": "burning-man-temple-2022-pink",
+   "wall": "room-04/4",
+   "s": -0.8,
+   "y": 1.219,
+   "plaqueS": -0.25,
+   "note": "#1022 fixes: temple 2x2 centred",
+   "col": "temple-a",
+   "pos": 2
+  },
+  {
+   "id": "archived-painting-20",
+   "wall": "room-04/4",
+   "s": 0.8,
+   "y": 1.219,
+   "plaqueS": 1.35,
+   "note": "#1022 fixes: temple 2x2 centred",
+   "col": "temple-b",
+   "pos": 1
+  },
+  {
+   "id": "burning-man-temple-2022-flame",
+   "wall": "room-04/4",
+   "s": 0.8,
+   "y": 1.219,
+   "plaqueS": 1.35,
+   "note": "#1022 fixes: temple 2x2 centred",
+   "col": "temple-b",
+   "pos": 2
+  },
+  {
+   "id": "archived-painting-18",
+   "wall": "room-04/3",
+   "s": 2.7,
+   "y": 1.219,
+   "plaqueS": 3.25,
+   "note": "#1022 fixes: Mayan Warrior on the far wall by the door (room-04 doorway wall)"
+  },
+  {
+   "id": "book-art-4c6fb3817fed4e5a6195",
+   "wall": "room-04/3",
+   "s": -1.0,
+   "y": 1.219,
+   "plaqueS": -0.45,
+   "note": "#1022 fixes: Painting in Black Rock City beside it"
+  },
+  {
+   "id": "book-art-9209f1fd7d47f373597f",
+   "wall": "room-06/1",
+   "s": -0.3,
+   "y": 1.219,
+   "plaqueS": 0.25,
+   "note": "#1022 fixes: Catherine 2x2 on the blank wall between the columns",
+   "col": "cath-a",
+   "pos": 1
+  },
+  {
+   "id": "book-art-a61c71e5de8cc1b71500",
+   "wall": "room-06/1",
+   "s": -0.3,
+   "y": 1.219,
+   "plaqueS": 0.25,
+   "note": "#1022 fixes: Catherine 2x2 on the blank wall between the columns",
+   "col": "cath-a",
+   "pos": 2
+  },
+  {
+   "id": "book-art-596837cb5ff533c620dd",
+   "wall": "room-06/1",
+   "s": 0.3,
+   "y": 1.219,
+   "plaqueS": 0.85,
+   "note": "#1022 fixes: Catherine 2x2 on the blank wall between the columns",
+   "col": "cath-b",
+   "pos": 1
+  },
+  {
+   "id": "book-art-7bce6e3509027d1f7a0b",
+   "wall": "room-06/1",
+   "s": 0.3,
+   "y": 1.219,
+   "plaqueS": 0.85,
+   "note": "#1022 fixes: Catherine 2x2 on the blank wall between the columns",
+   "col": "cath-b",
+   "pos": 2
+  },
+  {
+   "id": "book-art-92fdb3112257f4fb66e8",
+   "wall": "room-06/5",
+   "s": 0.0,
+   "y": 1.219,
+   "plaqueS": 0.55,
+   "note": "#1022 fixes: Catherine and Owen at 1.45 m",
+   "cy": 1.45
+  },
+  {
+   "id": "book-art-37fe572d9bb47cab3bc7",
+   "wall": "room-11/4",
+   "s": -0.2,
+   "y": 1.219,
+   "plaqueS": 0.35,
+   "note": "#1022 off the Mother of Kyiv wall onto Lisa's wall"
+  },
+  {
+   "id": "painting-sunflower-woman",
+   "wall": "room-11/4",
+   "s": 0.8,
+   "y": 1.219,
+   "plaqueS": 1.35,
+   "note": "#1022 off the Mother of Kyiv wall onto Lisa's wall"
+  },
+  {
+   "id": "book-art-6bcf18417734a8e3010a",
+   "wall": "room-11/4",
+   "s": 1.8,
+   "y": 1.219,
+   "plaqueS": 2.35,
+   "note": "#1022 off the Mother of Kyiv wall onto Lisa's wall"
+  },
+  {
+   "id": "book-art-8137549f4fe7a3a1b90d",
+   "wall": "room-11/3",
+   "s": 1.0,
+   "y": 1.219,
+   "plaqueS": 1.55,
+   "note": "#1022 off the Mother of Kyiv wall (Colin and Craig) to the next wall"
+  },
+  {
+   "id": "painting-figures-in-wheatfield",
+   "wall": "room-11/5",
+   "s": -2.1,
+   "y": 1.219,
+   "plaqueS": -1.55,
+   "note": "#1022 Mother of Kyiv stays at the left end of her wall; Ukraine trio hangs together right of her"
+  },
+  {
+   "id": "book-art-ded6b759e667e3c2a313",
+   "wall": "room-01/0",
+   "s": 1.2,
+   "y": 1.219,
+   "plaqueS": 1.75,
+   "note": "#1022 Sunrise on Puget Sound off the Rainier wall; room-01/0 was freed by the Lisa duplicate removal (no fully blank wall was left)"
+  },
+  {
+   "id": "archived-painting-4",
+   "wall": "room-09/5",
+   "s": 0.0,
+   "y": 1.219,
+   "plaqueS": 0.55,
+   "note": "#1022 Painting #4 at its true 24 in width needs a wider wall than room-01/3 offers (door and columns); moved to the roomy room-09/5 (Sunset) so room-01/2 keeps its 1.5x sizes"
+  },
+  {
+   "id": "archived-painting-2",
+   "wall": "room-12/4",
+   "s": 1.49,
+   "y": 1.219,
+   "plaqueS": 2.04,
+   "col": "rainier-pair",
+   "pos": 2,
+   "note": "#315 (TJ): Painting #2 kept (not a duplicate), 60 in wide like Sunrise, own proportions (4191x1069 px), below it"
+  },
+  {
+   "id": "archived-painting-249",
+   "wall": "room-03/1",
+   "s": 0.901,
+   "y": 1.219,
+   "plaqueS": 1.393,
+   "note": "#316 (TJ): hi-res Lake in North Cascades takes the center spot of the removed low-res duplicate (image match r=0.84, same painting)"
+  }
+ ],
+ "assets": [
+  {
+   "id": "lisa-climbing-tahoma-at-sunrise-from-denny-blaine",
+   "img": "art/lisa-climbing-tahoma-cropped-288.webp",
+   "hi": null,
+   "w": 1.733,
+   "h": 0.727,
+   "note": "Cropped to the painted area (868x364 px, aspect 2.385). Listed 72x54 in (4:3) matches the photo incl. white sheet and wall, not the painting, so size follows the image shape: sheet width scaled by the painted share (868/920 px) of 72 in. Original asset kept."
+  },
+  {
+   "id": "sunset-in-el-zonte-el-salvador",
+   "w": 0.597,
+   "h": 1.219,
+   "note": "TJ-directed size override (Oct 22): scaled uniformly from 0.348x0.711 to match the height of Sunrise from Punta El Zonte Hostel (0.619x1.219); 0.022 m narrower (aspect differs)."
+  },
+  {
+   "id": "painting-insect-garden",
+   "w": 1.959,
+   "h": 1.011,
+   "note": "TJ: same height as Present. Scaled uniformly from 1.219x0.629."
+  },
+  {
+   "id": "painting-twin-dragons",
+   "w": 1.959,
+   "h": 1.011,
+   "note": "TJ: same height as Present. Scaled uniformly from 1.219x0.629."
+  },
+  {
+   "id": "rice-paddies-in-vietnam",
+   "w": 1.1044,
+   "h": 0.6096,
+   "note": "#299 triptych: 24 in tall (TJ), width from image aspect. Preview gallery data only."
+  },
+  {
+   "id": "daniel-portrait-1",
+   "w": 0.3251,
+   "h": 0.6096,
+   "note": "#299 triptych: 24 in tall (TJ), width from image aspect. Preview gallery data only."
+  },
+  {
+   "id": "book-art-7df006b029abcb751da2",
+   "w": 0.3305,
+   "h": 0.6096,
+   "note": "#299 triptych: 24 in tall (TJ), width from image aspect. Preview gallery data only."
+  },
+  {
+   "id": "book-art-9209f1fd7d47f373597f",
+   "w": 0.1367,
+   "h": 0.3217,
+   "note": "#1022 Catherine 2x2: 12.67 in true = 19 in tall at the 1.5x preview scale (TJ asked ~18-20 in), width from aspect",
+   "img": "img/play/preview-302/catherine-cream/9209f1fd7d47f373597f.webp",
+   "hi": null
+  },
+  {
+   "id": "book-art-a61c71e5de8cc1b71500",
+   "w": 0.2036,
+   "h": 0.3217,
+   "note": "#1022 Catherine 2x2: 12.67 in true = 19 in tall at the 1.5x preview scale (TJ asked ~18-20 in), width from aspect",
+   "img": "img/play/preview-302/catherine-cream/a61c71e5de8cc1b71500.webp",
+   "hi": null
+  },
+  {
+   "id": "book-art-596837cb5ff533c620dd",
+   "w": 0.1863,
+   "h": 0.3217,
+   "note": "#1022 Catherine 2x2: 12.67 in true = 19 in tall at the 1.5x preview scale (TJ asked ~18-20 in), width from aspect",
+   "img": "img/play/preview-302/catherine-cream/596837cb5ff533c620dd.webp",
+   "hi": null
+  },
+  {
+   "id": "book-art-7bce6e3509027d1f7a0b",
+   "w": 0.1505,
+   "h": 0.3217,
+   "note": "#1022 Catherine 2x2: 12.67 in true = 19 in tall at the 1.5x preview scale (TJ asked ~18-20 in), width from aspect",
+   "img": "img/play/preview-302/catherine-cream/7bce6e3509027d1f7a0b.webp",
+   "hi": null
+  },
+  {
+   "id": "archived-painting-4",
+   "w": 0.6096,
+   "h": 0.1403,
+   "note": "#1022 (TJ 3:19): Painting #4 is really 24 in wide; height from the image aspect"
+  },
+  {
+   "id": "book-art-b7a9cd259d8ac51a236b",
+   "w": 0.3048,
+   "h": 0.2268,
+   "note": "#299 (TJ 3:29): Rescued Hummingbird about 12 in wide, aspect kept"
+  },
+  {
+   "id": "painting-portrait-with-hat",
+   "w": 1.524,
+   "h": 0.4255,
+   "note": "#315: 60 in wide; height follows the image (3.58:1, so 60 x 16.8 in, not the listed 60 x 22: never stretched)"
+  },
+  {
+   "id": "archived-painting-2",
+   "w": 1.524,
+   "h": 0.3887,
+   "note": "#315: 60 in wide, aspect 4191x1069"
+  },
+  {
+   "id": "book-art-a2e53a8418a8d84f3dc5",
+   "img": "art/book-art-a2e53a8418a8d84f3dc5-317.webp",
+   "hi": null,
+   "w": 0.381,
+   "h": 0.295,
+   "note": "#317: card margin cropped off (780x604 px of the 1200x630 social card; margins L/R/T/B 0.172/0.172/0.024/0.008); no real image or size is published, so the 15 in placeholder on the long side is kept, real aspect 1.291"
+  },
+  {
+   "id": "book-art-e3293c73dbb01f94b39b",
+   "img": "art/book-art-e3293c73dbb01f94b39b-317.webp",
+   "hi": null,
+   "w": 0.381,
+   "h": 0.3077,
+   "note": "#317: card margin cropped off (748x604 px of the 1200x630 social card; margins L/R/T/B 0.186/0.186/0.024/0.008); no real image or size is published, so the 15 in placeholder on the long side is kept, real aspect 1.238"
+  },
+  {
+   "id": "older-work-ammous-livera-original-1",
+   "img": "img/display/older-work-ammous-livera-1-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-ammous-livera-1-960.webp",
+   "w": 0.2794,
+   "h": 0.2931,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 11.00x12.00 in; image aspect 0.953, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-ammous-livera-original-2",
+   "img": "img/display/older-work-ammous-livera-2-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-ammous-livera-2-960.webp",
+   "w": 0.2794,
+   "h": 0.3041,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 11.00x12.00 in; image aspect 0.919, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-fernandez-moran-pysh-original-1",
+   "img": "img/display/older-work-fernandez-moran-pysh-1-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-fernandez-moran-pysh-1-960.webp",
+   "w": 0.2794,
+   "h": 0.2896,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 11.00x12.00 in; image aspect 0.965, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-fernandez-moran-pysh-original-2",
+   "img": "img/display/older-work-fernandez-moran-pysh-2-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-fernandez-moran-pysh-2-960.webp",
+   "w": 0.2794,
+   "h": 0.2928,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 11.00x12.00 in; image aspect 0.954, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-fernandez-moran-pysh-original-3",
+   "img": "img/display/older-work-fernandez-moran-pysh-3-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-fernandez-moran-pysh-3-960.webp",
+   "w": 0.2794,
+   "h": 0.2957,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 11.00x12.00 in; image aspect 0.945, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-figen-pnut-swoll-original-1",
+   "img": "img/display/older-work-figen-pnut-swoll-1-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-figen-pnut-swoll-1-960.webp",
+   "w": 0.2794,
+   "h": 0.2899,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 11.00x12.00 in; image aspect 0.964, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-figen-pnut-swoll-original-2",
+   "img": "img/display/older-work-figen-pnut-swoll-2-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-figen-pnut-swoll-2-960.webp",
+   "w": 0.2682,
+   "h": 0.3048,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 11.00x12.00 in; image aspect 0.880, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-figen-pnut-swoll-original-3",
+   "img": "img/display/older-work-figen-pnut-swoll-3-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-figen-pnut-swoll-3-960.webp",
+   "w": 0.2794,
+   "h": 0.3018,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 11.00x12.00 in; image aspect 0.926, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-forest-triptych-original-1",
+   "img": "img/display/older-work-forest-triptych-1-62cf81a2-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-forest-triptych-1-62cf81a2-960.webp",
+   "w": 0.1714,
+   "h": 0.762,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 7.75x30.00 in; image aspect 0.225, fitted inside at true size, never stretched (listed vs image aspect differs 15%, listed size needs TJ confirmation)"
+  },
+  {
+   "id": "older-work-forest-triptych-original-2",
+   "img": "img/display/older-work-forest-triptych-2-dfccfbad-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-forest-triptych-2-dfccfbad-960.webp",
+   "w": 0.1713,
+   "h": 0.762,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 7.75x30.00 in; image aspect 0.225, fitted inside at true size, never stretched (listed vs image aspect differs 15%, listed size needs TJ confirmation)"
+  },
+  {
+   "id": "older-work-forest-triptych-original-3",
+   "img": "img/display/older-work-forest-triptych-3-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-forest-triptych-3-960.webp",
+   "w": 0.1714,
+   "h": 0.762,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 7.75x30.00 in; image aspect 0.225, fitted inside at true size, never stretched (listed vs image aspect differs 15%, listed size needs TJ confirmation)"
+  },
+  {
+   "id": "older-work-hayek-stark-gomez-el-bawab-original-1",
+   "img": "img/display/older-work-hayek-stark-gomez-el-bawab-1-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-hayek-stark-gomez-el-bawab-1-960.webp",
+   "w": 0.208,
+   "h": 0.2731,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 9.00x10.75 in; image aspect 0.762, fitted inside at true size, never stretched (listed vs image aspect differs 10%, listed size needs TJ confirmation)"
+  },
+  {
+   "id": "older-work-hayek-stark-gomez-el-bawab-original-2",
+   "img": "img/display/older-work-hayek-stark-gomez-el-bawab-2-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-hayek-stark-gomez-el-bawab-2-960.webp",
+   "w": 0.2283,
+   "h": 0.2731,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 9.00x10.75 in; image aspect 0.836, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-hayek-stark-gomez-el-bawab-original-3",
+   "img": "img/display/older-work-hayek-stark-gomez-el-bawab-3-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-hayek-stark-gomez-el-bawab-3-960.webp",
+   "w": 0.2201,
+   "h": 0.2731,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 9.00x10.75 in; image aspect 0.806, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-hayek-stark-gomez-el-bawab-original-4",
+   "img": "img/display/older-work-hayek-stark-gomez-el-bawab-4-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-hayek-stark-gomez-el-bawab-4-960.webp",
+   "w": 0.2165,
+   "h": 0.2731,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 9.00x10.75 in; image aspect 0.793, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-lake-hillside-color-wheel-original-1",
+   "img": "img/display/older-work-lake-hillside-color-wheel-1-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-lake-hillside-color-wheel-1-960.webp",
+   "w": 0.1778,
+   "h": 0.1204,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 7.00x5.00 in; image aspect 1.477, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-lake-hillside-color-wheel-original-2",
+   "img": "img/display/older-work-lake-hillside-color-wheel-2-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-lake-hillside-color-wheel-2-960.webp",
+   "w": 0.1778,
+   "h": 0.1248,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 7.00x5.00 in; image aspect 1.424, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-lake-hillside-color-wheel-original-3",
+   "img": "img/display/older-work-lake-hillside-color-wheel-3-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-lake-hillside-color-wheel-3-960.webp",
+   "w": 0.1608,
+   "h": 0.127,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 7.00x5.00 in; image aspect 1.266, fitted inside at true size, never stretched (listed vs image aspect differs 11%, listed size needs TJ confirmation)"
+  },
+  {
+   "id": "older-work-legend-of-billy-buff-original-1",
+   "img": "img/display/older-work-legend-of-billy-buff-1-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-legend-of-billy-buff-1-960.webp",
+   "w": 0.2455,
+   "h": 0.3429,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 10.50x13.50 in; image aspect 0.716, fitted inside at true size, never stretched (listed vs image aspect differs 9%, listed size needs TJ confirmation)"
+  },
+  {
+   "id": "older-work-legend-of-billy-buff-original-2",
+   "img": "img/display/older-work-legend-of-billy-buff-2-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-legend-of-billy-buff-2-960.webp",
+   "w": 0.2394,
+   "h": 0.3429,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 10.50x13.50 in; image aspect 0.698, fitted inside at true size, never stretched (listed vs image aspect differs 11%, listed size needs TJ confirmation)"
+  },
+  {
+   "id": "older-work-mountain-layers-original-1",
+   "img": "img/display/older-work-mountain-layers-1-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-mountain-layers-1-960.webp",
+   "w": 0.1639,
+   "h": 0.127,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 7.00x5.00 in; image aspect 1.290, fitted inside at true size, never stretched (listed vs image aspect differs 8%, listed size needs TJ confirmation)"
+  },
+  {
+   "id": "older-work-mountain-layers-original-2",
+   "img": "img/display/older-work-mountain-layers-2-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-mountain-layers-2-960.webp",
+   "w": 0.1778,
+   "h": 0.1187,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 7.00x5.00 in; image aspect 1.498, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-mountain-layers-original-3",
+   "img": "img/display/older-work-mountain-layers-3-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-mountain-layers-3-960.webp",
+   "w": 0.1778,
+   "h": 0.1132,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 7.00x5.00 in; image aspect 1.571, fitted inside at true size, never stretched (listed vs image aspect differs 11%, listed size needs TJ confirmation)"
+  },
+  {
+   "id": "older-work-mountain-layers-original-4",
+   "img": "img/display/older-work-mountain-layers-4-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-mountain-layers-4-960.webp",
+   "w": 0.1778,
+   "h": 0.1222,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 7.00x5.00 in; image aspect 1.455, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-pitchers-original-1",
+   "img": "img/display/older-work-pitchers-1-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-pitchers-1-960.webp",
+   "w": 0.2286,
+   "h": 0.15,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 9.00x6.00 in; image aspect 1.524, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-pitchers-original-2",
+   "img": "img/display/older-work-pitchers-2-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-pitchers-2-960.webp",
+   "w": 0.1524,
+   "h": 0.2191,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 6.00x9.00 in; image aspect 0.696, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-portraits-319-329-original-1",
+   "img": "img/display/older-work-portraits-319-329-1-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-portraits-319-329-1-960.webp",
+   "w": 0.2277,
+   "h": 0.2731,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 9.00x10.75 in; image aspect 0.834, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-portraits-319-329-original-2",
+   "img": "img/display/older-work-portraits-319-329-2-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-portraits-319-329-2-960.webp",
+   "w": 0.2102,
+   "h": 0.2731,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 9.00x10.75 in; image aspect 0.770, fitted inside at true size, never stretched (listed vs image aspect differs 9%, listed size needs TJ confirmation)"
+  },
+  {
+   "id": "older-work-portraits-319-329-original-3",
+   "img": "img/display/older-work-portraits-319-329-3-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-portraits-319-329-3-960.webp",
+   "w": 0.2286,
+   "h": 0.2662,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 9.00x10.75 in; image aspect 0.859, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-portraits-319-329-original-4",
+   "img": "img/display/older-work-portraits-319-329-4-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-portraits-319-329-4-960.webp",
+   "w": 0.2157,
+   "h": 0.2731,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 9.00x10.75 in; image aspect 0.790, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-ridge-strips-unindexed-original-1",
+   "img": "img/display/older-work-ridge-strips-unindexed-1-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-ridge-strips-unindexed-1-960.webp",
+   "w": 0.3048,
+   "h": 0.0956,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 12.00x4.50 in; image aspect 3.189, fitted inside at true size, never stretched (listed vs image aspect differs 16%, listed size needs TJ confirmation)"
+  },
+  {
+   "id": "older-work-ridge-strips-unindexed-original-2",
+   "img": "img/display/older-work-ridge-strips-unindexed-2-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-ridge-strips-unindexed-2-960.webp",
+   "w": 0.3048,
+   "h": 0.0908,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 12.00x4.50 in; image aspect 3.357, fitted inside at true size, never stretched (listed vs image aspect differs 21%, listed size needs TJ confirmation)"
+  },
+  {
+   "id": "older-work-ridge-strips-unindexed-original-3",
+   "img": "img/display/older-work-ridge-strips-unindexed-3-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-ridge-strips-unindexed-3-960.webp",
+   "w": 0.3048,
+   "h": 0.0949,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 12.00x4.50 in; image aspect 3.211, fitted inside at true size, never stretched (listed vs image aspect differs 17%, listed size needs TJ confirmation)"
+  },
+  {
+   "id": "older-work-ridge-strips-unindexed-original-4",
+   "img": "img/display/older-work-ridge-strips-unindexed-4-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-ridge-strips-unindexed-4-960.webp",
+   "w": 0.3048,
+   "h": 0.0918,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 12.00x4.50 in; image aspect 3.322, fitted inside at true size, never stretched (listed vs image aspect differs 20%, listed size needs TJ confirmation)"
+  },
+  {
+   "id": "older-work-ridge-strips-unindexed-original-5",
+   "img": "img/display/older-work-ridge-strips-unindexed-5-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-ridge-strips-unindexed-5-960.webp",
+   "w": 0.3048,
+   "h": 0.0975,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 12.00x4.50 in; image aspect 3.127, fitted inside at true size, never stretched (listed vs image aspect differs 15%, listed size needs TJ confirmation)"
+  },
+  {
+   "id": "older-work-ridge-strips-unindexed-original-6",
+   "img": "img/display/older-work-ridge-strips-unindexed-6-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-ridge-strips-unindexed-6-960.webp",
+   "w": 0.3048,
+   "h": 0.101,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 12.00x4.50 in; image aspect 3.019, fitted inside at true size, never stretched (listed vs image aspect differs 12%, listed size needs TJ confirmation)"
+  },
+  {
+   "id": "older-work-ridge-strips-unindexed-original-7",
+   "img": "img/display/older-work-ridge-strips-unindexed-7-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-ridge-strips-unindexed-7-960.webp",
+   "w": 0.3048,
+   "h": 0.0946,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 12.00x4.50 in; image aspect 3.221, fitted inside at true size, never stretched (listed vs image aspect differs 17%, listed size needs TJ confirmation)"
+  },
+  {
+   "id": "older-work-rochard-martinez-original-1",
+   "img": "img/display/older-work-rochard-martinez-1-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-rochard-martinez-1-960.webp",
+   "w": 0.2794,
+   "h": 0.2902,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 11.00x12.00 in; image aspect 0.963, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-rochard-martinez-original-2",
+   "img": "img/display/older-work-rochard-martinez-2-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-rochard-martinez-2-960.webp",
+   "w": 0.2763,
+   "h": 0.3048,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 11.00x12.00 in; image aspect 0.907, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-rochard-martinez-original-3",
+   "img": "img/display/older-work-rochard-martinez-3-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-rochard-martinez-3-960.webp",
+   "w": 0.274,
+   "h": 0.3048,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 11.00x12.00 in; image aspect 0.899, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-shore-figures-original-1",
+   "img": "img/display/older-work-shore-figures-1-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-shore-figures-1-960.webp",
+   "w": 0.1079,
+   "h": 0.099,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 4.25x4.00 in; image aspect 1.091, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-shore-figures-original-2",
+   "img": "img/display/older-work-shore-figures-2-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-shore-figures-2-960.webp",
+   "w": 0.1079,
+   "h": 0.0985,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 4.25x4.00 in; image aspect 1.096, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-shore-figures-original-3",
+   "img": "img/display/older-work-shore-figures-3-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-shore-figures-3-960.webp",
+   "w": 0.1079,
+   "h": 0.0999,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 4.25x4.00 in; image aspect 1.081, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-yakes-todd-dickerson-original-1",
+   "img": "img/display/older-work-yakes-todd-dickerson-1-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-yakes-todd-dickerson-1-960.webp",
+   "w": 0.2268,
+   "h": 0.2731,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 9.00x10.75 in; image aspect 0.830, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "older-work-yakes-todd-dickerson-original-2",
+   "img": "img/display/older-work-yakes-todd-dickerson-2-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-yakes-todd-dickerson-2-960.webp",
+   "w": 0.1904,
+   "h": 0.2731,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 9.00x10.75 in; image aspect 0.697, fitted inside at true size, never stretched (listed vs image aspect differs 20%, listed size needs TJ confirmation)"
+  },
+  {
+   "id": "older-work-yakes-todd-dickerson-original-3",
+   "img": "img/display/older-work-yakes-todd-dickerson-3-480.webp",
+   "hi": "https://img.tjm.art/display/older-work-yakes-todd-dickerson-3-960.webp",
+   "w": 0.2286,
+   "h": 0.2698,
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 9.00x10.75 in; image aspect 0.847, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "archived-painting-301",
+   "img": "art/archived-painting-301-317.webp",
+   "hi": "https://img.tjm.art/gallery-hi/archived-painting-301-hi-317.webp",
+   "note": "#317: white side borders cropped (crops in gallery-courtyard/white-border-crops-317); size unchanged; listed side kept, other side follows cropped aspect",
+   "h": 0.6096,
+   "w": 0.5327
+  },
+  {
+   "id": "archived-painting-img-1555",
+   "img": "art/archived-painting-img-1555-317.webp",
+   "hi": "https://img.tjm.art/gallery-hi/archived-painting-img-1555-hi-317.webp",
+   "note": "#317: white side borders cropped (crops in gallery-courtyard/white-border-crops-317); size unchanged; listed side kept, other side follows cropped aspect",
+   "w": 0.305,
+   "h": 0.2418
+  }
+ ],
+ "notes": [
+  "#299: removed duplicate hangs: burning-man-temple-2022-blue (same painting as archived-painting-20, kept on the left wall), book-art-f91504eaa0ab6b936c29 Miami (same as TJ Beach Sunset 310 in the Miami trio)"
+ ],
+ "reserve": [
+  "room-06/1",
+  "room-03/4",
+  "room-12/1"
+ ],
+ "stayOut": [
+  "book-art-67cc9a4d5823eca2182e",
+  "older-work-provibes-sandwiches-original-1",
+  "older-work-provibes-sandwiches-original-2"
+ ],
+ "stayOutNote": "#300: these three had no wall room before the wider doors either; they stay out as at preview-251",
+ "rows": [
+  {
+   "name": "#318 Forest Triptych",
+   "wall": "room-02/5",
+   "reserve": [
+    0.95,
+    99
+   ],
+   "span": [
+    0.95,
+    2.17
+   ],
+   "rows": [
+    [
+     [
+      "older-work-forest-triptych-original-1",
+      "older-work-forest-triptych-original-2",
+      "older-work-forest-triptych-original-3"
+     ]
+    ]
+   ],
+   "y": [
+    1.219
+   ],
+   "gap": 0.03,
+   "inner": 0.1,
+   "pg": 0.04,
+   "note": "three panels at true size side by side, same height, even 10 cm gap, one plaque after the third panel"
+  },
+  {
+   "name": "#319 Strawberry Point",
+   "wall": "room-03/1",
+   "reserve": "all",
+   "rows": [
+    [
+     [
+      "strawberry-point-1"
+     ],
+     [
+      "strawberry-point-2"
+     ],
+     [
+      "strawberry-point-3"
+     ],
+     [
+      "strawberry-point-4"
+     ],
+     [
+      "strawberry-point-5"
+     ],
+     [
+      "strawberry-point-6"
+     ],
+     [
+      "strawberry-point-7"
+     ],
+     [
+      "strawberry-point-8"
+     ]
+    ],
+    [
+     [
+      "strawberry-point-9"
+     ],
+     [
+      "strawberry-point-10"
+     ],
+     [
+      "strawberry-point-11"
+     ],
+     [
+      "strawberry-point-12"
+     ],
+     [
+      "strawberry-point-13"
+     ],
+     [
+      "strawberry-point-14"
+     ],
+     [
+      "strawberry-point-15"
+     ]
+    ]
+   ],
+   "y": [
+    1.72,
+    1.05
+   ],
+   "gap": 0.03,
+   "pg": 0.02,
+   "note": "all 15 on one wall in two rows (plaque beside each)"
+  },
+  {
+   "name": "#320 Ukraine",
+   "wall": "room-11/5",
+   "reserve": "all",
+   "rows": [
+    [
+     [
+      "painting-figures-in-wheatfield"
+     ],
+     [
+      "honeybadger-and-cub-with-genesis-block"
+     ],
+     [
+      "coined-in-watercolor-film-poster"
+     ],
+     [
+      "warszawska-syrenka"
+     ],
+     [
+      "painting-sunflower-woman"
+     ]
+    ]
+   ],
+   "y": [
+    1.219
+   ],
+   "gap": 0.02,
+   "pg": 0.0,
+   "note": "all 5 Ukraine works in one row (Mother of Kyiv at the left end, trio, Vision of Ukraine at Peace)"
+  }
+ ]
+}

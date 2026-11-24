@@ -6,6 +6,7 @@ import { SOUP, buildThermos, soupBlob, soupSplatTex, sloshSound, splashSound, th
 import { SOUP, buildThermos, soupBlob, soupSplatTex, sloshSound, splashSound, thermosPose, FLING_TIME } from './soup.js'; // shared museum weapon: soup thermos
 //#endif
 import { GRAV, buildGravGun, gravPose, createGravGun } from './gravgun.js';
+import { swapToolGLB } from './toolglb.js'; // #199 tool GLBs (CDN)
 import { createShopScan } from './shopscan.js'; // #235 prices, print previews; #201 green / red 'Not for sale' // shared: gravity gun (grab / hang / launch paintings)
 import { installGlitterBlower } from './glitterblower.js'; // tool pack: glitter cannon + leaf blower (slots after the gravity gun)
 import { installMove } from './move.js'; // movement add-on: sprint, footsteps, elf-chase tuning (museum-move)
@@ -26,6 +27,8 @@ import { buildBilbao, waveCeiling } from './bilbao.js';
 import { rehang } from './rehang.js';
 //#elif tags
 import { buildTags } from './tags.js'; // #251 tag gallery: hex rooms by tag, Roman-garden pavilion and courtyards
+import { createPL876 } from './pl876.js';
+import { createED876 } from './ed876.js';
 //#elif uffizi
 import { buildUffizi } from './uffizi.js'; // Uffizi: Tribuna hub + U of corridors
 import { rehang } from './rehang.js';
@@ -71,7 +74,7 @@ const EYE = 1.6;
 // raised dais in the centre with one step around it
 const MINI = []; // small one-step daises under the room holograms
 //#if play orsay bilbao uffizi tags
-const floorH = (x, z) => { const dx = Math.abs(x - DAIS.x), dz = Math.abs(z - DAIS.z); if (dx < 1.8 && dz < 1.8) return 0.5; if (dx < 2.4 && dz < 2.4) return 0.25;
+const floorH = (x, z) => { if (window.__floorH800) { const h = window.__floorH800(x, z); if (h != null) return h; } /* #800 tags Kinoteka steps (inert elsewhere) */ const dx = Math.abs(x - DAIS.x), dz = Math.abs(z - DAIS.z); if (dx < 1.8 && dz < 1.8) return 0.5; if (dx < 2.4 && dz < 2.4) return 0.25;
 //#elif gugg-ny splat
 // Guggenheim: the floor is the spiral ramp itself. At any (x, z) there is one candidate height per ramp turn (plus the
 // rotunda floor, the galleries and the daises); the player's current floor height (curH) picks the turn, and a step is
@@ -503,7 +506,12 @@ function goCheckout(reason = 'checkout requested') {
   teleSound(); say('TO THE CHECKOUT…', 3); if (controls.isLocked) controls.unlock();
   const onSite = /(^|\.)tjm\.art$/.test(location.hostname);
   const ids = cart.filter(d => d.status === 'available').map(d => d.slug).slice(0, 12); // off-site: carry the picks to the tjm.art cart
-  const url = onSite ? '/cart/?from=play' : 'https://tjm.art/play/to-cart.html?from=play&items=' + encodeURIComponent(ids.join(',')); window.__checkoutGo = url; // tests stub navigation with __noNav
+//#if tags
+  const from = 'tags'; // #828: hex return, not dungeon
+//#elif play orsay bilbao uffizi gugg-ny splat
+  const from = 'play';
+//#endif
+  const url = onSite ? '/cart/?from=' + from : 'https://tjm.art/play/to-cart.html?from=' + from + '&items=' + encodeURIComponent(ids.join(',')); window.__checkoutGo = url; // tests stub navigation with __noNav
   if (!window.__noNav) setTimeout(() => top.location.assign(url), 600);
 }
 window.__goCheckout = (why) => goCheckout(why || 'guide bot checkout run'); // #236: the guide bot's 'Take me to checkout' run ends here (also when the gate is out of reach, e.g. the splat rooms)
@@ -582,15 +590,20 @@ const lampMat = new THREE.MeshBasicMaterial({ color: new THREE.Color(2.2, 1.8, 1
 //#if play orsay bilbao uffizi
 const DAIS = { x: 0, z: (ROOMS[0].minZ + ROOMS[0].maxZ) / 2 };
 //#elif tags
-const DAIS = { x: -4.5, z: 2.6 }; // hologram dais in the open pavilion (#278: the centre holds the checkout pillar)
+const DAIS = (CATALOG.layout && CATALOG.layout.tags && CATALOG.layout.tags.dais) || { x: -4.5, z: 2.6 }; // hologram dais in the open pavilion (#278: the centre holds the checkout pillar); #774 honeycomb moves it clear of the six room doors
 //#elif gugg-ny
 const DAIS = { x: -4.5, z: 4.5 }; // hologram dais on the rotunda floor
 //#elif splat
-const DAIS = { x: 999, z: 999 }; // splat room: no hologram dais
+const DAIS = { x: 999, z: 999 }; // splat room: no stone/metal dais or raised floor in the living room (floorH/groundAt stay flat)
+//#endif
+//#if splat
+const HOLO_CENTRAL = { x: 1.5, z: -3.8 }; // the guitar hologram floats on open floor between the sofa, round table and work table, in view of the spawn (groundOK clear >= 0.75 m)
+//#elif play orsay bilbao uffizi tags gugg-ny
+const HOLO_CENTRAL = DAIS;
 //#endif
 box(4.8, 0.25, 4.8, MAT.stone(2.4, 0.2), DAIS.x, 0.125, DAIS.z); box(3.6, 0.25, 3.6, MAT.metal(1.8, 0.2), DAIS.x, 0.375, DAIS.z);
 const HOLO_DEFS = [
-  { room: 'central', src: 'holo/holo_central_full_v2.mp4', still: 'holo/still_central_full.jpg', asp: 600 / 408, y: 0.5, x: DAIS.x, z: DAIS.z, title: 'Barre-chord loop (2026-08-21)' },
+  { room: 'central', src: 'holo/holo_central_full_v2.mp4', still: 'holo/still_central_full.jpg', asp: 600 / 408, y: 0.5, x: HOLO_CENTRAL.x, z: HOLO_CENTRAL.z, title: 'Barre-chord loop (2026-08-21)' },
 //#if play orsay bilbao uffizi
   { room: 'travels', src: 'holo/holo_bass_full_v2.mp4', still: 'holo/still_bass_full.jpg', asp: 454 / 408, title: 'Bass and guitar in counterpoint, G (2026-03-10)' },
   { room: 'people', src: 'holo/holo_irish_full_v2.mp4', still: 'holo/still_irish_full.jpg', asp: 454 / 408, title: 'Improv after two days of drilling Irish tunes (2026-03-20)' },
@@ -609,7 +622,12 @@ HOLO_DEFS.forEach(d => { const r = ROOMS.find(q => q.id === d.room); d.b = { min
 //#elif gugg-ny splat tags
 HOLO_DEFS.forEach(d => { const r = d.room === 'central' ? { minX: -10, maxX: 10, minZ: -10, maxZ: 10 } : ROOMS.find(q => q.id === d.room); d.b = { minX: r.minX, maxX: r.maxX, minZ: r.minZ, maxZ: r.maxZ }; });
 //#endif
+//#if tags
+const HOLO814 = new URLSearchParams(location.search).get('holos') === '1'; window.__holo814 = HOLO814; // #814 (TJ): room holograms parked OFF (no video, glow or audio); ?holos=1 re-enables
+const holo = makeHolos(scene, camera, HOLO814 ? HOLO_DEFS : [], { low: LOW, base: import.meta.env.VITE_HOLO_BASE || import.meta.env.BASE_URL });
+//#elif play orsay bilbao uffizi gugg-ny splat
 const holo = makeHolos(scene, camera, HOLO_DEFS, { low: LOW, base: import.meta.env.VITE_HOLO_BASE || import.meta.env.BASE_URL });
+//#endif
 { const hb = document.createElement('span'); hb.className = 'cell'; hb.id = 'holomute'; hb.setAttribute('role', 'button'); hb.tabIndex = 0; hb.title = 'Hologram sound (M)';
   const sb = document.createElement('button'); sb.id = 'soundbtn'; sb.type = 'button';
   const show = m => { hb.textContent = m ? '♪ off' : '♪ on'; sb.textContent = m ? '🔇' : '🔊'; sb.setAttribute('aria-label', m ? 'Unmute music' : 'Mute music'); sb.setAttribute('aria-pressed', String(m)); sb.title = (m ? 'Unmute' : 'Mute') + ' music (M)'; };
@@ -721,7 +739,7 @@ function roomAt(x, z, h = 0) { if (h > 3 && Math.hypot(x, z) < 21) return ROT; /
 
 // ---- paintings: every original, placed exactly as in the tjm.art gallery room ----
 const loader = new THREE.TextureLoader(); loader.setCrossOrigin('anonymous');
-const PLACEHOLDER = 0x5e5040;
+const PLACEHOLDER = 0x9a8c74; // #814: lighter warm stone (was 0x5e5040 charcoal-brown, read as blank boards from arches)
 const POOL = (() => { // soft warm-white wash fanning down from the picture lamp (baseline 'picture light', always on)
   const c = document.createElement('canvas'); c.width = c.height = 256; const x = c.getContext('2d');
   const g = x.createRadialGradient(128, 40, 4, 128, 120, 135); g.addColorStop(0, 'rgba(255,236,200,1)'); g.addColorStop(0.45, 'rgba(255,220,170,.55)'); g.addColorStop(1, 'rgba(255,200,140,0)');
@@ -734,17 +752,14 @@ const frameMat = new THREE.MeshStandardMaterial({ color: 0x2a241d, roughness: 0.
 const poolMat = new THREE.MeshBasicMaterial({ map: POOL, transparent: true, opacity: HIGH ? 0.32 : 0.34, blending: THREE.AdditiveBlending, depthWrite: false });
 const unit = new THREE.PlaneGeometry(1, 1);
 const paintings = [];
-//#if tags
-const baseQ = []; let baseActive = 0, baseDone = 0; // #272: low-res base images, nearest first, 4 in flight, one GPU upload per frame
-function basePump() { if (LOW && !(window.game && window.game.fps > 0) && baseActive >= 2) return; /* #272: low tier, before the first frame: 2 at a time */ const cp = camera.position; for (const p of baseQ) p.dist = p.group.position.distanceTo(cp); baseQ.sort((a, b) => a.dist - b.dist);
-  while (baseActive < 4 && baseQ.length && baseQ[0].dist < 60) { const p = baseQ.shift(); baseActive++;
-    loadTex(p.baseUrl, 3, t => { baseActive--; baseDone++; sharp(t); p.baseTex = t; if (!p.hiTex) { p.mesh.material.map = t; p.mesh.material.color.set(0xffffff); p.mesh.material.needsUpdate = true; } p.base = 1; basePump(); }, () => { baseActive--; p.baseFailed = 1; basePump(); }); }
-  window.__tagsLoad = { done: baseDone, queued: baseQ.length, active: baseActive, total: paintings.length }; }
-//#endif
+
 const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 const LABELS = [];
 const MAXANI = renderer.capabilities.getMaxAnisotropy();
 const sharp = t => { t.colorSpace = THREE.SRGBColorSpace; t.generateMipmaps = true; t.minFilter = THREE.LinearMipmapLinearFilter; t.magFilter = THREE.LinearFilter; t.anisotropy = MAXANI; t.needsUpdate = true; return t; };
+//#if tags
+const PL876 = createPL876({ renderer, camera, paintings, BASE, sharp, LOW, PLACEHOLDER });
+//#endif
 function wrapText(x, text, maxW) { const out = []; let line = ''; for (const w of text.split(' ')) { const t = line ? line + ' ' + w : w; if (x.measureText(t).width > maxW && line) { out.push(line); line = w; } else line = t; } if (line) out.push(line); return out; }
 function fit(x, text, maxW) { if (x.measureText(text).width <= maxW) return text; while (text.length > 1 && x.measureText(text + '…').width > maxW) text = text.slice(0, -1); return text + '…'; }
 // small museum plaque fixed flat on the wall (high-res canvas, mipmapped): readable only up close
@@ -752,6 +767,9 @@ function fit(x, text, maxW) { if (x.measureText(text).width <= maxW) return text
 const PLAQUE_W = 0.28, PLAQUE_H = 0.0875;
 function plaqueMesh(title, sub, subColor, sold) {
   const c = document.createElement('canvas'); c.width = 512; c.height = 160; const x = c.getContext('2d');
+//#if tags
+  if (LOW) { c.width = 384; c.height = 120; x.scale(0.75, 0.75); } // #485: phone/low plaque canvas 384x120 (-44% GPU mem), same layout at 0.75
+//#endif
   x.fillStyle = '#e9e1cf'; x.fillRect(0, 0, 512, 160); x.strokeStyle = '#8a7a5c'; x.lineWidth = 4; x.strokeRect(2, 2, 508, 156);
   const textW = sold ? 440 : 476;
   x.fillStyle = '#1d1712'; x.font = 'bold 44px Georgia, serif'; x.textBaseline = 'middle'; x.fillText(fit(x, title, textW), 18, 54);
@@ -809,7 +827,7 @@ CATALOG.paintings.forEach((data, i) => {
   mesh.userData.p = p; frame.userData.p = p;
   paintings.push(p);
 //#if tags
-  p.baseUrl = BASE + data.img; baseQ.push(p); // #272: streamed by distance (basePump), never all at once before play
+  p.baseUrl = BASE + data.img; PL876.add(p); // #876: 4-band progressive texture streamer
 //#elif play orsay bilbao uffizi gugg-ny splat
   loadTex(BASE + data.img, 3, t => { sharp(t); renderer.initTexture(t); p.baseTex = t; // uploaded before it is shown
     if (!p.hiTex) { mesh.material.map = t; mesh.material.color.set(0xffffff); mesh.material.needsUpdate = true; } p.base = 1; }, () => { p.baseFailed = 1; });
@@ -820,10 +838,11 @@ CATALOG.paintings.forEach((data, i) => {
 });
 //#endif
 //#if play
-//#elif orsay bilbao uffizi gugg-ny splat tags
+//#elif orsay bilbao uffizi gugg-ny splat
 // the Friends Club mural hangs high/far: load its best source (3528 px) up front, mipmapped + max anisotropy, and never evict it
 { const p = paintings.find(q => q.data.id === 'friends-club-mural');
   if (p && p.data.hi) { p.hiReq = 1; p.pinned = 1; p.hiUrl = p.data.hi; setTimeout(() => loadTex(p.hiUrl, 3, t => { sharp(t); renderer.initTexture(t); if (p.state === 'wall') { p.mesh.material.map = t; p.mesh.material.color.set(0xffffff); p.mesh.material.needsUpdate = true; p.hiTex = t; p.hi = 1; } }), 0); } }
+//#elif tags
 //#endif
 // ---- reliable texture loading: retries with backoff, GPU upload before swap, capped resident hi-res (LRU by distance) ----
 function loadTex(url, tries, ok, fail) {
@@ -839,13 +858,29 @@ function hiPump() {
       t.image && t.image.decode ? t.image.decode().catch(() => {}).then(swap) : swap(); }, () => { hiActive--; hiPump(); });
   }
 }
+// #338 (TJ Oct 26): highest practical master (<=2400 px, img.tjm.art/gallery-hi) streams in when the visitor is close; desktop/tablet tiers only
+const MAX_CAP = HIGH ? 10 : 6, maxQueue = [], maxResident = []; let maxActive = 0;
+const MAX_OK = () => !LOW && renderer.capabilities.maxTextureSize >= 4096 && !window.__noMaxTex;
+function maxPump() {
+  while (maxActive < 1 && maxQueue.length) {
+    const p = maxQueue.shift(); if (p.dist - p.w / 2 > 4 || p.state !== 'wall') { p.maxReq = 0; continue; }
+    maxActive++;
+    loadTex(p.data.max, 2, t => { sharp(t);
+      const swap = () => { maxActive--; if (p.state === 'wall' && p.maxReq) { renderer.initTexture(t); const old = p.hiTex; p.mesh.material.map = t; p.mesh.material.color.set(0xffffff); p.mesh.material.needsUpdate = true;
+          if (old && old !== t) old.dispose(); if (!p.hiTex) hiResident.push(p); p.hiTex = t; p.hi = 1; p.hiReq = 1; p.maxTex = 1; maxResident.push(p); window.__maxTex = (window.__maxTex || 0) + 1;
+          maxResident.sort((a, b) => b.dist - a.dist); while (maxResident.length > MAX_CAP && maxResident[0].dist > 4) { const q = maxResident.shift(); dropHi(q); } } else t.dispose(); maxPump(); };
+      t.image && t.image.decode ? t.image.decode().catch(() => {}).then(swap) : swap(); }, () => { maxActive--; maxPump(); });
+  }
+}
+function dropHi(q) { const k = hiResident.indexOf(q); if (k >= 0) hiResident.splice(k, 1); const m = maxResident.indexOf(q); if (m >= 0) maxResident.splice(m, 1);
+  q.mesh.material.map = q.baseTex || q.farStub || null; if (!q.mesh.material.map) q.mesh.material.color.set(PLACEHOLDER); q.mesh.material.needsUpdate = true; if (q.hiTex) q.hiTex.dispose(); q.hiTex = null; q.hi = 0; q.hiReq = 0; q.maxReq = 0; q.maxTex = 0; }
 function hiEvict() { // keep GPU memory bounded: drop the farthest hi-res textures back to the small base image
 //#if play
   if (hiResident.length <= HI_MAX) return; hiResident.sort((a, b) => b.dist - a.dist);
 //#elif orsay bilbao uffizi gugg-ny splat tags
   if (hiResident.length <= HI_MAX) return; hiResident.sort((a, b) => b.dist - a.dist); for (let k = hiResident.length - 1; k >= 0; k--) if (hiResident[k].pinned) hiResident.splice(k, 1);
 //#endif
-  while (hiResident.length > HI_MAX && hiResident[0].dist > 6) { const q = hiResident.shift(); q.mesh.material.map = q.baseTex || null; if (!q.baseTex) q.mesh.material.color.set(PLACEHOLDER); q.mesh.material.needsUpdate = true; q.hiTex.dispose(); q.hiTex = null; q.hi = 0; q.hiReq = 0; }
+  while (hiResident.length > HI_MAX && hiResident[0].dist > 6) { const q = hiResident.shift(); q.mesh.material.map = q.baseTex || q.farStub || null; if (!q.mesh.material.map) q.mesh.material.color.set(PLACEHOLDER); q.mesh.material.needsUpdate = true; q.hiTex.dispose(); q.hiTex = null; q.hi = 0; q.hiReq = 0; q.maxReq = 0; q.maxTex = 0; const m = maxResident.indexOf(q); if (m >= 0) maxResident.splice(m, 1); }
 }
 // picture lights: only the nearest few paintings get a real spotlight
 const spots = Array.from({ length: HIGH ? 6 : 3 }, () => { const s = new THREE.SpotLight(0xfff0dc, 30, 5, 0.42, 0.75, 2); scene.add(s); scene.add(s.target); return s; });
@@ -861,16 +896,19 @@ function updateNearby(force) {
 //#if play
     if (p.dist - p.w / 2 < 5.5 && !p.hiReq && p.state === 'wall') { const u = ON_TJM || /^https:\/\/img\.tjm\.art\//.test(p.data.hi || '') ? p.data.hi : p.data.hiLocal && BASE === '/' ? BASE + 'art-hi/' + p.data.slug + '.webp' : null;
       if (u) { p.hiReq = 1; p.hiUrl = u; hiQueue.push(p); } } if (p.state === 'wall') p.group.visible = p.dist < 24 || p.data.room === (curRoom && curRoom.id) || !!(window.game && window.game.freeze); });
-//#elif orsay bilbao uffizi tags
+//#elif orsay bilbao uffizi
     if (p.dist - p.w / 2 < 5.5 && !p.hiReq && p.state === 'wall') { const hi = p.data.hi || '', u = ON_TJM || /^https:\/\/img\.tjm\.art\//.test(hi) ? hi : /^https:\/\/tjm\.art\//.test(hi) ? '/tjm' + hi.slice(15) : /^https:\/\/media\.vermillionaurora\.com\//.test(hi) ? '/mva' + hi.slice(34) : null; // preview: tjm.art images via the same-origin /tjm/ proxy (no copies)
       if (u) { p.hiReq = 1; p.hiUrl = u; hiQueue.push(p); } } if (p.state === 'wall') p.group.visible = p.dist < 24 || p.data.room === (curRoom && curRoom.id) || !!(window.game && window.game.freeze); });
+//#elif tags
+    if (p.state === 'wall') p.group.visible = p.dist < 24 || p.data.room === (curRoom && curRoom.id) || !!(window.game && window.game.freeze); });
 //#elif gugg-ny splat
     if (p.dist - p.w / 2 < 5.5 && !p.hiReq && p.state === 'wall') { const hi = p.data.hi || '', u = ON_TJM || /^https:\/\/img\.tjm\.art\//.test(hi) ? hi : /^https:\/\/tjm\.art\//.test(hi) ? '/tjm' + hi.slice(15) : /^https:\/\/media\.vermillionaurora\.com\//.test(hi) ? '/mva' + hi.slice(34) : null; // preview: tjm.art images via the same-origin /tjm/ proxy (no copies)
       if (u) { p.hiReq = 1; p.hiUrl = u; hiQueue.push(p); } } if (p.state === 'wall') { p.group.visible = p.dist < 24 || p.data.room === (curRoom && curRoom.id) || !!(window.game && window.game.freeze); const near = p.dist < 14; if (p.plaque) p.plaque.visible = near; if (p.bar) p.bar.visible = near; } });
 //#endif
+//#if play orsay bilbao uffizi gugg-ny splat
   hiQueue.sort((a, b) => a.dist - b.dist); hiPump();
-//#if tags
-  basePump();
+//#elif tags
+  PL876.update();
 //#endif
   const near = paintings.filter(p => p.state === 'wall').sort((a, b) => a.dist - b.dist).slice(0, spots.length);
   spots.forEach((s, k) => { const p = near[k]; if (!p) { s.intensity = 0; return; } const n = new THREE.Vector3(p.data.ix, 0, p.data.iz);
@@ -888,6 +926,11 @@ const start = document.getElementById('start');
 start.addEventListener('click', () => { if (matchMedia('(pointer:coarse)').matches) start.style.display = 'none'; else controls.lock(); });
 controls.addEventListener('lock', () => start.style.display = 'none');
 controls.addEventListener('unlock', () => { if (!window.__test && !window.__reading) start.style.display = 'flex'; });
+//#if tags
+{ /* #783 (TJ): open with controls active, no CLICK TO ENTER gate. Hide #start once loaded; an unlock never brings it back (index.html gates hint + body click re-acquire look). */
+  controls.addEventListener('unlock', () => { start.style.display = 'none'; });
+  const t0783 = performance.now(), hide783 = () => { const p = document.getElementById('tags-progress'); if (window.game && ((p && p.classList.contains('done')) || performance.now() - t0783 > 15000)) { start.style.display = 'none'; window.__noEnter783 = 1; return; } requestAnimationFrame(hide783); }; requestAnimationFrame(hide783); }
+//#endif
 const BOOK_DEFS = [
 //#if play orsay bilbao uffizi
   { id: 'landscapes', room: 'travels', title: 'Watercolor Landscapes', url: 'https://tjm.art/products/watercolor-landscapes/', pages: 75, aspect: 612 / 787.92, dx: -5.5, dz: 4.25 },
@@ -899,9 +942,10 @@ const BOOK_DEFS = [
   { id: 'reflections', room: 'annex', title: 'Reflections on Time', url: 'https://tjm.art/products/reflections-on-time/', pages: 35, aspect: 432 / 648, dx: -3.8, dz: 3.8 }];
 //#elif tags
   // #281/#287: the readable art books on lecterns at the exact centre of their subject rooms, under the middle of the dome
-  { id: 'landscapes', room: 'room-01', x: 12.471, z: 18.200, yaw: -1.5708, title: 'Watercolor Landscapes', url: 'https://tjm.art/products/watercolor-landscapes/', pages: 75, aspect: 612 / 787.92, fixed: 1 },
-  { id: 'portraits', room: 'room-11', x: -10.609, z: -20.125, yaw: -1.5708, title: 'Watercolor Portraits', url: 'https://tjm.art/products/watercolor-portraits/', pages: 79, aspect: 612 / 787.92, fixed: 1 },
-  { id: 'reflections', room: 'room-05', x: 14.636, z: 8.450, yaw: -1.5708, title: 'Reflections on Time', url: 'https://tjm.art/products/reflections-on-time/', pages: 35, aspect: 432 / 648, fixed: 1 }];
+  { id: 'landscapes', room: 'room-01', x: 7.578, z: 13.125 /* #777 nest: room centre */, yaw: -1.5708, title: 'Watercolor Landscapes', url: 'https://tjm.art/products/watercolor-landscapes/', pages: 75, aspect: 612 / 787.92, fixed: 1 },
+  { id: 'portraits', room: 'room-11', x: -7.578, z: -13.125 /* #777 */, yaw: -1.5708, title: 'Watercolor Portraits', url: 'https://tjm.art/products/watercolor-portraits/', pages: 79, aspect: 612 / 787.92, fixed: 1 },
+  { id: 'reflections', room: 'room-02' /* #812 inner ring (was room-05) */, x: 12.375, z: 21.434 /* #781: H5 centre (was standing in the Bitcoin courtyard) */, yaw: -1.5708, title: 'Reflections on Time', url: 'https://tjm.art/products/reflections-on-time/', pages: 35, aspect: 432 / 648, fixed: 1 },
+  { id: 'changing-light', room: 'room-07' /* #812 inner ring (was room-12) */, x: -12.375, z: 21.434 /* #780 (TJ: no plinth in front of the FC container mural): H12 centre, out of courtyard-h1 */, yaw: -1.5708, title: 'In the Changing Light', url: 'https://tjm.art/books/', pages: 54, aspect: 918 / 783, fixed: 1 }];
 //#elif splat
 ]; // splat room: no art books
 //#endif
@@ -910,7 +954,7 @@ const TAGS_BOOKS = BOOK_DEFS.splice(0); // #281: tags books carry their own spot
 //#endif
 BOOK_DEFS.forEach(d => { const r = ROOMS.find(q => q.id === d.room), cx = (r.minX + r.maxX) / 2, cz = (r.minZ + r.maxZ) / 2; d.x = cx + d.dx; d.z = cz + d.dz; d.yaw = Math.atan2(cx - d.x, cz - d.z); d.cover = `books/${d.id}/cover.webp`; });
 //#if tags
-for (const d of TAGS_BOOKS) { d.cover = `books/${d.id}/cover.webp`; BOOK_DEFS.push(d); }
+for (const d of TAGS_BOOKS) { /* #783 (TJ): every book plinth at its room centre, facing the Checkout at the origin */ const rc = ((CATALOG.layout.tags || {}).rooms || []).find(q => q.id === d.room); if (rc && rc.center) { d.x = rc.center[0]; d.z = rc.center[1]; } d.yaw = Math.atan2(-d.x, -d.z); d.cover = `books/${d.id}/cover.webp`; BOOK_DEFS.push(d); }
 //#endif
 const books = makeBooks({ scene, camera, controls, defs: BOOK_DEFS, base: import.meta.env.VITE_BOOK_BASE || import.meta.env.BASE_URL, low: LOW, stone: MAT.stone(0.6, 0.6), pillars, isMuted: () => holo.muted,
   onReading: on => document.body.classList.toggle('reading', on) });
@@ -923,6 +967,11 @@ addEventListener('keydown', e => {
   if (e.code === 'KeyM' && window.__holoToggle) window.__holoToggle();
 });
 addEventListener('keyup', e => keys[e.code] = false);
+const clearMove868 = () => { for (const k in keys) keys[k] = false; try { touchMove.x = touchMove.y = 0; vel.set(0, 0, 0); } catch {} };
+addEventListener('blur', clearMove868);
+document.addEventListener('visibilitychange', () => { if (document.hidden) clearMove868(); });
+document.addEventListener('pointerlockchange', () => { if (!document.pointerLockElement) clearMove868(); });
+window.__clearMove868 = clearMove868;
 let wheelT = 0; addEventListener('wheel', e => { const t = performance.now(); if (t - wheelT < 180 || !e.deltaY) return; wheelT = t; setWeapon(window.__toolStep ? window.__toolStep(weapon, e.deltaY < 0 ? -1 : 1) : (weapon + (e.deltaY < 0 ? vm.length - 1 : 1)) % vm.length); }); // 1 soup thermos · 2 buy scanner · 3 gravity gun
 addEventListener('contextmenu', e => { if (controls.isLocked || weapon === 2) e.preventDefault(); });
 addEventListener('mousedown', e => { if (controls.isLocked && e.button === 2 && weapon === 2 && !window.__reading && grav) grav.secondary(); });
@@ -997,6 +1046,7 @@ buildGravGun(vm[2]); // orange-glowing gravity gun
   box(0.05, 0.025, 0.004, new THREE.MeshBasicMaterial({ color: 0x3aff7a }), 0, 0.04, -0.02, g); // little status screen
   const beam = new THREE.Mesh(new THREE.BoxGeometry(0.006, 0.006, 6), new THREE.MeshBasicMaterial({ color: 0xff2010, transparent: true, opacity: 0.55, blending: THREE.AdditiveBlending, depthWrite: false }));
   beam.position.set(0, 0.005, -3.25); g.add(beam); g.userData.beam = beam;
+  swapToolGLB(g, 'scanner', get => { const b = get('beam'); if (!b || !b.material) return false; Object.assign(b.material, { transparent: true, blending: THREE.AdditiveBlending, depthWrite: false }); b.material.needsUpdate = true; g.userData.beam = b; }); // #199 GLB
 }
 vm.forEach(g => { g.scale.setScalar(0.7); g.rotation.y = 0.1; vmScene.add(g); });
 renderer.autoClear = false;
@@ -1021,7 +1071,7 @@ grav = createGravGun({ scene, camera, paintings, say, isMuted: () => !!holo.mute
 //#elif bilbao
 grav = createGravGun({ scene, camera, paintings, say, isMuted: () => !!holo.muted, walkable, roomAt, gallery: 'bilbao'});
 //#elif tags
-grav = createGravGun({ scene, camera, paintings, say, isMuted: () => !!holo.muted, walkable, roomAt, gallery: 'tags' /* preview: no layout saves */});
+grav = createGravGun({ scene, camera, paintings, say, isMuted: () => !!holo.muted, walkable, roomAt, gallery: 'tags' /* preview: no layout saves */, wallTest: m => m.name === 'roomWallMerge' /* #743: hex walls are merged BufferGeometry, not boxes (museums unchanged) */});
 //#elif uffizi
 grav = createGravGun({ scene, camera, paintings, say, isMuted: () => !!holo.muted, walkable, roomAt, gallery: 'uffizi'});
 //#elif gugg-ny
@@ -1066,7 +1116,7 @@ function aimHit() {
 //#if play
 function fire() { /* museum-move hold 2026-10-18 */ if (chaosActive) return; if (tools && tools.owns(weapon)) { tools.down(weapon); return; } if (swarm && swarm.locked) return; if (weapon === 2) { if (grav) grav.primary(); return; } recoil = 1; if (weapon === 0) fling = FLING_TIME; weapon === 0 ? throwSoup() : buy(); }
 //#elif orsay bilbao uffizi gugg-ny splat tags
-function fire() { /* museum-move hold 2026-10-18 */ if (chaosActive) return; if (tools && tools.owns(weapon)) { tools.down(weapon); return; } if (swarm && swarm.locked) return; if (weapon === 2) { if (grav) grav.primary(); return; } recoil = 1; if (weapon === 0) fling = FLING_TIME; weapon === 0 ? throwPaint() : buy(); }
+function fire() { /* museum-move hold 2026-10-18 */ if (chaosActive) return; if (tools && tools.owns(weapon)) { tools.down(weapon); return; } if (swarm && swarm.locked) return; if (weapon === 2) { if (grav) grav.primary(); return; } recoil = weapon === 1 ? 0.28 : 1; /* #851: soft handheld-scanner kick (soup stays 1) */ if (weapon === 0) fling = FLING_TIME; weapon === 0 ? throwPaint() : buy(); }
 //#endif
 
 //#if play
@@ -1137,8 +1187,8 @@ const lifts = [];
 const scanTagTex = (() => { const c = document.createElement('canvas'); c.width = 256; c.height = 72; const x = c.getContext('2d'); x.fillStyle = '#12301c'; x.fillRect(0, 0, 256, 72); x.strokeStyle = '#3aff7a'; x.lineWidth = 5; x.strokeRect(3, 3, 250, 66);
   x.fillStyle = '#c8ffd8'; x.font = 'bold 34px Arial, sans-serif'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText('✓ Add to cart', 128, 38); const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t; })();
 let scanAC = null;
-function scanBeep(ok) { if (holo.muted) return; try { scanAC = scanAC || new (window.AudioContext || window.webkitAudioContext)(); const a = scanAC, t = a.currentTime;
-  (ok ? [[1568, 0], [2093, 0.09]] : [[330, 0]]).forEach(([f, d]) => { const o = a.createOscillator(), g = a.createGain(); o.type = ok ? 'sine' : 'triangle'; o.frequency.value = f; g.gain.setValueAtTime(0.0001, t + d); g.gain.linearRampToValueAtTime(0.035, t + d + 0.01); g.gain.exponentialRampToValueAtTime(0.0005, t + d + 0.12); o.connect(g).connect(a.destination); o.start(t + d); o.stop(t + d + 0.14); }); } catch (e) {} }
+function scanBeep(ok) { if (holo.muted) return; try { scanAC = scanAC || new (window.AudioContext || window.webkitAudioContext)(); const a = scanAC; if (a.state === 'suspended') a.resume().catch(() => {}); /* #851: resume on the click path */ const t = a.currentTime;
+  (ok ? [[1568, 0], [2093, 0.09]] : [[330, 0]]).forEach(([f, d]) => { const o = a.createOscillator(), g = a.createGain(); o.type = ok ? 'sine' : 'triangle'; o.frequency.value = f; g.gain.setValueAtTime(0.0001, t + d); g.gain.linearRampToValueAtTime(0.06, t + d + 0.01); g.gain.exponentialRampToValueAtTime(0.0005, t + d + 0.12); o.connect(g).connect(a.destination); o.start(t + d); o.stop(t + d + 0.14); }); } catch (e) {} }
 function scanGreen(p) { // the frame lights green with an 'Add to cart' tag
   const old = p.frame.material; p.frame.material = new THREE.MeshBasicMaterial({ color: 0x2bff6a }); exempt(p.frame);
   const tag = new THREE.Mesh(new THREE.PlaneGeometry(0.5, 0.14), new THREE.MeshBasicMaterial({ map: scanTagTex, transparent: true, depthWrite: false })); tag.position.set(0, p.h / 2 + 0.16, 0.04); p.group.add(tag); exempt(tag);
@@ -1154,7 +1204,7 @@ function buyPrint(a) { // #235: scanning a floating print preview adds that prin
 window.__buyPrint = a => buyPrint(a); // #270: click / tap on the print copy's label
 function buy() {
   { const pa = shopScan && shopScan.printAt(hitTargets()); if (pa) return buyPrint(pa); }
-  const hit = aimHit(); if (!hit) return say('AIM AT A PAINTING');
+  const hit = aimHit(); if (!hit) { scanBeep(false); return say('AIM AT A PAINTING'); } /* #851: every scan beeps */
   const p = hit.object.userData.p;
   if (p.data.status === 'sold') { scanBeep(false); return say('SOLD: ' + p.data.title); }
   if (p.data.status !== 'available') { scanBeep(false); return say('BY INQUIRY ONLY: ' + p.data.title); }
@@ -1278,6 +1328,9 @@ function startSwarm(drag) {
 }
 // chase: elves run you down. They rubber-band (always faster than your top speed, faster still the further back they are)
 // and hop onto your recent trail, out of sight, if a wall blocks them or they fall far behind. Once caught, the old carry plays.
+//#if tags
+const ED876 = createED876({ CATALOG, scene, camera, walkable, roomAt, pillars, MINI, DAIS });
+//#endif
 const EMERGE = 2; // s: the elves climb out of the paintings before the chase starts (a fair head start)
 function updateChase(dt) {
   const w = swarm; w.ct += dt; const t = w.ct, c = camera.position;
@@ -1301,8 +1354,10 @@ function updateChase(dt) {
     animateElf(e.s, 'walk', t, camera, dt); best = Math.min(best, Math.hypot(c.x - e.cp.x, c.z - e.cp.z));
   });
   if (t > EMERGE && (best < 1.0 || (move ? move.chase.forceCatch(t - (EMERGE - 1)) : t > 13))) { if (move) move.chase.end(w); // caught: from here on it is the old sequence (lift, carry, drop)
-//#if play orsay bilbao uffizi tags
+//#if play orsay bilbao uffizi
     const r = roomAt(c.x, c.z); if (r) w.dest = r.id === 'central' ? V(DAIS.x, 0, DAIS.z) : V((r.minX + r.maxX) / 2, 0, (r.minZ + r.maxZ) / 2);
+//#elif tags
+    const r = roomAt(c.x, c.z); if (r) w.dest = ED876.pick(r);
 //#elif gugg-ny splat
     const r = roomAt(c.x, c.z); w.fromH = curH; w.destH = curH > 0.3 ? curH : 0; if (r) w.dest = r.id === 'central' ? (curH > 0.3 ? V(c.x, 0, c.z) : V(DAIS.x, 0, DAIS.z)) : V((r.minX + r.maxX) / 2, 0, (r.minZ + r.maxZ) / 2);
 //#endif
@@ -1401,6 +1456,9 @@ function updateSwarm(dt) {
   const w = swarm; w.t += dt * (move && move.hold ? move.hold.factor(w, dt, w.t > 2.2 && w.t < 6) : 1); const t = w.t;
   const eu = new THREE.Euler(0, 0, 0, 'YXZ').setFromQuaternion(camera.quaternion);
   // camera path: 0-1.0 emerge, 1.0-2.2 rush, 2.2-3.0 lift, 3.0-6.0 carry to centre, 6.0-6.45 fall, bump+shake, 7.2 control back
+//#if tags
+  if (w.dest && !w.dest876) { w.dest876 = 1; const r = roomAt(w.dest.x, w.dest.z); if (r) w.dest = ED876.pick(r); }
+//#endif
 //#if play orsay bilbao uffizi tags
   const lift = EYE + floorH(w.from.x, w.from.z) + ease((t - 2.2) / 0.8) * (1.5 - floorH(w.from.x, w.from.z));
 //#elif gugg-ny splat
@@ -1480,7 +1538,7 @@ function loop() {
     return;
   }
   if (fall) updateFall(dt);
-  if ((window.game && window.game.freeze) || window.__reading) {} else if (fall) {} else if (swarm && !swarm.chase) { updateSwarm(dt); } else { if (swarm && swarm.chase) updateChase(dt);
+  if ((window.game && window.game.freeze) || window.__reading || (window.__museumPause && window.__museumPause.open)) {} else if (fall) {} else if (swarm && !swarm.chase) { updateSwarm(dt); } else { if (swarm && swarm.chase) updateChase(dt);
   vel.x -= vel.x * 10 * dt; vel.z -= vel.z * 10 * dt;
   const fz = (keys.KeyW || keys.ArrowUp ? 1 : 0) - (keys.KeyS || keys.ArrowDown ? 1 : 0) - touchMove.y;
   const fx = (keys.KeyD ? 1 : 0) - (keys.KeyA ? 1 : 0) + touchMove.x;
@@ -1617,9 +1675,9 @@ function loop() {
   canvas.style.transform = pulse > 0.01 ? `scale(${1 + 0.012 * pulse * Math.sin(now / 230)}) skewX(${pulse * 0.8 * Math.sin(now / 310)}deg)` : '';
   if (renderer.toneMapping !== THREE.AgXToneMapping) renderer.toneMapping = THREE.AgXToneMapping;
 //#if tags
-  if (!TAGS.holding()) { pipeline.render(); renderer.setRenderTarget(null); renderer.clearDepth(); if (!window.__reading) renderer.render(vmScene, vmCam); }
+  if (!TAGS.holding()) { pipeline.render(); renderer.setRenderTarget(null); renderer.clearDepth(); if (!window.__reading && !window.__tourHud) renderer.render(vmScene, vmCam); }
 //#elif play orsay bilbao uffizi gugg-ny splat
-  pipeline.render(); renderer.setRenderTarget(null); renderer.clearDepth(); if (!window.__reading) renderer.render(vmScene, vmCam);
+  pipeline.render(); renderer.setRenderTarget(null); renderer.clearDepth(); if (!window.__reading && !window.__tourHud) renderer.render(vmScene, vmCam);
 //#endif
   fpsTick(now); adaptive(now, start.style.display === 'none' && !document.hidden);
   window.__frames = (window.__frames || 0) + 1; // read by the black-screen watchdog in index.html
@@ -1674,7 +1732,7 @@ const STEPS = HIGH ? [() => { pipeline.stepDown && pipeline.stepDown(); GLOWS.fo
   : MEDIUM ? [() => dprDown(), () => { shadowsOff(); autoLevel = 'low'; }] : [() => dprDown()];
 const adaptive = makeAdaptive(STEPS, (i, n) => { if (qcell) qcell.textContent = QL[autoLevel] + '·auto'; window.__autoSteps = i; });
 setTimeout(() => pitLights.forEach(l => { if (l.castShadow) l.shadow.needsUpdate = true; }), 3000); // re-bake once everything has loaded
-renderer.domElement.addEventListener('webglcontextlost', e => { e.preventDefault(); window.__glLost = 1; window.__playFallback && window.__playFallback('lost'); });
+renderer.domElement.addEventListener('webglcontextlost', e => { e.preventDefault(); window.__glLost = 1; try { window.__texLost = { textures: renderer.info.memory.textures, geometries: renderer.info.memory.geometries, base: window.__tagsLoad, t: Math.round(performance.now()) }; console.warn('[webglcontextlost]', JSON.stringify(window.__texLost)); } catch (_) {} window.__playFallback && window.__playFallback('lost'); });
 loop(); renderCart();
 
 //#if gugg-ny
@@ -1693,7 +1751,7 @@ window.game = { get move() { return move; }, get weapon() { return weapon; }, ge
   const g = paintings[i].group; const n = new THREE.Vector3(0, 0, 1).applyQuaternion(g.quaternion);
 //#if play orsay bilbao uffizi tags
   camera.position.copy(g.position).addScaledVector(n, dist); camera.position.y = EYE + floorH(camera.position.x, camera.position.z); camera.lookAt(g.position.x, g.position.y, g.position.z); updateNearby(true); // test hook: refresh visibility after the jump
-}, view: (x, z, tx, tz) => { camera.position.set(x, EYE + floorH(x, z), z); camera.lookAt(tx, EYE, tz); updateNearby(true); }, hideStart: () => { window.__test = 1; start.style.display = 'none'; } };
+}, view: (x, z, tx, tz) => { camera.position.set(x, EYE + floorH(x, z), z); camera.lookAt(tx, EYE, tz); updateNearby(true); }, saveState: () => saveState(), hideStart: () => { window.__test = 1; start.style.display = 'none'; } };
 //#elif gugg-ny splat
   camera.position.copy(g.position).addScaledVector(n, dist); curH = floorNear(camera.position.x, camera.position.z, g.position.y - 1.7); camera.position.y = EYE + curH; camera.lookAt(g.position.x, g.position.y, g.position.z); updateNearby(true);
 }, view: (x, z, tx, tz, h = 0, ty) => { curH = floorNear(x, z, h); camera.position.set(x, EYE + curH, z); camera.lookAt(tx, ty === undefined ? EYE + curH : ty, tz); updateNearby(true); }, hideStart: () => { window.__test = 1; start.style.display = 'none'; } };

@@ -1,0 +1,10 @@
+import { chromium } from 'playwright-core';
+const dev = process.argv[2] || 'desktop';
+const b = await chromium.launch({ executablePath: '/usr/bin/google-chrome', args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] });
+const o = dev === 'phone' ? { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 } : { viewport: { width: 1280, height: 800 } };
+const p = await (await b.newContext(o)).newPage(); const errs = []; p.on('pageerror', e => errs.push(e.message));
+const bad = []; p.on('response', r => { if (/ostrich/.test(r.url())) bad.push(r.status() + ' ' + r.url().split('/').pop()); });
+await p.goto(process.argv[3] || 'http://localhost:4317/play/'); await p.waitForFunction(() => window.__ostrichBot && window.__ostrichBot.ready, null, { timeout: 120000 }); await p.waitForTimeout(4000);
+const r = await p.evaluate(() => { const O = window.__ostrichBot, b = O.bump470 || {}; let loaded = 0, tot = 0; O.api.g.traverse(o => { if (o.isMesh) for (const m of [].concat(o.material)) for (const k of ['normalMap', 'roughnessMap', 'aoMap']) if (m[k]) { tot++; if (m[k].image && m[k].image.width) loaded++; } });
+  return { ready: O.ready, low: O.low, bump: O.bump, err: O.bumpError, feather: b.feather, skin: b.skin, beak: b.beak, mats: b.mats, maps: b.maps, textures: b.textures, slotsLoaded: loaded + '/' + tot, minY: O.minY, scale: O.api.state.scale }; });
+console.log(dev, JSON.stringify(r), 'reqs', bad.join(', '), 'errs', errs.slice(0, 3)); await b.close();

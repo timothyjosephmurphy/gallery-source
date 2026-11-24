@@ -4,4 +4,7 @@
 export const EGG_FLAGS = {
   slender: false, // the slender figure: off by TJ's request
   box: false, // the box egg (the cardboard box that hides an egg): off by TJ's request, Oct 23
+  // #350 (TJ Oct 26, preview-251): ALL easter-egg props off. Only the guide bot (drone + guide = ostrich guide, tour/ride/checkout escort) stays.
+  secret: false, untitled4: false, insanity: false, notasoup: false, bobbleheads: false,
+  printer: false, satoshi: false, pizza: false, coin: false, banana: false, dune: false, ostrich: false, starship: false,
 };

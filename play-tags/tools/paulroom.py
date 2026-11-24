@@ -2,7 +2,7 @@
 # frame with its plaque and product link. Annex hex room 'room-13' (radius 8) joined to room-07 through a door on room-07's outer wall 5.
 import json, math
 import import309
-IN = 0.0254; RID = 'room-13'; HOST = __import__('os').environ.get('HOST', 'room-02'); HW = int(__import__('os').environ.get('HW', '0')); RAD = 8.0; HOFF = float(__import__('os').environ.get('HOFF', '0.9')); DATA = import309.DATA
+IN = 0.0254; RID = 'room-13'; HOST = __import__('os').environ.get('HOST', 'room-02'); HW = int(__import__('os').environ.get('HW', '0')); RAD = float(json.load(open('src/hang-overrides.json')).get('paulRoom', {}).get('radius', 8.0)); HOFF = float(__import__('os').environ.get('HOFF', '0.9')); DATA = import309.DATA
 def add_room(c):
     rooms = c['layout']['tags']['rooms']; host = next(r for r in rooms if r['id'] == HOST)
     if any(r['id'] == RID for r in rooms): return
@@ -32,7 +32,7 @@ def build(c, LP, R, live):
 def place(c, LP):
     r = next(r for r in c['layout']['tags']['rooms'] if r['id'] == RID); cx, cz = r['center']; ap = r['apothem']; half = r['radius'] / 2 - 0.55
     ps = sorted([p for p in c['paintings'] if p.get('paulMurphy')], key=lambda p: int(p['id'].rsplit('-', 1)[1])); doorw = [int(k) for k in r['doorWalls']]
-    walls = [k for k in range(6) if k not in doorw]; unit = lambda p: p['fw'] + 0.04 + 0.26 + 0.1  # painting + gap + plaque + gap
+    NR = int(json.load(open('src/hang-overrides.json')).get('paulRoom', {}).get('rows', 1)); walls = [k for k in range(6) if k not in doorw]; walls = [k for k in walls for _ in range(NR)]; unit = lambda p: p['fw'] + 0.04 + 0.26 + 0.1  # painting + gap + plaque + gap
     # fill wall by wall in number order; balance so every wall is used evenly
     tot = sum(unit(p) for p in ps); per = tot / len(walls); rows = []; cur = []; acc = 0
     for p in ps:
@@ -40,13 +40,15 @@ def place(c, LP):
         cur.append(p); acc += unit(p)
     rows.append(cur); rep = []
     assert len(rows) <= len(walls) and all(sum(unit(p) for p in rw) - 0.1 <= 2 * half for rw in rows), [round(sum(unit(p) for p in rw), 2) for rw in rows]
+    seen = {}
     for k, rw in zip(walls, rows):
+        lvl = seen.get(k, 0); seen[k] = lvl + 1; yy = 1.45 if NR == 1 else (1.85 if lvl == 0 else 1.15); py = yy if NR > 1 else 1.45
         th = math.radians(60 * k); n = (math.cos(th), math.sin(th)); ix, iz = -n[0], -n[1]; tx, tz = iz, -ix
         bx, bz = cx + (ap - 0.03) * n[0], cz + (ap - 0.03) * n[1]; L = sum(unit(p) for p in rw) - 0.1; s = -L / 2
         for p in rw:
             sc = s + p['fw'] / 2; sp = sc + p['fw'] / 2 + 0.04 + 0.13; q = LP[p['id']]
-            pl = dict(s=round(sp, 3), x=round(bx + tx * sp, 3), z=round(bz + tz * sp, 3), y=1.45, w=0.26, h=0.18)
-            for o in (p, q): o.update(room=RID, wall=k, x=round(bx + tx * sc, 3), z=round(bz + tz * sc, 3), y=1.45, ix=ix, iz=iz)
+            pl = dict(s=round(sp, 3), x=round(bx + tx * sp, 3), z=round(bz + tz * sp, 3), y=py, w=0.26, h=0.18)
+            for o in (p, q): o.update(room=RID, wall=k, x=round(bx + tx * sc, 3), z=round(bz + tz * sc, 3), y=yy, ix=ix, iz=iz); p['cy'] = yy
             q['s'] = round(sc, 3); p['plaqueAt'] = dict(pl); q['plaque'] = dict(pl); s += unit(p)
-        rep.append((k, len(rw), round(L, 2)))
+        rep.append((k, lvl, len(rw), round(L, 2)))
     return rep

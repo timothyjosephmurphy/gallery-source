@@ -1,0 +1,8 @@
+import { chromium } from 'playwright-core';
+const b=await chromium.launch({executablePath:'/usr/bin/google-chrome',args:['--use-gl=swiftshader','--enable-unsafe-swiftshader']});const p=await b.newPage({viewport:{width:1280,height:720}});const errs=[],bad=[];p.on('pageerror',e=>errs.push(e.message));p.on('console',m=>{if(m.type()==='error')errs.push(m.text())});p.on('response',r=>{if(r.status()>=400)bad.push(r.status()+' '+r.url())});
+await p.goto(process.argv[2]||'https://tjm.art/play/',{waitUntil:'load'});await p.waitForFunction(()=>window.game&&game.tags&&game.tags.ready,null,{timeout:180000});await p.waitForTimeout(5000);
+const r=await p.evaluate(()=>{const ids=game.paintings.map(q=>(q.data||q).id);const sc=game.scene||game.tags.scene;let names={};sc.traverse(o=>{if(/vista811|awning811|fountain811|easel811|horizon352|fence352/.test(o.name||''))names[o.name]=(names[o.name]||0)+1});
+let vro=null,fmap=null;sc.traverse(o=>{if(o.name==='vista811')vro=o.renderOrder;if(o.name==='fence352-panels')fmap=!!(o.material.map&&o.material.map.image)});
+const W=game.tags.world||{};const fc=(W.colliders||[]).filter(c=>c.kind==='fountain786').length;
+let low=0,spot=0;sc.traverse(o=>{if(o.name==='bookSpot834')spot++});const WL=(W.walls||[]).filter(w=>/low834/.test(w.id)).length;return {low834:WL,bookSpots:spot,feeder190:ids.includes('older-work-hummingbird-feeder-190'),keepers:['book-art-aa4dcced8a2ae6a8111c','book-art-8fde7c978d6cd5d53727','book-art-b7a9cd259d8ac51a236b'].map(i=>ids.includes(i)),names,vistaRO:vro,fenceTexLoaded:fmap,fountainColliders:fc,easel:window.__ist811&&window.__ist811.parts}});
+console.log(JSON.stringify(r));console.log('errors',errs);console.log('4xx',bad.slice(0,15));await b.close();

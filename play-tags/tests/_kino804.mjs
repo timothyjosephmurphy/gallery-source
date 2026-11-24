@@ -1,0 +1,10 @@
+import { chromium } from 'playwright-core'; import fs from 'node:fs';
+const b = await chromium.launch({ executablePath: '/usr/bin/google-chrome', args: ['--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader','--autoplay-policy=no-user-gesture-required'] });
+const p = await (await b.newContext({ viewport:{width:390,height:844}, isMobile:true, hasTouch:true })).newPage(); const errs=[]; p.on('pageerror',e=>errs.push(e.message));
+await p.goto(process.argv[2]); await p.waitForFunction(()=>window.game&&game.tags&&game.tags.ready&&window.__kino800,null,{timeout:120000});
+const cat = JSON.parse(fs.readFileSync('src/catalog.json')); const K = cat.layout.tags.openCourts.find(o=>o.id==='kinoteka').kino800;
+const at = (u,v)=>[K.D[0]+K.t[0]*u+K.f[0]*v, K.D[1]+K.t[1]*u+K.f[1]*v];
+const go = async (u,v)=>{ const [x,z]=at(u,v); await p.evaluate(([x,z])=>{game.camera.position.set(x,1.6,z)},[x,z]); await p.waitForTimeout(4000); };
+const st = ()=>p.evaluate(()=>{ const S=window.__kino800, v=S.video(); return {inside:S.inside,playing:S.playing,released:S.released||0,src:v.getAttribute('src'),t:S.t}; });
+await go(0,18); const a=await st(); await go(0,40); const c=await st(); await go(0,18); const d=await st();
+console.log(JSON.stringify({in1:a,out:c,in2:d,errs})); await b.close();

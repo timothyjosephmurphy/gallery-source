@@ -12,11 +12,13 @@ Primary sources: `/workspace/museum-eggs/` (esp. `CHANGES-2026-10-18.md`, `INTEG
 | Name | Live URL | Source on box | Build | Deploy |
 |---|---|---|---|---|
 | **TJM Gallery** | https://tjm.art/play/ | `/workspace/play-gallery` | `npx vite build` with **base `/play/`** → `dist/` | Copy built assets into **vermillionaurora** repo `static/play/`, open a PR, merge to `main` (Workers Builds). Latest: PR **#620** (merged ~2:36 AM PT Oct 18). Also ships `static/play/to-cart.html`. |
-| **Musée d'Orsay** | https://tjm-play-orsay.pages.dev/ | `/workspace/play-orsay` | `cp .env.orsay .env.production && npx vite build --base / --outDir dist && python3 deploy/gen.py` | Cloudflare Pages project **`tjm-play-orsay`**, TJ account **`<TJ-CF-ACCOUNT-ID, ask TJ>`**. Run `deploy/execute.js` via Cloudflare connector `execute`. No media copied; `/art/*` proxies tjm.art. |
+| **Musée d'Orsay** | https://tjm-play-orsay.pages.dev/ | `/workspace/play-orsay` | `cp .env.orsay .env.production && npx vite build --base / --outDir dist && python3 deploy/gen.py` | Cloudflare Pages project **`tjm-play-orsay`**, TJ account **`3c1fddf0f4f4fc9c84594757d2e1bda0`**. Run `deploy/execute.js` via Cloudflare connector `execute`. No media copied; `/art/*` proxies tjm.art. |
 | **Guggenheim Bilbao** | https://tjm-play-bilbao.pages.dev/ | `/workspace/play-bilbao` | same Vite `--base /` + `deploy/gen.py` (default project `tjm-play-bilbao`) | Pages **`tjm-play-bilbao`**, same TJ account. |
 | **Uffizi** | https://tjm-play-uffizi.pages.dev/ | `/workspace/play-uffizi` | same; `deploy/gen.py` default `tjm-play-uffizi` | Pages **`tjm-play-uffizi`**, same TJ account. |
-| **Guggenheim NY** | https://tjm-play-gugg-ny.pages.dev/ | `/workspace/play-gugg-ny` | `npx vite build --base / --outDir dist && python3 deploy/gen.py` | Pages **`tjm-play-gugg-ny`**, same TJ account. See `GUGG-NY.md`. |
-| **Montreal (MBAM) — Chase Toole** | https://chase-toole-site-7b3.pages.dev/play-montreal/ | `/workspace/chase-toole-site/play-montreal` (also mirrored under site `public/play-montreal/`) | `cd play-montreal && npm run layout && npm run build` → `../public/play-montreal/` | **Chase's** GitHub **`websitehandoff5-svg/chase-toole-site`**, Cloudflare Pages **`chase-toole-site`**, Chase account **`<CHASE-CF-ACCOUNT-ID, redacted>`**. PRs on that repo only (latest gallery work: PRs #4–#10). Site also hosts The Dungeon at `/play/`. |
+| **Guggenheim NY** | https://tjm.art/play/g/gugg-ny/ (old https://tjm-play-gugg-ny.pages.dev/ redirects) | `/workspace/play-gugg-ny` | `npx vite build --base / --outDir dist && python3 deploy/gen.py` | Served from website `static/play/` shared bundle (old Pages **`tjm-play-gugg-ny`** no longer primary). See `GUGG-NY.md`. |
+| **Montreal (MBAM) — Chase Toole** | https://chase-toole-site-7b3.pages.dev/play-montreal/ | `/workspace/chase-toole-site/play-montreal` (also mirrored under site `public/play-montreal/`) | `cd play-montreal && npm run layout && npm run build` → `../public/play-montreal/` | **Chase's** GitHub **`websitehandoff5-svg/chase-toole-site`**, Cloudflare Pages **`chase-toole-site`**, Chase account **`d4cd4947ec5996a991e43fa6134e6704`**. PRs on that repo only (latest gallery work: PRs #4–#10). Site also hosts The Dungeon at `/play/`. |
+
+**Guggenheim NY note (Oct 26 2026 scout):** `https://tjm-play-gugg-ny.pages.dev/` 301 → `https://tjm.art/play/gugg-ny/` → `https://tjm.art/play/g/gugg-ny/`. Production is the vermillionaurora website `static/play/` shared bundle, not the old Pages project. Local `play-gugg-ny/src` is stripped (no `main.js`/`move.js`, like Orsay/Bilbao/Uffizi), so the box cannot rebuild it; a rebuild needs recovered source or a website PR. Fairer-chase move is already live in `main-ClTpcqQe-r243.js`.
 
 **Gate network** (`museum-gates`): each museum has a slipgate hall linking the six URLs above (`src/gates.js` `MUSEUMS`). Dormant dungeon arches: Halo, Far Cry, Myst, Portal, Skyrim.
 
@@ -75,7 +77,7 @@ Issue **#29** body: *"Cake room, plaque, Untitled #4 in play. Starship in Orsay,
 5. **Original designs only** — procedural architecture, synthesized audio, no copied game assets.
 6. **No layout PUT or DELETE** against the layouts Worker (read/GET only unless TJ explicitly asks).
 7. **Never move Chase's `/play/media/` folder** (Montreal loads art from `/play/media/art|art-mid|art-hi/`).
-8. **Chase work only** via `websitehandoff5-svg/chase-toole-site` and Chase's Cloudflare account `<CHASE-CF-ACCOUNT-ID, redacted>` — never deploy Chase onto TJ's Pages.
+8. **Chase work only** via `websitehandoff5-svg/chase-toole-site` and Chase's Cloudflare account `d4cd4947ec5996a991e43fa6134e6704` — never deploy Chase onto TJ's Pages.
 9. **Never `pkill` by pattern** — stop only your own processes by PID.
 10. **Plaques beside paintings at eye level**, never blocked by lights (issue #19).
 11. **Social/public copy: no prices, no emojis.**

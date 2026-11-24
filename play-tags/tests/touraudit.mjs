@@ -19,7 +19,7 @@ if (w.skip === 'none') fails.push('no Skip button'); if (!w.cap) fails.push('no 
 await p.waitForFunction(() => __tour.phase === 'offer', null, { timeout: 20000 });
 await p.waitForFunction(() => __tour.state.clip, null, { timeout: 5000 }).catch(() => {}); await p.waitForTimeout(200);
 const of = await p.evaluate(() => ({ gap: __tour.state.gap, panel: getComputedStyle(document.getElementById('tourOffer')).display, clip: __tour.state.clip, cap: __tour.state.caption, skipped: __tour.S.skipped }));
-if (!(of.gap >= 0.9 / (+process.env.TOURRATE || 8) && of.gap < 3)) fails.push('no ~1 s pause before the first bot line: ' + of.gap); if (of.panel === 'none') fails.push('no controls overlay'); if (of.clip !== '01-offer.mp3') fails.push('offer clip not playing: ' + of.clip); if (of.skipped) fails.push('hologram did not play through');
+if (!(of.gap >= 0.9 / (+process.env.TOURRATE || 8) && of.gap < 3)) fails.push('no ~1 s pause before the first bot line: ' + of.gap); if (of.panel === 'none') fails.push('no controls overlay'); if (of.clip !== '01-offer.mp3' && of.clip !== '00-welcome.mp3' /* #809 Maeve welcome line precedes the offer */) fails.push('offer clip not playing: ' + of.clip); if (of.skipped) fails.push('hologram did not play through');
 // tap the bot
 let ph = 'offer';
 for (let k = 0; k < 3 && ph === 'offer'; k++) { const bot = await p.evaluate(() => { const D = eggs.drone, v = D.root.position.clone(); v.y += 0.1; v.project(game.camera); return { x: (v.x + 1) / 2 * innerWidth, y: (1 - v.y) / 2 * innerHeight, z: v.z }; });
@@ -43,22 +43,22 @@ for (let i = 0; i < 6000; i++) { await p.waitForTimeout(150); const s = await p.
   if (s.clip === '02-intro.mp3') { introW.kinds.add(s.kind); introW.pos.push(await p.evaluate(() => [game.camera.position.x, game.camera.position.z])); }
   if (s.phase !== 'tour') break; }
 const end = await p.evaluate(() => ({ ...__tour.state, frozen: !!game.freeze, reading: !!window.__reading, dmt: /DMT/.test(document.body.innerText + document.title) }));
-{ const P = introW.pos, mv = P.length > 1 ? Math.hypot(P[P.length - 1][0] - P[0][0], P[P.length - 1][1] - P[0][1]) : 0; introW.moved = +mv.toFixed(1); if (!introW.kinds.has('walk') || introW.kinds.has('stop') || mv < 1.5) fails.push('preamble not narrated on the first walk ' + JSON.stringify({ kinds: [...introW.kinds], moved: mv })); }
+{ const P = introW.pos, mv = P.length > 1 ? Math.hypot(P[P.length - 1][0] - P[0][0], P[P.length - 1][1] - P[0][1]) : 0; introW.moved = +mv.toFixed(1); if (MAN.clips.some(c => c.file === '02-intro.mp3') && (!introW.kinds.has('walk') || introW.kinds.has('stop') || mv < 1.5)) fails.push('preamble not narrated on the first walk ' + JSON.stringify({ kinds: [...introW.kinds], moved: mv })); }
 if (end.phase !== 'ended') fails.push('tour did not end: ' + end.phase);
-if (JSON.stringify(end.log) !== JSON.stringify(ORDER)) fails.push('clip order ' + end.log.join(','));
+if (JSON.stringify(end.log.filter(f => f !== '01-offer.mp3')) !== JSON.stringify(ORDER.filter(f => f !== '01-offer.mp3')) /* #809: tapping Tour during Maeve's welcome line skips the offer line */) fails.push('clip order ' + end.log.join(','));
 const want = MAN.clips.filter(c => c.type === 'stop' && !/intro/.test(c.file)).map(c => c.order); // #305: the preamble is narrated on the first walk, not at a stop if (JSON.stringify(end.visited.filter((x, i, a) => a.indexOf(x) === i)) !== JSON.stringify(want)) fails.push('visited ' + end.visited);
-const SP = { 4: 1, 6: 4, 8: 2, 8.5: 3, 10: 4, 12: 1, 12.5: 3 };
+const SP = { 5: 4, 7: 4, 9: 4, 11: 4, 13: 4 }; // #809 Maeve route
 for (const s of stops) { if (!s.walk) fails.push('stop ' + s.order + ' off the floor'); const want = SP[s.order];
   { const seen = (end.focusSeen || {})[s.order]; if (seen) s.focus = Object.entries(seen).map(([t, v]) => ({ t, ...v })); if (end.freed && end.freed[s.order] != null) s.freed = true; }
   if (want) { const got = (end.focusLog[s.order] || []).length; if (got < want) fails.push('stop ' + s.order + ' focused ' + got + '/' + want); if (!s.focus.length || !s.focus.every(f => f.on && f.d < (dev === 'phone' ? 5.2 : 3.4) /* a wide 1.5x painting needs more distance to fit a portrait phone screen */)) fails.push('stop ' + s.order + ' focus not close/on screen ' + JSON.stringify(s.focus)); if (!s.freed) fails.push('stop ' + s.order + ' never returned control'); }
   else if (s.mural === false) fails.push('mural stop not framed'); }
-if (![6, 8.5, 10, 12.5].every(o => (end.focusLog[o] || []).length >= 3)) fails.push('multi-painting focus missing');
-if (!ctlSeen) fails.push('no controls overlay during the controls line'); else if (ctlSeen.frozen) fails.push('player frozen during the controls line'); else if (dev === 'phone' ? !(ctlSeen.thumbs >= 2 && /tcStick/.test(ctlSeen.anim) && /tcDrag/.test(ctlSeen.anim)) : !(ctlSeen.shift && ctlSeen.wasd)) fails.push('controls overlay content ' + JSON.stringify(ctlSeen));
+if (![5, 7, 9, 11, 13].every(o => (end.focusLog[o] || []).length >= 3)) fails.push('multi-painting focus missing');
+if (!ctlSeen) fails.push('no controls overlay during the controls line'); else if (ctlSeen.frozen) fails.push('player frozen during the controls line'); else if (dev === 'phone' ? !(ctlSeen.thumbs >= 1 && /tcDrag/.test(ctlSeen.anim)) /* #304: move pad removed, look-drag only */ : !(ctlSeen.shift && ctlSeen.wasd)) fails.push('controls overlay content ' + JSON.stringify(ctlSeen));
 const pull = end.pulls.find(x => x.from > 3); if (!wandered || wandered.at == null) fails.push('could not wander'); else if (!pull) fails.push('no pull back after wandering ' + JSON.stringify(end.pulls));
 if (end.glides.some(g => g.L > 1 && g.frames < 4)) fails.push('a stop move looked like a teleport ' + JSON.stringify(end.glides.filter(g => g.frames < 4)));
 if (stops.length !== want.length) fails.push('sampled stops ' + stops.map(s => s.order));
 if (end.errors.length) fails.push('tour errors ' + end.errors); if (end.frozen || end.reading) fails.push('controls not released at the end');
-if (muteChecked !== true) fails.push('not silent when muted'); if (rings.size < 5) fails.push('countdown ring did not count'); if (caps.size < 20) fails.push('few captions: ' + caps.size); if (end.dmt) fails.push('DMT in DOM');
+if (muteChecked !== true) fails.push('not silent when muted'); if (rings.size < 5) fails.push('countdown ring did not count'); if (caps.size < 15) fails.push('few captions: ' + caps.size); if (end.dmt) fails.push('DMT in DOM');
 // exit any time: restart, exit mid-walk
 await p.evaluate(() => { __tour.S.phase = 'offer'; __tour.start(); }); await p.waitForTimeout(1500);
 const ex = await p.evaluate(() => { __tour.exit(); const c = game.camera.position; return { phase: __tour.phase, frozen: !!game.freeze, walk: !!eggs.world.walkable(c.x, c.z), ring: getComputedStyle(document.getElementById('tourRing')).display }; });

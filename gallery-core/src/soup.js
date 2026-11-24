@@ -3,6 +3,7 @@
 // Desktop: 512x640 splats with wet rim, spray streaks, tapered drips with bulb ends, gloss + beads. Phones / coarse pointer: 256x320.
 // Still 4 cached texture variants (no per-throw canvas work after the first 4), so the splat cap and performance stay as before.
 import * as THREE from 'three';
+import { swapToolGLB } from './toolglb.js'; // #199 tool GLBs
 const LOW = typeof matchMedia !== 'undefined' && matchMedia('(pointer: coarse)').matches;
 let quality = LOW ? 'low' : 'hd';
 // --- unchanged from museum-shared/soup.js (thermos, sounds, pose) ---
@@ -27,6 +28,7 @@ export function buildThermos(g) {
   a(new THREE.CylinderGeometry(0.045, 0.045, 0.04, TS, 1, true), steel, 0.24);
   const soup = a(new THREE.CircleGeometry(0.042, TS), new THREE.MeshLambertMaterial({ color: 0xd2451b }), 0.255); soup.rotation.x = -Math.PI / 2;
   const hd = a(new THREE.TorusGeometry(0.05, 0.012, 10, 20, Math.PI), black, 0.02); hd.rotation.set(0, Math.PI / 2, Math.PI / 2); hd.position.x = 0.085;
+  swapToolGLB(g, 'thermos', get => !!get('body'));
   return g;
 }
 // little slosh on throw, wet splash on hit (synthesised; silent when muted)

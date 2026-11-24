@@ -36,7 +36,8 @@ export function makeBooks({ scene, camera, controls, defs, base = '', low = fals
     const turn = new THREE.Group(); turn.position.z = 0.033; turn.visible = false; book.add(turn);
     const tF = plane(W, PH, basic({ color: paper }), W / 2, 0.0005), tB = plane(W, PH, basic({ color: paper }), W / 2, -0.0005, Math.PI); turn.add(tF, tB);
     const pool = new THREE.Mesh(new THREE.CircleGeometry(1.3, 40), new THREE.MeshBasicMaterial({ map: glow, ...add, opacity: 0.55 })); pool.rotation.x = -Math.PI / 2; pool.position.y = 0.015; g.add(pool);
-    const cone = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.9, 2.6, 32, 1, true), new THREE.MeshBasicMaterial({ color: 0xffd7a0, ...add, opacity: 0.05, side: THREE.DoubleSide })); cone.position.y = 1.4; g.add(cone);
+    const CT = d.coneTop ?? (typeof window !== 'undefined' && window.__bookConeTop) /* #834 opt-in: beam runs from the ceiling */, CH = CT ? CT - 0.1 : 2.6; const cone = new THREE.Mesh(new THREE.CylinderGeometry(CT ? 0.16 : 0.12, 0.9, CH, 32, 1, true), new THREE.MeshBasicMaterial({ color: 0xffd7a0, ...add, opacity: 0.05, side: THREE.DoubleSide })); cone.renderOrder = 12; cone.position.y = 0.1 + CH / 2; g.add(cone);
+    if (CT) { const fx = new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.26, 0.22, 20), new THREE.MeshStandardMaterial({ color: 0x2b2f38, roughness: 0.5, metalness: 0.7 })); fx.position.y = CT - 0.11; fx.name = 'bookSpot834'; g.add(fx); }
     const halo = new THREE.Mesh(new THREE.PlaneGeometry(2 * W + 0.5, PH + 0.4), new THREE.MeshBasicMaterial({ map: glow, ...add, opacity: 0.35 })); halo.rotation.x = -Math.PI / 2; halo.position.y = 0.003; desk.add(halo);
     if (!low) { const s = new THREE.SpotLight(0xffd6a0, 6, 5, 0.5, 0.7, 1.5); s.position.set(0, 3.4, 0.6); s.target = desk; g.add(s); }
     pillars && pillars.push([d.x, d.z]);

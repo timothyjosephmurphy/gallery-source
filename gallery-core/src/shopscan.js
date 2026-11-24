@@ -22,7 +22,7 @@ export function createShopScan({ THREE, scene, camera, paintings, boards = [], w
       for (const [a, b] of [[-0.5, -0.5], [0.5, -0.5], [-0.5, 0.5], [0.5, 0.5]]) { v.set(a, b, 0).applyMatrix4(obj.matrixWorld).applyMatrix4(inv); x0 = Math.min(x0, v.x); x1 = Math.max(x1, v.x); y0 = Math.min(y0, v.y); y1 = Math.max(y1, v.y); zz = Math.min(zz, Math.abs(v.z)); }
       if (zz < 0.6 && x1 - x0 > 0.01) out.push([x0, y0, x1, y1]); };
     p.group.updateMatrixWorld();
-    for (const q of paintings) { if (q === p || q.state !== 'wall' || q.group.position.distanceTo(p.group.position) > 6 + q.w / 2 + p.w / 2) continue; add(q.frame); if (q.plaque) add(q.plaque); if (q.preview && q.preview.visible) q.preview.traverse(o => { if (o.userData.box) add(o); }); if (q.priceBox) add(q.priceBox); }
+    for (const q of paintings) { if (q === p || q.state !== 'wall' || (p.freestanding && q.data.ix * p.data.ix + q.data.iz * p.data.iz < 0.5) /* #765: works on the far face of a freestanding wall are not in the way */ || q.group.position.distanceTo(p.group.position) > 6 + q.w / 2 + p.w / 2) continue; add(q.frame); if (q.plaque) add(q.plaque); if (q.preview && q.preview.visible) q.preview.traverse(o => { if (o.userData.box) add(o); }); if (q.priceBox) add(q.priceBox); }
     for (const b of boards) if (b.parent && b.parent.position.distanceTo(p.group.position) < 6 + b.scale.x / 2 + p.w / 2) add(b);
     if (p.preview) p.preview.traverse(o => { if (o.userData.box) add(o); }); // its own print preview (when placing its price)
     // its own frame, lamp bar and plaque
@@ -32,7 +32,7 @@ export function createShopScan({ THREE, scene, camera, paintings, boards = [], w
   const hit = (r, obs) => obs.some(o => r[0] < o[2] + MARGIN && r[2] > o[0] - MARGIN && r[1] < o[3] + MARGIN && r[3] > o[1] - MARGIN);
   // a spot is on real wall if the floor in front of it is walkable and the space behind it is not (no doorways, corners or open air)
   // (gugg-ny's ramp and the scanned room have floors at several heights: walkable() takes the floor height to test against)
-  function onWall(p, x0, x1, y) { p.group.updateWorldMatrix(true, false); const cy = p.group.position.y;
+  function onWall(p, x0, x1, y) { if (p.freestanding) return true; /* #765: hex courtyard murals on freestanding walls (flag absent in museums) */ p.group.updateWorldMatrix(true, false); const cy = p.group.position.y;
     const refs = rampFloors ? [undefined, ...[1.6, 1.3].map(d => cy - d)] : [undefined];
     for (const x of [x0, x1]) { let ok = false;
       for (const ref of refs) { if (![0.45, 0.8, 1.2, 1.7, 2.2].some(d => { v.set(x, y, d).applyMatrix4(p.group.matrixWorld); return walkable(v.x, v.z, ref); })) continue; /* open floor in front (walls keep a walking margin; furniture may stand under the art) */ v.set(x, y, -0.3).applyMatrix4(p.group.matrixWorld); if (walkable(v.x, v.z, ref)) continue; ok = true; break; }

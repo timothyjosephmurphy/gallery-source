@@ -1,0 +1,98 @@
+{
+ "issue": 358,
+ "blend": "additive",
+ "depthWrite": false,
+ "premultipliedAlpha": false,
+ "toneMapped": false,
+ "nightOnly": {
+  "sunElevationDegMax": -4,
+  "fadeInDeg": [
+   -4,
+   2
+  ],
+  "note": "lerp intensity 0->1 as sun goes from +2 to -4 deg"
+ },
+ "flicker": {
+  "enabled": true,
+  "amp": 0.04,
+  "hz": 0.3,
+  "perWindowPhase": "random"
+ },
+ "litFraction": 0.6,
+ "curtainShare": 0.3,
+ "pairsWith": "../horizon/night/night.json",
+ "sprites": [
+  {
+   "id": "glow-single",
+   "shape": "single",
+   "curtain": false,
+   "files": {
+    "desktop": "glow-single.desktop.webp",
+    "phone": "glow-single.phone.webp",
+    "png": "glow-single.png"
+   },
+   "emissiveIntensity": 1.4,
+   "color": "#F7A66E"
+  },
+  {
+   "id": "glow-single-curtain",
+   "shape": "single",
+   "curtain": true,
+   "files": {
+    "desktop": "glow-single-curtain.desktop.webp",
+    "phone": "glow-single-curtain.phone.webp",
+    "png": "glow-single-curtain.png"
+   },
+   "emissiveIntensity": 1.1,
+   "color": "#F7A66E"
+  },
+  {
+   "id": "glow-mullion",
+   "shape": "mullion",
+   "curtain": false,
+   "files": {
+    "desktop": "glow-mullion.desktop.webp",
+    "phone": "glow-mullion.phone.webp",
+    "png": "glow-mullion.png"
+   },
+   "emissiveIntensity": 1.4,
+   "color": "#F7A66E"
+  },
+  {
+   "id": "glow-mullion-curtain",
+   "shape": "mullion",
+   "curtain": true,
+   "files": {
+    "desktop": "glow-mullion-curtain.desktop.webp",
+    "phone": "glow-mullion-curtain.phone.webp",
+    "png": "glow-mullion-curtain.png"
+   },
+   "emissiveIntensity": 1.1,
+   "color": "#F7A66E"
+  },
+  {
+   "id": "glow-arched",
+   "shape": "arched",
+   "curtain": false,
+   "files": {
+    "desktop": "glow-arched.desktop.webp",
+    "phone": "glow-arched.phone.webp",
+    "png": "glow-arched.png"
+   },
+   "emissiveIntensity": 1.4,
+   "color": "#F7A66E"
+  },
+  {
+   "id": "glow-arched-curtain",
+   "shape": "arched",
+   "curtain": true,
+   "files": {
+    "desktop": "glow-arched-curtain.desktop.webp",
+    "phone": "glow-arched-curtain.phone.webp",
+    "png": "glow-arched-curtain.png"
+   },
+   "emissiveIntensity": 1.1,
+   "color": "#F7A66E"
+  }
+ ]
+}

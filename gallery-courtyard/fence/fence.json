@@ -1,0 +1,11 @@
+{"style":"thin dark wrought-iron picket fence, spear finials, sun-ring mid band","seed":352,"preview_only":true,
+"maps":{"albedo":"fence-iron_albedo.webp","albedo_png":"fence-iron_albedo.png","albedo_phone":"fence-iron_albedo.phone.webp",
+"roughness":"fence-iron_roughness.webp","roughness_phone":"fence-iron_roughness.phone.webp",
+"normal":"fence-iron_normal.webp","normal_phone":"fence-iron_normal.phone.webp","normal_convention":"OpenGL +Y",
+"ground_ao_strip":"fence-ground-ao-strip.webp","ground_ao_strip_phone":"fence-ground-ao-strip.phone.webp"},
+"sizes":{"desktop":[2048,1024],"phone":[1024,512],"ao_strip":[2048,256]},
+"alpha":"albedo RGBA alpha = cutout; alphaTest 0.5, side DoubleSide",
+"uv":{"meters_per_tile_x":2.0,"meters_per_tile_y":1.0,"wrapS":"Repeat","wrapT":"ClampToEdge","fence_height_m":1.0},
+"post_spacing_hint_m":2.0,"post_note":"one solid post (~6 cm sq, color #2B2F38) every tile seam = 2 m; picket pitch 12.5 cm",
+"ao_strip":{"size_m":[2.0,0.5],"use":"multiply decal on lawn/path centered under fence line"},
+"colors":{"iron":"#2B2F38","rim_apricot":"#F7A66E","ring_core_ochre":"#F7CC3A","pairs_with":["#F3E6D8","#E9A9A6","#9DB7CF","#8FAE9E"]}}

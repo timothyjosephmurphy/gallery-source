@@ -6,6 +6,6 @@ def patch(O):
     for a in O.get('assets', []):
         if not str(a.get('note', '')).startswith('#317'): continue
         v = R.get(a['id'], {})
-        if 'url' in v: RD[a['id']] = dict(px=v['w480'], border=z, hiPx=v['w960'], hiBorder=z)
+        if 'url' in v and not str(a.get('note', '')).startswith('#317-wave2'): RD[a['id']] = dict(px=v['w480'], border=z, hiPx=v['w960'], hiBorder=z)
         else: d = list(Image.open('public/' + a['img']).size); RD[a['id']] = dict(px=d, border=z, hiPx=d, hiBorder=z)
     json.dump(RD, open(RDp, 'w'))

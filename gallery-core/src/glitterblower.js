@@ -7,6 +7,7 @@
 //  - Hooks: api.sweepAt(position, radius) lets any other prop (e.g. a guide drone) clean; api.pushables.add({...}) lets any prop be blown.
 // The module never touches the gallery's own elves, splats, swarm, realm or slipgates; it pauses while ctx.isBusy() is true.
 import * as THREE from 'three';
+import { swapToolGLB } from './toolglb.js'; // #199 tool GLBs
 
 export const GLITTER = { id: 'glitter', slot: 'Glitter Cannon', hudName: 'GLITTER CANNON', fireLabel: 'SPRAY', altLabel: 'BURST', help: 'hold click spray glitter, right-click burst' };
 export const BLOWER = { id: 'blower', slot: 'Leaf Blower', hudName: 'LEAF BLOWER', fireLabel: 'BLOW', help: 'hold click blow' };
@@ -39,7 +40,9 @@ export function buildGlitterCannon(g) { // teal party cannon: domed hopper of gl
     const m = new THREE.Mesh(fg, new THREE.MeshBasicMaterial({ color: PALETTE[k % PALETTE.length], toneMapped: false })); m.position.set(Math.cos(a) * r, (k % 4) * 0.008, Math.sin(a) * r); m.rotation.set(k, k * 2, 0); fill.add(m); }
   add(new THREE.BoxGeometry(0.05, 0.12, 0.06), dark, 0, -0.1, 0.09, -0.25); add(new THREE.BoxGeometry(0.018, 0.04, 0.03), trim, 0, -0.06, 0.04);
   const flash = new THREE.Sprite(new THREE.SpriteMaterial({ map: sparkTex(), color: 0xffffff, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, opacity: 0 })); flash.position.set(0, 0, -0.32); flash.scale.set(0.22, 0.22, 1); g.add(flash);
-  g.userData.glitter = { fill, lip, flash, bell, dome }; return g;
+  g.userData.glitter = { fill, lip, flash, bell, dome };
+  swapToolGLB(g, 'glitter', get => { const f = get('fill'), l = get('lip'); if (!f || !l) return false; const fl = get('flash'); if (fl) { fl.visible = false; flash.position.copy(fl.position); }
+    g.userData.glitter = { fill: f, lip: l, flash, bell: get('bell') || bell, dome: get('dome') || dome, fillY: f.position.y }; }, [flash]); return g;
 }
 export function buildLeafBlower(g) { // hand blower: amber motor housing, black loop handle, long tube with a flattened nozzle
   const shell = new THREE.MeshPhongMaterial({ color: 0xf0a323, shininess: 50, flatShading: true }), black = lambert(0x222326), grey = lambert(0x6f747a), tube = new THREE.MeshPhongMaterial({ color: 0xe9e4d8, shininess: 30, flatShading: true });
@@ -53,7 +56,8 @@ export function buildLeafBlower(g) { // hand blower: amber motor housing, black 
   add(new THREE.CylinderGeometry(0.044, 0.044, 0.03, 10), black, 0, -0.01, -0.07, Math.PI / 2);
   const noz = add(new THREE.CylinderGeometry(0.03, 0.035, 0.08, 10), tube, 0, -0.01, -0.41, Math.PI / 2); noz.scale.set(1.5, 1, 0.6);
   add(new THREE.BoxGeometry(0.03, 0.025, 0.012), new THREE.MeshBasicMaterial({ color: 0x47ff8a }), 0.03, 0.06, 0.02); // power LED
-  g.userData.blower = { grille, noz }; return g;
+  g.userData.blower = { grille, noz, nozRest: 1.5 };
+  swapToolGLB(g, 'blower', get => { const gr = get('grille'), n = get('noz'); if (!gr || !n) return false; g.userData.blower = { grille: gr, noz: n, nozRest: 1.0 }; }); return g;
 }
 
 // ---------- synthesized sounds (all silent when the gallery is muted) ----------
@@ -365,10 +369,10 @@ export function installGlitterBlower(ctx) {
   // ---- view-model pose: call from the gallery's drawWeapon() after its own positioning ----
   function pose(g, w) { const t = now;
     if (w === slots.glitter) { const u = vmG.userData.glitter, sp = down ? 1 : 0; g.rotation.x = -0.05 + kick * 0.12; g.rotation.z = 0; g.position.y += 0.03; g.position.z += kick * 0.035;
-      if (sp) { g.position.x += (Math.random() - 0.5) * 0.004; g.position.y += (Math.random() - 0.5) * 0.004; } u.fill.rotation.y += (0.4 + sp * 9) * 0.016; u.fill.position.y = 0.085 + sp * Math.abs(Math.sin(t * 30)) * 0.01;
-      u.flash.material.opacity = Math.max(sp * (0.55 + 0.45 * Math.random()), burstT > 0.35 ? 1 : 0); const fs = 0.18 + sp * 0.08 + (burstT > 0.35 ? 0.25 : 0); u.flash.scale.set(fs, fs, 1); u.lip.rotation.z = t * 2; u.lip.material.map.offset.x = (t * 0.4) % 1; }
+      if (sp) { g.position.x += (Math.random() - 0.5) * 0.004; g.position.y += (Math.random() - 0.5) * 0.004; } u.fill.rotation.y += (0.4 + sp * 9) * 0.016; u.fill.position.y = (u.fillY || 0.085) + sp * Math.abs(Math.sin(t * 30)) * 0.01;
+      u.flash.material.opacity = Math.max(sp * (0.55 + 0.45 * Math.random()), burstT > 0.35 ? 1 : 0); const fs = 0.18 + sp * 0.08 + (burstT > 0.35 ? 0.25 : 0); u.flash.scale.set(fs, fs, 1); u.lip.rotation.z = t * 2; if (u.lip.material && u.lip.material.map) u.lip.material.map.offset.x = (t * 0.4) % 1; }
     if (w === slots.blower) { const u = vmB.userData.blower, b = blowing; g.rotation.x = -0.12; g.rotation.z = 0.04; g.position.y += 0.02;
-      if (b > 0) { g.position.x += (Math.random() - 0.5) * 0.006 * b; g.position.y += (Math.random() - 0.5) * 0.006 * b; g.rotation.z += Math.sin(t * 60) * 0.01 * b; } u.grille.rotation.z += b * 0.9; u.noz.scale.x = 1.5 + Math.sin(t * 45) * 0.06 * b; } }
+      if (b > 0) { g.position.x += (Math.random() - 0.5) * 0.006 * b; g.position.y += (Math.random() - 0.5) * 0.006 * b; g.rotation.z += Math.sin(t * 60) * 0.01 * b; } u.grille.rotation.z += b * 0.9; u.noz.scale.x = (u.nozRest || 1.5) + Math.sin(t * 45) * 0.06 * b; } }
   return {
     GLITTER, BLOWER, slots, names: [GLITTER.hudName, BLOWER.hudName], fireLabels: [GLITTER.fireLabel, BLOWER.fireLabel], owns,
     down: press, up: release, secondary, update, pose, sweepAt, pushables, viewmodels: [vmG, vmB],

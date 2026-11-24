@@ -1,0 +1,10 @@
+import { chromium } from 'playwright-core';
+const url = process.argv[2] || 'http://localhost:4338/play/?tour=0';
+const b = await chromium.launch({ executablePath: '/usr/bin/google-chrome', args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] });
+const p = await (await b.newContext({ viewport: { width: 1280, height: 720 } })).newPage(); await p.addInitScript(() => { window.__noNav = 1; });
+await p.goto(url); await p.waitForFunction(() => window.game && game.tags && game.tags.ready && window.eggs && eggs.world && window.__tour, null, { timeout: 180000 }); await p.waitForTimeout(1500);
+const r = await p.evaluate(() => { const W = eggs.world, T = __tour, c = game.camera.position, out = []; let prev = { x: c.x, z: c.z };
+  const hits = pts => { let n = 0; for (let i = 1; i < pts.length; i++) { const a = pts[i-1], b = pts[i], k = Math.max(1, Math.ceil(Math.hypot(b.x-a.x, b.z-a.z) / 0.4)); for (let j = 0; j <= k; j++) { const u = j / k; if (T.inMid(a.x + (b.x - a.x) * u, a.z + (b.z - a.z) * u)) n++; } } return n; };
+  for (const o of [6, 12.5, 4, 8, 8.5, 10, 12, 14]) { const v = T.view(o), d = W.path(prev, v.stand, 0.35) || [], rt = T.route(prev, v.stand) || [];
+    out.push({ o, direct: hits([prev, ...d, v.stand]), ring: hits([prev, ...rt, v.stand]), start: T.inMid(prev.x, prev.z), stand: [+v.stand.x.toFixed(1), +v.stand.z.toFixed(1)] }); prev = v.stand; } return out; });
+console.log(JSON.stringify(r)); await b.close();

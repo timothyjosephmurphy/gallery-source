@@ -1,0 +1,139 @@
+{
+  "issue": 340,
+  "related": [
+    10,
+    180,
+    357
+  ],
+  "preview_only": true,
+  "approved": false,
+  "convention": "luminance mask: white=pass, black=block; RGBA with RGB=mask and A=mask (use either). Linear-ish, not sRGB-critical.",
+  "blend": "multiply",
+  "shader_hint": "beamColor *= texture(gobo, projUV).r * texture(beamFalloff, projUV).r; SpotLight.map in three r155+ also accepts it",
+  "gobos": [
+    {
+      "id": "gobo-breakup",
+      "png": "gobo-breakup.png",
+      "desktop": "gobo-breakup.desktop.webp",
+      "phone": "gobo-breakup.phone.webp",
+      "px": [
+        1024,
+        1024
+      ],
+      "phone_px": [
+        512,
+        512
+      ],
+      "blend": "multiply",
+      "suggested_cone_deg": [
+        24,
+        36
+      ],
+      "intensity_hint": 0.8,
+      "tint_hex": {
+        "warm": "#F7A66E",
+        "cool": "#9DB7CF"
+      },
+      "use": "organic leafy/cloud wash on stage floor and back wall; rotate slowly (2-4 deg/s) for life"
+    },
+    {
+      "id": "gobo-bars",
+      "png": "gobo-bars.png",
+      "desktop": "gobo-bars.desktop.webp",
+      "phone": "gobo-bars.phone.webp",
+      "px": [
+        1024,
+        1024
+      ],
+      "phone_px": [
+        512,
+        512
+      ],
+      "blend": "multiply",
+      "suggested_cone_deg": [
+        18,
+        30
+      ],
+      "intensity_hint": 0.9,
+      "tint_hex": {
+        "warm": "#F7CC3A",
+        "cool": "#9DB7CF"
+      },
+      "use": "shutter/barn-door bars; rotate 0-90 deg for window/jail looks"
+    },
+    {
+      "id": "gobo-dots",
+      "png": "gobo-dots.png",
+      "desktop": "gobo-dots.desktop.webp",
+      "phone": "gobo-dots.phone.webp",
+      "px": [
+        1024,
+        1024
+      ],
+      "phone_px": [
+        512,
+        512
+      ],
+      "blend": "multiply",
+      "suggested_cone_deg": [
+        30,
+        45
+      ],
+      "intensity_hint": 0.6,
+      "tint_hex": {
+        "cool": "#B9A0E0",
+        "moon": "#8DB8E8"
+      },
+      "use": "sparse moonlight-through-leaves; pair with low ambient"
+    },
+    {
+      "id": "gobo-venetian",
+      "png": "gobo-venetian.png",
+      "desktop": "gobo-venetian.desktop.webp",
+      "phone": "gobo-venetian.phone.webp",
+      "px": [
+        1024,
+        1024
+      ],
+      "phone_px": [
+        512,
+        512
+      ],
+      "blend": "multiply",
+      "suggested_cone_deg": [
+        20,
+        32
+      ],
+      "intensity_hint": 0.75,
+      "tint_hex": {
+        "warm": "#F7A66E",
+        "dusk": "#E9A9A6"
+      },
+      "use": "soft horizontal blinds across a back wall or audience"
+    },
+    {
+      "id": "beam-falloff",
+      "png": "beam-falloff.png",
+      "desktop": "beam-falloff.desktop.webp",
+      "phone": "beam-falloff.phone.webp",
+      "px": [
+        1024,
+        1024
+      ],
+      "phone_px": [
+        512,
+        512
+      ],
+      "blend": "multiply",
+      "suggested_cone_deg": [
+        10,
+        50
+      ],
+      "intensity_hint": 1.0,
+      "tint_hex": {
+        "neutral": "#F3E6D8"
+      },
+      "use": "base Fresnel/PAR soft edge; multiply every gobo by this (or use alone)"
+    }
+  ]
+}

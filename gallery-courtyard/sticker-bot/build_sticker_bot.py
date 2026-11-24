@@ -171,8 +171,8 @@ def tube(name, a, b, bend, r1, r2, m, parent, rings=6, n=10):
 def joint(name, c, r, m, parent, sz=(1, 1, 1), seg=12, rings=8):
     bpy.ops.mesh.primitive_uv_sphere_add(segments=seg, ring_count=rings, radius=r, location=c)
     o = act(); o.scale = sz; shade(o); bpy.context.view_layer.update(); return link(o, parent, name, m)
-# Four legs: front pair splayed forward, back pair at the ends clear of BackScreen, lens and beam
-legs = [((-0.24, -0.04), (-0.78, -0.63)), ((0.24, -0.04), (0.78, -0.63)), ((-0.28, 0.05), (-0.62, 0.78)), ((0.30, 0.04), (0.72, 0.69))]
+# Three legs (tripod, #306): front pair splayed forward, single back leg near centre clear of BackScreen, lens and beam
+legs = [((-0.24, -0.04), (-0.78, -0.63)), ((0.24, -0.04), (0.78, -0.63)), ((0.01, 0.05), (-0.62, 0.78))]
 UP = Vector((0, 0, 1)); S = 1.25; HZ = 0.13
 for i, ((hx, hy), (dx, dy)) in enumerate(legs, 1):
     d = Vector((dx, dy, 0)).normalized(); hip = Vector((hx, hy, HZ))

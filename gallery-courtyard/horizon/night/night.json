@@ -1,0 +1,38 @@
+{
+ "ticket": "studio-tracker #358 (night companions to Gallery #352)",
+ "swap": {
+  "rule": "sunElevationDeg < -6 \u2192 night; -6..+2 \u2192 crossfade dawn\u2194night by t=(2-elev)/8; > 2 \u2192 dawn",
+  "note": "same size/alpha/UV/order as horizon.json; swap texture URLs only"
+ },
+ "sky": {
+  "desktop": "night/sky-night.webp",
+  "phone": "night/sky-night.phone.webp",
+  "master": "night/sky-night.png",
+  "size": [
+   2048,
+   1024
+  ],
+  "wrapS": "RepeatWrapping",
+  "horizonRow": "bottom edge = horizon"
+ },
+ "layers": [
+  {
+   "name": "distant-range",
+   "desktop": "night/horizon-distant-range.night.webp",
+   "phone": "night/horizon-distant-range.night.phone.webp",
+   "master": "night/horizon-distant-range.night.png",
+   "baked": "night/horizon-distant-range.night_baked.webp",
+   "replaces": "horizon-distant-range.webp",
+   "order": 0
+  },
+  {
+   "name": "mid-valley",
+   "desktop": "night/horizon-mid-valley.night.webp",
+   "phone": "night/horizon-mid-valley.night.phone.webp",
+   "master": "night/horizon-mid-valley.night.png",
+   "baked": "night/horizon-mid-valley.night_baked.webp",
+   "replaces": "horizon-mid-valley.webp",
+   "order": 1
+  }
+ ]
+}

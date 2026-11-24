@@ -1,0 +1,6 @@
+# #474 slice 2: room-06/4 rehung at true honeybadger width, DEPLOYED (Mon Oct 26 2026, ~6:05 PM PT)
+Deployment c8c400de-d0f5-4b39-b38a-7f1aab3e8883 on preview-251, replacing 41cd44cc. Entry index-DewCyhgq.js (alias verified).
+- Ran the full tools/apply-overrides.py from catalog.base.json (honeybadger w=iw=4683/7338). The diff is only room-06 wall 4: 8 works (honeybadger, archived-painting-193/233/368/369/371/373, book-art-c347459aa3f77f7213ae) moved x/z/s by 3 to 7 cm, and their plaques moved with them. Honeybadger's layout w went from 1.0503 to 0.9573 (fw 1.1403 to 1.0473), so it now shows at true size. spread/repack free space for room-06/4 went from 0.38 to 0.47. No other wall, painting, or max field changed.
+- tools/drift-check.py now returns 0 drift fields, so the pipeline reproduces the committed catalog.
+- Checks: tagsaudit desktop PASS and phone PASS, size[] and pageErrors empty (/tmp/ta474-d.log and /tmp/ta474-p.log).
+- Rollback: copy /tmp/catalog.pre474s2.json back to src/catalog.json (base: /tmp/catalog.base.pre474s2.json, /tmp/catalog.base.json.bak474), then rebuild, gen, splice and execute. The old execute.js is /tmp/execute.pre474s2.js and the old dist is /tmp/dist.pre474s2.

@@ -1,0 +1,3 @@
+import { chromium } from 'playwright-core'; const b = await chromium.launch({ executablePath: '/usr/bin/google-chrome', args: ['--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader'] }); const p = await (await b.newContext({viewport:{width:1280,height:800}})).newPage();
+await p.goto(process.argv[2]); await p.waitForFunction(() => window.game && game.tags && game.tags.ready, null, { timeout: 240000 });
+console.log(JSON.stringify(await p.evaluate(()=>{let n=0;game.scene?.traverse?.(o=>{if(o.isMesh&&o.name==='roomFloor')n++});return {m482:window.__m482,m481:window.__m481,roomFloorMeshes:n}}))); await b.close();

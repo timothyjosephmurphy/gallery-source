@@ -1,0 +1,33 @@
+import { chromium } from 'playwright-core';
+const url = process.argv[2], phone = process.argv[3] === 'phone';
+const b = await chromium.launch({ executablePath: '/usr/bin/google-chrome', args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] });
+const p = await (await b.newContext(phone ? { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 } : { viewport: { width: 1280, height: 800 } })).newPage();
+await p.goto(url, { waitUntil: 'commit' }); await p.waitForFunction(() => window.game && game.tags && game.tags.ready && game.fps > 0, null, { timeout: 240000, polling: 200 });
+await p.waitForTimeout(8000);
+const r = await p.evaluate(async () => {
+  const R = game.renderer, fr = () => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+  R.info.autoReset = false; const snap0 = () => { const i = R.info; return { calls: i.render.calls, tris: i.render.triangles, tex: i.memory.textures, geo: i.memory.geometries, progs: (i.programs || []).length }; };
+  const snap = async () => { await fr(); R.info.reset(); await new Promise(r => requestAnimationFrame(r)); return snap0(); };
+  const out = { spawn: await snap() };
+  const sc = game.scene; let meshes = 0, noCull = 0, inst = 0; const mats = new Map(), geos = new Map(), noCullNames = {};
+  sc.traverse(o => { if (!o.isMesh && !o.isPoints && !o.isLine) return; meshes++; if (o.isInstancedMesh) inst++; if (!o.frustumCulled) { noCull++; const k = (o.name || o.parent?.name || '?').slice(0, 24); noCullNames[k] = (noCullNames[k] || 0) + 1; }
+    const m = Array.isArray(o.material) ? o.material[0] : o.material; const mk = m && (m.type + ':' + (m.map ? 'map' : 'nomap')); mats.set(mk, (mats.get(mk) || 0) + 1); geos.set(o.geometry && o.geometry.type, (geos.get(o.geometry && o.geometry.type) || 0) + 1); });
+  out.scene = { meshes, inst, noCull, noCullTop: Object.entries(noCullNames).sort((a, b) => b[1] - a[1]).slice(0, 12), mats: [...mats].sort((a, b) => b[1] - a[1]).slice(0, 10), geos: [...geos].sort((a, b) => b[1] - a[1]).slice(0, 10) };
+  const ps = game.paintings || []; out.nPaint = ps.length; const samples = [];
+  for (let k = 0; k < ps.length; k += Math.max(1, Math.floor(ps.length / 12))) { const q = ps[k].mesh, v = q.getWorldPosition(q.position.clone()); const n = q.getWorldDirection(q.position.clone()); game.view(v.x + n.x * 3, v.z + n.z * 3, v.x, v.z); samples.push({ k, id: ps[k].id || q.name, x: +v.x.toFixed(1), z: +v.z.toFixed(1), ...(await snap()) }); }
+  samples.sort((a, b) => b.calls - a.calls); out.top = samples.slice(0, 5); out.median = samples[samples.length >> 1];
+  // per-object draw breakdown at densest view
+  const d = samples[0], q = ps[d.k].mesh, v = q.getWorldPosition(q.position.clone()), n = q.getWorldDirection(q.position.clone()); game.view(v.x + n.x * 3, v.z + n.z * 3, v.x, v.z); await fr();
+  const cam = game.camera;
+  { const T = cam.constructor; const THREEm = {}; const fr2 = cam.projectionMatrix.clone().multiply(cam.matrixWorldInverse); 
+    const pl = []; const e = fr2.elements; const mk = (a,b,c,d)=>{const l=Math.hypot(a,b,c);return [a/l,b/l,c/l,d/l]};
+    pl.push(mk(e[3]-e[0],e[7]-e[4],e[11]-e[8],e[15]-e[12]),mk(e[3]+e[0],e[7]+e[4],e[11]+e[8],e[15]+e[12]),mk(e[3]+e[1],e[7]+e[5],e[11]+e[9],e[15]+e[13]),mk(e[3]-e[1],e[7]-e[5],e[11]-e[9],e[15]-e[13]),mk(e[3]-e[2],e[7]-e[6],e[11]-e[10],e[15]-e[14]),mk(e[3]+e[2],e[7]+e[6],e[11]+e[10],e[15]+e[14]));
+    const groups = {}; const cp = cam.position;
+    sc.traverseVisible(o => { if (!o.isMesh) return; const g = o.geometry; if (!g.boundingSphere) g.computeBoundingSphere(); const s = g.boundingSphere, c = s.center.clone().applyMatrix4(o.matrixWorld), r = s.radius * o.matrixWorld.getMaxScaleOnAxis();
+      if (o.frustumCulled && pl.some(p => p[0]*c.x+p[1]*c.y+p[2]*c.z+p[3] < -r)) return;
+      let a = o, nm = ''; while (a && !nm) { nm = a.name; a = a.parent; } const k = (nm || '?').replace(/[-_]?\d+.*$/, '').slice(0, 28); const gg = groups[k] = groups[k] || { n: 0, far: 0, tris: 0 }; gg.n++; gg.tris += (g.index ? g.index.count : g.attributes.position.count) / 3; const dd=c.distanceTo(cp); if (dd > 12) gg.far++; gg.d=gg.d||[0,0,0,0]; gg.d[dd<12?0:dd<18?1:dd<25?2:3]++; if(o.name==='hang478Art'){let pp=(game.paintings||[]).find(x=>x.mesh===o); gg.same=(gg.same||0)+(pp&&pp.dist>=24?1:0);} });
+    out.anonFar=[]; sc.traverseVisible(o=>{ if(!o.isMesh||!/^anon/.test(o.name||'')) return; const g=o.geometry; const s=g.boundingSphere, c=s.center.clone().applyMatrix4(o.matrixWorld), r=s.radius*o.matrixWorld.getMaxScaleOnAxis(); if (o.frustumCulled && pl.some(p => p[0]*c.x+p[1]*c.y+p[2]*c.z+p[3] < -r)) return; const dd=c.distanceTo(cp); const m=o.material; out.anonFar.push({nm:o.name,d:+dd.toFixed(1),c:[c.x,c.y,c.z].map(v=>+v.toFixed(1)),r:+r.toFixed(1),fc:o.frustumCulled,par:o.parent&&o.parent.type,mt:m&&m.type,tr:m&&m.transparent,bl:m&&m.blending,map:m&&m.map&&((m.map.image&&(m.map.image.src||m.map.image.width+'x'+m.map.image.height))||'tex').toString().slice(-60),col:m&&m.color&&m.color.getHexString(),gp:g.parameters&&JSON.stringify(g.parameters).slice(0,60),ud:Object.keys(o.userData||{}).join(',')}); });
+    out.brk = Object.entries(groups).sort((a, b) => b[1].n - a[1].n).slice(0, 25);
+    out.shadow = { on: R.shadowMap.enabled, casters: 0 }; sc.traverse(o => { if (o.castShadow) out.shadow.casters++; if (o.isLight && o.castShadow) out.shadow.lights = (out.shadow.lights || 0) + 1; }); }
+  return out; });
+console.log(JSON.stringify(r, null, 1)); await b.close();

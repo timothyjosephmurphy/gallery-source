@@ -1,0 +1,7 @@
+# #487 fountainJet merge DEPLOYED Mon Oct 26 2026 ~10:20 PM PT
+Deployment 958e63e2-57ea-4a93-8fcd-8f4c478deedd on preview-251 (replaces 957dcefe). Entry index-B51kQf-F.js (alias verified; gen.py + splice.py both run). Change in main-DVUFGvEg.js.
+- Census (_drawscout LIVE 957dcefe, /tmp/au/scout487.json): spawn 207 calls; remaining groups hang(82 art, unique tex), Leg/Knee/etc (ostrich, animated/HOLD), anon 29 (mixed), fountainJet 10 (one shared jetM, static), roomSign 9 (per-room tex), glassDome 6 (HOLD), Window* 6/4 (glTF).
+- Change (play-tags/src/courtyard296.js after the jets loop): mergeGeometries of the 10 TubeGeometries (all direct children of the fountain group, identity transforms) -> 1 mesh 'fountainJet', material = jetM (same object, so update()'s jetM.opacity pulse still applies), userData.merge487. Additive, no renderOrder, no shadows, no colliders/picking on that name. Fail soft: console.warn('[487 merge]'), __m487.err, originals stay.
+- Probe tests/_p487.mjs: LIVE before 10 meshes x114 verts, 1 mat; local + LIVE after 1 mesh 1140 verts, color cfeaff, blending Additive, opacity animating, no warns/errors. -9 draws.
+- tagsaudit local+LIVE desktop/phone PASS; builderErrs/softWarnings/pageErrors []; colliders 99. LIVE phone first run FAILed only the mute meter (after 0.00077 audio tail, known flake); solo rerun PASS. Logs /tmp/au/t487*.
+- Rollback: cp /tmp/courtyard296.js.pre487 play-tags/src/courtyard296.js + rebuild/gen/splice/execute, or re-run /tmp/execute.js.pre487 (restores 957dcefe bundle). /tmp/execute.js.487 = this deploy.

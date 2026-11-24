@@ -1,0 +1,301 @@
+{
+ "face_m": [
+  0.45,
+  0.28
+ ],
+ "tex_px": {
+  "desktop": [
+   1024,
+   640
+  ],
+  "phone": [
+   512,
+   320
+  ]
+ },
+ "text_rect_px_desktop_topleft": [
+  96,
+  88,
+  928,
+  552
+ ],
+ "text_rect_uv": {
+  "u0": 0.09375,
+  "v0": 0.13749999999999996,
+  "u1": 0.90625,
+  "v1": 0.8625,
+  "note": "three.js UV (v up, texture.flipY = true default); same fractions at phone size"
+ },
+ "text_rect_canvas_frac_topleft": [
+  0.09375,
+  0.1375,
+  0.90625,
+  0.8625
+ ],
+ "text_rect_m_from_centre": [
+  -0.1828,
+  -0.1015,
+  0.1828,
+  0.1015
+ ],
+ "variants": {
+  "dark": {
+   "map": "story-plate-dark.webp",
+   "normalMap": "story-plate-dark_n.webp",
+   "roughnessMap": "story-plate-dark_r.webp",
+   "metalness": 0.0,
+   "ink": "#e9dcc0"
+  },
+  "brass": {
+   "map": "story-plate-brass.webp",
+   "normalMap": "story-plate-brass_n.webp",
+   "roughnessMap": "story-plate-brass_r.webp",
+   "metalness": 1.0,
+   "ink": "#2a1a0c"
+  },
+  "enamel": {
+   "map": "story-plate-enamel.webp",
+   "normalMap": "story-plate-enamel_n.webp",
+   "roughnessMap": "story-plate-enamel_r.webp",
+   "metalness": 0.0,
+   "ink": "#f3ead6"
+  }
+ },
+ "rooms": {
+  "room-01": {
+   "title": "Landscapes",
+   "label": "Landscapes \u00b7 Tahoma / Rainier \u00b7 Denny Blaine",
+   "motifs": [
+    "SUNBURST",
+    "CLOUDS"
+   ],
+   "layout": "crest: rising SUNBURST over a stepped horizon; bottom: CLOUDS frieze; corners: quarter sunbursts",
+   "map": "story-plate-brass-room-01.webp",
+   "normalMap": "story-plate-brass-room-01_n.webp",
+   "roughnessMap": "story-plate-brass-room-01_r.webp",
+   "phone": {
+    "map": "story-plate-brass-room-01.phone.webp",
+    "normalMap": "story-plate-brass-room-01_n.phone.webp",
+    "roughnessMap": "story-plate-brass-room-01_r.phone.webp"
+   },
+   "metalness": 1.0,
+   "ink": "#2a1a0c"
+  },
+  "room-02": {
+   "title": "Brekkie Bitcoin B",
+   "label": "Brekkie Bitcoin B \u00b7 Bounty of Satoshi \u00b7 Bitcoiners",
+   "motifs": [
+    "CHEVRON",
+    "FAN"
+   ],
+   "layout": "crest: FAN; sides: stacked CHEVRONS; bottom: CHEVRON zigzag frieze; corners: quarter fans",
+   "map": "story-plate-brass-room-02.webp",
+   "normalMap": "story-plate-brass-room-02_n.webp",
+   "roughnessMap": "story-plate-brass-room-02_r.webp",
+   "phone": {
+    "map": "story-plate-brass-room-02.phone.webp",
+    "normalMap": "story-plate-brass-room-02_n.phone.webp",
+    "roughnessMap": "story-plate-brass-room-02_r.phone.webp"
+   },
+   "metalness": 1.0,
+   "ink": "#2a1a0c"
+  },
+  "room-03": {
+   "title": "Mexico",
+   "label": "Mexico \u00b7 Pacific Northwest",
+   "motifs": [
+    "PALM LEAF",
+    "SCALLOP",
+    "SUNBURST"
+   ],
+   "layout": "crest: SUNBURST flanked by PALM LEAF fans; sides: palm fronds; bottom: SCALLOP row; corners: scallop quarters",
+   "map": "story-plate-brass-room-03.webp",
+   "normalMap": "story-plate-brass-room-03_n.webp",
+   "roughnessMap": "story-plate-brass-room-03_r.webp",
+   "phone": {
+    "map": "story-plate-brass-room-03.phone.webp",
+    "normalMap": "story-plate-brass-room-03_n.phone.webp",
+    "roughnessMap": "story-plate-brass-room-03_r.phone.webp"
+   },
+   "metalness": 1.0,
+   "ink": "#2a1a0c"
+  },
+  "room-04": {
+   "title": "Festival",
+   "label": "Festival \u00b7 Bass Coast \u00b7 Burning Man",
+   "motifs": [
+    "FAN",
+    "PEACOCK",
+    "WAVES"
+   ],
+   "layout": "crest: PEACOCK tail; corners: FANS; bottom: WAVES frieze",
+   "map": "story-plate-brass-room-04.webp",
+   "normalMap": "story-plate-brass-room-04_n.webp",
+   "roughnessMap": "story-plate-brass-room-04_r.webp",
+   "phone": {
+    "map": "story-plate-brass-room-04.phone.webp",
+    "normalMap": "story-plate-brass-room-04_n.phone.webp",
+    "roughnessMap": "story-plate-brass-room-04_r.phone.webp"
+   },
+   "metalness": 1.0,
+   "ink": "#2a1a0c"
+  },
+  "room-05": {
+   "title": "Family",
+   "label": "Family",
+   "motifs": [
+    "VOLUTE",
+    "SCALLOP"
+   ],
+   "layout": "crest: SCALLOP shell; corners: VOLUTE scrolls; bottom: scallop row",
+   "map": "story-plate-brass-room-05.webp",
+   "normalMap": "story-plate-brass-room-05_n.webp",
+   "roughnessMap": "story-plate-brass-room-05_r.webp",
+   "phone": {
+    "map": "story-plate-brass-room-05.phone.webp",
+    "normalMap": "story-plate-brass-room-05_n.phone.webp",
+    "roughnessMap": "story-plate-brass-room-05_r.phone.webp"
+   },
+   "metalness": 1.0,
+   "ink": "#2a1a0c"
+  },
+  "room-06": {
+   "title": "Catherine dance series",
+   "label": "Catherine dance series \u00b7 Portrait",
+   "motifs": [
+    "FEATHER",
+    "PEACOCK",
+    "FAN"
+   ],
+   "layout": "crest: PEACOCK tail; sides: FEATHER stacks; corners: FANS",
+   "map": "story-plate-brass-room-06.webp",
+   "normalMap": "story-plate-brass-room-06_n.webp",
+   "roughnessMap": "story-plate-brass-room-06_r.webp",
+   "phone": {
+    "map": "story-plate-brass-room-06.phone.webp",
+    "normalMap": "story-plate-brass-room-06_n.phone.webp",
+    "roughnessMap": "story-plate-brass-room-06_r.phone.webp"
+   },
+   "metalness": 1.0,
+   "ink": "#2a1a0c"
+  },
+  "room-07": {
+   "title": "Bitcoiners",
+   "label": "Bitcoiners",
+   "motifs": [
+    "AIRCRAFT FIN",
+    "CHEVRON"
+   ],
+   "layout": "sides: AIRCRAFT FIN stacks; crest: nested CHEVRON peaks; bottom: chevron frieze; corners: ziggurat steps",
+   "map": "story-plate-brass-room-07.webp",
+   "normalMap": "story-plate-brass-room-07_n.webp",
+   "roughnessMap": "story-plate-brass-room-07_r.webp",
+   "phone": {
+    "map": "story-plate-brass-room-07.phone.webp",
+    "normalMap": "story-plate-brass-room-07_n.phone.webp",
+    "roughnessMap": "story-plate-brass-room-07_r.phone.webp"
+   },
+   "metalness": 1.0,
+   "ink": "#2a1a0c"
+  },
+  "room-08": {
+   "title": "El Salvador",
+   "label": "El Salvador \u00b7 Sunset",
+   "motifs": [
+    "WAVES",
+    "PALM LEAF",
+    "SUNBURST"
+   ],
+   "layout": "crest: SUNBURST rising from WAVES; sides: PALM fronds; bottom: waves frieze",
+   "map": "story-plate-brass-room-08.webp",
+   "normalMap": "story-plate-brass-room-08_n.webp",
+   "roughnessMap": "story-plate-brass-room-08_r.webp",
+   "phone": {
+    "map": "story-plate-brass-room-08.phone.webp",
+    "normalMap": "story-plate-brass-room-08_n.phone.webp",
+    "roughnessMap": "story-plate-brass-room-08_r.phone.webp"
+   },
+   "metalness": 1.0,
+   "ink": "#2a1a0c"
+  },
+  "room-09": {
+   "title": "Sunset",
+   "label": "Sunset",
+   "motifs": [
+    "SUNBURST",
+    "WAVES",
+    "CLOUDS"
+   ],
+   "layout": "crest: half SUNBURST setting into WAVES; bottom: waves; corners: CLOUD curls",
+   "map": "story-plate-brass-room-09.webp",
+   "normalMap": "story-plate-brass-room-09_n.webp",
+   "roughnessMap": "story-plate-brass-room-09_r.webp",
+   "phone": {
+    "map": "story-plate-brass-room-09.phone.webp",
+    "normalMap": "story-plate-brass-room-09_n.phone.webp",
+    "roughnessMap": "story-plate-brass-room-09_r.phone.webp"
+   },
+   "metalness": 1.0,
+   "ink": "#2a1a0c"
+  },
+  "room-10": {
+   "title": "Bitcoiners",
+   "label": "Bitcoiners",
+   "motifs": [
+    "FOUNTAIN",
+    "CHEVRON"
+   ],
+   "layout": "crest: stepped FOUNTAIN with jets; sides: stacked CHEVRONS; bottom: low fountain tiers; corners: ziggurat steps (no fins, unlike 07)",
+   "map": "story-plate-brass-room-10.webp",
+   "normalMap": "story-plate-brass-room-10_n.webp",
+   "roughnessMap": "story-plate-brass-room-10_r.webp",
+   "phone": {
+    "map": "story-plate-brass-room-10.phone.webp",
+    "normalMap": "story-plate-brass-room-10_n.phone.webp",
+    "roughnessMap": "story-plate-brass-room-10_r.phone.webp"
+   },
+   "metalness": 1.0,
+   "ink": "#2a1a0c"
+  },
+  "room-11": {
+   "title": "Portrait",
+   "label": "Portrait",
+   "motifs": [
+    "FEATHER",
+    "VOLUTE"
+   ],
+   "layout": "crest: FEATHER fan; sides: feather stacks; corners: VOLUTE scrolls",
+   "map": "story-plate-brass-room-11.webp",
+   "normalMap": "story-plate-brass-room-11_n.webp",
+   "roughnessMap": "story-plate-brass-room-11_r.webp",
+   "phone": {
+    "map": "story-plate-brass-room-11.phone.webp",
+    "normalMap": "story-plate-brass-room-11_n.phone.webp",
+    "roughnessMap": "story-plate-brass-room-11_r.phone.webp"
+   },
+   "metalness": 1.0,
+   "ink": "#2a1a0c"
+  },
+  "room-12": {
+   "title": "Seattle",
+   "label": "Seattle \u00b7 Denny Blaine \u00b7 Pacific Northwest",
+   "motifs": [
+    "CLOUDS",
+    "WAVES",
+    "CHEVRON"
+   ],
+   "layout": "crest: CLOUDS; bottom: WAVES frieze; sides: stacked CHEVRONS (rain)",
+   "map": "story-plate-brass-room-12.webp",
+   "normalMap": "story-plate-brass-room-12_n.webp",
+   "roughnessMap": "story-plate-brass-room-12_r.webp",
+   "phone": {
+    "map": "story-plate-brass-room-12.phone.webp",
+    "normalMap": "story-plate-brass-room-12_n.phone.webp",
+    "roughnessMap": "story-plate-brass-room-12_r.phone.webp"
+   },
+   "metalness": 1.0,
+   "ink": "#2a1a0c"
+  }
+ },
+ "rooms_note": "BRASS ONLY for #335 story plaques (TJ, Oct 26). text_rect_uv unchanged; deco confined to border, corners, side bands and bottom frieze."
+}

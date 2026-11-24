@@ -1,0 +1,116 @@
+{
+ "issue": "studio-tracker#301",
+ "wave": 2,
+ "extends": [
+  "../frames-301/frames.json",
+  "../frames-301-variants/frames-variants.json"
+ ],
+ "style": "original procedural, painterly",
+ "strip": {
+  "size": [
+   2048,
+   256
+  ],
+  "phone": [
+   1024,
+   128
+  ],
+  "u": "along moulding, tiles; ~1 repeat per 0.6 m",
+  "v": "across profile 0=back/wall -> 1=canvas lip"
+ },
+ "uv_bands": {
+  "back": [
+   0,
+   0.1
+  ],
+  "outer_bevel": [
+   0.1,
+   0.34
+  ],
+  "face": [
+   0.34,
+   0.72
+  ],
+  "step_cove": [
+   0.72,
+   0.88
+  ],
+  "liner_lip": [
+   0.88,
+   1.0
+  ]
+ },
+ "phone_suffix": ".phone.webp",
+ "variants": {
+  "frame-oak": {
+   "albedo": "frame-oak.webp",
+   "normal": "frame-oak_n.webp (OpenGL +Y)",
+   "roughness": "frame-oak_r.webp",
+   "ao": "frame-oak_ao.webp",
+   "png_masters": true,
+   "material": {
+    "metalness": 0,
+    "roughness_scale": 1.0,
+    "normalScale": [
+     1,
+     1
+    ],
+    "envMapIntensity": 0.5
+   },
+   "use": "warm landscapes, Bass Coast Sunrises, Forest Triptych"
+  },
+  "frame-maple": {
+   "albedo": "frame-maple.webp",
+   "normal": "frame-maple_n.webp (OpenGL +Y)",
+   "roughness": "frame-maple_r.webp",
+   "ao": "frame-maple_ao.webp",
+   "png_masters": true,
+   "material": {
+    "metalness": 0,
+    "roughness_scale": 1.0,
+    "normalScale": [
+     1,
+     1
+    ],
+    "envMapIntensity": 0.5
+   },
+   "use": "light watercolors, Hummingbirds, airy rooms"
+  },
+  "frame-float-charcoal": {
+   "albedo": "frame-float-charcoal.webp",
+   "normal": "frame-float-charcoal_n.webp (OpenGL +Y)",
+   "roughness": "frame-float-charcoal_r.webp",
+   "ao": "frame-float-charcoal_ao.webp",
+   "png_masters": true,
+   "material": {
+    "metalness": 0,
+    "roughness_scale": 1.0,
+    "normalScale": [
+     1,
+     1
+    ],
+    "envMapIntensity": 0.35
+   },
+   "use": "contemporary / Bitcoiners, large canvases; float with shadow gap",
+   "note": "flatter profile; shadow-gap reveal baked at v .70-.76"
+  }
+ },
+ "liners": {
+  "frame-liner-copper": {
+   "file": "frame-liner-copper.webp",
+   "png": "frame-liner-copper.png",
+   "px": [
+    2048,
+    64
+   ],
+   "map_v": [
+    0.88,
+    1.0
+   ],
+   "metalness": 0.65,
+   "roughness": 0.42,
+   "pairs": "oak, maple, walnut, float-charcoal"
+  }
+ },
+ "contact_shadow": "reuse ../frames-301/frame-contact-shadow.*"
+}

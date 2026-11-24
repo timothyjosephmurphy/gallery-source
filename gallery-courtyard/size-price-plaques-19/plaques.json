@@ -1,0 +1,320 @@
+{
+  "issue": 19,
+  "preview_only": true,
+  "approved": false,
+  "note": "Gallery owns interaction; runtime copy only. No text baked.",
+  "rect_convention": "rect_px = [x0,y0,x1,y1] top-left origin; rect_uv v-up (matches #337 overlay.json)",
+  "material_hint": "MeshBasicMaterial({map, transparent:true, toneMapped:false}); alpha only at rounded corners",
+  "face_rgb": "#15100b",
+  "ink": {
+    "title": "#F7DC8C",
+    "size": "#EDE3CF",
+    "price": "#F7CC3A",
+    "muted": "#B9AFA4",
+    "nfs": "#C8644E"
+  },
+  "text_px_suggest": {
+    "desktop": {
+      "title": 34,
+      "size": 28,
+      "price": 30,
+      "status": 20
+    },
+    "phone": {
+      "title": 17,
+      "size": 14,
+      "price": 15,
+      "status": 10
+    }
+  },
+  "variants": {
+    "desktop": {
+      "file": "plaque-desktop.webp",
+      "png": "plaque-desktop.png",
+      "px": [
+        512,
+        640
+      ],
+      "world_size_m": [
+        0.2,
+        0.25
+      ],
+      "statusChip_baked": false,
+      "rects": {
+        "titleBand": {
+          "rect_px": [
+            61,
+            83,
+            451,
+            192
+          ],
+          "rect_uv": {
+            "u0": 0.12,
+            "v0": 0.7,
+            "u1": 0.88,
+            "v1": 0.87
+          }
+        },
+        "sizeLine": {
+          "rect_px": [
+            61,
+            256,
+            451,
+            346
+          ],
+          "rect_uv": {
+            "u0": 0.12,
+            "v0": 0.46,
+            "u1": 0.88,
+            "v1": 0.6
+          }
+        },
+        "priceLine": {
+          "rect_px": [
+            61,
+            371,
+            451,
+            461
+          ],
+          "rect_uv": {
+            "u0": 0.12,
+            "v0": 0.28,
+            "u1": 0.88,
+            "v1": 0.42
+          }
+        },
+        "statusChip": {
+          "rect_px": [
+            143,
+            506,
+            369,
+            563
+          ],
+          "rect_uv": {
+            "u0": 0.28,
+            "v0": 0.12,
+            "u1": 0.72,
+            "v1": 0.21
+          },
+          "note": "optional: empty area, chip drawn at runtime if needed"
+        }
+      }
+    },
+    "nfs-desktop": {
+      "file": "plaque-nfs-desktop.webp",
+      "png": "plaque-nfs-desktop.png",
+      "px": [
+        512,
+        640
+      ],
+      "world_size_m": [
+        0.2,
+        0.25
+      ],
+      "statusChip_baked": true,
+      "rects": {
+        "titleBand": {
+          "rect_px": [
+            61,
+            83,
+            451,
+            192
+          ],
+          "rect_uv": {
+            "u0": 0.12,
+            "v0": 0.7,
+            "u1": 0.88,
+            "v1": 0.87
+          }
+        },
+        "sizeLine": {
+          "rect_px": [
+            61,
+            256,
+            451,
+            346
+          ],
+          "rect_uv": {
+            "u0": 0.12,
+            "v0": 0.46,
+            "u1": 0.88,
+            "v1": 0.6
+          }
+        },
+        "priceLine": {
+          "rect_px": [
+            61,
+            371,
+            451,
+            461
+          ],
+          "rect_uv": {
+            "u0": 0.12,
+            "v0": 0.28,
+            "u1": 0.88,
+            "v1": 0.42
+          }
+        },
+        "statusChip": {
+          "rect_px": [
+            143,
+            506,
+            369,
+            563
+          ],
+          "rect_uv": {
+            "u0": 0.28,
+            "v0": 0.12,
+            "u1": 0.72,
+            "v1": 0.21
+          }
+        }
+      },
+      "nfs_note": "Chip outline + small terracotta dot baked; text 'Not for sale' rendered at runtime inside statusChip."
+    },
+    "phone": {
+      "file": "plaque-phone.webp",
+      "png": "plaque-phone.png",
+      "px": [
+        256,
+        320
+      ],
+      "world_size_m": [
+        0.2,
+        0.25
+      ],
+      "statusChip_baked": false,
+      "rects": {
+        "titleBand": {
+          "rect_px": [
+            31,
+            42,
+            225,
+            96
+          ],
+          "rect_uv": {
+            "u0": 0.12,
+            "v0": 0.7,
+            "u1": 0.88,
+            "v1": 0.87
+          }
+        },
+        "sizeLine": {
+          "rect_px": [
+            31,
+            128,
+            225,
+            173
+          ],
+          "rect_uv": {
+            "u0": 0.12,
+            "v0": 0.46,
+            "u1": 0.88,
+            "v1": 0.6
+          }
+        },
+        "priceLine": {
+          "rect_px": [
+            31,
+            186,
+            225,
+            230
+          ],
+          "rect_uv": {
+            "u0": 0.12,
+            "v0": 0.28,
+            "u1": 0.88,
+            "v1": 0.42
+          }
+        },
+        "statusChip": {
+          "rect_px": [
+            72,
+            253,
+            184,
+            282
+          ],
+          "rect_uv": {
+            "u0": 0.28,
+            "v0": 0.12,
+            "u1": 0.72,
+            "v1": 0.21
+          },
+          "note": "optional: empty area, chip drawn at runtime if needed"
+        }
+      }
+    },
+    "nfs-phone": {
+      "file": "plaque-nfs-phone.webp",
+      "png": "plaque-nfs-phone.png",
+      "px": [
+        256,
+        320
+      ],
+      "world_size_m": [
+        0.2,
+        0.25
+      ],
+      "statusChip_baked": true,
+      "rects": {
+        "titleBand": {
+          "rect_px": [
+            31,
+            42,
+            225,
+            96
+          ],
+          "rect_uv": {
+            "u0": 0.12,
+            "v0": 0.7,
+            "u1": 0.88,
+            "v1": 0.87
+          }
+        },
+        "sizeLine": {
+          "rect_px": [
+            31,
+            128,
+            225,
+            173
+          ],
+          "rect_uv": {
+            "u0": 0.12,
+            "v0": 0.46,
+            "u1": 0.88,
+            "v1": 0.6
+          }
+        },
+        "priceLine": {
+          "rect_px": [
+            31,
+            186,
+            225,
+            230
+          ],
+          "rect_uv": {
+            "u0": 0.12,
+            "v0": 0.28,
+            "u1": 0.88,
+            "v1": 0.42
+          }
+        },
+        "statusChip": {
+          "rect_px": [
+            72,
+            253,
+            184,
+            282
+          ],
+          "rect_uv": {
+            "u0": 0.28,
+            "v0": 0.12,
+            "u1": 0.72,
+            "v1": 0.21
+          }
+        }
+      },
+      "nfs_note": "Chip outline + small terracotta dot baked; text 'Not for sale' rendered at runtime inside statusChip."
+    }
+  }
+}

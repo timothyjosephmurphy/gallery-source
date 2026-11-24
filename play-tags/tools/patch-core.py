@@ -1,7 +1,8 @@
 # #251: teach gallery-core/src/main.js the 'tags' gallery. Mostly 'tags' rides on the uffizi branches (flat floor, daylight);
 # a handful of blocks get their own '//#elif tags' branch. Inert for every other gallery (verified by tools/core-same.mjs).
 import re, sys
-P = '/workspace/gallery-core/src/main.js'; s = open(P).read()
+import os
+P = os.environ.get('PATCH_CORE_TARGET', '/workspace/gallery-core/src/main.js'); s = open(P).read()
 if "'./tags.js'" in s: sys.exit('already patched')
 L = s.split('\n')
 OWN = {}  # line text (stripped, first occurrence after an anchor) -> replacement handled below
@@ -74,7 +75,14 @@ R = [("//#if play orsay bilbao uffizi tags\nconst DAIS = { x: 0, z: (ROOMS[0].mi
      ("//#if play orsay bilbao uffizi tags\nHOLO_DEFS.forEach(d => { const r = ROOMS.find", "//#if play orsay bilbao uffizi\nHOLO_DEFS.forEach(d => { const r = ROOMS.find"),
      ("//#elif gugg-ny splat\nHOLO_DEFS.forEach(d => { const r = d.room === 'central'", "//#elif gugg-ny splat tags\nHOLO_DEFS.forEach(d => { const r = d.room === 'central'")]
 R += [("BOOK_DEFS.forEach(d => { const r = ROOMS.find(q => q.id === d.room),", "//#if tags\nconst TAGS_BOOKS = BOOK_DEFS.splice(0); // #281: tags books carry their own spot\n//#endif\nBOOK_DEFS.forEach(d => { const r = ROOMS.find(q => q.id === d.room),"), ("\nconst books = makeBooks({", "\n//#if tags\nfor (const d of TAGS_BOOKS) { d.cover = `books/${d.id}/cover.webp`; BOOK_DEFS.push(d); }\n//#endif\nconst books = makeBooks({")]
-R += [("const BOOK_DEFS = [\n//#if play orsay bilbao uffizi tags", "const BOOK_DEFS = [\n//#if play orsay bilbao uffizi"), ("//#elif splat\n]; // splat room: no art books", "//#elif tags\n  // #281: the readable art books on lecterns near the middle of their subject rooms (clear of doors, paths, art and plaques)\n  { id: 'landscapes', room: 'room-01', x: 14.465, z: 17.568, yaw: -1.5708, title: 'Watercolor Landscapes', url: 'https://tjm.art/products/watercolor-landscapes/', pages: 75, aspect: 612 / 787.92, fixed: 1 },\n  { id: 'portraits', room: 'room-11', x: -10.921, z: -22.825, yaw: -1.5708, title: 'Watercolor Portraits', url: 'https://tjm.art/products/watercolor-portraits/', pages: 79, aspect: 612 / 787.92, fixed: 1 },\n  { id: 'reflections', room: 'room-05', x: 16.630, z: 7.818, yaw: -1.5708, title: 'Reflections on Time', url: 'https://tjm.art/products/reflections-on-time/', pages: 35, aspect: 432 / 648, fixed: 1 }];\n//#elif splat\n]; // splat room: no art books")]
+R += [("const BOOK_DEFS = [\n//#if play orsay bilbao uffizi tags", "const BOOK_DEFS = [\n//#if play orsay bilbao uffizi"), ("//#elif splat\n]; // splat room: no art books", "//#elif tags\n  // #281: the readable art books on lecterns near the middle of their subject rooms (clear of doors, paths, art and plaques)\n  { id: 'landscapes', room: 'room-01', x: 14.465, z: 17.568, yaw: -1.5708, title: 'Watercolor Landscapes', url: 'https://tjm.art/products/watercolor-landscapes/', pages: 75, aspect: 612 / 787.92, fixed: 1 },\n  { id: 'portraits', room: 'room-11', x: -10.921, z: -22.825, yaw: -1.5708, title: 'Watercolor Portraits', url: 'https://tjm.art/products/watercolor-portraits/', pages: 79, aspect: 612 / 787.92, fixed: 1 },\n  { id: 'reflections', room: 'room-05', x: 16.630, z: 7.818, yaw: -1.5708, title: 'Reflections on Time', url: 'https://tjm.art/products/reflections-on-time/', pages: 35, aspect: 432 / 648, fixed: 1 },\n  { id: 'changing-light', room: 'room-12', x: 0.996, z: 19.725, yaw: -1.5708, title: 'In the Changing Light', url: 'https://tjm.art/books/', pages: 54, aspect: 918 / 783, fixed: 1 }];\n//#elif splat\n]; // splat room: no art books")]
 for a, b in R:
     assert s.count(a) == 1, a[:60]; s = s.replace(a, b)
 open(P, 'w').write(s); print('holo/dais fixed')
+# #485: phone/low hang-plaque canvas 384x120 (tags only), right after the 512x160 plaque canvas line in plaqueMesh()
+s = open(P).read()
+A = "  const c = document.createElement('canvas'); c.width = 512; c.height = 160; const x = c.getContext('2d');\n  x.fillStyle = '#e9e1cf';"
+if '#485: phone/low plaque canvas' not in s:
+    assert s.count(A) == 1, '#485 anchor'
+    s = s.replace(A, A.split('\n')[0] + "\n//#if tags\n  if (LOW) { c.width = 384; c.height = 120; x.scale(0.75, 0.75); } // #485: phone/low plaque canvas 384x120 (-44% GPU mem), same layout at 0.75\n//#endif\n" + A.split('\n')[1])
+    open(P, 'w').write(s); print('#485 low plaque canvas')

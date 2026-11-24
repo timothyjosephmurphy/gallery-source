@@ -1,0 +1,36 @@
+{
+ "w": 2.0,
+ "h": 0.5,
+ "gap": 0.2,
+ "plates": [
+  {
+   "id": "reiki",
+   "title": "Reiki",
+   "desktop": "plate-reiki.desktop.webp",
+   "phone": "plate-reiki.phone.webp",
+   "skip": "no Reiki hang/wall in catalog or hang-overrides; add members[] or door to place"
+  },
+  {
+   "id": "bounty-of-satoshi",
+   "title": "Bounty of Satoshi",
+   "desktop": "plate-bounty-of-satoshi.desktop.webp",
+   "phone": "plate-bounty-of-satoshi.phone.webp",
+   "members": [
+    "archived-painting-img-1612",
+    "painting-phoenix-rising",
+    "painting-festival-portrait"
+   ]
+  },
+  {
+   "id": "ukraine",
+   "title": "Ukraine",
+   "desktop": "plate-ukraine.desktop.webp",
+   "phone": "plate-ukraine.phone.webp",
+   "members": [
+    "painting-sunflower-woman",
+    "painting-figures-in-wheatfield",
+    "girl-wearing-flower-crown"
+   ]
+  }
+ ]
+}

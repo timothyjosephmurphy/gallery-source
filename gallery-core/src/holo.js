@@ -50,12 +50,12 @@ export function makeHolos(scene, camera, defs, { low = false, base = '' } = {}) 
     H.forEach(h => { const v = h === active ? 1 : 0;
       if (h.gain) { if (instant) h.gain.gain.value = v; else h.gain.gain.setTargetAtTime(v, ctx.currentTime, FADE); }
       else h.video.muted = !(started && v && masterOn()); });
-    if (master) master.gain.setTargetAtTime(masterOn() ? 0.7 : 0, ctx.currentTime, 0.08);
+    if (master) master.gain.setTargetAtTime(masterOn() ? (window.__tourVO ? 0.25 : 0.7) : 0, ctx.currentTime, 0.08); /* #809: room holos sit under the tour VO, never the reverse */
   }
   const play = h => { h.pauseAt = 0; if (document.hidden) return; h.video.play().catch(() => {}); };
   function begin() { // from a user gesture
     if (started) { if (ctx && ctx.state === 'suspended') ctx.resume(); return; } started = true;
-    try { ctx = new (window.AudioContext || window.webkitAudioContext)(); master = ctx.createGain(); master.connect(ctx.destination);
+    try { ctx = window.__sharedAC = window.__sharedAC || new (window.AudioContext || window.webkitAudioContext)(); /* #809: one AudioContext shared with the tour guide (iOS drops a 2nd context) */ master = ctx.createGain(); master.connect(ctx.destination);
       H.forEach(h => { const s = ctx.createMediaElementSource(h.video); h.pan = ctx.createStereoPanner ? ctx.createStereoPanner() : null; h.gain = ctx.createGain(); h.gain.gain.value = h === active ? 1 : 0; h.prox = ctx.createGain(); h.prox.gain.value = h.pv;
         (h.pan ? s.connect(h.pan).connect(h.prox) : s.connect(h.prox)).connect(h.gain).connect(master); h.video.muted = false; });
     } catch (e) { ctx = null; master = null; H.forEach(h => { h.gain = null; }); }
@@ -64,6 +64,7 @@ export function makeHolos(scene, camera, defs, { low = false, base = '' } = {}) 
   addEventListener('visibilitychange', () => { if (document.hidden) H.forEach(h => h.video.pause()); else if (active) play(active); setGains(); });
   const right = new THREE.Vector3();
   function update(dt, now, roomId) {
+    if (started && !!window.__tourVO !== !!H.__vo) { H.__vo = !!window.__tourVO; setGains(); } if (ctx && ctx.state !== 'running' && ctx.state !== 'closed' && !document.hidden) ctx.resume().catch(() => {});
     const nxt = H.find(h => h.d.room === roomId) || null;
     if (nxt !== active) { const old = active; active = nxt; switches++;
       if (old) old.pauseAt = now + (started ? 2000 : 0); // let its audio fade out, then stop decoding

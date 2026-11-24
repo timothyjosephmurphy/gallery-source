@@ -1,0 +1,119 @@
+{
+ "issue": "studio-tracker#301",
+ "extends": "../frames-301/frames.json",
+ "style": "original procedural, painterly",
+ "strip": {
+  "size": [
+   2048,
+   256
+  ],
+  "phone": [
+   1024,
+   128
+  ],
+  "u": "along moulding, tiles; ~1 repeat per 0.6 m",
+  "v": "across profile 0=back/wall -> 1=canvas lip"
+ },
+ "uv_bands": {
+  "back": [
+   0,
+   0.1
+  ],
+  "outer_bevel": [
+   0.1,
+   0.34
+  ],
+  "face": [
+   0.34,
+   0.72
+  ],
+  "step_cove": [
+   0.72,
+   0.88
+  ],
+  "liner_lip": [
+   0.88,
+   1.0
+  ]
+ },
+ "phone_suffix": ".phone.webp",
+ "variants": {
+  "frame-walnut": {
+   "albedo": "frame-walnut.webp",
+   "normal": "frame-walnut_n.webp (OpenGL +Y)",
+   "roughness": "frame-walnut_r.webp",
+   "ao": "frame-walnut_ao.webp",
+   "png_masters": true,
+   "material": {
+    "metalness": 0,
+    "roughness_scale": 1.0,
+    "normalScale": [
+     1,
+     1
+    ],
+    "envMapIntensity": 0.5
+   },
+   "use": "portraits, Father Paul, Reiki, warm rooms"
+  },
+  "frame-white": {
+   "albedo": "frame-white.webp",
+   "normal": "frame-white_n.webp (OpenGL +Y)",
+   "roughness": "frame-white_r.webp",
+   "ao": "frame-white_ao.webp",
+   "png_masters": true,
+   "material": {
+    "metalness": 0,
+    "roughness_scale": 1.0,
+    "normalScale": [
+     1,
+     1
+    ],
+    "envMapIntensity": 0.5
+   },
+   "use": "small watercolors, light rooms"
+  },
+  "frame-dark-ornate": {
+   "albedo": "frame-dark-ornate.webp",
+   "normal": "frame-dark-ornate_n.webp (OpenGL +Y)",
+   "roughness": "frame-dark-ornate_r.webp",
+   "ao": "frame-dark-ornate_ao.webp",
+   "png_masters": true,
+   "material": {
+    "metalness": 0,
+    "roughness_scale": 1.0,
+    "normalScale": [
+     1,
+     1
+    ],
+    "envMapIntensity": 0.7
+   },
+   "use": "festival / Burning Man, Temples (optional)",
+   "note": "relief period = 1/16 U; keep U repeat in world mm so motifs don't stretch"
+  },
+  "frame-black": {
+   "see": "../frames-301/",
+   "use": "landscapes (default)"
+  }
+ },
+ "liners": {
+  "frame-liner-silver": {
+   "file": "frame-liner-silver.webp",
+   "png": "frame-liner-silver.png",
+   "px": [
+    2048,
+    64
+   ],
+   "map_v": [
+    0.88,
+    1.0
+   ],
+   "metalness": 0.6,
+   "roughness": 0.4,
+   "pairs": "walnut, white, dark-ornate"
+  },
+  "frame-liner-gold": {
+   "see": "../frames-301/frame-liner-gold.webp"
+  }
+ },
+ "contact_shadow": "reuse ../frames-301/frame-contact-shadow.*"
+}

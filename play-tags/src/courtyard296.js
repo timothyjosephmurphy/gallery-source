@@ -3,7 +3,11 @@
 // glow toward the room the guide / wall map is taking you to, thin orange and blue trim at the doorways, and a walk-in fountain over the sun medallion that IS the
 // checkout portal (replaces the #290 bubble). No text floats anywhere; everything is silent (no new sound).
 import * as THREE from 'three';
-const BASE = import.meta.env.BASE_URL + 'courtyard/', ORANGE = '#F7A66E', BLUE = '#5E9ADB', TAU = Math.PI * 2;
+import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js'; // #477
+import { buildFence, buildHorizon, buildNight, dialShafts } from './horizon352.js';
+import { installShafts357 } from './shafts357.js'; // #357 gobos
+import { installGlows358 } from './glows358.js'; // #358 night window glows
+const BASE = import.meta.env.BASE_URL + 'img/play/preview-251/courtyard-296/', ORANGE = '#F7A66E', BLUE = '#5E9ADB', TAU = Math.PI * 2;
 const loader = new THREE.TextureLoader();
 const tex = (f, cb, low, wrap) => loader.load(BASE + f, t => { t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = low ? 2 : 8; if (wrap) t.wrapS = t.wrapT = THREE.RepeatWrapping; cb(t); }, undefined, () => { (window.__c296 = window.__c296 || {}).texErr = ((window.__c296 || {}).texErr || []).concat(f); });
 const radial = (stops, n = 128) => { const c = document.createElement('canvas'); c.width = c.height = n; const g = c.getContext('2d'), rg = g.createRadialGradient(n / 2, n / 2, 0, n / 2, n / 2, n / 2); stops.forEach(([o, col]) => rg.addColorStop(o, col)); g.fillStyle = rg; g.fillRect(0, 0, n, n); const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t; };
@@ -17,7 +21,7 @@ export function buildFountainPortal({ root, low, BUBBLE }) {
   tex('sun-medallion-296.webp', t => { medMat.map = t; medMat.color.set(0xffffff); medMat.needsUpdate = true; }, low);
   const ringMat = new THREE.MeshBasicMaterial({ transparent: true, depthWrite: false, toneMapped: false, opacity: 0 }), RO = 3.6;
   const ring = new THREE.Mesh(new THREE.PlaneGeometry(RO * 2, RO * 2), ringMat); ring.rotation.x = -Math.PI / 2; ring.position.y = 0.017; ring.renderOrder = 4; ring.name = 'checkoutRing'; g.add(ring);
-  tex('checkout-ring-296.webp', t => { ringMat.map = t; ringMat.opacity = 1; ringMat.needsUpdate = true; }, low);
+  tex('checkout-ring-759.webp' /* #759 (TJ Oct 27 2026): CHECKOUT letters flipped to face outward (read on approach) */, t => { ringMat.map = t; ringMat.opacity = 1; ringMat.needsUpdate = true; }, low);
   // shallow water over the medallion: soft ripples out from the middle and a little sparkle, see-through so the sun shows
   const wu = { t: { value: 0 }, glow: { value: 0 } };
   const water = new THREE.Mesh(new THREE.CircleGeometry(RM, seg), new THREE.ShaderMaterial({ uniforms: wu, transparent: true, depthWrite: false, toneMapped: false, fog: false,
@@ -29,11 +33,16 @@ export function buildFountainPortal({ root, low, BUBBLE }) {
   water.rotation.x = -Math.PI / 2; water.position.y = 0.075; water.renderOrder = 5; water.name = 'fountainWater'; g.add(water);
   // low travertine curb with four entrances (nothing solid: you simply walk in)
   const stone = new THREE.MeshStandardMaterial({ color: 0xe6dac4, roughness: 0.6 }), prof = [[2.06, 0], [2.06, 0.13], [2.3, 0.13], [2.3, 0.03], [2.34, 0]].map(([r, y]) => new THREE.Vector2(r, y)), gap = 0.62, arc = TAU / 4 - gap;
-  for (let k = 0; k < 4; k++) { const m = new THREE.Mesh(new THREE.LatheGeometry(prof, low ? 14 : 28, k * TAU / 4 + gap / 2, arc), stone); m.material.side = THREE.DoubleSide; m.name = 'fountainCurb'; m.receiveShadow = true; g.add(m); }
+  // #351 (TJ Oct 26): no raised curb/plinth on the sunburst (trip hazard): the medallion and water stay flush with the floor
+  if (false) for (let k = 0; k < 4; k++) { const m = new THREE.Mesh(new THREE.LatheGeometry(prof, low ? 14 : 28, k * TAU / 4 + gap / 2, arc), stone); m.material.side = THREE.DoubleSide; m.name = 'fountainCurb'; m.receiveShadow = true; g.add(m); }
   // water jets: ten low arcs falling toward the middle and one slim central column (additive, no light cost)
   const jetM = new THREE.MeshBasicMaterial({ color: 0xcfeaff, opacity: 0.5, ...ADD }), jets = [];
   for (let k = 0; k < 10; k++) { const a = k / 10 * TAU + 0.15, c = Math.cos(a), s = Math.sin(a), curve = new THREE.QuadraticBezierCurve3(new THREE.Vector3(c * 1.6, 0.08, s * 1.6), new THREE.Vector3(c * 1.05, 1.25, s * 1.05), new THREE.Vector3(c * 0.5, 0.08, s * 0.5));
     const m = new THREE.Mesh(new THREE.TubeGeometry(curve, low ? 10 : 18, 0.022, 5, false), jetM); m.name = 'fountainJet'; g.add(m); jets.push(m); }
+  // #487: ten static jet tubes share jetM (additive, only material opacity animates) -> one merged draw; fail soft keeps originals
+  try { const gs = jets.map(m => m.geometry); const mg = mergeGeometries(gs); if (!mg) throw new Error('merge returned null'); mg.computeBoundingSphere();
+    const mj = new THREE.Mesh(mg, jetM); mj.name = 'fountainJet'; mj.userData.merge487 = true; g.add(mj); jets.forEach(m => { g.remove(m); m.geometry.dispose(); }); jets.length = 0; jets.push(mj); window.__m487 = { n: 10, draws: 1 };
+  } catch (e) { console.warn('[487 merge]', e); window.__m487 = { err: String(e) }; }
   const col = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.07, 1.7, 8, 1, true), new THREE.MeshBasicMaterial({ color: 0xe6f6ff, opacity: 0.4, ...ADD })); col.position.y = 0.9; col.name = 'fountainColumn'; g.add(col);
   const halo = new THREE.Mesh(new THREE.CircleGeometry(RM * 1.1, 32), new THREE.MeshBasicMaterial({ map: radial([[0, 'rgba(255,214,120,0.95)'], [0.55, 'rgba(255,170,90,0.35)'], [1, 'rgba(255,150,70,0)']]), opacity: 0.3, ...ADD })); halo.rotation.x = -Math.PI / 2; halo.position.y = 0.09; halo.renderOrder = 6; halo.name = 'fountainSun'; g.add(halo);
   // #323 (TJ: "I don't see the portals for checkout"): a tall sun beam over the fountain, readable from the entrance, every ray path and the doorways, plus a pulsing gold glow on the floor under the ring
@@ -74,6 +83,9 @@ export function installCourtyard296({ game, W, root, low, T }) {
   ['orange', 'blue'].forEach((n, i) => tex(`dome-glass-${n}-296.webp`, t => { t.repeat.set(6, 3); glassTex[i] = t; capMats[i].map = t; capMats[i].opacity = 0.55; capMats[i].needsUpdate = true; const pm = new THREE.MeshBasicMaterial({ map: t.clone(), alphaMap: fade, opacity: 0.5, ...ADD }); pm.map.repeat.set(3, 3); pm.map.needsUpdate = true; poolMats[i] = pm;
     for (const o of S.floorPatterns || []) if (o.k === i) { o.mesh.material = pm; } }, low, true));
   S.floorPatterns = [];
+  try { S.fence = buildFence({ W, scene, low }); buildHorizon({ scene, low, S }); buildNight({ scene, low, S }); dialShafts({ dd, scene, S }); } catch (e) { console.warn('[352]', e); S.err352 = String(e); }
+  try { installShafts357({ scene, low, S }); } catch (e) { console.warn('[357]', e); S.err357 = String(e); } // #357 gobos on #296 shafts
+  try { installGlows358({ scene, low, S, W }); } catch (e) { console.warn('[358g]', e); S.err358g = String(e); }
   rooms.forEach((r, i) => { const k = i % 2, H = r.wallH || 4.2, rd = r.apothem * 0.74, top = H + 1.7, cx = r.center[0], cz = r.center[1];
     const cap = new THREE.Mesh(new THREE.SphereGeometry(rd + 0.17, low ? 24 : 48, low ? 8 : 14, 0, TAU, 0.16, Math.PI / 2 - 0.16), capMats[k]); cap.scale.y = 0.82; cap.position.set(cx, top, cz); cap.name = 'glassDome'; cap.renderOrder = 3; scene.add(cap); S.glassRooms++;
     const pool = new THREE.Mesh(new THREE.CircleGeometry(r.apothem * 0.92, 40), pools[k]); pool.rotation.x = -Math.PI / 2; pool.position.set(cx, 0.034, cz); pool.renderOrder = 3; pool.name = 'domeLight'; scene.add(pool); S.pools++;
@@ -81,6 +93,22 @@ export function installCourtyard296({ game, W, root, low, T }) {
   // dawn light through the glass also lands outside, in front of each courtyard door
   for (const d of W.doors.filter(d => d.kind === 'inner')) { const r = W.rooms.find(q => q.id === d.room); if (!r) continue; const i = rooms.indexOf(r); let ox = d.x - r.center[0], oz = d.z - r.center[1]; const q = Math.hypot(ox, oz) || 1; ox /= q; oz /= q;
     const m = new THREE.Mesh(new THREE.CircleGeometry(2.2, 32), pools[i % 2]); m.rotation.x = -Math.PI / 2; m.position.set(d.x + ox * 2.8, 0.02, d.z + oz * 2.8); m.renderOrder = 3; m.name = 'doorLightPool'; scene.add(m); S.pools++; }
+  // #484 (Mon Oct 26 2026 ~9:50 PM PT): domeLight + doorLightPool discs share pools[k] (additive, depthWrite off -> order-independent); no name lookups / per-mesh writes. World-bake + merge per k. Fail soft: originals stay.
+  { const M = window.__m484 = { before: 0, draws: 0 }; scene.updateMatrixWorld(true); const inv = new THREE.Matrix4().copy(scene.matrixWorld).invert();
+    [0, 1].forEach(k => { try { const list = []; scene.traverse(o => { if (o.isMesh && (o.name === 'domeLight' || o.name === 'doorLightPool') && o.material === pools[k]) list.push(o); }); M.before += list.length; if (list.length < 2) { M.draws += list.length; return; }
+      const geos = list.map(o => { const g = o.geometry.index ? o.geometry.toNonIndexed() : o.geometry.clone(); for (const a of Object.keys(g.attributes)) if (!['position', 'normal', 'uv'].includes(a)) g.deleteAttribute(a); return g.applyMatrix4(new THREE.Matrix4().multiplyMatrices(inv, o.matrixWorld)); });
+      const mg = mergeGeometries(geos); geos.forEach(g => g.dispose()); if (!mg) throw new Error('merge returned null'); mg.computeBoundingSphere();
+      const m = new THREE.Mesh(mg, pools[k]); m.name = 'domeLight'; m.renderOrder = 3; m.userData.merge484 = true; scene.add(m); for (const o of list) { o.parent.remove(o); o.geometry.dispose(); } M.draws += 1; M['k' + k] = list.length;
+    } catch (e) { console.warn('[484 merge]', e); M.err = String(e); } }); }
+  // #486 (Mon Oct 26 2026 ~10:05 PM PT): domeLeadLight per-k merge. Additive, depthWrite off, renderOrder 4 -> order-independent. Only consumer of S.floorPatterns is the async glass-tex callback (swaps material per k), so re-point floorPatterns at the merged mesh. Fail soft.
+  { const M = window.__m486 = { before: 0, draws: 0 }; scene.updateMatrixWorld(true); const inv = new THREE.Matrix4().copy(scene.matrixWorld).invert();
+    [0, 1].forEach(k => { try { const ents = S.floorPatterns.filter(o => o.k === k), list = ents.map(o => o.mesh); M.before += list.length; if (list.length < 2) { M.draws += list.length; return; }
+      const geos = list.map(o => { const g = o.geometry.index ? o.geometry.toNonIndexed() : o.geometry.clone(); for (const a of Object.keys(g.attributes)) if (!['position', 'normal', 'uv'].includes(a)) g.deleteAttribute(a); return g.applyMatrix4(new THREE.Matrix4().multiplyMatrices(inv, o.matrixWorld)); });
+      const mg = mergeGeometries(geos); geos.forEach(g => g.dispose()); if (!mg) throw new Error('merge returned null'); mg.computeBoundingSphere();
+      const mat = poolMats[k] || list[0].material, m = new THREE.Mesh(mg, mat); m.name = 'domeLeadLight'; m.renderOrder = 4; m.userData.merge486 = true; scene.add(m);
+      for (const o of list) { o.parent.remove(o); o.geometry.dispose(); if (o.material !== mat && o.material !== poolMats[k]) o.material.dispose(); }
+      S.floorPatterns = S.floorPatterns.filter(o => o.k !== k).concat([{ k, mesh: m }]); M.draws += 1; M['k' + k] = list.length;
+    } catch (e) { console.warn('[486 merge]', e); M.err = String(e); } }); }
   // 3. sunburst rays: a soft sunrise glow that runs along the floor ray toward the room the guide, the ride or the wall map is heading for
   const rayU = { t: { value: 0 } }, rays = new Map();
   for (const r of W.rays) { const dx = r.x1 - r.x0, dz = r.z1 - r.z0, L = Math.hypot(dx, dz), ux = dx / L, uz = dz / L, tx = -uz, tz = ux, s0 = 3.7, s1 = L - 0.25, w = 1.9; if (s1 - s0 < 0.5) continue;
@@ -97,12 +125,15 @@ export function installCourtyard296({ game, W, root, low, T }) {
   S.point = (id, secs = 6) => { S.manual = id; S.manualUntil = performance.now() + secs * 1000; }; window.__rayGlow = S;
   // 4. thin orange / blue trim round every doorway, on the gallery side (both sides where a door joins two galleries); the walls themselves stay neutral
   { const tm = [new THREE.MeshBasicMaterial({ color: new THREE.Color(ORANGE), toneMapped: false, side: THREE.DoubleSide }), new THREE.MeshBasicMaterial({ color: new THREE.Color(BLUE), toneMapped: false, side: THREE.DoubleSide })], seg = low ? 20 : 40;
+    const tg = [[], []]; /* #477: bake every trim piece to world space and merge per colour, so ~150 static unlit meshes become 2 draws (pixel-identical) */
     for (const d of W.doors.filter(d => d.kind === 'inner' || d.kind === 'outer' || d.kind === 'room')) { const sp = d.spring ?? 2.4, w2 = d.width / 2, g = new THREE.Group(); g.position.set(d.x, 0, d.z); g.rotation.y = -Math.atan2(d.nx, -d.nz); g.name = 'doorTrim'; // local +z = into the owning room
-      for (const sd of d.kind === 'room' ? [1, -1] : [1]) for (const [ri, ro, mi] of [[w2 + 0.045, w2 + 0.085, 0], [w2 + 0.115, w2 + 0.155, 1]]) { const ring = new THREE.Mesh(new THREE.RingGeometry(ri, ro, seg, 1, 0, Math.PI), tm[mi]); ring.position.set(0, sp, sd * 0.078); g.add(ring);
-        for (const s2 of [-1, 1]) { const bar = new THREE.Mesh(new THREE.PlaneGeometry(ro - ri, sp), tm[mi]); bar.position.set(s2 * (ri + ro) / 2, sp / 2, sd * 0.078); g.add(bar); } }
-      scene.add(g); S.trims++; } }
+      for (const sd of d.kind === 'room' ? [1, -1] : [1]) for (const [ri, ro, mi] of [[w2 + 0.045, w2 + 0.085, 0], [w2 + 0.115, w2 + 0.155, 1]]) { const ring = new THREE.Mesh(new THREE.RingGeometry(ri, ro, seg, 1, 0, Math.PI), tm[mi]); ring.position.set(0, sp, sd * 0.078); if (d.rise) ring.scale.y = d.rise / w2; /* #851: hug the #777/#782 elliptical full-width arch (circle stuck up into the sky) */ ring.userData.mi = mi; g.add(ring);
+        for (const s2 of [-1, 1]) { const bar = new THREE.Mesh(new THREE.PlaneGeometry(ro - ri, sp), tm[mi]); bar.position.set(s2 * (ri + ro) / 2, sp / 2, sd * 0.078); bar.userData.mi = mi; g.add(bar); } }
+      g.updateMatrixWorld(true); for (const c of g.children) { const gg = c.geometry; gg.applyMatrix4(c.matrixWorld); tg[c.userData.mi].push(gg); } S.trims++; }
+    const added = []; try { tg.forEach((list, mi) => { const mg = list.length && mergeGeometries(list); if (!mg) throw new Error('merge failed'); mg.computeBoundingSphere(); const m = new THREE.Mesh(mg, tm[mi]); m.name = 'doorTrim'; scene.add(m); added.push(m); }); S.trimDraws = 2; }
+    catch (e) { console.warn('[477 trim merge]', e && e.message || e); added.forEach(m => scene.remove(m)); tg.forEach((list, mi) => list.forEach(gg => { const m = new THREE.Mesh(gg, tm[mi]); m.name = 'doorTrim'; scene.add(m); })); S.trimDraws = tg[0].length + tg[1].length; } }
   // 5. mosaic room signs set in the floor at the end of each room's ray (Visual's signs, tile lettering, no floating text)
-  { const files = { 'room-01': 'landscapes', 'room-02': 'brekkie-bitcoin-b', 'room-03': 'mexico', 'room-04': 'festival', 'room-05': 'family', 'room-06': 'catherine-dance-series', 'room-07': 'bitcoiners', 'room-08': 'el-salvador', 'room-09': 'sunset', 'room-10': 'bitcoiners', 'room-11': 'portrait', 'room-12': 'seattle' };
+  { const files = { 'room-01': 'landscapes', 'room-02': 'bitcoiners' /* #757 TJ: Bitcoiners, drop Brekkie */, 'room-03': 'mexico', 'room-04': 'festival', 'room-05': 'family', 'room-06': 'catherine-dance-series', 'room-07': 'bitcoiners', 'room-08': 'el-salvador', 'room-09': 'sunset', 'room-10': 'bitcoiners', 'room-11': 'portrait', 'room-12': 'seattle' };
     const order = W.rays.map(r => ({ r, a: Math.atan2(r.z1, r.x1) })).sort((p, q) => p.a - q.a), tiers = [6.4, 8.6, 10.8];
     order.forEach(({ r, a }, i) => { const f = files[r.room]; if (!f) return; const n = r.room.slice(-2), rad = Math.min(tiers[i % 3], Math.hypot(r.x1, r.z1) - 2.4), Wd = 0.416 * rad, Hd = Wd * 262 / 1024;
       const mat = new THREE.MeshBasicMaterial({ transparent: true, depthWrite: false, toneMapped: false, opacity: 0, polygonOffset: true, polygonOffsetFactor: -3, polygonOffsetUnits: -3 });
@@ -113,6 +144,6 @@ export function installCourtyard296({ game, W, root, low, T }) {
   S.update = (dt, cam) => { const now = performance.now(); rayU.t.value = now / 1000;
     const wm = window.__wallMap, rd = window.__ride; let id = (wm && wm.active && wm.active.id) || (rd && rd.state && rd.state.ride && rd.state.room) || (S.manual && now < S.manualUntil ? S.manual : null) || null; S.target = id;
     for (const [rid, o] of rays) { const want = rid === id ? 1 : 0, k = o.u.k.value + (want - o.u.k.value) * Math.min(1, dt * 4); o.u.k.value = k; o.m.visible = k > 0.01; }
-    if (S.skyMesh && cam) S.skyMesh.position.copy(cam); };
+    if (S.skyMesh && cam) S.skyMesh.position.copy(cam); if (S.night && S.night.update) S.night.update(cam); if (S.gobo357) S.gobo357.update(); if (S.glow358) S.glow358.update(); if (window.__ist811 && window.__ist811.update) { window.__ist811S = S; window.__ist811.update(); } /* nest836 */ };
   return S;
 }

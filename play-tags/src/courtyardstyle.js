@@ -3,6 +3,7 @@
 // entrance and a Dusk Slate lintel with a gilded reveal. Phone-light: one floor disc, building skins merged into one mesh per colour.
 import * as THREE from 'three';
 import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
+import { installOverlays303 } from './overlays303.js'; // #303
 const BASE = import.meta.env.BASE_URL + 'img/play/preview-295/'; // R2 tjm-images via the /img/ proxy
 const PAL = ['#F3E6D8', '#F7A66E', '#E9A9A6', '#9DB7CF', '#F48A5C', '#8FAE9E'], CREAM = new THREE.Color('#F3E6D8');
 export function installCourtyardStyle({ game, W, root, low }) {
@@ -29,19 +30,21 @@ export function installCourtyardStyle({ game, W, root, low }) {
   const arches = [], lintels = [], gild = [];
   for (const d of W.doors.filter(d => d.kind === 'inner' || d.kind === 'outer')) { const r = W.rooms.find(q => q.id === d.room); if (!r) continue; let ox = d.x - r.center[0], oz = d.z - r.center[1]; const m = Math.hypot(ox, oz) || 1; ox /= m; oz /= m;
     // #300: round-arched doorways. Skin over the arch = rectangle minus the semicircle; slate ring + gilded reveal hug the opening; Visual's sunburst fanlight band rings the arch.
-    const w2 = d.width / 2, sp = d.spring ?? 2.4, seg = low ? 20 : 40;
-    const spand = new THREE.Shape(); spand.moveTo(-w2, sp); spand.absarc(0, sp, w2, Math.PI, 0, true); spand.lineTo(w2, wallH); spand.lineTo(-w2, wallH); spand.closePath();
+    const w2 = d.width / 2, sp = d.spring ?? 2.4, seg = low ? 20 : 40, ky782 = d.rise ? d.rise / w2 : 1; /* #782 elliptical on full-width doors */
+    const spand = new THREE.Shape(); spand.moveTo(-w2, sp); spand.absellipse(0, sp, w2, w2 * ky782, Math.PI, 0, true); spand.lineTo(w2, wallH); spand.lineTo(-w2, wallH); spand.closePath();
     add(colOf(d.room), place(new THREE.ShapeGeometry(spand, seg), d.x + ox * 0.03, d.z + oz * 0.03, ox, oz, 0)); // skin above the arch
     const band = (ri, ro) => { const g = new THREE.RingGeometry(ri, ro, seg, 1, 0, Math.PI), P = g.attributes.position, U = g.attributes.uv; for (let i = 0; i < P.count; i++) U.setXY(i, P.getX(i) / ro * 0.5 + 0.5, P.getY(i) / ro); return g; }; // planar UV: the 2:1 half-disc motif
-    const fan = band(w2 + 0.04, w2 + 0.55); fan.translate(0, sp, 0); arches.push(place(fan, d.x + ox * 0.045, d.z + oz * 0.045, ox, oz, 0)); S.arches++;
-    const slate = new THREE.RingGeometry(w2, w2 + 0.04, seg, 1, 0, Math.PI); slate.translate(0, sp, 0); lintels.push(place(slate, d.x + ox * 0.06, d.z + oz * 0.06, ox, oz, 0)); S.lintels++;
+    const fan = band(w2 + 0.04, w2 + 0.55); fan.scale(1, ky782, 1); fan.translate(0, sp, 0); arches.push(place(fan, d.x + ox * 0.045, d.z + oz * 0.045, ox, oz, 0)); S.arches++;
+    const slate = new THREE.RingGeometry(w2, w2 + 0.04, seg, 1, 0, Math.PI); slate.scale(1, ky782, 1); slate.translate(0, sp, 0); lintels.push(place(slate, d.x + ox * 0.06, d.z + oz * 0.06, ox, oz, 0)); S.lintels++;
     for (const sd of [-1, 1]) { const j = new THREE.PlaneGeometry(0.04, sp); j.translate(sd * (w2 + 0.02), sp / 2, 0); lintels.push(place(j, d.x + ox * 0.06, d.z + oz * 0.06, ox, oz, 0)); }
-    const gl = new THREE.RingGeometry(w2 - 0.035, w2, seg, 1, 0, Math.PI); gl.translate(0, sp, 0); gild.push(place(gl, d.x + ox * 0.075, d.z + oz * 0.075, ox, oz, 0)); }
+    const gl = new THREE.RingGeometry(w2 - 0.035, w2, seg, 1, 0, Math.PI); gl.scale(1, ky782, 1); gl.translate(0, sp, 0); gild.push(place(gl, d.x + ox * 0.075, d.z + oz * 0.075, ox, oz, 0)); }
   const skins = new THREE.Group(); skins.name = 'sunriseSkins';
   for (const [hex, gs] of byCol) { const m = new THREE.Mesh(mergeGeometries(gs), new THREE.MeshStandardMaterial({ color: pastel(hex), roughness: 0.92, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 })); m.name = 'skin-' + hex; skins.add(m); S.colours[hex] = gs.length; }
   if (lintels.length) { const m = new THREE.Mesh(mergeGeometries(lintels), new THREE.MeshStandardMaterial({ color: 0x5e7289, roughness: 0.8, side: THREE.DoubleSide })); m.name = 'doorSurrounds'; skins.add(m); }
   if (gild.length) { const m = new THREE.Mesh(mergeGeometries(gild), new THREE.MeshStandardMaterial({ color: 0xf7cc3a, roughness: 0.4, metalness: 0.3, side: THREE.DoubleSide })); m.name = 'doorReveal'; skins.add(m); }
   if (arches.length) { const am = new THREE.MeshBasicMaterial({ transparent: true, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -4, polygonOffsetUnits: -4, toneMapped: false }); const m = new THREE.Mesh(mergeGeometries(arches), am); m.name = 'sunburstArches'; skins.add(m);
     loader.load(BASE + 'trim-motif.webp', t => { t.colorSpace = THREE.SRGBColorSpace; am.map = t; am.needsUpdate = true; }, undefined, () => { S.archErr = true; }); }
-  root.add(skins); return S;
+  root.add(skins);
+  try { S.o303 = installOverlays303({ root, low }); } catch (e) { console.warn('[o303]', e); window.__o303 = { err: String(e) }; }
+  return S;
 }

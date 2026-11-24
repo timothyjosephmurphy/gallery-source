@@ -1,0 +1,63 @@
+{
+ "issue": 293,
+ "projection": "equirectangular (plate carree), 2:1",
+ "uv": "u=(lon+180)/360, v=(90-lat)/180 from TOP (flipY=false); in three.js default flipY=true use v=1-(90-lat)/180 i.e. (lat+90)/180",
+ "face_m": [
+  5.6,
+  2.8
+ ],
+ "face_note": "TestiFace in props2 testimonials-map lod0/lod1 is 5.6x2.8 => 1 px(2048) = 2.73 mm",
+ "world_pos": "x=(u-0.5)*5.6, y=(0.5-v_top)*2.8 on face plane, z=+0.02 for pins",
+ "textures": {
+  "albedo": [
+   "map-albedo-2048.webp/png",
+   "map-albedo-1024.webp/png"
+  ],
+  "normal": [
+   "map-normal-2048.webp",
+   "map-normal-1024.webp"
+  ],
+  "roughness": [
+   "map-roughness-2048.webp",
+   "map-roughness-1024.webp"
+  ]
+ },
+ "pins": {
+  "sheet": "pins-sheet.png (384x128, 3 cells: default, hover, selected) + pins-sheet-64.png",
+  "anchor": "tip at cell (0.5, 0.97) -> sprite center offset y=+0.47*size",
+  "size_m": {
+   "default": 0.14,
+   "hover": 0.16,
+   "selected": 0.18,
+   "phone_min": 0.16
+  },
+  "states": [
+   "default",
+   "hover",
+   "selected"
+  ]
+ },
+ "colors": {
+  "ocean": "#9DB7CF",
+  "ocean_deep": "#5E7289",
+  "paper": "#F3E6D8",
+  "coast": "#5E7289",
+  "grat": "#F3E6D8",
+  "land": [
+   "#8FAE9E",
+   "#F7A66E",
+   "#E9A9A6",
+   "#F7CC3A",
+   "#C8644E",
+   "#9A78CF",
+   "#8FAE9E"
+  ],
+  "pin": "#C8644E",
+  "pin_hover": "#F48A5C",
+  "pin_sel": "#F7CC3A",
+  "pin_ring": "#3A3432",
+  "pin_dot": "#F3E6D8"
+ },
+ "normal_strength": 0.35,
+ "roughness_note": "oceans ~0.55, land ~0.8; if face stays Unlit, ignore normal/rough"
+}

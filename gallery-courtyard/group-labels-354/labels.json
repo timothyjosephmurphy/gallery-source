@@ -1,0 +1,142 @@
+[
+  {
+    "id": "bitcoiners",
+    "title": "Bitcoiners",
+    "fileDesktop": "label-bitcoiners.desktop.webp",
+    "filePhone": "label-bitcoiners.phone.webp",
+    "filePng": "label-bitcoiners.png",
+    "widthPx": 1024,
+    "heightPx": 256,
+    "suggestedUse": "Wall plaque centered above the group's hang grid (~eye height+); also usable as door header"
+  },
+  {
+    "id": "festival-burning-man",
+    "title": "Festival · Burning Man",
+    "fileDesktop": "label-festival-burning-man.desktop.webp",
+    "filePhone": "label-festival-burning-man.phone.webp",
+    "filePng": "label-festival-burning-man.png",
+    "widthPx": 1024,
+    "heightPx": 256,
+    "suggestedUse": "Wall plaque centered above the group's hang grid (~eye height+); also usable as door header"
+  },
+  {
+    "id": "bass-coast-sunrises",
+    "title": "Bass Coast Sunrises",
+    "fileDesktop": "label-bass-coast-sunrises.desktop.webp",
+    "filePhone": "label-bass-coast-sunrises.phone.webp",
+    "filePng": "label-bass-coast-sunrises.png",
+    "widthPx": 1024,
+    "heightPx": 256,
+    "suggestedUse": "Wall plaque centered above the group's hang grid (~eye height+); also usable as door header"
+  },
+  {
+    "id": "temples",
+    "title": "Temples",
+    "fileDesktop": "label-temples.desktop.webp",
+    "filePhone": "label-temples.phone.webp",
+    "filePng": "label-temples.png",
+    "widthPx": 1024,
+    "heightPx": 256,
+    "suggestedUse": "Wall plaque centered above the group's hang grid (~eye height+); also usable as door header"
+  },
+  {
+    "id": "renoirs-and-ridges",
+    "title": "Renoirs & Ridges",
+    "fileDesktop": "label-renoirs-and-ridges.desktop.webp",
+    "filePhone": "label-renoirs-and-ridges.phone.webp",
+    "filePng": "label-renoirs-and-ridges.png",
+    "widthPx": 1024,
+    "heightPx": 256,
+    "suggestedUse": "Wall plaque centered above the group's hang grid (~eye height+); also usable as door header"
+  },
+  {
+    "id": "father-paul",
+    "title": "Father Paul",
+    "fileDesktop": "label-father-paul.desktop.webp",
+    "filePhone": "label-father-paul.phone.webp",
+    "filePng": "label-father-paul.png",
+    "widthPx": 1024,
+    "heightPx": 256,
+    "suggestedUse": "Wall plaque centered above the group's hang grid (~eye height+); also usable as door header"
+  },
+  {
+    "id": "reiki",
+    "title": "Reiki",
+    "fileDesktop": "label-reiki.desktop.webp",
+    "filePhone": "label-reiki.phone.webp",
+    "filePng": "label-reiki.png",
+    "widthPx": 1024,
+    "heightPx": 256,
+    "suggestedUse": "Wall plaque centered above the group's hang grid (~eye height+); also usable as door header"
+  },
+  {
+    "id": "bounty-of-satoshi",
+    "title": "Bounty of Satoshi",
+    "fileDesktop": "label-bounty-of-satoshi.desktop.webp",
+    "filePhone": "label-bounty-of-satoshi.phone.webp",
+    "filePng": "label-bounty-of-satoshi.png",
+    "widthPx": 1024,
+    "heightPx": 256,
+    "suggestedUse": "Wall plaque centered above the group's hang grid (~eye height+); also usable as door header"
+  },
+  {
+    "id": "ukraine",
+    "title": "Ukraine",
+    "fileDesktop": "label-ukraine.desktop.webp",
+    "filePhone": "label-ukraine.phone.webp",
+    "filePng": "label-ukraine.png",
+    "widthPx": 1024,
+    "heightPx": 256,
+    "suggestedUse": "Wall plaque centered above the group's hang grid (~eye height+); also usable as door header"
+  },
+  {
+    "id": "small-watercolors",
+    "title": "Small Watercolors",
+    "fileDesktop": "label-small-watercolors.desktop.webp",
+    "filePhone": "label-small-watercolors.phone.webp",
+    "filePng": "label-small-watercolors.png",
+    "widthPx": 1024,
+    "heightPx": 256,
+    "suggestedUse": "Wall plaque centered above the group's hang grid (~eye height+); also usable as door header"
+  },
+  {
+    "id": "attendees",
+    "title": "Attendees",
+    "fileDesktop": "label-attendees.desktop.webp",
+    "filePhone": "label-attendees.phone.webp",
+    "filePng": "label-attendees.png",
+    "widthPx": 1024,
+    "heightPx": 256,
+    "suggestedUse": "Wall plaque centered above the group's hang grid (~eye height+); also usable as door header"
+  },
+  {
+    "id": "landscapes-by-size",
+    "title": "Landscapes by Size",
+    "fileDesktop": "label-landscapes-by-size.desktop.webp",
+    "filePhone": "label-landscapes-by-size.phone.webp",
+    "filePng": "label-landscapes-by-size.png",
+    "widthPx": 1024,
+    "heightPx": 256,
+    "suggestedUse": "Wall plaque centered above the group's hang grid (~eye height+); also usable as door header"
+  },
+  {
+    "id": "forest-triptych",
+    "title": "Forest Triptych",
+    "fileDesktop": "label-forest-triptych.desktop.webp",
+    "filePhone": "label-forest-triptych.phone.webp",
+    "filePng": "label-forest-triptych.png",
+    "widthPx": 1024,
+    "heightPx": 256,
+    "suggestedUse": "Wall plaque centered above the group's hang grid (~eye height+); also usable as door header"
+  },
+  {
+    "id": "hummingbirds",
+    "title": "Hummingbirds",
+    "fileDesktop": "label-hummingbirds.desktop.webp",
+    "filePhone": "label-hummingbirds.phone.webp",
+    "filePng": "label-hummingbirds.png",
+    "widthPx": 1024,
+    "heightPx": 256,
+    "suggestedUse": "Wall plaque centered above the group's hang grid (~eye height+); also usable as door header"
+  }
+]

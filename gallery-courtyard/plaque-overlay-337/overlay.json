@@ -1,0 +1,132 @@
+{
+  "issue": 337,
+  "preview_only": true,
+  "approved": false,
+  "note": "Gallery owns interaction/layout; Writer owns copy. No text baked.",
+  "material_hint": "MeshBasicMaterial({map, transparent:true, depthTest:false, toneMapped:false}) or CSS/DOM background; renderOrder high",
+  "alpha": {
+    "body": 0.86,
+    "body_rgb": "#15100b",
+    "trim": 1.0,
+    "outside_corners": 0.0,
+    "premultiplied": false,
+    "hint": "body is translucent: keep scene dimmer or add 0.35 black backdrop behind for WCAG contrast"
+  },
+  "ink": {
+    "title": "#F7DC8C",
+    "body": "#EDE3CF",
+    "muted": "#B9AFA4"
+  },
+  "variants": {
+    "desktop": {
+      "file": "overlay-desktop.webp",
+      "png": "overlay-desktop.png",
+      "px": [
+        1600,
+        1000
+      ],
+      "world_size_m": [
+        1.2,
+        0.75
+      ],
+      "title_rect_uv": {
+        "u0": 0.0406,
+        "v0": 0.858,
+        "u1": 0.8844,
+        "v1": 0.964
+      },
+      "body_rect_uv": {
+        "u0": 0.07,
+        "v0": 0.097,
+        "u1": 0.93,
+        "v1": 0.81
+      },
+      "title_rect_px": [
+        65,
+        36,
+        1415,
+        142
+      ],
+      "body_rect_px": [
+        112,
+        190,
+        1488,
+        903
+      ],
+      "close_hit_px": {
+        "cx": 1479,
+        "cy": 89,
+        "r": 63
+      },
+      "close_hit_uv": {
+        "u": 0.9244,
+        "v": 0.911,
+        "r_u": 0.0394
+      },
+      "text_px_suggest": {
+        "title": 57,
+        "body": 30,
+        "line_height": 1.4
+      }
+    },
+    "phone": {
+      "file": "overlay-phone.webp",
+      "png": "overlay-phone.png",
+      "px": [
+        900,
+        1200
+      ],
+      "world_size_m": [
+        0.6,
+        0.8
+      ],
+      "title_rect_uv": {
+        "u0": 0.0689,
+        "v0": 0.8817,
+        "u1": 0.7978,
+        "v1": 0.9725
+      },
+      "body_rect_uv": {
+        "u0": 0.07,
+        "v0": 0.0725,
+        "u1": 0.93,
+        "v1": 0.8417
+      },
+      "title_rect_px": [
+        62,
+        33,
+        718,
+        142
+      ],
+      "body_rect_px": [
+        63,
+        190,
+        837,
+        1113
+      ],
+      "close_hit_px": {
+        "cx": 782,
+        "cy": 88,
+        "r": 63
+      },
+      "close_hit_uv": {
+        "u": 0.8689,
+        "v": 0.9271,
+        "r_u": 0.07
+      },
+      "text_px_suggest": {
+        "title": 57,
+        "body": 34,
+        "line_height": 1.4
+      }
+    }
+  },
+  "corner_ornament": {
+    "files": [
+      "corner-ornament-256.webp",
+      "corner-ornament-128.webp"
+    ],
+    "orientation": "top-left; flip X/Y for other corners",
+    "already_baked_in_panel": "bottom corners"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticket": "#303",
+  "macro": {
+    "uvScale": "macroUV = baseUV / 3.5 (one macro tile spans 3.5 base tiles; non-integer so repeats don't align)",
+    "blend": "multiply", "strength": 0.2, "strengthRange": [0.15, 0.25],
+    "colorSpace": "sRGB", "wrap": "RepeatWrapping",
+    "maps": {
+      "plaster":   {"target": "hq-assets/walls/wall-plaster",     "desktop": "macro-plaster.webp",   "phone": "macro-plaster.phone.webp",   "strength": 0.18},
+      "ashlar":    {"target": "hq-assets/walls/wall-ashlar",      "desktop": "macro-ashlar.webp",    "phone": "macro-ashlar.phone.webp",    "strength": 0.2},
+      "flagstone": {"target": "hq-assets/floors/floor-flagstone", "desktop": "macro-flagstone.webp", "phone": "macro-flagstone.phone.webp", "strength": 0.22}
+    },
+    "shader": "color.rgb *= mix(vec3(1.0), texture2D(macroMap, vUv / 3.5).rgb, strength);  // or overlay blend at same strength"
+  },
+  "water": {
+    "target": "fountain basin water plane (shallow, ~2 cm below basin rim)",
+    "map": "water-surface.webp", "normalMap": "water-surface_n.webp", "roughnessMap": "water-surface_r.webp",
+    "phone": {"map": "water-surface.phone.webp", "normalMap": "water-surface_n.phone.webp", "roughnessMap": "water-surface_r.phone.webp"},
+    "material": "MeshStandardMaterial / MeshPhysicalMaterial",
+    "transparent": true, "alphaInMap": "0.59-0.82", "opacity": 1.0, "depthWrite": false,
+    "roughness": 1.0, "roughnessMapRange": "0.04-0.14", "metalness": 0.0,
+    "normalScale": [0.35, 0.35], "normalConvention": "OpenGL (+Y up)",
+    "uvRepeat": [1.5, 1.5], "animate": "scroll normalMap offset ~0.01/s on two axes (or two layered offsets) for gentle ripple; keep slow",
+    "envMap": "sky-pnw-day PMREM for reflections", "colorSpace": {"map": "sRGB", "normalMap": "linear", "roughnessMap": "linear"}
+  }
+}

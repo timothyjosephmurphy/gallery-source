@@ -4,14 +4,16 @@
 // through walls), then control is handed straight back. Data-driven from the world (rooms, doors); no layout writes.
 import * as THREE from 'three';
 import SLOTS from './outer-slots.json'; // #295: the map hangs flat on a courtyard-facing outer wall (tools/outerslots.mjs)
+import { showEscortCaption } from './escortCaptions355.js'; // #355 temp captions
 export function installWallMap({ game, W, root, world, drone, low }) {
   const SL = SLOTS.slots.map, A = 95 * Math.PI / 180, R = 5.6, f = SL ? [-SL.n[0], -SL.n[1]] : [Math.cos(A), Math.sin(A)], n = [-f[0], -f[1]], rt = [-f[1], f[0]], BW = SL ? SL.w : 2.4, BH = SL ? SL.h : 1.6, BY = SL ? 1.75 : 1.45;
   const pos = SL ? new THREE.Vector3(SL.mid[0] + SL.t[0] * SL.s + SL.n[0] * 0.07, 0, SL.mid[1] + SL.t[1] * SL.s + SL.n[1] * 0.07) : new THREE.Vector3(f[0] * R, 0, f[1] * R), rooms = W.rooms.filter(r => r.kind === 'room' || r.kind === 'outer' || r.kind === 'hub');
-  const uv = (x, z) => [x * rt[0] + z * rt[1], x * f[0] + z * f[1]]; let u0 = 1e9, u1 = -1e9, v0 = 1e9, v1 = -1e9;
+  const stR = W.rooms.find(r => r.id === 'courtyard-start'), sc0 = stR && stR.center ? Math.hypot(stR.center[0], stR.center[1]) : 0, fm = sc0 > 1 ? [-stR.center[0] / sc0, -stR.center[1] / sc0] : f, rm = [-fm[1], fm[0]]; // #783 (TJ): map drawn with START at the bottom
+  const uv = (x, z) => [x * rm[0] + z * rm[1], x * fm[0] + z * fm[1]]; let u0 = 1e9, u1 = -1e9, v0 = 1e9, v1 = -1e9;
   for (const r of rooms) for (const p of r.poly) { const [u, v] = uv(p[0], p[1]); u0 = Math.min(u0, u); u1 = Math.max(u1, u); v0 = Math.min(v0, v); v1 = Math.max(v1, v); }
   const CW = low ? 768 : 1200, CH = Math.round(CW * BH / BW), pad = 40, sc = Math.min((CW - 2 * pad) / (u1 - u0), (CH - 2 * pad - 50) / (v1 - v0));
   const ox = (CW - sc * (u1 - u0)) / 2, oy = 50 + (CH - 50 - sc * (v1 - v0)) / 2;
-  const toC = (x, z) => { const [u, v] = uv(x, z); return [ox + (u - u0) * sc, oy + (v1 - v) * sc]; }, fromC = (cx, cy) => { const u = (cx - ox) / sc + u0, v = v1 - (cy - oy) / sc; return [u * rt[0] + v * f[0], u * rt[1] + v * f[1]]; };
+  const toC = (x, z) => { const [u, v] = uv(x, z); return [ox + (u - u0) * sc, oy + (v1 - v) * sc]; }, fromC = (cx, cy) => { const u = (cx - ox) / sc + u0, v = v1 - (cy - oy) / sc; return [u * rm[0] + v * fm[0], u * rm[1] + v * fm[1]]; };
   const c = document.createElement('canvas'); c.width = CW; c.height = CH; const x = c.getContext('2d'), tex = new THREE.CanvasTexture(c); tex.colorSpace = THREE.SRGBColorSpace;
   const inPoly = (px, pz, poly) => { let o = false; for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) { const [xi, zi] = poly[i], [xj, zj] = poly[j]; if ((zi > pz) !== (zj > pz) && px < (xj - xi) * (pz - zi) / (zj - zi) + xi) o = !o; } return o; };
   let hover = null;
@@ -37,11 +39,11 @@ export function installWallMap({ game, W, root, world, drone, low }) {
   S.stand = [pos.x + n[0] * 2.4, pos.z + n[1] * 2.4];
   function pick(px, pz) { if (Math.hypot(px, pz) < 2.6) return CHKR; return rooms.find(r => r.kind !== 'hub' && inPoly(px, pz, r.poly)); }
   const CHKR = { id: 'checkout', kind: 'checkout', center: [0, 0] };
-  function go(id, speed = 3.2) { const r = id === 'checkout' ? CHKR : rooms.find(q => q.id === id), Wd = world(); if (!r || !Wd || S.active) return false; const cp = game.camera.position, from = new THREE.Vector3(cp.x, 0, cp.z), to = new THREE.Vector3(r.center[0], 0, r.center[1]);
+  function go(id, speed = 6.2) { /* #380: room-tap escort at running pace (was 3.2 walking) */ const r = id === 'checkout' ? CHKR : rooms.find(q => q.id === id), Wd = world(); if (!r || !Wd || S.active) return false; const cp = game.camera.position, from = new THREE.Vector3(cp.x, 0, cp.z), to = new THREE.Vector3(r.center[0], 0, r.center[1]);
     if (id === 'checkout') { const d = Math.hypot(from.x, from.z) || 1; to.set(from.x / d * 2.7, 0, from.z / d * 2.7); } // stops at the edge of the fountain: stepping in is the visitor's choice (it opens checkout)
     const path = Wd.path(from, to, 0.35) || Wd.path(from, to, 0.25); if (!path) { S.escorts.push({ id, ok: false, err: 'nopath' }); return false; }
     const pts = [from, ...path.map(q => new THREE.Vector3(q.x, 0, q.z)), to]; let L = 0; const acc = [0]; for (let i = 1; i < pts.length; i++) { L += pts[i].distanceTo(pts[i - 1]); acc.push(L); }
-    game.freeze = true; window.__reading = true; const D = drone(); if (D && D.tow) D.tow(true); S.active = { id, pts, acc, L, s: 0, speed, frames: 0, t0: performance.now() }; return true; }
+    game.freeze = true; window.__reading = true; const D = drone(); if (D && D.tow) D.tow(true); S.active = { id, pts, acc, L, s: 0, speed, frames: 0, t0: performance.now() }; showEscortCaption(id); return true; }
   const at = (r, s) => { let i = 1; while (i < r.acc.length - 1 && r.acc[i] < s) i++; const a = r.pts[i - 1], b = r.pts[i], seg = (r.acc[i] - r.acc[i - 1]) || 1e-6, u = Math.min(1, Math.max(0, (s - r.acc[i - 1]) / seg)); return new THREE.Vector3(a.x + (b.x - a.x) * u, 0, a.z + (b.z - a.z) * u); };
   const ray = new THREE.Raycaster(), v2 = new THREE.Vector2(); let down = null;
   addEventListener('pointerdown', e => { down = [e.clientX, e.clientY]; }, true);

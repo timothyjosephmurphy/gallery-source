@@ -56,6 +56,9 @@ for h in O['hang']:
 for a in O.get('assets', []):
     p, q = R[a['id']], LP[a['id']]; p.update(**({'img': a['img'], 'hi': a['hi']} if 'img' in a else {}), w=a['w'], h=a['h'], iw=a['w'], ih=a['h'], fw=a['w'] + 0.06, fh=a['h'] + 0.06, photoShape=('img' in a) or p.get('photoShape'))
     q.update(w=a['w'], h=a['h'], fw=a['w'] + 0.06, fh=a['h'] + 0.06)
+# #338: 2400 px masters (img.tjm.art/gallery-hi) as the tags-only third texture step
+for _id, _m in json.load(open('/workspace/gallery-hires-338/hires-338.json')).items():
+    if _id in R: R[_id].update(max=_m['max'], maxW=_m['maxW'], maxH=_m['maxH'])
 ex = set(O['exclude']) | set(split_from)
 c['paintings'] = [p for p in c['paintings'] if p['id'] not in ex]
 import repack, spread
@@ -94,6 +97,8 @@ c['layout']['tags']['paintings'] = [p for p in c['layout']['tags']['paintings'] 
 c['excluded'] = sorted(ex)
 c['rows323'] = _rows.place(c, LP, KEEP_ROWS, O.get('rows', []))  # true-size row groups (#318/#319/#320)
 NEW310 = paulroom.build(c, LP, R, LIVE); c['paulroom'] = paulroom.place(c, LP)  # after the repack: true size, never rescaled
+for _id, _m in json.load(open('/workspace/gallery-hires-338/hires-338.json')).items():  # #338: Paul annex records are created by paulroom.build, after the first max pass
+    if _id in R and not R[_id].get('max'): R[_id].update(max=_m['max'], maxW=_m['maxW'], maxH=_m['maxH'])
 # final pass (#292): every plaque beside its own painting, at 1.45 m when the final hung painting spans 1.45, else at the painting's centre
 for p in c['paintings']:
     q = p.get('plaqueAt')
@@ -110,6 +115,18 @@ for o in c['layout']['tags']['outerCourts']:
             a.update(at(SL['s'], 1.55), w=round(1.524 * 1.5, 3), h=round(1.016 * 1.5, 3), trueW=1.524, trueH=1.016, artScale=1.5, movedBy='#295 outer wall room-10 k3')
         elif a['id'] == 'cormorant-qr-brass-plaque': a.update(at(SL['s'] + 1.4, 1.45))
         elif a['id'] == 'eagle-brass-plaque': a.update(at(SL['s'] + 1.9, 1.45))
+# #354 (TJ Oct 26): eagle brass plaque hangs beside Sunrise on Rainier with Eagle (its own detail), not on the cormorant outer wall
+_EP = O.get('eaglePlaque')
+if _EP:
+    _t = next(p for p in c['paintings'] if p['id'] == _EP['nextTo']); _ix, _iz = _t['ix'], _t['iz']; _tx, _tz = _iz, -_ix; _off = -(_t['fw'] / 2 + 0.25) if _EP.get('side', 'left') == 'left' else (_t['fw'] / 2 + 0.6)
+    for o in c['layout']['tags']['outerCourts']:
+        for a in o['art']:
+            if a['id'] == 'eagle-brass-plaque':
+                a.pop('wallCenter', None); a.pop('wallLength', None)
+                a.update(x=round(_t['x'] + _tx * _off + _ix * 0.03, 3), z=round(_t['z'] + _tz * _off + _iz * 0.03, 3), y=1.45 if abs(_t['y'] - 1.45) < _t['fh'] / 2 else round(_t['y'], 3), wallFacing=[_ix, _iz], onWallOf=_t['id'], room=_t['room'], movedBy='#354')
+# #354: group labels (door signs + wall map) follow the regrouped themes
+for _r in c['layout']['tags']['rooms']:
+    if _r['id'] in O.get('labels', {}): _r['label'] = O['labels'][_r['id']]
 # #323 (TJ, "put a teaser of the Friends Club mural in the inner courtyard"): half-size (20 x 4.5 ft) copy of the Friends Club mural, flat on the courtyard-facing outer wall
 # of room-04 (wall 0, court-5 side, 8 m straight run, clear floor in front, no door or path), centred on eye level, with a plate that says what it is. The full-size mural stays in the Friends Court.
 _SLX = json.load(open('src/outer-slots.json'))['slots']; _fc = next(o for o in c['layout']['tags']['outerCourts'] if o['id'] == 'friends-court')
@@ -123,7 +140,7 @@ if not any(a['id'] == 'friends-club-mural-teaser' for a in _fc['art']):
         x=round(_pp['mid'][0] + _pp['t'][0] * _pp['s'] + _pp['n'][0] * 0.06, 3), z=round(_pp['mid'][1] + _pp['t'][1] * _pp['s'] + _pp['n'][1] * 0.06, 3), y=1.45, onWallOf='friends-club-mural-teaser', wallFacing=_pp['n']))
 for _p in c['paintings']:
     if _p['id'] == 'michael-and-katie-in-yelapa': _p['url'] = 'https://tjm.art/products/romance-in-yelapa/'  # fix: Romance in Yelapa product link
-c['layout']['start'] = dict(x=4.7, z=3.4, yaw=-2.19)  # #323 (TJ: can't see the checkout portal): spawn 5.8 m out, facing the whole fountain, not 3.2 m beside it
+c['layout']['start'] = dict(x=0.5, z=-28.2, yaw=-0.8)  # #803 #351 START courtyard, gallery map  # #351 refine (TJ Oct 26 shot): courtyard maps gathering, wallmap right, collectors map left, pavilion ahead; checkout off to the side/behind. Was #323  # #323 (TJ: can't see the checkout portal): spawn 5.8 m out, facing the whole fountain, not 3.2 m beside it
 import rd317; rd317.patch(O)  # #317: real image sizes for the replaced images
 open('src/catalog.json', 'w').write(json.dumps(c, ensure_ascii=False, separators=(',', ':')))
 print('hung', len(O['hang']), 'excluded', sorted(ex), 'paintings', len(c['paintings']))

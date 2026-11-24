@@ -1,0 +1,154 @@
+{
+  "issue": 340,
+  "related": [
+    10,
+    357
+  ],
+  "preview_only": true,
+  "approved": false,
+  "format": "LDR sRGB equirectangular 2:1 (not photographic HDRI)",
+  "three": "tex=loader.load(file); tex.mapping=THREE.EquirectangularReflectionMapping; tex.colorSpace=THREE.SRGBColorSpace; scene.environment=pmrem.fromEquirectangular(tex).texture",
+  "orientation": "u=0.5 faces +Z (stage/audience axis: +Z = toward audience); v=0 top (zenith)",
+  "probes": [
+    {
+      "id": "probe-warm-key",
+      "png": "probe-warm-key.png",
+      "desktop": "probe-warm-key.webp",
+      "phone": "probe-warm-key.phone.webp",
+      "px": [
+        1024,
+        512
+      ],
+      "phone_px": [
+        512,
+        256
+      ],
+      "lights": [
+        {
+          "az_deg": 35,
+          "el_deg": 40,
+          "spread_deg": 22
+        },
+        {
+          "az_deg": -60,
+          "el_deg": 15,
+          "spread_deg": 45
+        },
+        {
+          "az_deg": 180,
+          "el_deg": 10,
+          "spread_deg": 70
+        }
+      ],
+      "exposure": 1.0,
+      "envMapIntensity": 0.9,
+      "toneMapping": "ACESFilmic",
+      "use": "warm tungsten key from stage-left high; pairs with gobo-breakup warm"
+    },
+    {
+      "id": "probe-cool-wash",
+      "png": "probe-cool-wash.png",
+      "desktop": "probe-cool-wash.webp",
+      "phone": "probe-cool-wash.phone.webp",
+      "px": [
+        1024,
+        512
+      ],
+      "phone_px": [
+        512,
+        256
+      ],
+      "lights": [
+        {
+          "az_deg": 0,
+          "el_deg": 60,
+          "spread_deg": 55
+        },
+        {
+          "az_deg": -110,
+          "el_deg": 25,
+          "spread_deg": 40
+        },
+        {
+          "az_deg": 120,
+          "el_deg": 20,
+          "spread_deg": 50
+        }
+      ],
+      "exposure": 0.9,
+      "envMapIntensity": 0.8,
+      "toneMapping": "ACESFilmic",
+      "use": "cool LED top/side wash; scene transitions, gobo-dots"
+    },
+    {
+      "id": "probe-magenta-accent",
+      "png": "probe-magenta-accent.png",
+      "desktop": "probe-magenta-accent.webp",
+      "phone": "probe-magenta-accent.phone.webp",
+      "px": [
+        1024,
+        512
+      ],
+      "phone_px": [
+        512,
+        256
+      ],
+      "lights": [
+        {
+          "az_deg": 160,
+          "el_deg": 30,
+          "spread_deg": 25
+        },
+        {
+          "az_deg": -30,
+          "el_deg": 35,
+          "spread_deg": 40
+        },
+        {
+          "az_deg": 60,
+          "el_deg": 10,
+          "spread_deg": 50
+        }
+      ],
+      "exposure": 0.85,
+      "envMapIntensity": 0.6,
+      "toneMapping": "ACESFilmic",
+      "use": "restrained magenta back-rim (upstage); accents only, keep under 0.7"
+    },
+    {
+      "id": "probe-neutral-house",
+      "png": "probe-neutral-house.png",
+      "desktop": "probe-neutral-house.webp",
+      "phone": "probe-neutral-house.phone.webp",
+      "px": [
+        1024,
+        512
+      ],
+      "phone_px": [
+        512,
+        256
+      ],
+      "lights": [
+        {
+          "az_deg": 0,
+          "el_deg": 85,
+          "spread_deg": 70
+        },
+        {
+          "az_deg": 90,
+          "el_deg": 40,
+          "spread_deg": 60
+        },
+        {
+          "az_deg": -90,
+          "el_deg": 40,
+          "spread_deg": 60
+        }
+      ],
+      "exposure": 0.7,
+      "envMapIntensity": 0.5,
+      "toneMapping": "ACESFilmic",
+      "use": "dim house lights between pieces / walk-in"
+    }
+  ]
+}

@@ -1,0 +1,848 @@
+{
+ "note": "#335 room deco (TJ Oct 26): same motif map as ../story-plaques/story-plates.json rooms",
+ "rooms": {
+  "room-01": {
+   "title": "Landscapes",
+   "motifs": [
+    "SUNBURST",
+    "CLOUDS"
+   ],
+   "frieze_band": "terracotta",
+   "cornice-frieze": {
+    "map": "room-01-cornice-frieze.webp",
+    "normalMap": "room-01-cornice-frieze_n.webp",
+    "phone": {
+     "map": "room-01-cornice-frieze.phone.webp",
+     "normalMap": "room-01-cornice-frieze_n.phone.webp"
+    },
+    "kb": {
+     "room-01-cornice-frieze.webp": 75.7,
+     "room-01-cornice-frieze_n.webp": 52.2,
+     "room-01-cornice-frieze.phone.webp": 24.8,
+     "room-01-cornice-frieze_n.phone.webp": 21.2
+    }
+   },
+   "dado-rail": {
+    "map": "room-01-dado-rail.webp",
+    "normalMap": "room-01-dado-rail_n.webp",
+    "phone": {
+     "map": "room-01-dado-rail.phone.webp",
+     "normalMap": "room-01-dado-rail_n.phone.webp"
+    },
+    "kb": {
+     "room-01-dado-rail.webp": 36.4,
+     "room-01-dado-rail_n.webp": 15.5,
+     "room-01-dado-rail.phone.webp": 12.3,
+     "room-01-dado-rail_n.phone.webp": 5.5
+    }
+   },
+   "door-surround": {
+    "map": "room-01-door-surround.webp",
+    "normalMap": "room-01-door-surround_n.webp",
+    "phone": {
+     "map": "room-01-door-surround.phone.webp",
+     "normalMap": "room-01-door-surround_n.phone.webp"
+    },
+    "kb": {
+     "room-01-door-surround.webp": 66.7,
+     "room-01-door-surround_n.webp": 37.3,
+     "room-01-door-surround.phone.webp": 24.0,
+     "room-01-door-surround_n.phone.webp": 15.1
+    }
+   },
+   "keystone-medallion": {
+    "map": "room-01-keystone-medallion.webp",
+    "normalMap": "room-01-keystone-medallion_n.webp",
+    "phone": {
+     "map": "room-01-keystone-medallion.phone.webp",
+     "normalMap": "room-01-keystone-medallion_n.phone.webp"
+    },
+    "kb": {
+     "room-01-keystone-medallion.webp": 42.4,
+     "room-01-keystone-medallion_n.webp": 25.5,
+     "room-01-keystone-medallion.phone.webp": 17.9,
+     "room-01-keystone-medallion_n.phone.webp": 9.8
+    }
+   }
+  },
+  "room-02": {
+   "title": "Brekkie Bitcoin B",
+   "motifs": [
+    "CHEVRON",
+    "FAN"
+   ],
+   "frieze_band": "slate",
+   "cornice-frieze": {
+    "map": "room-02-cornice-frieze.webp",
+    "normalMap": "room-02-cornice-frieze_n.webp",
+    "phone": {
+     "map": "room-02-cornice-frieze.phone.webp",
+     "normalMap": "room-02-cornice-frieze_n.phone.webp"
+    },
+    "kb": {
+     "room-02-cornice-frieze.webp": 85.0,
+     "room-02-cornice-frieze_n.webp": 52.9,
+     "room-02-cornice-frieze.phone.webp": 30.1,
+     "room-02-cornice-frieze_n.phone.webp": 20.1
+    }
+   },
+   "dado-rail": {
+    "map": "room-02-dado-rail.webp",
+    "normalMap": "room-02-dado-rail_n.webp",
+    "phone": {
+     "map": "room-02-dado-rail.phone.webp",
+     "normalMap": "room-02-dado-rail_n.phone.webp"
+    },
+    "kb": {
+     "room-02-dado-rail.webp": 51.3,
+     "room-02-dado-rail_n.webp": 27.4,
+     "room-02-dado-rail.phone.webp": 15.8,
+     "room-02-dado-rail_n.phone.webp": 10.5
+    }
+   },
+   "door-surround": {
+    "map": "room-02-door-surround.webp",
+    "normalMap": "room-02-door-surround_n.webp",
+    "phone": {
+     "map": "room-02-door-surround.phone.webp",
+     "normalMap": "room-02-door-surround_n.phone.webp"
+    },
+    "kb": {
+     "room-02-door-surround.webp": 68.9,
+     "room-02-door-surround_n.webp": 37.3,
+     "room-02-door-surround.phone.webp": 24.7,
+     "room-02-door-surround_n.phone.webp": 14.8
+    }
+   },
+   "keystone-medallion": {
+    "map": "room-02-keystone-medallion.webp",
+    "normalMap": "room-02-keystone-medallion_n.webp",
+    "phone": {
+     "map": "room-02-keystone-medallion.phone.webp",
+     "normalMap": "room-02-keystone-medallion_n.phone.webp"
+    },
+    "kb": {
+     "room-02-keystone-medallion.webp": 43.2,
+     "room-02-keystone-medallion_n.webp": 25.5,
+     "room-02-keystone-medallion.phone.webp": 17.8,
+     "room-02-keystone-medallion_n.phone.webp": 9.7
+    }
+   }
+  },
+  "room-03": {
+   "title": "Mexico",
+   "motifs": [
+    "PALM LEAF",
+    "SCALLOP",
+    "SUNBURST"
+   ],
+   "frieze_band": "terracotta",
+   "cornice-frieze": {
+    "map": "room-03-cornice-frieze.webp",
+    "normalMap": "room-03-cornice-frieze_n.webp",
+    "phone": {
+     "map": "room-03-cornice-frieze.phone.webp",
+     "normalMap": "room-03-cornice-frieze_n.phone.webp"
+    },
+    "kb": {
+     "room-03-cornice-frieze.webp": 78.8,
+     "room-03-cornice-frieze_n.webp": 55.1,
+     "room-03-cornice-frieze.phone.webp": 25.8,
+     "room-03-cornice-frieze_n.phone.webp": 21.3
+    }
+   },
+   "dado-rail": {
+    "map": "room-03-dado-rail.webp",
+    "normalMap": "room-03-dado-rail_n.webp",
+    "phone": {
+     "map": "room-03-dado-rail.phone.webp",
+     "normalMap": "room-03-dado-rail_n.phone.webp"
+    },
+    "kb": {
+     "room-03-dado-rail.webp": 38.2,
+     "room-03-dado-rail_n.webp": 17.2,
+     "room-03-dado-rail.phone.webp": 12.8,
+     "room-03-dado-rail_n.phone.webp": 6.5
+    }
+   },
+   "door-surround": {
+    "map": "room-03-door-surround.webp",
+    "normalMap": "room-03-door-surround_n.webp",
+    "phone": {
+     "map": "room-03-door-surround.phone.webp",
+     "normalMap": "room-03-door-surround_n.phone.webp"
+    },
+    "kb": {
+     "room-03-door-surround.webp": 153.1,
+     "room-03-door-surround_n.webp": 131.0,
+     "room-03-door-surround.phone.webp": 51.7,
+     "room-03-door-surround_n.phone.webp": 48.1
+    }
+   },
+   "keystone-medallion": {
+    "map": "room-03-keystone-medallion.webp",
+    "normalMap": "room-03-keystone-medallion_n.webp",
+    "phone": {
+     "map": "room-03-keystone-medallion.phone.webp",
+     "normalMap": "room-03-keystone-medallion_n.phone.webp"
+    },
+    "kb": {
+     "room-03-keystone-medallion.webp": 42.4,
+     "room-03-keystone-medallion_n.webp": 25.5,
+     "room-03-keystone-medallion.phone.webp": 17.8,
+     "room-03-keystone-medallion_n.phone.webp": 9.8
+    }
+   }
+  },
+  "room-04": {
+   "title": "Festival",
+   "motifs": [
+    "FAN",
+    "PEACOCK",
+    "WAVES"
+   ],
+   "frieze_band": "slate",
+   "cornice-frieze": {
+    "map": "room-04-cornice-frieze.webp",
+    "normalMap": "room-04-cornice-frieze_n.webp",
+    "phone": {
+     "map": "room-04-cornice-frieze.phone.webp",
+     "normalMap": "room-04-cornice-frieze_n.phone.webp"
+    },
+    "kb": {
+     "room-04-cornice-frieze.webp": 89.0,
+     "room-04-cornice-frieze_n.webp": 57.3,
+     "room-04-cornice-frieze.phone.webp": 31.7,
+     "room-04-cornice-frieze_n.phone.webp": 21.9
+    }
+   },
+   "dado-rail": {
+    "map": "room-04-dado-rail.webp",
+    "normalMap": "room-04-dado-rail_n.webp",
+    "phone": {
+     "map": "room-04-dado-rail.phone.webp",
+     "normalMap": "room-04-dado-rail_n.phone.webp"
+    },
+    "kb": {
+     "room-04-dado-rail.webp": 41.8,
+     "room-04-dado-rail_n.webp": 22.7,
+     "room-04-dado-rail.phone.webp": 13.8,
+     "room-04-dado-rail_n.phone.webp": 9.0
+    }
+   },
+   "door-surround": {
+    "map": "room-04-door-surround.webp",
+    "normalMap": "room-04-door-surround_n.webp",
+    "phone": {
+     "map": "room-04-door-surround.phone.webp",
+     "normalMap": "room-04-door-surround_n.phone.webp"
+    },
+    "kb": {
+     "room-04-door-surround.webp": 78.1,
+     "room-04-door-surround_n.webp": 49.1,
+     "room-04-door-surround.phone.webp": 28.1,
+     "room-04-door-surround_n.phone.webp": 19.4
+    }
+   },
+   "keystone-medallion": {
+    "map": "room-04-keystone-medallion.webp",
+    "normalMap": "room-04-keystone-medallion_n.webp",
+    "phone": {
+     "map": "room-04-keystone-medallion.phone.webp",
+     "normalMap": "room-04-keystone-medallion_n.phone.webp"
+    },
+    "kb": {
+     "room-04-keystone-medallion.webp": 44.7,
+     "room-04-keystone-medallion_n.webp": 27.5,
+     "room-04-keystone-medallion.phone.webp": 18.5,
+     "room-04-keystone-medallion_n.phone.webp": 10.6
+    }
+   }
+  },
+  "room-05": {
+   "title": "Family",
+   "motifs": [
+    "VOLUTE",
+    "SCALLOP"
+   ],
+   "frieze_band": "terracotta",
+   "cornice-frieze": {
+    "map": "room-05-cornice-frieze.webp",
+    "normalMap": "room-05-cornice-frieze_n.webp",
+    "phone": {
+     "map": "room-05-cornice-frieze.phone.webp",
+     "normalMap": "room-05-cornice-frieze_n.phone.webp"
+    },
+    "kb": {
+     "room-05-cornice-frieze.webp": 85.3,
+     "room-05-cornice-frieze_n.webp": 60.6,
+     "room-05-cornice-frieze.phone.webp": 28.7,
+     "room-05-cornice-frieze_n.phone.webp": 23.9
+    }
+   },
+   "dado-rail": {
+    "map": "room-05-dado-rail.webp",
+    "normalMap": "room-05-dado-rail_n.webp",
+    "phone": {
+     "map": "room-05-dado-rail.phone.webp",
+     "normalMap": "room-05-dado-rail_n.phone.webp"
+    },
+    "kb": {
+     "room-05-dado-rail.webp": 38.7,
+     "room-05-dado-rail_n.webp": 17.2,
+     "room-05-dado-rail.phone.webp": 12.8,
+     "room-05-dado-rail_n.phone.webp": 6.5
+    }
+   },
+   "door-surround": {
+    "map": "room-05-door-surround.webp",
+    "normalMap": "room-05-door-surround_n.webp",
+    "phone": {
+     "map": "room-05-door-surround.phone.webp",
+     "normalMap": "room-05-door-surround_n.phone.webp"
+    },
+    "kb": {
+     "room-05-door-surround.webp": 118.7,
+     "room-05-door-surround_n.webp": 90.2,
+     "room-05-door-surround.phone.webp": 43.3,
+     "room-05-door-surround_n.phone.webp": 35.2
+    }
+   },
+   "keystone-medallion": {
+    "map": "room-05-keystone-medallion.webp",
+    "normalMap": "room-05-keystone-medallion_n.webp",
+    "phone": {
+     "map": "room-05-keystone-medallion.phone.webp",
+     "normalMap": "room-05-keystone-medallion_n.phone.webp"
+    },
+    "kb": {
+     "room-05-keystone-medallion.webp": 43.6,
+     "room-05-keystone-medallion_n.webp": 26.1,
+     "room-05-keystone-medallion.phone.webp": 18.2,
+     "room-05-keystone-medallion_n.phone.webp": 10.1
+    }
+   }
+  },
+  "room-06": {
+   "title": "Catherine dance series",
+   "motifs": [
+    "FEATHER",
+    "PEACOCK",
+    "FAN"
+   ],
+   "frieze_band": "slate",
+   "cornice-frieze": {
+    "map": "room-06-cornice-frieze.webp",
+    "normalMap": "room-06-cornice-frieze_n.webp",
+    "phone": {
+     "map": "room-06-cornice-frieze.phone.webp",
+     "normalMap": "room-06-cornice-frieze_n.phone.webp"
+    },
+    "kb": {
+     "room-06-cornice-frieze.webp": 73.9,
+     "room-06-cornice-frieze_n.webp": 43.6,
+     "room-06-cornice-frieze.phone.webp": 26.1,
+     "room-06-cornice-frieze_n.phone.webp": 16.2
+    }
+   },
+   "dado-rail": {
+    "map": "room-06-dado-rail.webp",
+    "normalMap": "room-06-dado-rail_n.webp",
+    "phone": {
+     "map": "room-06-dado-rail.phone.webp",
+     "normalMap": "room-06-dado-rail_n.phone.webp"
+    },
+    "kb": {
+     "room-06-dado-rail.webp": 35.6,
+     "room-06-dado-rail_n.webp": 13.1,
+     "room-06-dado-rail.phone.webp": 12.5,
+     "room-06-dado-rail_n.phone.webp": 4.6
+    }
+   },
+   "door-surround": {
+    "map": "room-06-door-surround.webp",
+    "normalMap": "room-06-door-surround_n.webp",
+    "phone": {
+     "map": "room-06-door-surround.phone.webp",
+     "normalMap": "room-06-door-surround_n.phone.webp"
+    },
+    "kb": {
+     "room-06-door-surround.webp": 77.7,
+     "room-06-door-surround_n.webp": 45.7,
+     "room-06-door-surround.phone.webp": 27.9,
+     "room-06-door-surround_n.phone.webp": 18.5
+    }
+   },
+   "keystone-medallion": {
+    "map": "room-06-keystone-medallion.webp",
+    "normalMap": "room-06-keystone-medallion_n.webp",
+    "phone": {
+     "map": "room-06-keystone-medallion.phone.webp",
+     "normalMap": "room-06-keystone-medallion_n.phone.webp"
+    },
+    "kb": {
+     "room-06-keystone-medallion.webp": 44.5,
+     "room-06-keystone-medallion_n.webp": 27.5,
+     "room-06-keystone-medallion.phone.webp": 18.3,
+     "room-06-keystone-medallion_n.phone.webp": 10.6
+    }
+   }
+  },
+  "room-07": {
+   "title": "Bitcoiners",
+   "motifs": [
+    "AIRCRAFT FIN",
+    "CHEVRON"
+   ],
+   "frieze_band": "slate",
+   "cornice-frieze": {
+    "map": "room-07-cornice-frieze.webp",
+    "normalMap": "room-07-cornice-frieze_n.webp",
+    "phone": {
+     "map": "room-07-cornice-frieze.phone.webp",
+     "normalMap": "room-07-cornice-frieze_n.phone.webp"
+    },
+    "kb": {
+     "room-07-cornice-frieze.webp": 70.8,
+     "room-07-cornice-frieze_n.webp": 44.0,
+     "room-07-cornice-frieze.phone.webp": 25.9,
+     "room-07-cornice-frieze_n.phone.webp": 16.8
+    }
+   },
+   "dado-rail": {
+    "map": "room-07-dado-rail.webp",
+    "normalMap": "room-07-dado-rail_n.webp",
+    "phone": {
+     "map": "room-07-dado-rail.phone.webp",
+     "normalMap": "room-07-dado-rail_n.phone.webp"
+    },
+    "kb": {
+     "room-07-dado-rail.webp": 31.2,
+     "room-07-dado-rail_n.webp": 9.6,
+     "room-07-dado-rail.phone.webp": 10.8,
+     "room-07-dado-rail_n.phone.webp": 3.6
+    }
+   },
+   "door-surround": {
+    "map": "room-07-door-surround.webp",
+    "normalMap": "room-07-door-surround_n.webp",
+    "phone": {
+     "map": "room-07-door-surround.phone.webp",
+     "normalMap": "room-07-door-surround_n.phone.webp"
+    },
+    "kb": {
+     "room-07-door-surround.webp": 57.4,
+     "room-07-door-surround_n.webp": 29.3,
+     "room-07-door-surround.phone.webp": 20.6,
+     "room-07-door-surround_n.phone.webp": 12.7
+    }
+   },
+   "keystone-medallion": {
+    "map": "room-07-keystone-medallion.webp",
+    "normalMap": "room-07-keystone-medallion_n.webp",
+    "phone": {
+     "map": "room-07-keystone-medallion.phone.webp",
+     "normalMap": "room-07-keystone-medallion_n.phone.webp"
+    },
+    "kb": {
+     "room-07-keystone-medallion.webp": 38.8,
+     "room-07-keystone-medallion_n.webp": 22.5,
+     "room-07-keystone-medallion.phone.webp": 16.6,
+     "room-07-keystone-medallion_n.phone.webp": 8.8
+    }
+   }
+  },
+  "room-08": {
+   "title": "El Salvador",
+   "motifs": [
+    "WAVES",
+    "PALM LEAF",
+    "SUNBURST"
+   ],
+   "frieze_band": "sage",
+   "cornice-frieze": {
+    "map": "room-08-cornice-frieze.webp",
+    "normalMap": "room-08-cornice-frieze_n.webp",
+    "phone": {
+     "map": "room-08-cornice-frieze.phone.webp",
+     "normalMap": "room-08-cornice-frieze_n.phone.webp"
+    },
+    "kb": {
+     "room-08-cornice-frieze.webp": 87.9,
+     "room-08-cornice-frieze_n.webp": 49.8,
+     "room-08-cornice-frieze.phone.webp": 30.3,
+     "room-08-cornice-frieze_n.phone.webp": 19.3
+    }
+   },
+   "dado-rail": {
+    "map": "room-08-dado-rail.webp",
+    "normalMap": "room-08-dado-rail_n.webp",
+    "phone": {
+     "map": "room-08-dado-rail.phone.webp",
+     "normalMap": "room-08-dado-rail_n.phone.webp"
+    },
+    "kb": {
+     "room-08-dado-rail.webp": 41.7,
+     "room-08-dado-rail_n.webp": 20.6,
+     "room-08-dado-rail.phone.webp": 14.3,
+     "room-08-dado-rail_n.phone.webp": 8.1
+    }
+   },
+   "door-surround": {
+    "map": "room-08-door-surround.webp",
+    "normalMap": "room-08-door-surround_n.webp",
+    "phone": {
+     "map": "room-08-door-surround.phone.webp",
+     "normalMap": "room-08-door-surround_n.phone.webp"
+    },
+    "kb": {
+     "room-08-door-surround.webp": 104.2,
+     "room-08-door-surround_n.webp": 81.3,
+     "room-08-door-surround.phone.webp": 34.9,
+     "room-08-door-surround_n.phone.webp": 30.1
+    }
+   },
+   "keystone-medallion": {
+    "map": "room-08-keystone-medallion.webp",
+    "normalMap": "room-08-keystone-medallion_n.webp",
+    "phone": {
+     "map": "room-08-keystone-medallion.phone.webp",
+     "normalMap": "room-08-keystone-medallion_n.phone.webp"
+    },
+    "kb": {
+     "room-08-keystone-medallion.webp": 42.5,
+     "room-08-keystone-medallion_n.webp": 25.5,
+     "room-08-keystone-medallion.phone.webp": 17.8,
+     "room-08-keystone-medallion_n.phone.webp": 9.8
+    }
+   }
+  },
+  "room-09": {
+   "title": "Sunset",
+   "motifs": [
+    "SUNBURST",
+    "WAVES",
+    "CLOUDS"
+   ],
+   "frieze_band": "violetdeep",
+   "cornice-frieze": {
+    "map": "room-09-cornice-frieze.webp",
+    "normalMap": "room-09-cornice-frieze_n.webp",
+    "phone": {
+     "map": "room-09-cornice-frieze.phone.webp",
+     "normalMap": "room-09-cornice-frieze_n.phone.webp"
+    },
+    "kb": {
+     "room-09-cornice-frieze.webp": 72.4,
+     "room-09-cornice-frieze_n.webp": 50.1,
+     "room-09-cornice-frieze.phone.webp": 24.8,
+     "room-09-cornice-frieze_n.phone.webp": 19.1
+    }
+   },
+   "dado-rail": {
+    "map": "room-09-dado-rail.webp",
+    "normalMap": "room-09-dado-rail_n.webp",
+    "phone": {
+     "map": "room-09-dado-rail.phone.webp",
+     "normalMap": "room-09-dado-rail_n.phone.webp"
+    },
+    "kb": {
+     "room-09-dado-rail.webp": 40.7,
+     "room-09-dado-rail_n.webp": 22.1,
+     "room-09-dado-rail.phone.webp": 13.8,
+     "room-09-dado-rail_n.phone.webp": 8.8
+    }
+   },
+   "door-surround": {
+    "map": "room-09-door-surround.webp",
+    "normalMap": "room-09-door-surround_n.webp",
+    "phone": {
+     "map": "room-09-door-surround.phone.webp",
+     "normalMap": "room-09-door-surround_n.phone.webp"
+    },
+    "kb": {
+     "room-09-door-surround.webp": 76.1,
+     "room-09-door-surround_n.webp": 45.8,
+     "room-09-door-surround.phone.webp": 27.4,
+     "room-09-door-surround_n.phone.webp": 18.8
+    }
+   },
+   "keystone-medallion": {
+    "map": "room-09-keystone-medallion.webp",
+    "normalMap": "room-09-keystone-medallion_n.webp",
+    "phone": {
+     "map": "room-09-keystone-medallion.phone.webp",
+     "normalMap": "room-09-keystone-medallion_n.phone.webp"
+    },
+    "kb": {
+     "room-09-keystone-medallion.webp": 42.5,
+     "room-09-keystone-medallion_n.webp": 25.5,
+     "room-09-keystone-medallion.phone.webp": 17.7,
+     "room-09-keystone-medallion_n.phone.webp": 9.8
+    }
+   }
+  },
+  "room-10": {
+   "title": "Bitcoiners",
+   "motifs": [
+    "FOUNTAIN",
+    "CHEVRON"
+   ],
+   "frieze_band": "slate",
+   "cornice-frieze": {
+    "map": "room-10-cornice-frieze.webp",
+    "normalMap": "room-10-cornice-frieze_n.webp",
+    "phone": {
+     "map": "room-10-cornice-frieze.phone.webp",
+     "normalMap": "room-10-cornice-frieze_n.phone.webp"
+    },
+    "kb": {
+     "room-10-cornice-frieze.webp": 58.8,
+     "room-10-cornice-frieze_n.webp": 34.9,
+     "room-10-cornice-frieze.phone.webp": 22.1,
+     "room-10-cornice-frieze_n.phone.webp": 15.2
+    }
+   },
+   "dado-rail": {
+    "map": "room-10-dado-rail.webp",
+    "normalMap": "room-10-dado-rail_n.webp",
+    "phone": {
+     "map": "room-10-dado-rail.phone.webp",
+     "normalMap": "room-10-dado-rail_n.phone.webp"
+    },
+    "kb": {
+     "room-10-dado-rail.webp": 31.2,
+     "room-10-dado-rail_n.webp": 9.6,
+     "room-10-dado-rail.phone.webp": 11.0,
+     "room-10-dado-rail_n.phone.webp": 3.6
+    }
+   },
+   "door-surround": {
+    "map": "room-10-door-surround.webp",
+    "normalMap": "room-10-door-surround_n.webp",
+    "phone": {
+     "map": "room-10-door-surround.phone.webp",
+     "normalMap": "room-10-door-surround_n.phone.webp"
+    },
+    "kb": {
+     "room-10-door-surround.webp": 57.3,
+     "room-10-door-surround_n.webp": 30.8,
+     "room-10-door-surround.phone.webp": 20.3,
+     "room-10-door-surround_n.phone.webp": 13.1
+    }
+   },
+   "keystone-medallion": {
+    "map": "room-10-keystone-medallion.webp",
+    "normalMap": "room-10-keystone-medallion_n.webp",
+    "phone": {
+     "map": "room-10-keystone-medallion.phone.webp",
+     "normalMap": "room-10-keystone-medallion_n.phone.webp"
+    },
+    "kb": {
+     "room-10-keystone-medallion.webp": 35.9,
+     "room-10-keystone-medallion_n.webp": 21.0,
+     "room-10-keystone-medallion.phone.webp": 15.8,
+     "room-10-keystone-medallion_n.phone.webp": 8.3
+    }
+   }
+  },
+  "room-11": {
+   "title": "Portrait",
+   "motifs": [
+    "FEATHER",
+    "VOLUTE"
+   ],
+   "frieze_band": "slate",
+   "cornice-frieze": {
+    "map": "room-11-cornice-frieze.webp",
+    "normalMap": "room-11-cornice-frieze_n.webp",
+    "phone": {
+     "map": "room-11-cornice-frieze.phone.webp",
+     "normalMap": "room-11-cornice-frieze_n.phone.webp"
+    },
+    "kb": {
+     "room-11-cornice-frieze.webp": 69.0,
+     "room-11-cornice-frieze_n.webp": 36.5,
+     "room-11-cornice-frieze.phone.webp": 23.4,
+     "room-11-cornice-frieze_n.phone.webp": 13.6
+    }
+   },
+   "dado-rail": {
+    "map": "room-11-dado-rail.webp",
+    "normalMap": "room-11-dado-rail_n.webp",
+    "phone": {
+     "map": "room-11-dado-rail.phone.webp",
+     "normalMap": "room-11-dado-rail_n.phone.webp"
+    },
+    "kb": {
+     "room-11-dado-rail.webp": 35.8,
+     "room-11-dado-rail_n.webp": 13.1,
+     "room-11-dado-rail.phone.webp": 12.3,
+     "room-11-dado-rail_n.phone.webp": 4.6
+    }
+   },
+   "door-surround": {
+    "map": "room-11-door-surround.webp",
+    "normalMap": "room-11-door-surround_n.webp",
+    "phone": {
+     "map": "room-11-door-surround.phone.webp",
+     "normalMap": "room-11-door-surround_n.phone.webp"
+    },
+    "kb": {
+     "room-11-door-surround.webp": 76.1,
+     "room-11-door-surround_n.webp": 45.6,
+     "room-11-door-surround.phone.webp": 27.8,
+     "room-11-door-surround_n.phone.webp": 19.2
+    }
+   },
+   "keystone-medallion": {
+    "map": "room-11-keystone-medallion.webp",
+    "normalMap": "room-11-keystone-medallion_n.webp",
+    "phone": {
+     "map": "room-11-keystone-medallion.phone.webp",
+     "normalMap": "room-11-keystone-medallion_n.phone.webp"
+    },
+    "kb": {
+     "room-11-keystone-medallion.webp": 41.5,
+     "room-11-keystone-medallion_n.webp": 24.5,
+     "room-11-keystone-medallion.phone.webp": 17.3,
+     "room-11-keystone-medallion_n.phone.webp": 9.2
+    }
+   }
+  },
+  "room-12": {
+   "title": "Seattle",
+   "motifs": [
+    "CLOUDS",
+    "WAVES",
+    "CHEVRON"
+   ],
+   "frieze_band": "slate",
+   "cornice-frieze": {
+    "map": "room-12-cornice-frieze.webp",
+    "normalMap": "room-12-cornice-frieze_n.webp",
+    "phone": {
+     "map": "room-12-cornice-frieze.phone.webp",
+     "normalMap": "room-12-cornice-frieze_n.phone.webp"
+    },
+    "kb": {
+     "room-12-cornice-frieze.webp": 64.8,
+     "room-12-cornice-frieze_n.webp": 39.0,
+     "room-12-cornice-frieze.phone.webp": 23.6,
+     "room-12-cornice-frieze_n.phone.webp": 15.1
+    }
+   },
+   "dado-rail": {
+    "map": "room-12-dado-rail.webp",
+    "normalMap": "room-12-dado-rail_n.webp",
+    "phone": {
+     "map": "room-12-dado-rail.phone.webp",
+     "normalMap": "room-12-dado-rail_n.phone.webp"
+    },
+    "kb": {
+     "room-12-dado-rail.webp": 52.2,
+     "room-12-dado-rail_n.webp": 25.9,
+     "room-12-dado-rail.phone.webp": 16.8,
+     "room-12-dado-rail_n.phone.webp": 9.2
+    }
+   },
+   "door-surround": {
+    "map": "room-12-door-surround.webp",
+    "normalMap": "room-12-door-surround_n.webp",
+    "phone": {
+     "map": "room-12-door-surround.phone.webp",
+     "normalMap": "room-12-door-surround_n.phone.webp"
+    },
+    "kb": {
+     "room-12-door-surround.webp": 56.7,
+     "room-12-door-surround_n.webp": 27.5,
+     "room-12-door-surround.phone.webp": 20.0,
+     "room-12-door-surround_n.phone.webp": 11.6
+    }
+   },
+   "keystone-medallion": {
+    "map": "room-12-keystone-medallion.webp",
+    "normalMap": "room-12-keystone-medallion_n.webp",
+    "phone": {
+     "map": "room-12-keystone-medallion.phone.webp",
+     "normalMap": "room-12-keystone-medallion_n.phone.webp"
+    },
+    "kb": {
+     "room-12-keystone-medallion.webp": 37.3,
+     "room-12-keystone-medallion_n.webp": 22.1,
+     "room-12-keystone-medallion.phone.webp": 16.1,
+     "room-12-keystone-medallion_n.phone.webp": 8.5
+    }
+   }
+  }
+ },
+ "textures": {
+  "cornice-frieze": {
+   "px": [
+    2048,
+    256
+   ],
+   "tile_m": [
+    1.44,
+    0.18
+   ],
+   "wrap": "RepeatWrapping in U (tileable X), Clamp V",
+   "skin": [
+    "tags.js 'cornice' (box 0.18 m tall on every room wall top): front/back faces, repeat.x = wallLength / 1.44"
+   ]
+  },
+  "dado-rail": {
+   "px": [
+    2048,
+    128
+   ],
+   "tile_m": [
+    1.28,
+    0.08
+   ],
+   "wrap": "Repeat U, Clamp V",
+   "skin": [
+    "NEW thin rail (0.08 m strip, plane or 1-2 cm box) inside each room at 1.45-1.8 m (picture rail) or ~0.9 m (dado) / base; no existing mesh"
+   ],
+   "tile_m_alt": "0.96 m per tile if the rail is 0.06 m tall"
+  },
+  "door-surround": {
+   "px": [
+    512,
+    1024
+   ],
+   "tile_m": [
+    0.2,
+    0.4
+   ],
+   "wrap": "Clamp U (across the band), Repeat V (along the jamb / ring)",
+   "skin": [
+    "tags.js 'lintel' arch ring (0.2 m wide band, 0.14 deep) and door jambs",
+    "courtyardstyle.js 'doorSurrounds' (jamb planes 0.04 m wide: use the centre column only, u 0.29-0.71)",
+    "courtyard296.js 'doorTrim'"
+   ]
+  },
+  "keystone-medallion": {
+   "px": [
+    512,
+    512
+   ],
+   "tile_m": [
+    0.3,
+    0.3
+   ],
+   "wrap": "Clamp, alpha disc (alphaTest 0.5)",
+   "skin": [
+    "NEW keystone at the apex of each 'doorArch' / over 'sunburstArches' fanlight, or cornice corner blocks; suggested 0.24-0.32 m"
+   ]
+  }
+ },
+ "palette": {
+  "frieze bands": "Terracotta Ember #C8644E, Dusk Slate #5E7289, Sea Sage #8FAE9E (08), Violet Deep #6E4FA8 (09)",
+  "gilt": "Gilded Ochre #F7CC3A",
+  "relief fields": "Sunrise Coral / Blue Deep",
+  "dado": "Dawn Plaster #F3E6D8 with Apricot fields and dark ochre lines",
+  "door/keystone": "Dusk Slate + Gilded Ochre"
+ },
+ "loading": "TextureLoader, map.colorSpace = SRGBColorSpace, wrapS (and wrapT for door) = RepeatWrapping; MeshStandardMaterial({map, normalMap, roughness 0.75, metalness 0}); '.phone.webp' at half size on the phone tier, like hq-assets/signs."
+}

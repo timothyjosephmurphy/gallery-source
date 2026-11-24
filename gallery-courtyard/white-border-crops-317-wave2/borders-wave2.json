@@ -1,0 +1,374 @@
+[
+ {
+  "id": "book-art-596837cb5ff533c620dd",
+  "source": "/workspace/portfolio/work/bg/596837cb5ff533c620dd.jpg",
+  "size": [
+   1962,
+   3388
+  ],
+  "before_pct": {
+   "top": 7.56,
+   "bottom": 28.48,
+   "left": 43.37,
+   "right": 12.49
+  },
+  "crop_box": [
+   0,
+   125,
+   1962,
+   3388
+  ],
+  "after_size": [
+   1962,
+   3263
+  ],
+  "after_pct": {
+   "top": 4.01,
+   "bottom": 29.57,
+   "left": 43.27,
+   "right": 12.33
+  },
+  "cropped": true
+ },
+ {
+  "id": "book-art-a61c71e5de8cc1b71500",
+  "source": "/workspace/portfolio/work/bg/a61c71e5de8cc1b71500.jpg",
+  "size": [
+   1935,
+   3057
+  ],
+  "before_pct": {
+   "top": 0.95,
+   "bottom": 1.86,
+   "left": 31.37,
+   "right": 20.26
+  },
+  "crop_box": [
+   0,
+   0,
+   1935,
+   3057
+  ],
+  "after_size": [
+   1935,
+   3057
+  ],
+  "after_pct": {
+   "top": 0.95,
+   "bottom": 1.86,
+   "left": 31.37,
+   "right": 20.26
+  },
+  "cropped": false
+ },
+ {
+  "id": "book-art-7bce6e3509027d1f7a0b",
+  "source": "/workspace/portfolio/work/bg/7bce6e3509027d1f7a0b.jpg",
+  "size": [
+   1824,
+   3901
+  ],
+  "before_pct": {
+   "top": 0.9,
+   "bottom": 0.77,
+   "left": 2.19,
+   "right": 38.98
+  },
+  "crop_box": [
+   0,
+   0,
+   1824,
+   3901
+  ],
+  "after_size": [
+   1824,
+   3901
+  ],
+  "after_pct": {
+   "top": 0.9,
+   "bottom": 0.77,
+   "left": 2.19,
+   "right": 38.98
+  },
+  "cropped": false
+ },
+ {
+  "id": "book-art-9209f1fd7d47f373597f",
+  "source": "/workspace/portfolio/work/bg/9209f1fd7d47f373597f.jpg",
+  "size": [
+   1371,
+   3229
+  ],
+  "before_pct": {
+   "top": 0.43,
+   "bottom": 0.62,
+   "left": 7.0,
+   "right": 7.22
+  },
+  "crop_box": [
+   0,
+   0,
+   1371,
+   3229
+  ],
+  "after_size": [
+   1371,
+   3229
+  ],
+  "after_pct": {
+   "top": 0.43,
+   "bottom": 0.62,
+   "left": 7.0,
+   "right": 7.22
+  },
+  "cropped": false
+ },
+ {
+  "id": "older-work-lake-hillside-color-wheel-original-3",
+  "source": "/workspace/va-240/static/display/older-work-lake-hillside-color-wheel-3.jpg",
+  "size": [
+   1600,
+   1263
+  ],
+  "before_pct": {
+   "top": 6.97,
+   "bottom": 0.0,
+   "left": 4.38,
+   "right": 1.31
+  },
+  "crop_box": [
+   76,
+   94,
+   1573,
+   1263
+  ],
+  "after_size": [
+   1600,
+   1263
+  ],
+  "after_pct": {
+   "top": 6.97,
+   "bottom": 0.0,
+   "left": 4.38,
+   "right": 1.31
+  },
+  "cropped": false
+ },
+ {
+  "id": "older-work-portraits-319-329-original-4",
+  "source": "/workspace/va-251/static/display/older-work-portraits-319-329-4.jpg",
+  "size": [
+   1600,
+   2024
+  ],
+  "before_pct": {
+   "top": 9.09,
+   "bottom": 0.0,
+   "left": 0.0,
+   "right": 0.0
+  },
+  "crop_box": [
+   0,
+   192,
+   1600,
+   2024
+  ],
+  "after_size": [
+   1600,
+   1832
+  ],
+  "after_pct": {
+   "top": 0.0,
+   "bottom": 0.0,
+   "left": 0.0,
+   "right": 0.0
+  },
+  "cropped": true
+ },
+ {
+  "id": "archived-painting-73",
+  "source": "/workspace/fwdiag/m/archived-painting-73.jpg",
+  "size": [
+   4372,
+   7007
+  ],
+  "before_pct": {
+   "top": 10.03,
+   "bottom": 0.0,
+   "left": 0.0,
+   "right": 0.0
+  },
+  "crop_box": [
+   0,
+   731,
+   4372,
+   7007
+  ],
+  "after_size": [
+   4372,
+   6276
+  ],
+  "after_pct": {
+   "top": 0.0,
+   "bottom": 0.0,
+   "left": 0.0,
+   "right": 0.0
+  },
+  "cropped": true
+ },
+ {
+  "id": "archived-painting-2",
+  "source": "/workspace/fwdiag/m/archived-painting-2.jpg",
+  "size": [
+   4191,
+   1069
+  ],
+  "before_pct": {
+   "top": 10.1,
+   "bottom": 0.0,
+   "left": 0.0,
+   "right": 0.0
+  },
+  "crop_box": [
+   0,
+   125,
+   4191,
+   1069
+  ],
+  "after_size": [
+   4191,
+   944
+  ],
+  "after_pct": {
+   "top": 0.0,
+   "bottom": 0.0,
+   "left": 0.0,
+   "right": 0.0
+  },
+  "cropped": true
+ },
+ {
+  "id": "book-art-4bf5a04e40e7d8341378",
+  "source": "/workspace/portfolio/work/bg/4bf5a04e40e7d8341378.jpg",
+  "size": [
+   421,
+   381
+  ],
+  "before_pct": {
+   "top": 7.35,
+   "bottom": 0.0,
+   "left": 0.0,
+   "right": 0.0
+  },
+  "crop_box": [
+   0,
+   30,
+   421,
+   381
+  ],
+  "after_size": [
+   421,
+   381
+  ],
+  "after_pct": {
+   "top": 7.35,
+   "bottom": 0.0,
+   "left": 0.0,
+   "right": 0.0
+  },
+  "cropped": false
+ },
+ {
+  "id": "book-art-74a736000a32427842b1",
+  "source": "/workspace/portfolio/work/bg/74a736000a32427842b1.jpg",
+  "size": [
+   3342,
+   2979
+  ],
+  "before_pct": {
+   "top": 0.81,
+   "bottom": 0.0,
+   "left": 0.0,
+   "right": 0.0
+  },
+  "crop_box": [
+   0,
+   37,
+   3342,
+   2979
+  ],
+  "after_size": [
+   3342,
+   2942
+  ],
+  "after_pct": {
+   "top": 0.03,
+   "bottom": 0.0,
+   "left": 0.0,
+   "right": 0.0
+  },
+  "cropped": true
+ },
+ {
+  "id": "older-work-ridge-strips-unindexed-original-6",
+  "source": "/workspace/va-719/static/display/older-work-ridge-strips-unindexed-6.jpg",
+  "size": [
+   1600,
+   530
+  ],
+  "before_pct": {
+   "top": 3.4,
+   "bottom": 0.0,
+   "left": 0.0,
+   "right": 0.0
+  },
+  "crop_box": [
+   0,
+   24,
+   1600,
+   530
+  ],
+  "after_size": [
+   1600,
+   506
+  ],
+  "after_pct": {
+   "top": 0.0,
+   "bottom": 0.0,
+   "left": 0.0,
+   "right": 0.0
+  },
+  "cropped": true
+ },
+ {
+  "id": "older-work-yakes-todd-dickerson-original-2",
+  "source": "/workspace/va-333/static/display/older-work-yakes-todd-dickerson-2.jpg",
+  "size": [
+   1600,
+   2294
+  ],
+  "before_pct": {
+   "top": 0.0,
+   "bottom": 0.0,
+   "left": 3.31,
+   "right": 0.0
+  },
+  "crop_box": [
+   62,
+   0,
+   1600,
+   2294
+  ],
+  "after_size": [
+   1538,
+   2294
+  ],
+  "after_pct": {
+   "top": 0.0,
+   "bottom": 0.0,
+   "left": 0.0,
+   "right": 0.0
+  },
+  "cropped": true
+ }
+]

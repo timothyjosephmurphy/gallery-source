@@ -1,0 +1,68 @@
+{
+ "issue": 479,
+ "parent": 358,
+ "seed": 358,
+ "shapes": {
+  "single": {
+   "root": "WindowSingle",
+   "glb": "window-single.glb",
+   "textures": {
+    "png": "frame-single.png",
+    "desktop": "frame-single.webp",
+    "phone": "frame-single.phone.webp"
+   },
+   "glow": {
+    "plain": "glow-single",
+    "curtain": "glow-single-curtain"
+   }
+  },
+  "mullion": {
+   "root": "WindowMullion",
+   "glb": "window-mullion.glb",
+   "textures": {
+    "png": "frame-mullion.png",
+    "desktop": "frame-mullion.webp",
+    "phone": "frame-mullion.phone.webp"
+   },
+   "glow": {
+    "plain": "glow-mullion",
+    "curtain": "glow-mullion-curtain"
+   }
+  },
+  "arched": {
+   "root": "WindowArched",
+   "glb": "window-arched.glb",
+   "textures": {
+    "png": "frame-arched.png",
+    "desktop": "frame-arched.webp",
+    "phone": "frame-arched.phone.webp"
+   },
+   "glow": {
+    "plain": "glow-arched",
+    "curtain": "glow-arched-curtain"
+   }
+  }
+ },
+ "card_m": {
+  "w": 0.6667,
+  "h": 1.0
+ },
+ "size_m": {
+  "h": 1.2,
+  "w": 0.8
+ },
+ "glowScale": 1.8,
+ "glowAlign": {
+  "u": [
+   0.22,
+   0.78
+  ],
+  "v": [
+   0.18,
+   0.82
+  ]
+ },
+ "glowAttach": "child empty GlowAttach at card center (0.5,0.5 UV), 1 cm in front of frame (+Z in glTF)",
+ "glowSource": "/workspace/gallery-courtyard/window-glows-358/",
+ "dest": "/img/play/preview-251/window-mesh-cards/"
+}

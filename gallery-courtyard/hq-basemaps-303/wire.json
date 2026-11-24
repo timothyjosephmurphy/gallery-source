@@ -1,0 +1,6 @@
+{"tracker":"#303 base maps (studio-tracker #477)","dest":"/img/play/preview-251/hq-basemaps-303/","phone_suffix":".phone.webp",
+"kinds":{
+"plaster":{"map":"textures/wall-plaster.webp","normalMap":"textures/wall-plaster_n.webp","roughnessMap":null,"roughness":0.9,"tile_m":1.0,"macro":"/img/play/preview-251/hq-overlays-303/macro-plaster.webp","macro_strength":0.18,"macro_tile_div":3.5,"meshes":"skin-*"},
+"ashlar":{"map":"textures/wall-ashlar.webp","normalMap":"textures/wall-ashlar_n.webp","roughnessMap":null,"roughness":0.85,"tile_m":1.0,"macro":"/img/play/preview-251/hq-overlays-303/macro-ashlar.webp","macro_strength":0.2,"macro_tile_div":3.5,"meshes":"lintel/jamb/cornice/coreWall/entablature/nichePlinth/outer plinth+caps"},
+"flagstone":{"map":"textures/floor-flagstone.webp","normalMap":"textures/floor-flagstone_n.webp","roughnessMap":"textures/floor-flagstone_r.webp","roughness":1.0,"tile_m":1.0,"macro":"/img/play/preview-251/hq-overlays-303/macro-flagstone.webp","macro_strength":0.22,"macro_tile_div":3.5,"meshes":"walkRay/sunburstFloor/marbleCore"}},
+"material":{"color":"0xFFFFFF (or light tint)","metalness":0,"aoMap":null,"colorSpace":{"map":"SRGB","normalMap":"Linear","roughnessMap":"Linear"}}}

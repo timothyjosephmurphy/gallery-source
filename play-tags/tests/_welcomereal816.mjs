@@ -1,0 +1,20 @@
+import { chromium } from 'playwright-core';
+const [url, dev = 'desktop', pol = 'real'] = process.argv.slice(2);
+const args = ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader']; if (pol !== 'real') args.push('--autoplay-policy=no-user-gesture-required');
+const b = await chromium.launch({ executablePath: '/usr/bin/google-chrome', args });
+const o = dev === 'phone' ? { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 } : { viewport: { width: 1280, height: 800 } };
+const ctx = await b.newContext(o); const p = await ctx.newPage();
+await p.addInitScript(() => { window.__ev = []; const T0 = performance.now(); const L = (m) => __ev.push(((performance.now() - T0) / 1000).toFixed(2) + ' ' + m);
+  const pl = HTMLMediaElement.prototype.play; HTMLMediaElement.prototype.play = function () { if (!/welcome/.test(this.src)) L('OTHER play ' + (this.src || this.srcObject || '?').toString().slice(-50) + ' muted=' + this.muted + ' ' + new Error().stack.split('\n')[2]); if (/welcome/.test(this.src)) { window.__wv = this; L('play muted=' + this.muted + ' t=' + this.currentTime.toFixed(2) + ' ' + new Error().stack.split('\n').slice(2,5).join(' < ')); } const r = pl.call(this); r && r.catch(e => /welcome/.test(this.src) && L('playfail ' + e.name)); return r; };
+  const pa = HTMLMediaElement.prototype.pause; HTMLMediaElement.prototype.pause = function () { if (/welcome/.test(this.src)) L('pause() ' + new Error().stack.split('\n')[2]); return pa.call(this); };
+  ['pause', 'volumechange', 'ended', 'waiting', 'playing', 'stalled'].forEach(n => document.addEventListener(n, e => { if (/welcome/.test(e.target.src || '')) L(n + ' muted=' + e.target.muted + ' t=' + e.target.currentTime.toFixed(2)); }, true));
+  const AC = window.AudioContext; const cm = AC.prototype.createMediaElementSource; AC.prototype.createMediaElementSource = function (m) { L('MES ' + (m.src || '').slice(-30) + ' ctx=' + this.state); this.addEventListener('statechange', () => L('ctx ' + this.state)); return cm.call(this, m); }; });
+await p.goto(url); await p.waitForFunction(() => window.game && game.tags && game.tags.ready && window.__tour, null, { timeout: 120000 });
+await p.evaluate(() => document.body.classList.add('portraitok'));
+const st = await p.evaluate(() => { const s = document.getElementById('start'); const r = s.getBoundingClientRect(); return { d: getComputedStyle(s).display, x: r.x + r.width / 2, y: r.y + r.height / 2, h: s.innerText.slice(0, 80) }; }); console.log('start', JSON.stringify(st));
+if (dev === 'phone') { await p.touchscreen.tap(st.x, st.y); await p.waitForTimeout(800); if (await p.evaluate(() => getComputedStyle(document.getElementById('start')).display) !== 'none') await p.evaluate(() => { document.getElementById('start').style.display = 'none'; }); } else await p.mouse.click(st.x, st.y);
+await p.waitForFunction(() => __tour.phase === 'welcome', null, { timeout: 20000 }).catch(async () => console.log('no welcome', await p.evaluate(() => __tour.phase + ' ' + getComputedStyle(document.getElementById('start')).display + ' ' + window.__paused)));
+const t0 = Date.now(); const rows = [];
+for (let i = 0; i < 100; i++) { const s = await p.evaluate(() => { const v = window.__wv; return [__tour.phase, v && +v.currentTime.toFixed(1), v && v.paused, v && v.muted, __tour.S.skipped, (__tour.state.caption || '').slice(0, 20), window.__sharedAC && __sharedAC.state, !!document.pointerLockElement].join('|'); });
+  rows.push(((Date.now() - t0) / 1000).toFixed(1) + ' ' + s); if (!s.startsWith('welcome')) break; await p.waitForTimeout(500); }
+console.log(rows.filter((_, i) => i % 3 == 0 || i == rows.length - 1).join('\n')); console.log((await p.evaluate(() => __ev)).join('\n')); await b.close();

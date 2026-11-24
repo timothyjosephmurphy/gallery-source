@@ -1,0 +1,10 @@
+import { chromium } from 'playwright-core';
+const [url, dev = 'desktop', shot = ''] = process.argv.slice(2);
+const b = await chromium.launch({ executablePath: '/usr/bin/google-chrome', args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] });
+const o = dev === 'phone' ? { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 } : { viewport: { width: 1280, height: 800 } };
+const p = await (await b.newContext(o)).newPage(); const errs = []; p.on('pageerror', e => errs.push(e.message));
+await p.goto(url); await p.waitForFunction(() => window.__c296 && window.__c296.glow358 && (window.__c296.glow358.ready || window.__c296.glow358.err), null, { timeout: 180000 });
+await new Promise(r => setTimeout(r, 4000));
+const r = await p.evaluate(() => { const g = window.__c296.glow358; return { count: g.count, cards: g.cards, lit: g.lit, k: g.k, elev: g.elev, err: g.err }; });
+if (shot) await p.screenshot({ path: shot });
+console.log(JSON.stringify({ r, errs })); console.log(r.cards > 0 && r.lit > 0 && !r.err && !errs.length ? 'SMOKE358W PASS' : 'SMOKE358W FAIL'); await b.close();

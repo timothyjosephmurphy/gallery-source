@@ -1,0 +1,312 @@
+{
+ "issue": "studio-tracker#478 for #307",
+ "dest_hint": "/img/play/preview-251/sticker306/neural/",
+ "replaces": "play-tags/public/sticker306/*.webp (placeholders kept until Gallery chooses)",
+ "strip": {
+  "file": "strip-sheet.webp",
+  "size": [
+   1707,
+   328
+  ],
+  "poses": [
+   "pose-01",
+   "pose-02",
+   "pose-03",
+   "pose-04",
+   "pose-05",
+   "pose-06",
+   "pose-07",
+   "pose-08"
+  ],
+  "background": "transparent"
+ },
+ "atlas": {
+  "file": "atlas.webp",
+  "grid": "5x2",
+  "cell": 320,
+  "frames": {
+   "pose-01": [
+    100,
+    8,
+    119,
+    304
+   ],
+   "pose-02": [
+    422,
+    8,
+    115,
+    304
+   ],
+   "pose-03": [
+    677,
+    8,
+    245,
+    304
+   ],
+   "pose-04": [
+    999,
+    8,
+    241,
+    304
+   ],
+   "pose-05": [
+    1317,
+    8,
+    245,
+    304
+   ],
+   "pose-06": [
+    63,
+    328,
+    194,
+    304
+   ],
+   "pose-07": [
+    370,
+    328,
+    220,
+    304
+   ],
+   "pose-08": [
+    690,
+    328,
+    220,
+    304
+   ],
+   "pose-09": [
+    1013,
+    328,
+    214,
+    304
+   ],
+   "pose-10": [
+    1288,
+    328,
+    304,
+    304
+   ]
+  }
+ },
+ "stickers": [
+  {
+   "id": "pose-01",
+   "pose": "idle-sway",
+   "source": "procedural",
+   "sizes_px": {
+    "desktop": [
+     119,
+     304
+    ],
+    "phone": [
+     64,
+     152
+    ]
+   },
+   "size_m": 0.18,
+   "fill": "#2A2430",
+   "border_px": {
+    "desktop": 8,
+    "phone": 5
+   },
+   "edge_highlight": "#FAF0DE 1px"
+  },
+  {
+   "id": "pose-02",
+   "pose": "arms-up",
+   "source": "procedural",
+   "sizes_px": {
+    "desktop": [
+     115,
+     304
+    ],
+    "phone": [
+     62,
+     152
+    ]
+   },
+   "size_m": 0.18,
+   "fill": "#2A2430",
+   "border_px": {
+    "desktop": 8,
+    "phone": 5
+   },
+   "edge_highlight": "#FAF0DE 1px"
+  },
+  {
+   "id": "pose-03",
+   "pose": "spin",
+   "source": "procedural",
+   "sizes_px": {
+    "desktop": [
+     245,
+     304
+    ],
+    "phone": [
+     124,
+     152
+    ]
+   },
+   "size_m": 0.18,
+   "fill": "#2A2430",
+   "border_px": {
+    "desktop": 8,
+    "phone": 5
+   },
+   "edge_highlight": "#FAF0DE 1px"
+  },
+  {
+   "id": "pose-04",
+   "pose": "kick",
+   "source": "procedural",
+   "sizes_px": {
+    "desktop": [
+     241,
+     304
+    ],
+    "phone": [
+     122,
+     152
+    ]
+   },
+   "size_m": 0.18,
+   "fill": "#2A2430",
+   "border_px": {
+    "desktop": 8,
+    "phone": 5
+   },
+   "edge_highlight": "#FAF0DE 1px"
+  },
+  {
+   "id": "pose-05",
+   "pose": "crouch",
+   "source": "procedural",
+   "sizes_px": {
+    "desktop": [
+     245,
+     304
+    ],
+    "phone": [
+     124,
+     152
+    ]
+   },
+   "size_m": 0.18,
+   "fill": "#2A2430",
+   "border_px": {
+    "desktop": 8,
+    "phone": 5
+   },
+   "edge_highlight": "#FAF0DE 1px"
+  },
+  {
+   "id": "pose-06",
+   "pose": "reach",
+   "source": "procedural",
+   "sizes_px": {
+    "desktop": [
+     194,
+     304
+    ],
+    "phone": [
+     100,
+     152
+    ]
+   },
+   "size_m": 0.18,
+   "fill": "#2A2430",
+   "border_px": {
+    "desktop": 8,
+    "phone": 5
+   },
+   "edge_highlight": "#FAF0DE 1px"
+  },
+  {
+   "id": "pose-07",
+   "pose": "duet-lean-left",
+   "source": "procedural",
+   "sizes_px": {
+    "desktop": [
+     220,
+     304
+    ],
+    "phone": [
+     112,
+     152
+    ]
+   },
+   "size_m": 0.18,
+   "fill": "#2A2430",
+   "border_px": {
+    "desktop": 8,
+    "phone": 5
+   },
+   "edge_highlight": "#FAF0DE 1px"
+  },
+  {
+   "id": "pose-08",
+   "pose": "duet-lean-right",
+   "source": "procedural",
+   "sizes_px": {
+    "desktop": [
+     220,
+     304
+    ],
+    "phone": [
+     112,
+     152
+    ]
+   },
+   "size_m": 0.18,
+   "fill": "#2A2430",
+   "border_px": {
+    "desktop": 8,
+    "phone": 5
+   },
+   "edge_highlight": "#FAF0DE 1px"
+  },
+  {
+   "id": "pose-09",
+   "pose": "jump",
+   "source": "procedural",
+   "sizes_px": {
+    "desktop": [
+     214,
+     304
+    ],
+    "phone": [
+     109,
+     152
+    ]
+   },
+   "size_m": 0.18,
+   "fill": "#2A2430",
+   "border_px": {
+    "desktop": 8,
+    "phone": 5
+   },
+   "edge_highlight": "#FAF0DE 1px"
+  },
+  {
+   "id": "pose-10",
+   "pose": "arabesque",
+   "source": "procedural",
+   "sizes_px": {
+    "desktop": [
+     304,
+     304
+    ],
+    "phone": [
+     152,
+     152
+    ]
+   },
+   "size_m": 0.18,
+   "fill": "#2A2430",
+   "border_px": {
+    "desktop": 8,
+    "phone": 5
+   },
+   "edge_highlight": "#FAF0DE 1px"
+  }
+ ]
+}

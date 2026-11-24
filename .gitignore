@@ -2,3 +2,9 @@ node_modules
 dist*
 .env*
 *.log
+*.orig
+*.bak*
+.DS_Store
+play-tags/deploy/_worker.js
+play-tags/deploy/execute.js
+play-tags/tests/*.pre-builderr

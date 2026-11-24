@@ -21,14 +21,21 @@ const A = W.art.filter(a => a.kind !== 'projection'); for (let i = 0; i < A.leng
   const dx = b.x - a.x, dz = b.z - a.z; if (Math.abs(dx * a.ix + dz * a.iz) > 0.3) continue; const du = Math.abs(dx * a.iz - dz * a.ix), dy = Math.abs(a.y - b.y);
   if (du < (a.w + b.w) / 2 - 0.01 && dy < (a.h + b.h) / 2 - 0.01) bad.push(`overlap ${a.id} / ${b.id}`); }
 for (const a of W.art.filter(a => a.kind === 'painting')) for (const d of W.doors) { const v = (a.x - d.x) * d.nx + (a.z - d.z) * d.nz, u = Math.abs((a.x - d.x) * -d.nz + (a.z - d.z) * d.nx); if (Math.abs(v) < 0.3 && u < d.width / 2 + a.w / 2 - 0.01) bad.push(`painting in doorway ${a.id}`); }
+// #352: the courtyard-edge fence never crosses a door, a path or a viewing spot
+{ const nf = (x, z, m) => (W.fences || []).some(f => segDist(x, z, f.x0, f.z0, f.x1, f.z1) < m);
+  for (const d of W.doors) if (nf(d.x, d.z, d.width / 2 + 0.3)) bad.push(`fence across door ${d.room}->${d.to}`);
+  for (const p of W.paths) { const L = Math.hypot(p.x1 - p.x0, p.z1 - p.z0); for (let t = 0; t <= L; t += 0.25) if (nf(p.x0 + (p.x1 - p.x0) * t / L, p.z0 + (p.z1 - p.z0) * t / L, p.width / 2)) { bad.push(`fence blocks path ${p.room || ''}`); break; } }
+  for (const a of W.art) if (nf(a.x + a.ix * 1.5, a.z + a.iz * 1.5, 0.5)) bad.push('fence in view of ' + a.id);
+  console.log(`fence: ${(W.fences || []).length} segments`); }
 // no dead ends: room graph (doors) must give every node 2+ exits and have no bridges (every route on a loop)
 const G = new Map(), add = (a, b) => { if (!G.has(a)) G.set(a, new Set()); if (!G.has(b)) G.set(b, new Set()); G.get(a).add(b); G.get(b).add(a); };
-const nearCourt = d => { let b = null, bd = 1e9; for (const c of C.layout.tags.courtyards) { const q = Math.hypot(d.x - c.center[0], d.z - c.center[1]); if (q < bd) { bd = q; b = c.id; } } return b; };
-const nearOuter = d => { let b = null, bd = 1e9; for (const c of C.layout.tags.outerCourts) { const q = Math.hypot(d.x - c.center[0], d.z - c.center[1]); if (q < bd) { bd = q; b = c.id; } } return b; };
-for (const d of W.doors) { if (d.kind === 'room') add(d.room, d.to); else if (d.kind === 'inner') add(d.room, nearCourt(d)); else if (d.kind === 'outer') add(d.room, nearOuter(d)); }
+const nearCourt = d => { if (!C.layout.tags.courtyards.length) return 'hub'; /* #774 honeycomb: inner rooms open straight onto the pavilion */ let b = null, bd = 1e9; for (const c of C.layout.tags.courtyards) { const q = Math.hypot(d.x - c.center[0], d.z - c.center[1]); if (q < bd) { bd = q; b = c.id; } } return b; };
+const nearOuter = d => { let b = null, bd = 1e9; for (const c of C.layout.tags.outerCourts) { const q = Math.hypot(d.x - c.center[0], d.z - c.center[1]); if (q < bd) { bd = q; b = c.id; } } if (C.layout.tags.grounds && bd > 9.5) return 'grounds'; return b; }; // #774: lawn round the honeycomb
+if (C.layout.tags.grounds) for (const o of C.layout.tags.outerCourts) add(o.id, 'grounds'); // courts open onto the lawn
+for (const d of W.doors) { if (d.kind === 'room' || d.kind === 'court' /* #800 open court -> open court */) add(d.room, d.to); else if (d.kind === 'inner') add(d.room, nearCourt(d)); else if (d.kind === 'outer') add(d.room, nearOuter(d)); }
 for (const c of C.layout.tags.courtyards) add('hub', c.id); // open colonnade ground: every court opens onto the pavilion band
 const cs = C.layout.tags.courtyards; for (let i = 0; i < cs.length; i++) add(cs[i].id, cs[(i + 1) % cs.length].id); // and onto its neighbours round the ring
-const ANNEX = new Set(C.layout.tags.rooms.filter(r => r.annex).map(r => r.id)); // #310: the Paul Murphy annex is a deliberate one-door side room
+const ANNEX = new Set(C.layout.tags.rooms.filter(r => r.annex || r.entry /* #778 START entry room: one portal door to H11 */).map(r => r.id).concat((C.layout.tags.openCourts || []).map(o => o.id) /* #779 H1 courtyard: one-door open-air side space */)); // #310: the Paul Murphy annex is a deliberate one-door side room
 const deadEnds = [...G].filter(([k, v]) => v.size < 2 && !ANNEX.has(k)).map(([k]) => k);
 let bridges = 0; { let t = 0; const tin = new Map(), low = new Map(); const dfs = (u, p) => { tin.set(u, ++t); low.set(u, t); for (const v of G.get(u)) { if (v === p) continue; if (tin.has(v)) low.set(u, Math.min(low.get(u), tin.get(v))); else { dfs(v, u); low.set(u, Math.min(low.get(u), low.get(v))); if (low.get(v) > tin.get(u) && !ANNEX.has(v)) { bridges++; bad.push('bridge (dead-end route) ' + u + '-' + v); } } } }; dfs('hub', null);
   for (const k of G.keys()) if (!tin.has(k)) bad.push('unreachable node ' + k); }
@@ -37,7 +44,8 @@ let wallChecked = 0;
 for (const a of W.art.filter(a => a.kind === 'painting' || a.kind === 'plaque')) { const segs = W.walls.filter(w => w.room === a.room && Math.abs(w.nx * -a.ix + w.nz * -a.iz - 1) < 0.01);
   if (segs.length) wallChecked++;
   const ok = segs.some(w => { const L = Math.hypot(w.x1 - w.x0, w.z1 - w.z0), tx = (w.x1 - w.x0) / L, tz = (w.z1 - w.z0) / L, u = (a.x - w.x0) * tx + (a.z - w.z0) * tz, v = Math.abs((a.x - w.x0) * w.nx + (a.z - w.z0) * w.nz); return v < 0.15 && u - a.w / 2 > -0.02 && u + a.w / 2 < L + 0.02; });
-  if (segs.length && !ok) bad.push('off its wall / over a door gap: ' + a.id); }
+  const hex841 = !ok && W.walls.some(w => w.k !== undefined && Math.abs(w.nx * a.ix + w.nz * a.iz - 1) < 0.01 && (() => { const L = Math.hypot(w.x1 - w.x0, w.z1 - w.z0), tx = (w.x1 - w.x0) / L, tz = (w.z1 - w.z0) / L, u = (a.x - w.x0) * tx + (a.z - w.z0) * tz, v = Math.abs((a.x - w.x0) * w.nx + (a.z - w.z0) * w.nz); return v < 0.15 && u - a.w / 2 > -0.02 && u + a.w / 2 < L + 0.02; })()); // #841 open-court art hung on a hex building's outer face
+  if (segs.length && !ok && !hex841) bad.push('off its wall / over a door gap: ' + a.id); }
 // #269: every frame hugs its image: picture area aspect within 1% of the served image, even moulding all round, no letterbox
 const RDF = new URL('./realdims.json', import.meta.url), RD = fs.existsSync(RDF) ? JSON.parse(fs.readFileSync(RDF)) : {}; let aspectChecked = 0;
 for (const p of C.paintings) { const r = RD[p.id]; if (r && r.hiPx) r.px = r.hiPx; if (!r || !r.px) { bad.push('no served image size for ' + p.id); continue; } aspectChecked++;

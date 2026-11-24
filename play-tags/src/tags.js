@@ -3,19 +3,41 @@
 // so what is drawn is exactly what the doorway / path check verified.
 import { MUSEUM } from './museum.config.js'; // #284 plainCourts
 import * as THREE from 'three';
-import { installWallMap } from './wallmap.js'; // #291
+import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js'; // #478 cornice/jamb merge
 window.__shopSoftGlow = true; // #301: preview-only soft Buy Scanner halo (gallery-core shopscan opt-in)
 window.__noOstrichEgg = true; // #289: the walking ostrich egg is gone (the guide bot is the ostrich now)
 window.__gbMenu = true; // #308: preview-only guide-bot hover/tap menu
-import { installTestiMap } from './testimap.js'; // #293
+// #293 testimap: dynamic import after first playable frame (DEFER-MODULES-SCOUT)
 import { installFrames } from './frames.js'; // #301
 import { installCourtyard294 } from './courtyard294.js'; // #294
 import { installCourtyardStyle } from './courtyardstyle.js'; // #295
 import { installRide } from './ride.js';
+import { installAdvice785 } from './advice785.js';
+import { makeMuralLod, updateMuralLods } from './muralLod402.js'; // #402
+import { installPhone304 } from './phone304.js'; // #304 tap-to-move + floating stick (preview)
 import { buildFountainPortal, installCourtyard296 } from './courtyard296.js';
 import { makeWorld, segDist, PILLAR_W, PILLAR_D, WALL_H, WT, CORE_R, RING_R, DOOR_H, DOOR_SPRING } from './tags-world.js';
 import { createMinimap } from './minimap.js';
 import { buildDomes, buildGarden, createFountainSound } from './garden/index.js'; // gallery-core/src/garden ('garden ready' on #251, 1:25 PM)
+import { installGroupLabels354 } from './groupLabels354.js'; import { installStoryPlaques335 } from './storyPlaques335.js'; /* #335 */ // #354 group wall labels
+import { installWallTitles354 } from './wallTitles354.js'; // #354 wall title plates
+import { tierPlaqueTex } from './plaqueTex.js'; // perf pass: tier-sized plaque textures
+const BRASS_HOLD_829 = true; // #829 TJ: all brass plaques down until he says put them back (set false to restore)
+// #829: eagle brass #354 removed (TJ plaque-remove shot); eagleBrass354.js kept on disk for rollback
+import { installHangIndex } from './hangIndex773.js'; // #773 hang-index labels (?hangIndex=1, planning only)
+import { installContainer780 } from './container780.js'; // #780
+import { installBerlinWall790 } from './berlinWall790.js';
+import { installSteeples784 } from './steeples784.js'; // #784
+import { installBerlinCourt810 } from './berlinCourt810.js'; // #810 Berlin, El Salvador court remodel
+import { installRoadster797 as installRoadster785 } from './roadster797.js'; // #797 (was roadster795.js; before that roadster785.js)
+import { installWest786 } from './west786.js'; // #786
+import { installMarket798 } from './market798.js'; // #798 Paul market booths (#808: booths798 cleared -> no-op)
+import { installCafe808 } from './cafe808.js'; // #808 fountain-sw cafe corner
+import { installFountainIstanbul811 } from './fountainIstanbul811.js'; // #811 fountain-sw Istanbul overlook
+import { installSigns818, installStarship818 } from './signs818.js'; // #818
+import { installKino800 } from './kino800.js'; // #800 Kinoteka cinema
+import { installGuitar764 } from './guitarHolo764.js'; // #764 guitar holograms on room plinths
+import { installRoomTitle769 } from './roomTitle769.js'; // #769 title = current room name
 const std = (color, o = {}) => new THREE.MeshStandardMaterial({ color, roughness: 0.85, metalness: 0, ...o });
 export const PAL = { travertine: 0xe3d5bb, stone: 0xcbb89a, terracotta: 0xb8673f, marble: 0xf1ece2, gravel: 0xcdbfa3, path: 0xd9ccb2, box: 0x3f5a2c, water: 0x6f9fae, bronze: 0x8a6a3a };
 // #276: geometry detail tier picked from the device: high on desktop GPUs, medium on weak / software GPUs, low on phones
@@ -33,18 +55,32 @@ export function buildTags(scene, { CATALOG, LOW, MEDIUM }) {
   // ---- ground: gravel everywhere, stone floors in rooms, marble in the pavilion, stone flag lanes on every walk path
   const ground = new THREE.Mesh(new THREE.CircleGeometry(60, 48), std(MUSEUM.plainCourts ? new THREE.Color('#5f8f45') : PAL.gravel, { roughness: 1 })); // #284: plain green courtyards ground.rotation.x = -Math.PI / 2; ground.position.set(-8, MUSEUM.plainCourts ? 0.002 : -0.002, 8); ground.receiveShadow = true; root.add(ground); ground.name = 'gravel';
   const floorMat = std(PAL.stone, { roughness: 0.7 }), marble = std(PAL.marble, { roughness: 0.35 });
-  for (const r of W.rooms.filter(r => r.kind === 'room')) { const s = new THREE.Shape(r.poly.map(([x, z]) => new THREE.Vector2(x, -z))); const m = new THREE.Mesh(new THREE.ShapeGeometry(s), floorMat); m.rotation.x = -Math.PI / 2; m.position.y = 0.004; m.receiveShadow = true; root.add(m); }
+  for (const r of W.rooms.filter(r => r.kind === 'room')) { const s = new THREE.Shape(r.poly.map(([x, z]) => new THREE.Vector2(x, -z))); const m = new THREE.Mesh(new THREE.ShapeGeometry(s), floorMat); m.rotation.x = -Math.PI / 2; m.position.y = 0.004; m.receiveShadow = true; m.name = 'roomFloor'; root.add(m); }
   { const m = new THREE.Mesh(new THREE.CircleGeometry(RING_R + 0.6, 48), marble); m.rotation.x = -Math.PI / 2; m.position.y = 0.006; m.name = 'marbleCore'; root.add(m); }
   const pathMat = std(PAL.path, { roughness: 0.9 });
-  if (!MUSEUM.plainCourts) for (const p of W.paths) { const L = Math.hypot(p.x1 - p.x0, p.z1 - p.z0); if (L < 0.05) continue; const m = new THREE.Mesh(new THREE.PlaneGeometry(p.width, L), pathMat); m.rotation.set(-Math.PI / 2, 0, Math.atan2(p.x1 - p.x0, p.z1 - p.z0)); m.position.set((p.x0 + p.x1) / 2, 0.008, (p.z0 + p.z1) / 2); root.add(m); }
-  if (!MUSEUM.plainCourts) for (const g of W.rings) { const m = new THREE.Mesh(new THREE.RingGeometry(g.r0, g.r1, 40), pathMat); m.rotation.x = -Math.PI / 2; m.position.set(g.x, 0.009, g.z); root.add(m); }
+  if (!MUSEUM.plainCourts) for (const p of W.paths) { const L = Math.hypot(p.x1 - p.x0, p.z1 - p.z0); if (L < 0.05) continue; const m = new THREE.Mesh(new THREE.PlaneGeometry(p.width, L), pathMat); m.rotation.set(-Math.PI / 2, 0, Math.atan2(p.x1 - p.x0, p.z1 - p.z0)); m.position.set((p.x0 + p.x1) / 2, 0.008, (p.z0 + p.z1) / 2); m.name = 'pathLane'; root.add(m); }
+  if (!MUSEUM.plainCourts) for (const g of W.rings) { const m = new THREE.Mesh(new THREE.RingGeometry(g.r0, g.r1, 40), pathMat); m.rotation.x = -Math.PI / 2; m.position.set(g.x, 0.009, g.z); m.name = 'pathRing'; root.add(m); }
   // ---- room walls: warm plaster inside (each room's palette colour), terracotta cornice
-  const NEUTRAL = '#ece6da', wallMats = new Map(), cornice = std(PAL.terracotta);
-  for (const w of W.walls) { const L = Math.hypot(w.x1 - w.x0, w.z1 - w.z0), ry = -Math.atan2(w.z1 - w.z0, w.x1 - w.x0), cx = (w.x0 + w.x1) / 2 - w.nx * 0, cz = (w.z0 + w.z1) / 2;
+  const NEUTRAL = '#ece6da', wallMats = new Map(), cornice = std(PAL.terracotta), corn478 = [], wallRecs = [];
+  for (const w of W.walls) { if (w.container || w.kino800) continue; /* #800 kino800.js draws Kinoteka */ /* #780: container780 draws it */ const L = Math.hypot(w.x1 - w.x0, w.z1 - w.z0), ry = -Math.atan2(w.z1 - w.z0, w.x1 - w.x0), cx = (w.x0 + w.x1) / 2 - w.nx * 0, cz = (w.z0 + w.z1) / 2;
     const room = T.rooms.find(r => r.id === w.room), col = NEUTRAL; // #296: gallery walls stay neutral (the colour lives in the trim and the courtyard) if (!wallMats.has(col)) wallMats.set(col, std(new THREE.Color(col)));
-    const off = 0, th = w.free ? WT : 0.05; // room walls: 5 cm slab centred on the layout line (neighbouring rooms share it; art hangs 3 cm off it on both sides)
-    const m = mk(geoBox, wallMats.get(col), cx + w.nx * off, w.h / 2, cz + w.nz * off, L + (w.free ? 0 : 0.02), w.h, th, ry); m.castShadow = true; m.name = w.free ? 'muralWall' : 'roomWall';
-    mk(geoBox, cornice, cx + w.nx * off, w.h + 0.09, cz + w.nz * off, L + 0.06, 0.18, th + 0.12, ry).name = 'cornice'; }
+    const off = 0, th = w.free ? WT : 0.05; if (w.low801) { wallRecs.push({ pos: [cx, 0.5, cz], ry, L, h: 1.0, th, kind: 'mural', room: w.room, mat: wallMats.get(col) }); corn478.push([cx, 1.05, cz, L + 0.06, 0.1, th + 0.12, ry]); continue; } /* #801 Paul->Kinoteka: low parapet, open view */ // room walls: 5 cm slab centred on the layout line (neighbouring rooms share it; art hangs 3 cm off it on both sides)
+    wallRecs.push({ pos: [cx + w.nx * off, w.h / 2, cz + w.nz * off], ry, L: L + (w.free ? 0 : 0.02), h: w.h, th, kind: w.free ? 'mural' : 'room', room: w.room, mat: wallMats.get(col) });
+    corn478.push([cx + w.nx * off, w.h + 0.09, cz + w.nz * off, L + 0.06, 0.18, th + 0.12, ry]); }
+  { // #wallrec: walls are data records {pos, ry, L, h, th, kind, room}; stickerWalls307 + tagsaudit read window.__wallRecs (no per-wall meshes needed). Walls merged per material into 'roomWallMerge' (no UV/world-triplanar dependence; overlays rules do not match roomWall*). Fail soft: one mesh per wall, as before.
+    const S = window.__mWall = { recs: wallRecs.length }; window.__wallRecs = root.userData.wallRecs = wallRecs.map(({ mat, ...r }) => r);
+    const one = r => { const m = mk(geoBox, r.mat, ...r.pos, r.L, r.h, r.th, r.ry); m.castShadow = true; m.name = r.kind === 'mural' ? 'muralWall' : 'roomWall'; return m; };
+    try { const byMat = new Map(); for (const r of wallRecs) { if (!byMat.has(r.mat)) byMat.set(r.mat, []); byMat.get(r.mat).push(r); }
+      const M = new THREE.Matrix4(), q = new THREE.Quaternion(), e = new THREE.Euler(), out = [];
+      for (const [mat, rs] of byMat) { const geos = rs.map(r => geoBox.clone().applyMatrix4(M.compose(new THREE.Vector3(...r.pos), q.setFromEuler(e.set(0, r.ry, 0)), new THREE.Vector3(r.L, r.h, r.th))));
+        const mg = geos.length && mergeGeometries(geos); geos.forEach(g => g.dispose()); if (!mg) throw new Error('merge returned null'); mg.computeBoundingSphere(); out.push([mg, mat]); }
+      for (const [mg, mat] of out) { const m = new THREE.Mesh(mg, mat); m.name = 'roomWallMerge'; m.castShadow = m.receiveShadow = true; root.add(m); }
+      S.draws = out.length; S.pieces = wallRecs.length; }
+    catch (err) { console.warn('[wallrec merge]', err); S.err = String(err); wallRecs.forEach(one); } }
+  { const S = window.__m478 = window.__m478 || {}; // #478: all cornices share one material -> bake each box to world space and merge into ONE mesh 'cornice' (overlays303 ashlar is world-space triplanar, so the look is unchanged). Fail soft: per-wall boxes.
+    try { const M = new THREE.Matrix4(), q = new THREE.Quaternion(), e = new THREE.Euler(), geos = corn478.map(([x, y, z, sx, sy, sz, ry]) => geoBox.clone().applyMatrix4(M.compose(new THREE.Vector3(x, y, z), q.setFromEuler(e.set(0, ry, 0)), new THREE.Vector3(sx, sy, sz))));
+      const mg = geos.length && mergeGeometries(geos); geos.forEach(g => g.dispose()); if (!mg) throw new Error('merge returned null'); mg.computeBoundingSphere(); const m = new THREE.Mesh(mg, cornice); m.name = 'cornice'; m.receiveShadow = true; root.add(m); S.cornice = { draws: 1, pieces: corn478.length }; }
+    catch (err) { console.warn('[478 cornice merge]', err); S.corniceErr = String(err); for (const a of corn478) mk(geoBox, cornice, ...a).name = 'cornice'; } }
   // door frames: travertine jambs and lintel on every room door (inside the wall line, never in the opening)
   const trav = std(PAL.travertine, { roughness: 0.6 });
   // ---- #277 (TJ): smooth the OUTSIDE joins where hexagons meet, courtyard side only (room interiors untouched):
@@ -59,7 +95,7 @@ export function buildTags(scene, { CATALOG, LOW, MEDIUM }) {
           if (clear(cx, cz, D / 2)) plinth.push({ x: cx, z: cz, L: u1 - u0 + 0.004, ry: -Math.atan2(tz, tx) }); }
         const rm = W.rooms.find(r => r.id === w.room); for (const [vx, vz] of [[w.x0, w.z0], [w.x1, w.z1]]) { const k = vx.toFixed(2) + ',' + vz.toFixed(2); if (caps.has(k) || !rm) continue;
           const ox = vx - rm.center[0], oz = vz - rm.center[1], oL = Math.hypot(ox, oz), px = vx + ox / oL * 0.17, pz = vz + oz / oL * 0.17; // sits fully OUTSIDE the room (interiors untouched)
-          if (oL > rm.radius * 0.97 && isCourt(px + ox / oL * 0.3, pz + oz / oL * 0.3) && clear(px, pz, 0.17)) caps.set(k, [px, pz]); } } }
+          if (oL > rm.radius * 0.995 /* #777: true hex corners only, never a full-width door edge */ && isCourt(px + ox / oL * 0.3, pz + oz / oL * 0.3) && clear(px, pz, 0.17)) caps.set(k, [px, pz]); } } }
     const geo = new THREE.BoxGeometry(1, 1, 1), im = new THREE.InstancedMesh(geo, trav, Math.max(1, plinth.length)), mtx = new THREE.Matrix4(), q = new THREE.Quaternion(), e = new THREE.Euler();
     plinth.forEach((p, i) => im.setMatrixAt(i, mtx.compose(new THREE.Vector3(p.x, H / 2, p.z), q.setFromEuler(e.set(0, p.ry, 0)), new THREE.Vector3(p.L, H, D)))); im.count = plinth.length; im.name = 'outerPlinth'; im.receiveShadow = true; root.add(im);
     const seg = tier === 'high' ? 32 : tier === 'medium' ? 16 : 10, cg = new THREE.CylinderGeometry(0.15, 0.17, WALL_H + 0.18, seg), ci = new THREE.InstancedMesh(cg, trav, Math.max(1, caps.size)); let i = 0;
@@ -67,28 +103,61 @@ export function buildTags(scene, { CATALOG, LOW, MEDIUM }) {
     window.__tagsOuterSmoothing = { plinthPieces: plinth.length, cornerCaps: caps.size }; }
   // #300 (TJ): wide round-arched doorways. Per door: straight travertine jambs up to the springing line, a semicircular travertine arch ring over the opening,
   // and a plaster tympanum (rectangle minus the arch) that closes the wall above it. Everything stays outside the opening (never narrows the walk-through).
-  const archShape = (w, sp, top, ro) => { const s = new THREE.Shape(); if (ro == null) { s.moveTo(-w / 2, sp); s.absarc(0, sp, w / 2, Math.PI, 0, true); s.lineTo(w / 2, top); s.lineTo(-w / 2, top); s.closePath(); }
-    else { s.moveTo(ro, sp); s.absarc(0, sp, ro, 0, Math.PI, false); s.lineTo(-w / 2, sp); s.absarc(0, sp, w / 2, Math.PI, 0, true); s.closePath(); } return s; };
-  const segN = tier === 'high' ? 40 : tier === 'medium' ? 28 : 18; const archCache = new Map();
-  for (const d of W.doors.filter(d => d.kind !== 'gate' && d.kind !== 'hub')) { const tx = -d.nz, tz = d.nx, ry = -Math.atan2(tz, tx), sp = d.spring ?? DOOR_SPRING, g = new THREE.Group(); g.position.set(d.x, 0, d.z); g.rotation.y = ry; g.name = 'doorArch'; root.add(g);
-    const k = d.width.toFixed(2); if (!archCache.has(k)) { const ex = (sh, depth) => { const e = new THREE.ExtrudeGeometry(sh, { depth, bevelEnabled: false, curveSegments: segN }); e.translate(0, 0, -depth / 2); return e; };
-      archCache.set(k, { tym: ex(archShape(d.width, sp, WALL_H), 0.05), ring: ex(archShape(d.width, sp, 0, d.width / 2 + 0.2), 0.14) }); }
+  const archShape = (w, sp, top, ro, rise) => { const s = new THREE.Shape(), ry = rise ?? w / 2, ary = (r) => rise == null ? r : ry + (r - w / 2); /* #777: elliptical (full-width) arch when rise is set */ if (ro == null) { s.moveTo(-w / 2, sp); s.absellipse(0, sp, w / 2, ry, Math.PI, 0, true); s.lineTo(w / 2, top); s.lineTo(-w / 2, top); s.closePath(); }
+    else { s.moveTo(ro, sp); s.absellipse(0, sp, ro, ary(ro), 0, Math.PI, false); s.lineTo(-w / 2, sp); s.absellipse(0, sp, w / 2, ry, Math.PI, 0, true); s.closePath(); } return s; };
+  const segN = tier === 'high' ? 40 : tier === 'medium' ? 28 : 18; const archCache = new Map(), jamb478 = [];
+  for (const d of W.doors.filter(d => d.kind !== 'gate' && d.kind !== 'hub' && !d.open801 /* #801 no arch before the Kinoteka plaza */)) { const tx = -d.nz, tz = d.nx, ry = -Math.atan2(tz, tx), sp = d.spring ?? DOOR_SPRING, g = new THREE.Group(); g.position.set(d.x, 0, d.z); g.rotation.y = ry; g.name = 'doorArch'; root.add(g);
+    const k = d.width.toFixed(2) + ':' + (d.rise ?? ''); if (!archCache.has(k)) { const ex = (sh, depth) => { const e = new THREE.ExtrudeGeometry(sh, { depth, bevelEnabled: false, curveSegments: segN }); e.translate(0, 0, -depth / 2); return e; };
+      archCache.set(k, { tym: ex(archShape(d.width, sp, WALL_H, null, d.rise), 0.05), ring: ex(archShape(d.width, sp, 0, d.width / 2 + 0.2, d.rise), 0.14) }); }
     const A = archCache.get(k), rm = T.rooms.find(q => q.id === d.room), tm = wallMats.get(NEUTRAL) || wallMats.values().next().value || trav;
-    const tym = new THREE.Mesh(A.tym, tm); tym.receiveShadow = true; tym.name = 'overdoor'; g.add(tym);
+    if (!d.open801) { const tym = new THREE.Mesh(A.tym, tm); tym.receiveShadow = true; tym.name = 'overdoor'; g.add(tym); } /* #801 no plaster over the Kinoteka arch */
     const ring = new THREE.Mesh(A.ring, trav); ring.receiveShadow = true; ring.name = 'lintel'; g.add(ring);
-    for (const sd of [-1, 1]) { const j = new THREE.Mesh(geoBox, trav); j.scale.set(0.2, sp, 0.14); j.position.set(sd * (d.width / 2 + 0.1), sp / 2, 0); j.name = 'jamb'; j.receiveShadow = true; g.add(j); } }
+    for (const sd of [-1, 1]) jamb478.push({ g, sd, w: d.width, sp }); }
+  { const S = window.__m478 = window.__m478 || {}, one = (g, sd, w, sp) => { const j = new THREE.Mesh(geoBox, trav); j.scale.set(0.2, sp, 0.14); j.position.set(sd * (w / 2 + 0.1), sp / 2, 0); j.name = 'jamb'; j.receiveShadow = true; g.add(j); return j; };
+    // #478: every jamb is the same travertine box in its door group -> bake group*local to world and merge into ONE mesh 'jamb' under tagsArchitecture (arch rule still covers it). Openings untouched (same boxes). Fail soft: per-door jambs.
+    try { const M = new THREE.Matrix4(), L = new THREE.Matrix4(), geos = jamb478.map(({ g, sd, w, sp }) => { g.updateMatrix(); return geoBox.clone().applyMatrix4(M.copy(g.matrix).multiply(L.compose(new THREE.Vector3(sd * (w / 2 + 0.1), sp / 2, 0), new THREE.Quaternion(), new THREE.Vector3(0.2, sp, 0.14)))); });
+      const mg = geos.length && mergeGeometries(geos); geos.forEach(g => g.dispose()); if (!mg) throw new Error('merge returned null'); mg.computeBoundingSphere(); const m = new THREE.Mesh(mg, trav); m.name = 'jamb'; m.receiveShadow = true; root.add(m); S.jamb = { draws: 1, pieces: jamb478.length }; }
+    catch (err) { console.warn('[478 jamb merge]', err); S.jambErr = String(err); for (const a of jamb478) one(a.g, a.sd, a.w, a.sp); } }
   // ---- #288: inviting entrances: splayed travertine returns outside each room door, a warm glow over and in front of it,
   // and simple stone walkways from the checkout platform to every courtyard door (data-driven rays; #295 will restyle them)
   { const glow = (() => { const c = document.createElement('canvas'); c.width = c.height = 128; const g = c.getContext('2d'), rg = g.createRadialGradient(64, 64, 0, 64, 64, 64); rg.addColorStop(0, 'rgba(255,190,110,1)'); rg.addColorStop(0.5, 'rgba(255,150,70,0.45)'); rg.addColorStop(1, 'rgba(255,120,40,0)'); g.fillStyle = rg; g.fillRect(0, 0, 128, 128); const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t; })(), addM = { transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, toneMapped: false, fog: false };
     for (const f of W.flares) { const L = Math.hypot(f.x1 - f.x0, f.z1 - f.z0), m = mk(geoBox, trav, (f.x0 + f.x1) / 2, DOOR_H / 2 + 0.06, (f.z0 + f.z1) / 2, 0.14, DOOR_H + 0.12, L, Math.atan2(f.x1 - f.x0, f.z1 - f.z0)); m.name = 'doorFlare'; }
     for (const d of W.doors.filter(d => d.kind === 'inner' || d.kind === 'outer')) { const r = T.rooms.find(q => q.id === d.room); let ox = d.x - r.center[0], oz = d.z - r.center[1]; const q = Math.hypot(ox, oz) || 1; ox /= q; oz /= q;
       const pool = new THREE.Mesh(new THREE.CircleGeometry(1.9, 32), new THREE.MeshBasicMaterial({ map: glow, color: 0xffffff, opacity: 0.55, ...addM })); pool.rotation.x = -Math.PI / 2; pool.position.set(d.x + ox * 1.0, 0.02, d.z + oz * 1.0); pool.name = 'doorGlow'; root.add(pool);
-      const sp = d.spring ?? DOOR_SPRING, strip = new THREE.Mesh(new THREE.TorusGeometry(d.width / 2 - 0.04, 0.022, 6, segN, Math.PI), new THREE.MeshBasicMaterial({ color: new THREE.Color(2.2, 1.8, 1.2), toneMapped: false })); strip.position.set(d.x + ox * 0.09, sp, d.z + oz * 0.09); strip.rotation.y = Math.atan2(ox, oz); root.add(strip); strip.name = 'doorLight'; }
+      const sp = d.spring ?? DOOR_SPRING, strip = new THREE.Mesh(new THREE.TorusGeometry(d.width / 2 - 0.04, 0.022, 6, segN, Math.PI), new THREE.MeshBasicMaterial({ color: new THREE.Color(2.2, 1.8, 1.2), toneMapped: false })); strip.position.set(d.x + ox * 0.09, sp, d.z + oz * 0.09); strip.rotation.y = Math.atan2(ox, oz); if (d.rise) strip.scale.y = d.rise / (d.width / 2); /* #782 */ root.add(strip); strip.name = 'doorLight'; }
     const pc = document.createElement('canvas'); pc.width = 64; pc.height = 256; const px = pc.getContext('2d'); for (let i = 0; i < 1400; i++) { const v = 150 + Math.random() * 70 | 0; px.fillStyle = `rgb(${v},${v - 8},${v - 22})`; px.fillRect(Math.random() * 64, Math.random() * 256, 2, 2); }
     const ag = px.createLinearGradient(0, 0, 64, 0); ag.addColorStop(0, 'rgba(0,0,0,1)'); ag.addColorStop(0.18, 'rgba(0,0,0,0)'); ag.addColorStop(0.82, 'rgba(0,0,0,0)'); ag.addColorStop(1, 'rgba(0,0,0,1)'); px.globalCompositeOperation = 'destination-out'; px.fillStyle = ag; px.fillRect(0, 0, 64, 256);
     const pt = new THREE.CanvasTexture(pc); pt.colorSpace = THREE.SRGBColorSpace; pt.wrapT = THREE.RepeatWrapping; const base = new THREE.MeshStandardMaterial({ color: 0xd9ccb4, roughness: 0.95, transparent: true, depthWrite: false });
     for (const r of W.rays) { const dx = r.x1 - r.x0, dz = r.z1 - r.z0, L = Math.hypot(dx, dz), s0 = 2.4, Lw = L - s0; if (Lw <= 0.2) continue; const t = pt.clone(); t.needsUpdate = true; t.repeat.set(1, Lw / 2);
       const m = new THREE.Mesh(new THREE.PlaneGeometry(r.width, Lw), base.clone()); m.material.map = t; m.rotation.x = -Math.PI / 2; m.rotation.z = Math.atan2(dx, dz) + Math.PI; m.position.set(r.x0 + dx / L * (s0 + Lw / 2), 0.012, r.z0 + dz / L * (s0 + Lw / 2)); m.name = 'walkRay'; m.receiveShadow = true; root.add(m); } }
+  // #481 (Mon Oct 26 2026 ~9:10 PM PT): static door-arch tympana ('overdoor'), arch rings ('lintel') and splayed returns ('doorFlare') share one material per name
+  // -> world-bake + merge per (name, material) under tagsArchitecture. Overlays303 shades world-space, so pixel-identical. Fail soft: originals stay.
+  { const S = window.__m481 = {}; root.updateMatrixWorld(true);
+    for (const nm of ['overdoor', 'lintel', 'doorFlare']) { try { const by = new Map(); root.traverse(o => { if (o.isMesh && !o.isInstancedMesh && o.name === nm && !Array.isArray(o.material)) { if (!by.has(o.material)) by.set(o.material, []); by.get(o.material).push(o); } });
+        let pieces = 0, draws = 0; for (const [mat, list] of by) { if (list.length < 3) continue; const inv = new THREE.Matrix4().copy(root.matrixWorld).invert(), geos = list.map(o => { const g = o.geometry.index ? o.geometry.toNonIndexed() : o.geometry.clone(); for (const k of Object.keys(g.attributes)) if (!['position', 'normal', 'uv'].includes(k)) g.deleteAttribute(k); return g.applyMatrix4(new THREE.Matrix4().multiplyMatrices(inv, o.matrixWorld)); });
+          const mg = mergeGeometries(geos); geos.forEach(g => g.dispose()); if (!mg) throw new Error('merge returned null'); mg.computeBoundingSphere(); const m = new THREE.Mesh(mg, mat); m.name = nm; m.receiveShadow = true; m.castShadow = list[0].castShadow; root.add(m);
+          for (const o of list) o.parent.remove(o); pieces += list.length; draws++; }
+        S[nm] = { pieces, draws }; } catch (err) { console.warn('[481 merge ' + nm + ']', err); S[nm + 'Err'] = String(err); } } }
+  // #482 (Mon Oct 26 2026 ~9:15 PM PT): 13 'roomFloor' ShapeGeometry slabs share floorMat -> world-bake + merge to one draw. Name kept (no lookups by name); colliders come from W. Fail soft.
+  { const S = window.__m482 = {}; try { root.updateMatrixWorld(true); const list = []; root.traverse(o => { if (o.isMesh && o.name === 'roomFloor' && o.material === floorMat) list.push(o); });
+      if (list.length >= 2) { const inv = new THREE.Matrix4().copy(root.matrixWorld).invert(), geos = list.map(o => { const g = o.geometry.index ? o.geometry.toNonIndexed() : o.geometry.clone(); for (const k of Object.keys(g.attributes)) if (!['position', 'normal', 'uv'].includes(k)) g.deleteAttribute(k); return g.applyMatrix4(new THREE.Matrix4().multiplyMatrices(inv, o.matrixWorld)); });
+        const mg = mergeGeometries(geos); geos.forEach(g => g.dispose()); if (!mg) throw new Error('merge returned null'); mg.computeBoundingSphere(); const m = new THREE.Mesh(mg, floorMat); m.name = 'roomFloor'; m.userData.merge482 = true; m.receiveShadow = list[0].receiveShadow; m.castShadow = list[0].castShadow; root.add(m);
+        for (const o of list) { o.parent.remove(o); o.geometry.dispose(); } }
+      Object.assign(S, { pieces: list.length, draws: list.length >= 2 ? 1 : list.length, done: true }); } catch (err) { console.warn('[482 merge]', err); S.err = String(err); } }
+  // #483 (Mon Oct 26 2026 ~9:13 PM PT): doorGlow pools / doorLight strips / walkRay paths have identical per-mesh materials (no per-door values, nothing mutates them per mesh)
+  // -> one shared material each + world-bake merge to 1 draw per group. walkRay: per-mesh texture repeat (1, Lw/2) baked into UV.y. rayGlow untouched (per-ray uniforms + visibility toggles). Fail soft: originals stay.
+  { const S = window.__m483 = {}; root.updateMatrixWorld(true); const inv = new THREE.Matrix4().copy(root.matrixWorld).invert();
+    for (const nm of ['doorGlow', 'doorLight', 'walkRay']) { try { const list = []; root.traverse(o => { if (o.isMesh && !o.isInstancedMesh && o.name === nm && !Array.isArray(o.material)) list.push(o); }); if (list.length < 2) { S[nm] = { pieces: list.length, draws: list.length }; continue; }
+        const m0 = list[0].material, key = m => [m.type, m.color.getHexString(), m.opacity, m.transparent, m.depthWrite, m.blending, m.toneMapped, m.side, m.fog, m.roughness, m.map ? m.map.source.uuid : 0].join('|');
+        if (list.some(o => key(o.material) !== key(m0))) throw new Error('materials differ');
+        const geos = list.map(o => { const g = o.geometry.index ? o.geometry.toNonIndexed() : o.geometry.clone(); for (const k of Object.keys(g.attributes)) if (!['position', 'normal', 'uv'].includes(k)) g.deleteAttribute(k);
+          if (nm === 'walkRay') { const t = o.material.map, uv = g.attributes.uv; for (let i = 0; i < uv.count; i++) uv.setXY(i, uv.getX(i) * t.repeat.x + t.offset.x, uv.getY(i) * t.repeat.y + t.offset.y); }
+          return g.applyMatrix4(new THREE.Matrix4().multiplyMatrices(inv, o.matrixWorld)); });
+        const mg = mergeGeometries(geos); geos.forEach(g => g.dispose()); if (!mg) throw new Error('merge returned null'); mg.computeBoundingSphere();
+        let mat = m0; if (nm === 'walkRay') { mat = m0.clone(); mat.map = m0.map.clone(); mat.map.repeat.set(1, 1); mat.map.offset.set(0, 0); mat.map.needsUpdate = true; }
+        const m = new THREE.Mesh(mg, mat); m.name = nm; m.renderOrder = list[0].renderOrder; m.receiveShadow = list[0].receiveShadow; m.castShadow = list[0].castShadow; m.userData.merge483 = true; root.add(m);
+        for (const o of list) { o.parent.remove(o); o.geometry.dispose(); if (o.material !== mat) { if (nm === 'walkRay' && o.material.map) o.material.map.dispose(); o.material.dispose(); } }
+        S[nm] = { pieces: list.length, draws: 1 }; } catch (err) { console.warn('[483 merge ' + nm + ']', err); S[nm + 'Err'] = String(err); } } S.done = true; }
   // ---- pavilion core: round travertine wall with the gates and checkout on its inner face
   const coreMat = std(PAL.travertine, { roughness: 0.65 });
   for (const a of W.arcs) { const n = Math.max(2, Math.ceil((a.a1 - a.a0) * a.r / 0.6)); for (let i = 0; i < n; i++) { const t0 = a.a0 + (a.a1 - a.a0) * i / n, t1 = a.a0 + (a.a1 - a.a0) * (i + 1) / n, tm = (t0 + t1) / 2, ch = 2 * a.r * Math.sin((t1 - t0) / 2) + 0.03;
@@ -117,21 +186,54 @@ export function buildTags(scene, { CATALOG, LOW, MEDIUM }) {
       const j = mk(new THREE.ConeGeometry(0.06, 0.6, 8, 1, true), new THREE.MeshBasicMaterial({ color: 0xdff3f6, transparent: true, opacity: 0.55 }), c.x, 1.65, c.z, 1, 1, 1, 0, stub); j.name = 'jet'; jets.push(j); }
     if (c.kind === 'bed') mk(new THREE.CylinderGeometry(c.r, c.r, 0.5, 14), boxw, c.x, 0.25, c.z, 1, 1, 1, 0, stub); }
   // ---- outer courts: murals at full size on their freestanding courtyard walls, brass plates at 1.45 m, the Neural Dance wall
+  try { installGroupLabels354({ root, CATALOG, W, low: LOW }); } catch (e) { console.warn('[354l]', e); window.__g354 = Object.assign(window.__g354 || {}, { err: '354l: ' + String(e) }); } // #354 group wall labels
+  window.__story335 = { err: 'soft-hold', placed: null }; // #829 TJ: all brass plaques down (soft-hold); restore: re-enable installStoryPlaques335
+  try { installWallTitles354({ root, CATALOG, W, low: LOW }); } catch (e) { console.warn('[354t]', e); window.__g354 = Object.assign(window.__g354 || {}, { err: '354t: ' + String(e) }); } // #354 wall title plates
+  window.__eaglebrass354 = { err: 'removed', placed: null }; // #829 eagle brass #354 removed
+  try { window.__hangIndex773 = installHangIndex(THREE, root, W); } catch (e) { console.warn('[773]', e); } // #773/#856: ?key= wall names + locks, ?hangIndex=1 + slots, ?hangIndex=0 off
+  try { window.__container780 = installContainer780(root, W, T); } catch (e) { console.warn('[780]', e); } // #780 FC shipping container + pines
+  try { window.__roadster785 = installRoadster785(root, T); } catch (e) { console.warn('[785]', e); } // #785 roadster beyond the START fence
+  try { window.__west786 = installWest786(root, W, T, LOW); } catch (e) { console.warn('[786]', e); } // #786 Garden Patio + Fountain Courtyard
+  try { window.__cafe808 = installCafe808(root, T, LOW); } catch (e) { console.warn('[808]', e); }
+  try { window.__ist811 = installFountainIstanbul811(root, W, T, LOW, CATALOG); } catch (e) { console.warn('[811]', e); window.__ist811 = { err: String(e) }; } // #811
+  if ((T.openCourts || []).some(o => (o.booths798 || []).length)) try { window.__market798 = installMarket798(root, T, LOW); } catch (e) { console.warn('[798]', e); } // #798 Paul Murphy festival booths + wire racks
+  try { window.__signs818 = installSigns818(root, W, T); window.__starship818 = installStarship818(root, T, LOW); } catch (e) { console.warn('[818]', e); window.__signs818 = { err: String(e) }; } // #818
+  try { window.__kino800 = installKino800(root, T, LOW); } catch (e) { console.warn('[800]', e); window.__kino800 = { err: String(e) }; } // #800 Kinoteka + PKiN + film
+  if (new URLSearchParams(location.search).get('holos') !== '1') window.__guitar764 = { off814: true }; else /* #814 (TJ): guitar holograms parked OFF; ?holos=1 re-enables */
+  try { window.__guitar764 = installGuitar764(root, T, LOW, W); } catch (e) { console.warn('[764]', e); window.__guitar764 = { err: String(e) }; } // #764 four guitar holograms on floor plinths
+  try { window.__steeples784 = installSteeples784(root, W, T); } catch (e) { console.warn('[784]', e); } // #784 church steeples over the Berlin wall
+  try { window.__berlin790 = installBerlinWall790(root, W, T); } catch (e) { console.warn('[790]', e); } // #790 Berlin mural: no frame, wall painted from its edges
+  try { window.__court810 = installBerlinCourt810(root, W, T, LOW); } catch (e) { console.warn('[810]', e); window.__court810 = { err: String(e) }; } // #810 Bitcoin Courtyard after the real Berlin court
+  try { window.__title769 = installRoomTitle769(W); } catch (e) { console.warn('[769]', e); } // #769
   const loader = new THREE.TextureLoader(); loader.setCrossOrigin('anonymous');
   const proxied = u => u.replace('https://img.tjm.art/', import.meta.env.BASE_URL + 'img/').replace('https://tjm.art/', import.meta.env.BASE_URL + 'tjm/');
   // #272: on the low tier the big mural textures wait until the first playable frame (plaques still load at once)
   const afterPlayable = f => { if (!LOW) return f(); const t0 = performance.now(); (function w() { const g = window.game; if (g && (g.fps > 0 || window.__auditNoRender || performance.now() - t0 > 8000)) setTimeout(f, 300); else setTimeout(w, 100); })(); };
+  const SCAN_MURALS = ['cormorant-presiding-over-sunset-on-puget-sound'], scanMurals = []; // #765
   const murals = [], report = { murals: [] }; let dance = null;
   for (const a of W.art.filter(a => a.src && a.kind !== 'painting' && a.kind !== 'plaque')) {
     const s = a.src, g = new THREE.Group(); g.position.set(a.x, a.y, a.z); g.rotation.y = Math.atan2(a.ix, a.iz); root.add(g); g.name = s.id;
     if (s.kind === 'mural') { const fr = mk(geoBox, std(0x3b2a1c), 0, 0, -0.01, a.w + 0.08, a.h + 0.08, 0.03, 0, g); fr.name = 'muralFrame';
       const m = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ color: 0x6a5a48 })); m.scale.set(a.w, a.h, 1); m.position.z = 0.01; g.add(m); m.name = 'mural';
       const rec = { id: s.id, listed: [a.w, a.h] }; report.murals.push(rec); murals.push({ g, m, a });
-      afterPlayable(() => loader.load(proxied(s.tex), t => { t.colorSpace = THREE.SRGBColorSpace; const ia = t.image.width / t.image.height, la = a.w / a.h; rec.image = [t.image.width, t.image.height];
-        if (Math.abs(ia / la - 1) > 0.03) { rec.mismatch = true; if (ia > la) m.scale.set(a.w, a.w / ia, 1); else m.scale.set(a.h * ia, a.h, 1); } // fit, never stretch
-        m.material.map = t; m.material.color.set(0xffffff); m.material.needsUpdate = true; })); }
-    else if (s.kind === 'brass-plaque') { const m = new THREE.Mesh(new THREE.PlaneGeometry(a.w, a.h), new THREE.MeshBasicMaterial({ transparent: true, alphaTest: 0.05 })); m.position.z = 0.012; g.add(m); m.name = 'brassPlaque';
-      loader.load(import.meta.env.BASE_URL + 'plaques/' + s.img.split('/').pop(), t => { t.colorSpace = THREE.SRGBColorSpace; m.material.map = t; m.material.needsUpdate = true; }); }
+      if (SCAN_MURALS.includes(s.id)) { /* #765: the Buy Scanner sees this mural (print preview + print to cart); the original stays not for sale, never grabbed */
+        const n = Math.hypot(a.ix, a.iz) || 1, d = { id: s.id, slug: s.id, title: s.title, url: s.url, status: 'nfs', kind: 'mural', x: a.x, y: a.y, z: a.z, ix: a.ix / n, iz: a.iz / n, w: a.w, h: a.h, iw: a.w, ih: a.h, fw: a.w + 0.08, fh: a.h + 0.08, trueW: s.trueW, trueH: s.trueH, artScale: s.artScale };
+        const p = { data: d, group: g, mesh: m, frame: fr, state: 'wall', w: a.w, h: a.h, noGrab: true, freestanding: true }; m.userData.p = p; fr.userData.p = p; scanMurals.push(p); }
+      afterPlayable(() => {
+        if (/friends-club-mural-upscaled-3528/.test(s.tex) && window.__mural876 && window.__mural876(s, m, a, murals, rec)) return;
+        const u = proxied(s.tex).replace(/^art\//, "/play/art/");
+        const loadMural = n => loader.load(u, t => { t.colorSpace = THREE.SRGBColorSpace; const ia = t.image.width / t.image.height, la = a.w / a.h; rec.image = [t.image.width, t.image.height];
+          if (Math.abs(ia / la - 1) > 0.03) { rec.mismatch = true; if (ia > la) m.scale.set(a.w, a.w / ia, 1); else m.scale.set(a.h * ia, a.h, 1); } // fit, never stretch
+          const mr = murals.find(q => q.m === m); const lod = makeMuralLod(THREE, t, LOW); if (mr) { mr.lod = lod; mr.rec = rec; } rec.lod = 'far'; // #402
+          m.material.map = lod.far; m.material.color.set(0xffffff); m.material.needsUpdate = true; }, undefined, () => {
+          if (n < 5) setTimeout(() => loadMural(n + 1), 500 * (1 << n));
+        });
+        loadMural(0);
+      }); }
+    else if (s.kind === 'brass-plaque' && BRASS_HOLD_829) { g.visible = false; window.__brassHold829 = (window.__brassHold829 || 0) + 1; } // #829 soft-hold: courtyard/mural brass not rendered
+    else if (s.kind === 'brass-plaque') { const m = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ transparent: true, alphaTest: 0.05 })); m.scale.set(a.w, a.h, 1); /* #765: unit plane, scaled (same look) so the scanner counts its true size */ m.position.z = 0.012; g.add(m); m.name = 'brassPlaque';
+      { const sm = scanMurals.find(q => q.data.id === s.onWallOf); if (sm) sm.plaque = m; }
+      loader.load(import.meta.env.BASE_URL + 'plaques/' + s.img.split('/').pop(), t => { m.material.map = tierPlaqueTex(THREE, t, LOW); m.material.needsUpdate = true; }); }
     else if (s.kind === 'projection') { // #269 (TJ): the REAL Neural Dance simulation from tjm.art/neural-dance/, run live in a
       // hidden same-origin iframe (page fetched through the /tjm/ proxy, header/cart scripts stripped, fullscreen layout) and
       // copied onto this wall each frame. Loaded only when near, torn down when away; its audio is never started (silent);
@@ -140,23 +242,46 @@ export function buildTags(scene, { CATALOG, LOW, MEDIUM }) {
       const x = c.getContext('2d'); x.fillStyle = '#05060a'; x.fillRect(0, 0, c.width, c.height);
       const m = new THREE.Mesh(new THREE.PlaneGeometry(a.w, a.h), new THREE.MeshBasicMaterial({ map: tex, toneMapped: false })); m.position.z = 0.015; g.add(m); m.name = 'neuralDance';
       mk(geoBox, std(0x1d1814), 0, 0, -0.005, a.w + 0.16, a.h + 0.16, 0.02, 0, g);
-      dance = { c, x, tex, acc: 0, pos: new THREE.Vector3(a.x, 1.6, a.z), frame: null, loading: false, live: false }; } }
-  const ND_URL = 'tjm/neural-dance/', ND_NEAR = 22, ND_FAR = 30;
+      dance = { m, c, x, tex, acc: 0, pos: new THREE.Vector3(a.x, 1.6, a.z), frame: null, loading: false, live: false }; } }
+  const ND_URL = 'tjm/neural-dance/', ND_NEAR = 14, ND_FAR = 18;
   async function danceOn() { if (dance.frame || dance.loading) return; dance.loading = true;
     try { let html = await (await fetch(ND_URL)).text();
-      html = html.replace(/<script[^>]*src="\/(payments|site-header)[^"]*"[^>]*><\/script>/g, '').replace(/<body([^>]*)>/, '<body$1 class="full">');
+      html = html.replace(/<script[^>]*src="\/(payments|site-header)[^"]*"[^>]*><\/script>/g, '').replace(/<body([^>]*)>/, '<body$1 class="full">')
+        // #288c: the original #canvas sim starts paused and body.full hides its Start button; it also self-pauses when
+        // "out of view" (the iframe is opacity:0) and after 5 min. Bypass those for the gallery embed; audio stays off.
+        .replace(/function onScreen\(\)\{/, 'function onScreen(){return true;').replace(/function onscreen\(\)\{/, 'function onscreen(){return true;')
+        .replace(/now-sessionStart>300000/g, 'false').replace(/now-started>300000/g, 'false')
+        .replace(/<head([^>]*)>/, '<head$1><base href="' + new URL(ND_URL, location.href).href + '"><script>window.AudioContext=window.webkitAudioContext=undefined;</script>');
       const f = document.createElement('iframe'); f.setAttribute('aria-hidden', 'true'); f.tabIndex = -1; f.inert = true; f.title = 'Neural Dance';
       f.style.cssText = 'position:fixed;left:0;top:0;width:' + (LOW ? 640 : 1100) + 'px;height:' + (LOW ? 360 : 620) + 'px;opacity:0;pointer-events:none;z-index:-1;border:0';
-      f.srcdoc = html; document.body.appendChild(f); dance.frame = f; f.addEventListener('load', () => { dance.live = true; });
+      f.srcdoc = html; document.body.appendChild(f); dance.frame = f; f.addEventListener('load', () => { dance.live = true; danceKick(); });
       window.__neuralDance = { state: 'live', src: '/neural-dance/' }; } catch (e) { window.__neuralDance = { state: 'error', err: String(e) }; console.warn('[neural-dance] load failed', e); }
     dance.loading = false; }
+  function danceKick() { try { const d = dance.frame && dance.frame.contentDocument, b = d && d.getElementById('pause'); // start / re-start the sim if it paused
+      if (b && !/^Pause/.test(b.textContent.trim())) { b.click(); window.__neuralDance.kicks = (window.__neuralDance.kicks || 0) + 1; }
+      if (b) window.__neuralDance.running = /^Pause/.test(b.textContent.trim()); } catch (e) { if (!danceKick.w) { danceKick.w = 1; console.warn('[neuralDance] kick/running probe failed', e && e.message || e); } } }
   function danceOff() { if (!dance.frame) return; dance.frame.remove(); dance.frame = null; dance.live = false; window.__neuralDance = { state: 'paused (away)' }; }
+  const _v868a = new THREE.Vector3(), _v868b = new THREE.Vector3();
+  function V868(cam) {
+    if (!dance || !dance.m || (window.__museumPause && window.__museumPause.open)) return false;
+    dance.m.getWorldPosition(_v868a);
+    _v868b.set(0, 0, 1).transformDirection(dance.m.matrixWorld);
+    const dx = cam.position.x - _v868a.x, dy = cam.position.y - _v868a.y, dz = cam.position.z - _v868a.z;
+    if (dx * _v868b.x + dy * _v868b.y + dz * _v868b.z <= 0) return false;
+    cam.getWorldDirection(_v868b);
+    const L = Math.hypot(dx, dy, dz) || 1;
+    return -(dx * _v868b.x + dy * _v868b.y + dz * _v868b.z) / L > 0.15;
+  }
+  function P868() { try { const d = dance.frame.contentDocument, b = d && d.getElementById('pause'); if (b && /^Pause/.test(b.textContent.trim())) b.click(); } catch {} }
   function drawDance(dt, cam) { if (!dance || !cam) return; const d = cam.position.distanceTo(dance.pos);
+    const vis = dance.live && !document.hidden && V868(cam);
     if (d < ND_NEAR) danceOn(); else if (d > ND_FAR) danceOff();
-    if (!dance.live || document.hidden) return; dance.acc += dt; if (dance.acc < (LOW ? 1 / 15 : 1 / 30)) return; dance.acc = 0;
+    if (dance.live && !vis) { dance.kt = 0; P868(); }
+    if (!vis) return;
+    if ((dance.kt = (dance.kt || 0) + dt) > 1) { dance.kt = 0; danceKick(); } dance.acc += dt; if (dance.acc < 1 / 15) return; dance.acc = 0;
     try { const src = dance.frame.contentDocument && dance.frame.contentDocument.getElementById('canvas'); if (!src || !src.width) return;
       const { c, x } = dance, k = Math.min(c.width / src.width, c.height / src.height), w = src.width * k, h = src.height * k; // fitted, never stretched
-      x.fillStyle = '#05060a'; x.fillRect(0, 0, c.width, c.height); x.drawImage(src, (c.width - w) / 2, (c.height - h) / 2, w, h); dance.tex.needsUpdate = true; } catch (e) {} }
+      x.fillStyle = '#05060a'; x.fillRect(0, 0, c.width, c.height); x.drawImage(src, (c.width - w) / 2, (c.height - h) / 2, w, h); dance.tex.needsUpdate = true; } catch (e) { if (!drawDance.w) { drawDance.w = 1; console.warn('[neuralDance] frame copy failed, keeping last frame', e && e.message); } } }
   // ---- #269 (TJ): no museum gates in the pavilion. Each former gate spot is a statue niche (arched travertine surround,
   // dark recess, plinth and an original abstract marble figure) so the core wall is never blank. Only the checkout gate leads out.
   function buildGates() { const out = [], recess = std(0x3a2f27, { roughness: 0.95 }), marble = std(0xeee6d8, { roughness: 0.35 });
@@ -172,8 +297,8 @@ export function buildTags(scene, { CATALOG, LOW, MEDIUM }) {
   function checkGates() {} // #269: no museum gates here; the core's checkout gate (CHK) is the only way out
   // ---- core contract: PIT (slipgate drop zone), NAVE (apex, lifts, clock), signs over doors
   const PIT = { minX: -3, maxX: 3, minZ: -3, maxZ: 3 }, NAVE = { apex: 12, lifts: [], clock: null };
-  const NAVE_SIGNS = W.doors.filter(d => d.kind === 'inner').map(d => { const r = T.rooms.find(q => q.id === d.room); return { title: r.label.split(' · ').slice(0, 2).join(' · '), x: d.x + d.nx * (WT + 0.03), z: d.z + d.nz * (WT + 0.03), yaw: Math.atan2(d.nx, d.nz) }; });
-  for (const d of W.doors.filter(d => d.kind === 'inner')) { const r = T.rooms.find(q => q.id === d.room); NAVE_SIGNS.push({ title: r.label.split(' · ').slice(0, 2).join(' · '), x: d.x - d.nx * 0.03, z: d.z - d.nz * 0.03, yaw: Math.atan2(-d.nx, -d.nz) }); }
+  const NAVE_SIGNS = W.doors.filter(d => d.kind === 'inner').map(d => { const r = T.rooms.find(q => q.id === d.room); return { title: r.label.split(' · ').filter(x => !/\$\s*\d/.test(x)).slice(0, 1).join(' · ') /* #763 gallery name only, no prices */, x: d.x + d.nx * (WT + 0.03), z: d.z + d.nz * (WT + 0.03), yaw: Math.atan2(d.nx, d.nz) }; });
+  for (const d of W.doors.filter(d => d.kind === 'inner')) { const r = T.rooms.find(q => q.id === d.room); NAVE_SIGNS.push({ title: r.label.split(' · ').filter(x => !/\$\s*\d/.test(x)).slice(0, 1).join(' · ') /* #763 gallery name only, no prices */, x: d.x - d.nx * 0.03, z: d.z - d.nz * 0.03, yaw: Math.atan2(-d.nx, -d.nz) }); }
   const CHKG = W.gates.find(g => g.id === 'checkout');
   void CHKG; const CHK = { pos: new THREE.Vector3(0, 0, 0), n: new THREE.Vector3(1, 0, 0), w: 1.5, h: 2.6, bubble: BUBBLE, light: { intensity: 0 } }; // #290: the bubble at the centre
   const GATE = { pos: new THREE.Vector3(0, -400, 400), n: new THREE.Vector3(0, 0, -1), w: 1.5, h: 2.6 }; // hyperspace realm slipgate: parked out of reach (the museum gates are on the core wall)
@@ -194,15 +319,66 @@ export function buildTags(scene, { CATALOG, LOW, MEDIUM }) {
   const colliders = []; const hooks = { ready: false, rooms: W.rooms, doors: W.doors.map(d => d.kind === 'gate' && d.to === 'checkout' ? { ...d, kind: 'checkout', id: 'checkout', width: 1.5 /* the core checkout arch */ } : { ...d, id: d.to }), paths: [...W.paths, ...W.rings], art: W.art,
     keepClear: W.keepClear, blocksSight, addCollider: c => { colliders.push(c); W.colliders.push(c); }, tier, detail: tier, scene, THREE, world: W, report };
   window.__tagsTris = () => { let n = 0; scene.traverse(o => { if (!o.isMesh || !o.visible) return; const g = o.geometry, c = g.index ? g.index.count / 3 : g.attributes.position.count / 3; n += c * (o.isInstancedMesh ? o.count : 1); }); return Math.round(n); };
-  let c296 = null, mm = null, garden = null, wallMap = null, testiMap = null, frames = null;
+  let i479 = null, i48x = null; let c296 = null, mm = null, garden = null, wallMap = null, testiMap = null, frames = null;
   async function finish(game) { hooks.ready = true; game.tags = hooks;
+    // #478: name the unnamed meshes so draw calls can be attributed (naming only: no geometry, material or order change). Painting groups -> 'hang478', their art/frame/rest -> hang478Art/Rim/Part;
+    // anything else nameless with no named ancestor -> 'anon478' + geometry type. Names avoid every name rule in use (/Frame$/, ^egg-, ^skin-, roomWall, doorTrim, overlays PICK).
+    const name478 = () => { try { let n = 0; for (const p of game.paintings || []) { const g = p.group; if (!g) continue; if (!g.name) g.name = 'hang478'; g.traverse(o => { if (!o.isMesh || o.name) return; o.name = o === p.mesh ? 'hang478Art' : o === p.frame ? 'hang478Rim' : 'hang478Part'; n++; }); }
+        scene.traverse(o => { if (!o.isMesh || o.name) return; for (let a = o.parent; a; a = a.parent) if (a.name) return; o.name = 'anon478' + String(o.geometry && o.geometry.type || 'Geo').replace(/Geometry$/, ''); n++; });
+        const S = window.__m478 = window.__m478 || {}; S.named = (S.named || 0) + n; } catch (e) { console.warn('[478 name]', e); (window.__m478 = window.__m478 || {}).nameErr = String(e); } };
+    // #480 (Mon Oct 26 2026 ~8:55 PM PT): anon478Box static sets that share one material (book lecterns: col/foot/slab on core 'stone' x12; arch posts+lintel x3)
+    // -> baked to world space and merged per material, 1 draw each. Originals hidden only (Mesh.raycast ignores .visible, so books.js click hits on col/slab still work).
+    // Only sets of >=3 whose ancestors are all visible and on the scene. Fail soft: originals back on, window.__m480.err.
+    const merge480 = () => { const S = window.__m480 = window.__m480 || { draws: 0, pieces: 0 }; if (S.done) return; const hid = [];
+      try { const by = new Map(); scene.updateMatrixWorld();
+        scene.traverse(o => { if (!o.isMesh || o.isInstancedMesh || o.name !== 'anon478Box' || Array.isArray(o.material) || !o.visible) return; for (let a = o.parent; a; a = a.parent) { if (!a.visible) return; if (a === scene) break; if (!a.parent) return; } const k = o.material.uuid; if (!by.has(k)) by.set(k, []); by.get(k).push(o); });
+        const out = [];
+        for (const list of by.values()) { if (list.length < 3) continue; const geos = list.map(o => { const g = o.geometry.index ? o.geometry.toNonIndexed() : o.geometry.clone(); for (const n of Object.keys(g.attributes)) if (!['position', 'normal', 'uv'].includes(n)) g.deleteAttribute(n); g.applyMatrix4(o.matrixWorld); return g; });
+          const mg = mergeGeometries(geos); geos.forEach(g => g.dispose()); if (!mg) throw new Error('merge returned null'); mg.computeBoundingSphere(); out.push([mg, list]); }
+        for (const [mg, list] of out) { const m = new THREE.Mesh(mg, list[0].material); m.name = 'anon480Merge'; m.castShadow = list.some(o => o.castShadow); m.receiveShadow = list.some(o => o.receiveShadow); m.raycast = () => {}; m.matrixAutoUpdate = false;
+          list.forEach(o => { o.visible = false; hid.push(o); }); scene.add(m); S.draws++; S.pieces += list.length; }
+        if (out.length) S.done = true;
+      } catch (e) { console.warn('[480 merge]', e); S.err = String(e); hid.forEach(o => { o.visible = true; }); scene.traverse(o => { if (o.name === 'anon480Merge') o.visible = false; }); } };
+    name478(); merge480(); afterPlayable(() => { name478(); merge480(); });
+    { const NL = new Set(T.noLamp788 || []); let n = 0; for (const p of game.paintings || []) if (p.group && p.data && NL.has(p.data.id)) for (const ch of p.group.children) if (ch.isMesh && ch.name === 'hang478Part' && ch !== p.plaque) { ch.visible = false; n++; } window.__noLamp788 = n; } // #788 (#740): Ridges wall: no light pools / lamp bars
+    // #479: hang478Part light pools + lamp bars (same unit geo + shared poolMat/lampMat, ~2 per painting) -> ONE InstancedMesh per geo+material.
+    // Originals stay in their painting groups but hidden (raycast, transforms, lifts untouched); each frame an instance copies its source's matrixWorld,
+    // or collapses to zero scale when the source (or an ancestor, e.g. the distance-culled group) is hidden. Instances do not raycast. Fail soft: originals back on.
+    try { const S = window.__m479 = { draws: 0, pieces: 0 }; const by = new Map();
+      for (const p of game.paintings || []) { const g = p.group; if (!g) continue; for (const c of g.children) if (c.isMesh && c.name === 'hang478Part' && !c.isInstancedMesh && !Array.isArray(c.material)) { const k = c.geometry.uuid + c.material.uuid; if (!by.has(k)) by.set(k, []); by.get(k).push(c); } }
+      const sets = []; const Z = new THREE.Matrix4().makeScale(0, 0, 0);
+      for (const list of by.values()) { if (list.length < 8) continue; const im = new THREE.InstancedMesh(list[0].geometry, list[0].material, list.length);
+        im.name = 'hang479' + (list[0].material.blending === THREE.AdditiveBlending ? 'Pool' : 'Bar'); im.frustumCulled = false; im.raycast = () => {}; im.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+        const want = list.map(c => c.visible); list.forEach(c => { c.visible = false; }); scene.add(im); sets.push({ im, list, want }); S.draws++; S.pieces += list.length; }
+      const live = (c, i, want) => { if (!want[i]) return false; for (let a = c.parent; a; a = a.parent) { if (!a.visible) return false; if (a === scene) return true; } return false; };
+      i479 = () => { try { for (const { im, list, want } of sets) { for (let i = 0; i < list.length; i++) im.setMatrixAt(i, live(list[i], i, want) ? list[i].matrixWorld : Z); im.instanceMatrix.needsUpdate = true; } }
+        catch (e) { i479 = null; console.warn('[479 inst]', e); S.err = String(e); for (const { im, list, want } of sets) { im.visible = false; list.forEach((c, i) => { c.visible = want[i]; }); } } };
+      scene.updateMatrixWorld(); i479();
+    } catch (e) { console.warn('[479 inst]', e); (window.__m479 = window.__m479 || {}).err = String(e); }
     { const SY = DOOR_H + 0.39; let n = 0; scene.traverse(o => { if (o.isMesh && NAVE_SIGNS.some(q => Math.abs(q.x - o.position.x) < 1e-4 && Math.abs(q.z - o.position.z) < 1e-4 && Math.abs(o.position.y - 3.02) < 0.02)) { o.position.y = SY; n++; } }); window.__signFit300 = { moved: n, y: SY }; } // #300: the core hangs room signs at 3.02 m (old 2.6 m door + 0.42); lift them to sit just over the arch crown
-    try { wallMap = installWallMap({ game, W, root, world: () => window.eggs && window.eggs.world, drone: () => window.eggs && window.eggs.drone, low: LOW }); } catch (e) { console.warn('[wallmap]', e); window.__wallMap = { err: String(e) }; }
-    try { frames = installFrames(game, LOW); } catch (e) { console.warn('[frames]', e); window.__frames = { err: String(e) }; }
-    try { testiMap = installTestiMap({ game, W, root, low: LOW }); } catch (e) { console.warn('[testimap]', e); window.__testiMap = { err: String(e) }; }
-    try { installRide({ game, W, low: LOW }); } catch (e) { console.warn('[ride]', e); window.__ride = { err: String(e) }; } // #314: 'Ask for guidance' = a ride round the galleries
+    afterPlayable(() => import('./wallmap.js').then(({ installWallMap }) => { try { wallMap = installWallMap({ game, W, root, world: () => window.eggs && window.eggs.world, drone: () => window.eggs && window.eggs.drone, low: LOW }); } catch (e) { console.warn('[wallmap]', e); window.__wallMap = { err: String(e) }; } }).catch(e => { console.warn('[wallmap]', e); window.__wallMap = { err: String(e) }; })); // #291 deferred
+    try { frames = installFrames(game, LOW); } catch (e) { console.warn('[frames]', e); window.__frameBars = { err: String(e) }; }
+    // #48x (Mon Oct 26 2026 ~8:10 PM PT): hang478Rim flat frame backings (shared unit geo + shared core frameMat, 1 per painting) -> ONE InstancedMesh per geo+material,
+    // same pattern as #479. frames.js (#301) re-sets p.frame.visible=true in place(), and core scan flash swaps p.frame.material for 1.6 s, so the sync runs AFTER
+    // frames.update each tick: a rim still on the shared material is re-hidden and drawn by its instance; a rim on any other material shows itself (instance zeroed). Fail soft.
+    try { const S = window.__m48x = { draws: 0, pieces: 0 }; const by = new Map();
+      for (const p of game.paintings || []) { const c = p.frame; if (!c || !c.isMesh || c.name !== 'hang478Rim' || !p.group || Array.isArray(c.material)) continue; const k = c.geometry.uuid + c.material.uuid; if (!by.has(k)) by.set(k, []); by.get(k).push(c); }
+      const sets = []; const Z = new THREE.Matrix4().makeScale(0, 0, 0);
+      for (const list of by.values()) { if (list.length < 8) continue; const mat = list[0].material, im = new THREE.InstancedMesh(list[0].geometry, mat, list.length);
+        im.name = 'hang48xRim'; im.frustumCulled = false; im.raycast = () => {}; im.instanceMatrix.setUsage(THREE.DynamicDrawUsage); scene.add(im); sets.push({ im, list, mat }); S.draws++; S.pieces += list.length; }
+      const up = c => { for (let a = c.parent; a; a = a.parent) { if (!a.visible) return false; if (a === scene) return true; } return false; };
+      i48x = () => { try { for (const { im, list, mat } of sets) { for (let i = 0; i < list.length; i++) { const c = list[i]; if (c.material !== mat) { c.visible = true; im.setMatrixAt(i, Z); continue; } c.visible = false; im.setMatrixAt(i, up(c) ? c.matrixWorld : Z); } im.instanceMatrix.needsUpdate = true; } }
+        catch (e) { i48x = null; console.warn('[48x inst]', e); S.err = String(e); for (const { im, list } of sets) { im.visible = false; list.forEach(c => { c.visible = true; }); } } };
+      scene.updateMatrixWorld(); i48x();
+    } catch (e) { console.warn('[48x inst]', e); (window.__m48x = window.__m48x || {}).err = String(e); }
+    afterPlayable(() => import('./testimap.js').then(({ installTestiMap }) => { try { testiMap = installTestiMap({ game, W, root, low: LOW }); } catch (e) { console.warn('[testimap]', e); window.__testiMap = { err: String(e) }; } }).catch(e => { console.warn('[testimap]', e); window.__testiMap = { err: String(e) }; })); // deferred
+    try { installRide({ game, W, low: LOW }); } catch (e) { console.warn('[ride]', e); window.__ride = { err: String(e) }; } try { installAdvice785({ game, W }); } catch (e) { console.warn('[advice]', e); window.__advice = { err: String(e) }; } try { installPhone304(game, W); } catch (e) { console.warn('[phone304]', e); window.__phone304 = { err: String(e) }; } // #314: 'Ask for guidance' = a ride round the galleries
     try { installCourtyardStyle({ game, W, root, low: LOW }); } catch (e) { console.warn('[c295]', e); window.__c295 = { err: String(e) }; }
     try { installCourtyard294({ game, W, root, low: LOW }); } catch (e) { console.warn('[c294]', e); window.__c294 = { err: String(e) }; }
+    afterPlayable(() => import('./plaqueEnlarge337.js').then(({ installPlaqueEnlarge337 }) => { try { installPlaqueEnlarge337({ game, root }); window.__plaque337Installed = true; } catch (e) { console.warn('[pe337]', e); window.__plaque337 = { err: String(e) }; } }, e => { console.warn('[pe337]', e); window.__plaque337 = { err: String(e) }; })); // #337 deferred
+    // #306/#307 deferred pair: 306 first (307 reads window.__stickerBot306)
+    afterPlayable(() => import('./stickerBot306.js').then(({ installStickerBot306 }) => { try { void installStickerBot306; window.__stickerBot306 = { state: 'removed788' }; /* #788 (TJ Oct 27 ~5:15 PM PT): START courtyard pedestal + sticker bot removed */ } catch (e) { console.warn('[sticker306]', e); window.__stickerBot306 = { err: String(e) }; } }, e => { console.warn('[sticker306]', e); window.__stickerBot306 = { err: String(e) }; })
+      .then(() => import('./stickerWalls307.js')).then(({ installStickerWalls307 }) => { try { installStickerWalls307({ game, W, root }); } catch (e) { console.warn('[sticker307]', e); window.__stickerWalls307 = { err: String(e) }; } }).catch(e => { console.warn('[sticker307]', e); window.__stickerWalls307 = { err: String(e) }; })); // deferred
     { // #290: tapping or clicking the bubble checks out too (same path as walking into it)
       const ray = new THREE.Raycaster(), v = new THREE.Vector2(); let down = null;
       addEventListener('pointerdown', e => { down = [e.clientX, e.clientY]; }, true);
@@ -211,16 +387,16 @@ export function buildTags(scene, { CATALOG, LOW, MEDIUM }) {
         ray.setFromCamera(v, game.camera); ray.far = 7; if (ray.intersectObject(BUBBLE.mesh, false).length && window.__goCheckout) { window.__goCheckout('tapped the checkout bubble'); return; }
         // #288 (TJ): tap / click the Neural Dance wall to add a node where you tapped (only while the live sim is loaded nearby, so LOD holds)
         if (dance && dance.live && dance.frame) { ray.far = 14; const ndm = root.getObjectByName('neuralDance'), h = ndm && ray.intersectObject(ndm, false)[0];
-          if (h && h.uv) { try { const d = dance.frame.contentDocument, cv = d.querySelector('canvas'), r = cv.getBoundingClientRect(), PE = dance.frame.contentWindow.PointerEvent; cv.setPointerCapture = cv.releasePointerCapture = () => {};
+          if (h && h.uv) { try { const d = dance.frame.contentDocument, cv = d.getElementById('canvas') || d.querySelector('canvas'), r = cv.getBoundingClientRect(), PE = dance.frame.contentWindow.PointerEvent; cv.setPointerCapture = cv.releasePointerCapture = () => {};
             const o = { clientX: r.left + h.uv.x * r.width, clientY: r.top + (1 - h.uv.y) * r.height, bubbles: true, pointerId: 1, isPrimary: true, button: 0 };
-            cv.dispatchEvent(new PE('pointerdown', o)); cv.dispatchEvent(new PE('pointerup', o)); window.__neuralDance.taps = (window.__neuralDance.taps || 0) + 1; } catch (err) { console.warn('[neural-dance] tap', err); } } } }, true); }
+            cv.dispatchEvent(new PE('pointerdown', o)); cv.dispatchEvent(new PE('pointerup', o)); cv.dispatchEvent(new dance.frame.contentWindow.MouseEvent('click', o)); window.__neuralDance.taps = (window.__neuralDance.taps || 0) + 1; } catch (err) { console.warn('[neural-dance] tap', err); } } } }, true); }
     mm = createMinimap({ rooms: W.rooms, doors: hooks.doors, checkout: { x: 0, z: 0, width: 3.2 }, getPlayer: () => game.player(), key: 'n' }); // #323: the checkout fountain is marked on the minimap
     if (MUSEUM.plainCourts) { const g = new THREE.Mesh(new THREE.CircleGeometry(60, 48), new THREE.MeshStandardMaterial({ color: 0x5f8f45, roughness: 1, metalness: 0 })); g.rotation.x = -Math.PI / 2; g.position.set(-8, 0.002, 8); g.name = 'lawn284'; scene.add(g); } // #284: plain green courts (under the room floors and the pavilion marble)
     stub.parent && stub.parent.remove(stub); // garden module replaces the stand-in fountains and beds
     const domes = buildDomes(hooks), gd = MUSEUM.plainCourts ? { group: null, fountains: [] } : buildGarden(hooks); /* #284: plain green courts: no trees, beds, ivy, fountains */ for (const m of [domes, gd]) if (m.group && !m.group.parent) scene.add(m.group); garden = { domes, garden: gd }; hooks.garden = garden;
     try { c296 = installCourtyard296({ game, W, root, low: LOW, T }); } catch (e) { console.warn('[c296]', e); window.__c296 = Object.assign(window.__c296 || {}, { err: String(e) }); }
     hooks.allColliders = () => W.colliders.map(c => ({ x: c.x, z: c.z, r: c.r, kind: c.kind }));
-    const sound = gd.sound || createFountainSound(MUSEUM.plainCourts ? T.courtyards.map(c => ({ x: c.center[0], z: c.center[1], r: 1 })) /* soft courtyard ambience, so mute still has something to silence */ : gd.fountains || [], () => !!(game.holo && game.holo.muted)); hooks.sound = sound;
+    const sound = gd.sound || createFountainSound(MUSEUM.plainCourts ? (T.courtyards.length ? T.courtyards : [{ center: [0, 0] }] /* #774 honeycomb: no courts, ambience from the pavilion */).map(c => ({ x: c.center[0], z: c.center[1], r: 1 })) /* soft courtyard ambience, so mute still has something to silence */ : gd.fountains || [], () => !!(game.holo && game.holo.muted)); hooks.sound = sound;
     const go = () => { try { sound.start(); } catch (e) {} removeEventListener('pointerdown', go); removeEventListener('touchstart', go); }; // only from a user tap
     addEventListener('pointerdown', go); addEventListener('touchstart', go, { passive: true }); compileFirst(game); }
   // museum-eggs places props from rectangular-room doors; on hex rooms, move any egg that landed in a doorway or on a walk lane
@@ -228,7 +404,8 @@ export function buildTags(scene, { CATALOG, LOW, MEDIUM }) {
   // #269: eggs (e.g. the money printer) keep clear of doors, paths, walls and a deep (3 m) viewing zone in front of every work
   const viewDeep = (x, z, r) => W.art.some(a => { const tx = a.iz, tz = -a.ix, u = (x - a.x) * tx + (z - a.z) * tz, v = (x - a.x) * a.ix + (z - a.z) * a.iz; return Math.abs(u) < (a.w || 1) / 2 + 0.4 + r && v > -0.05 && v < 3 + r; });
   const nearWall = (x, z, r) => W.walls.some(w => segDist(x, z, w.x0, w.z0, w.x1, w.z1) < r + 0.25);
-  const eggClear = (x, z, r) => W.keepClear(x, z, r) && !viewDeep(x, z, r) && !nearWall(x, z, r) && !(MUSEUM.salon && blocksSight(x, z, r)); // #284: smaller rooms: keep egg props off the sightlines from the room centre too
+  const OPEN780 = new Set((T.openCourts || []).map(o => o.id)); // #780 (TJ): no plinth/egg props in the open-air courtyards
+  const eggClear = (x, z, r) => !OPEN780.has(W.roomAt(x, z)?.id) && W.keepClear(x, z, r) && !viewDeep(x, z, r) && !nearWall(x, z, r) && !(MUSEUM.salon && blocksSight(x, z, r)); // #284: smaller rooms: keep egg props off the sightlines from the room centre too
   // #280: the Bitcoin artefacts (Satoshi's desk, the Pizza Day case, the Don't-trust-verify coin, the money printer) live in and beside the Bitcoin room
   const BTC = ['egg-satoshi', 'egg-pizza', 'egg-coin', 'egg-printer'], BTC_ROOMS = ['room-02', 'room-10', 'room-07'], btcDone = new Set();
   function homeBitcoin() { const placed = []; for (const name of BTC) { const o = scene.getObjectByName(name); if (!o || btcDone.has(name)) continue; const bb = new THREE.Box3().setFromObject(o); if (bb.isEmpty()) continue;
@@ -240,18 +417,18 @@ export function buildTags(scene, { CATALOG, LOW, MEDIUM }) {
       const EW = window.eggs && window.eggs.world; if (EW && EW.colliders) for (const q of [...EW.colliders]) if (!q.off && Math.hypot(q.x - c.x, q.z - c.z) < r + 0.6) { q.off = true; EW.addCollider({ ...q, off: false, x: q.x + dx, z: q.z + dz }); } } }
   window.__tagsBitcoin = () => BTC.map(n => { const o = scene.getObjectByName(n); if (!o) return [n, null]; const c = new THREE.Box3().setFromObject(o).getCenter(new THREE.Vector3()); return [n, W.roomAt(c.x, c.z)?.id || null, +c.x.toFixed(1), +c.z.toFixed(1)]; });
   function clearEggs() { homeBitcoin(); report.eggPasses = (report.eggPasses || 0) + 1; const extra = []; if (window.eggs) for (const k in window.eggs) { const g = window.eggs[k] && window.eggs[k].group; if (g && g.parent && k !== 'secret' && !/^egg-/.test(g.name || '') && !window.eggs[k].moving) extra.push(g); }
-    for (const o of [...scene.children, ...extra]) { if (!(extra.includes(o) || /^egg-/.test(o.name || '')) || moved.has(o) || /^egg-(banana|drone|ostrich|elf)/.test(o.name || '')) continue; /* #282: wall-mounted and moving eggs keep their own anchors */ const bb = new THREE.Box3().setFromObject(o); if (bb.isEmpty() || bb.min.y > 2.4) continue;
+    for (const o of [...scene.children, ...extra]) { if (!(extra.includes(o) || /^egg-/.test(o.name || '')) || moved.has(o) || /^egg-(banana|drone|ostrich|elf|cart)/.test(o.name || '')) continue; /* #282: wall-mounted and moving eggs keep their own anchors; #746: so does the guide bot's trolley (egg-cart), which was being yanked ~3 m out of every painting's viewing zone while the ostrich pushed it */ const bb = new THREE.Box3().setFromObject(o); if (bb.isEmpty() || bb.min.y > 2.4) continue;
       const c = bb.getCenter(new THREE.Vector3()), sz = bb.getSize(new THREE.Vector3()), r = Math.max(sz.x, sz.z) / 2;
       if (!eggClear(c.x, c.z, r)) { let best = null; for (let k = 1; k < 80 && !best; k++) for (let a = 0; a < 12; a++) { const x = c.x + Math.cos(a / 12 * 6.283) * k * 0.25, z = c.z + Math.sin(a / 12 * 6.283) * k * 0.25;
           if (eggClear(x, z, r + 0.1) && W.walkable(x, z) && (k > 40 || W.roomAt(x, z)?.id === W.roomAt(c.x, c.z)?.id)) { best = [x, z]; break; } }
         if (best) { const dx = best[0] - c.x, dz = best[1] - c.z; o.position.x += dx; o.position.z += dz; report.eggsMoved.push(o.name);
           const EW = window.eggs && window.eggs.world; if (EW && EW.colliders) for (const q of [...EW.colliders]) if (!q.off && Math.hypot(q.x - c.x, q.z - c.z) < r + 0.6) { q.off = true; EW.addCollider({ ...q, off: false, x: q.x + dx, z: q.z + dz }); } } /* its collider moves with it */ else moved.add(o); } } }
   const fitted = new WeakMap();
-  function fitAll() { const g = window.game; if (!g || !g.paintings) return; for (const q of g.paintings) { const t = q.mesh.material.map, im = t && t.image; if (!im || !im.width || fitted.get(q) === t) continue; fitted.set(q, t);
-      const d = q.data, ia = im.width / im.height, la = d.iw / d.ih; let w = d.iw, h = d.ih; if (ia > la) h = d.iw / ia; else w = d.ih * ia; q.mesh.scale.set(w, h, 1);
+  function fitAll() { const g = window.game; if (!g || !g.paintings) return; for (const q of g.paintings) { const t = q.mesh.material.map, im = t && t.image; if (!im || !im.width || (t.userData && t.userData.ph876) || fitted.get(q) === t) continue; fitted.set(q, t);
+      const d = q.data, ia = (t.userData && t.userData.asp876) || im.width / im.height, la = d.iw / d.ih; let w = d.iw, h = d.ih; if (ia > la) h = d.iw / ia; else w = d.ih * ia; q.mesh.scale.set(w, h, 1);
       if (Math.abs(ia / (d.w / d.h) - 1) > 0.035) (report.fitLate = report.fitLate || []).includes(d.id) || report.fitLate.push(d.id); } }
   let fitT = 0;
-  function update(dt, cam, opts = {}) { if (wallMap) wallMap.update(dt); if (testiMap) testiMap.update(dt); if (frames) frames.update(dt); { const tt = performance.now() / 1000; const cp = window.game && game.camera ? game.camera.position : null; FOUNTAIN.update(tt, cp); if (c296) c296.update(dt, cp); } if ((fitT -= dt) < 0) { fitT = 0.5; fitAll(); if (window.eggs) clearEggs(); } drawDance(dt, cam); for (const j of jets) j.scale.y = 0.85 + 0.15 * Math.sin(performance.now() / 180 + j.position.x); if (mm) mm.update(); if (garden && garden.garden.update && window.game && game.player) garden.garden.update(dt, game.player()); checkGates(cam, opts); }
+  function update(dt, cam, opts = {}) { if (scanMurals.length && window.game && game.paintings) { for (const p of scanMurals.splice(0)) { if (!p.plaque) { const pa = W.art.find(q => q.src && q.src.kind === 'brass-plaque' && q.src.onWallOf === p.data.id), pg = pa && root.getObjectByName(pa.src.id); p.plaque = (pg && pg.getObjectByName('brassPlaque')) || null; } if (!game.paintings.includes(p)) game.paintings.push(p); } } /* #765 */ if (i479) i479(); /* #479 */ if ((update.l402 = (update.l402 || 0) + dt) > 0.25) { update.l402 = 0; try { updateMuralLods(murals, cam); } catch (e) { if (!update.w402) { update.w402 = 1; console.warn('[muralLod402] LOD update failed, staying on full', e && e.message || e); } } } /* #402 */ if (wallMap) wallMap.update(dt); if (testiMap) testiMap.update(dt); if (frames) frames.update(dt); if (i48x) i48x(); /* #48x after frames */ { const tt = performance.now() / 1000; const cp = window.game && game.camera ? game.camera.position : null; FOUNTAIN.update(tt, cp); if (c296) c296.update(dt, cp); } if ((fitT -= dt) < 0) { fitT = 0.5; fitAll(); if (window.eggs) clearEggs(); } drawDance(dt, cam); for (const j of jets) j.scale.y = 0.85 + 0.15 * Math.sin(performance.now() / 180 + j.position.x); if (mm) mm.update(); if (garden && garden.garden.update && window.game && game.player) garden.garden.update(dt, game.player()); checkGates(cam, opts); }
   window.__tagsEggClear = eggClear;
   // #272: compile every shader in parallel (KHR_parallel_shader_compile) before the first scene frame; the core skips the scene
   // render while holding (the start screen and its progress bar stay live). Capped at 8 s so a slow driver can never hang it.
@@ -263,7 +440,7 @@ export function buildTags(scene, { CATALOG, LOW, MEDIUM }) {
     const all = []; scene.traverse(o => all.push(o)); let i = 0; const t0 = performance.now(); window.__tagsPrewarm = { total: reps.length, done: 0 };
     const step = () => { if (i >= reps.length) { window.__tagsPrewarm.ms = Math.round(performance.now() - t0); return; } const batch = reps.slice(i, i + 3); i += 3;
       const vis = all.map(o => [o, o.visible]); for (const o of all) o.visible = false; for (const o of batch) for (let q = o; q; q = q.parent) q.visible = true;
-      try { r.compile(scene, cam); } catch (e) {} for (const [o, v] of vis) o.visible = v; window.__tagsPrewarm.done = Math.min(i, reps.length);
+      try { r.compile(scene, cam); } catch (e) { window.__tagsPrewarm.err = (window.__tagsPrewarm.err || 0) + 1; if (!prewarm.w) { prewarm.w = 1; console.warn('[tagsPrewarm] compile slice failed, continuing', e && e.message || e); } } for (const [o, v] of vis) o.visible = v; window.__tagsPrewarm.done = Math.min(i, reps.length);
       (window.requestIdleCallback || (cb => setTimeout(cb, 16)))(step, { timeout: 120 }); };
     afterPlayable(() => setTimeout(step, 1500)); } // only after the first playable frame
   let hold = false; function compileFirst(game) { const r = game.renderer, cam = game.camera; if (!r || !cam || !r.compileAsync) return;

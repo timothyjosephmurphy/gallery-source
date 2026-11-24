@@ -1,3 +1,11 @@
+## 0) Update (Nov 24, 2026): Public Source of Truth & Version-Control Deploy Rule
+
+- **Repository visibility:** `timothyjosephmurphy/gallery-source` is **public** and is the single source of truth for the live 3D gallery at `https://tjm.art/play/`.
+- **Deploy rule (hard):** Deploys to `tjm.art/play` (or previews) **must ship strictly from committed, pushed commits** in `gallery-source`. Never patch `dist/`, `_worker.js`, or `tour-wire*` output folders out-of-band after a build. Make edits in `play-tags/` / `gallery-core/`, run `npm run build` + `python3 deploy/gen.py`, commit and push first, then deploy from the committed tree (and tag live deploys, e.g. `live-899` / `live-876`).
+- **Exclusions (public repo):** Never commit secrets (`LAYOUT_SAVE_KEY`, `.env*`, API tokens), private journal project files, files >25 MB, or private Neural Dance source code (`annex871` / `/neural-dance/` app). Only the `/tjm/neural-dance/` iframe embed URL is kept.
+
+---
+
 # Handoff to ChatGPT (Codex / Agent mode): website and 3D gallery development
 
 Written Fri Oct 23, 2026, 1:15 PM PT, for TJ Murphy (artist, Vermillion Aurora Productions). You take over for a few days (about Oct 24 to 27) while Grok Bot usage is exhausted. TJ's Grok Bot did all work so far. This file is self-contained; facts come from box files and GitHub cards as of today. If something here conflicts with a card in the tracker, the newest TJ comment wins. If unsure, do not guess: comment on the card and ask TJ.
@@ -10,7 +18,7 @@ You are not given secrets. Anything named "ask TJ" below is something TJ must ha
 
 **Product.** A 3D walkable art gallery (plain three.js, built with Vite) of TJ's paintings, shown at https://tjm.art/play/ (the live "dungeon" gallery) and, in development, a new hex-cell "tag gallery": a courtyard with a fountain at the centre, 12 hexagonal rooms around it clustered by painting tags, a minimap, a guide bot, a checkout portal in the fountain.
 
-**Where the work lives:** the source is now in the private GitHub repo `timothyjosephmurphy/gallery-source` (this repo), copied from the box `/workspace` on Oct 23, 2026. Original box paths are listed below. Treat this repo as the source of truth and commit as you go (see section 6).
+**Where the work lives:** the source is now in the public GitHub repo `timothyjosephmurphy/gallery-source` (this repo), copied from the box `/workspace` on Oct 23, 2026. Original box paths are listed below. Treat this repo as the source of truth and commit as you go (see section 6).
 
 | What | Path (box) / repo | Notes |
 |---|---|---|
@@ -138,7 +146,7 @@ Website (tjm.art, Astro, `vermillionaurora`): PR only, TJ approves before merge.
 
 ## 6) How ChatGPT gets access (TJ sets these up)
 
-0. **UPDATE (Oct 23, 2026): the source is now in this private GitHub repo, `timothyjosephmurphy/gallery-source`** (this repo). Use it instead of the zip described below: clone it, `cd play-tags && npm install && npm run build`. The folders sit side by side as the build needs. Files over 25 MB, videos, `dist*`, `node_modules`, secrets and generated deploy workers (`play-tags/deploy/_worker.js`, `execute.js`, regenerate with `deploy/gen.py`) are NOT in the repo; see `LARGE_FILES.md`. TJ invites ChatGPT's connected GitHub account as a collaborator (write). Commit one card per commit and keep `CHANGELOG.md` at the repo root.
+0. **UPDATE (Oct 23, 2026): the source is now in this public GitHub repo, `timothyjosephmurphy/gallery-source`** (this repo). Use it instead of the zip described below: clone it, `cd play-tags && npm install && npm run build`. The folders sit side by side as the build needs. Files over 25 MB, videos, `dist*`, `node_modules`, secrets and generated deploy workers (`play-tags/deploy/_worker.js`, `execute.js`, regenerate with `deploy/gen.py`) are NOT in the repo; see `LARGE_FILES.md`. TJ invites ChatGPT's connected GitHub account as a collaborator (write). Commit one card per commit and keep `CHANGELOG.md` at the repo root.
 
 1. **Source zip of the gallery (superseded by the repo above; kept for reference)** (the work was not in git). TJ or Grok Bot builds it on the box, excluding `node_modules`, `dist*`, `.git` and secret files:
    `cd /workspace && zip -r gallery-src.zip play-tags gallery-core tag-gallery gallery-courtyard ostrich-robot gallery-handoff -x '*/node_modules/*' -x 'play-tags/dist*' -x '*.env*'` (about 100 MB; do not include `museum-shared/layout-save-urls.txt`). TJ uploads it to ChatGPT, or puts it in a **private** GitHub repo (for example `tjm-gallery-src`) and invites ChatGPT's connected account.

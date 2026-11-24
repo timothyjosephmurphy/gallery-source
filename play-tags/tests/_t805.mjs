@@ -1,0 +1,11 @@
+import { chromium } from 'playwright-core';
+const [url, dev='desktop'] = process.argv.slice(2);
+const b = await chromium.launch({ executablePath: '/usr/bin/google-chrome', args: ['--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader'] });
+const o = dev==='phone'?{viewport:{width:390,height:844},isMobile:true,hasTouch:true,deviceScaleFactor:2}:{viewport:{width:1280,height:800}};
+const p = await (await b.newContext(o)).newPage(); const errs=[]; p.on('pageerror',e=>errs.push(e.message));
+const imgs={}; p.on('response',r=>{ if(/exhibitions-/.test(r.url())) imgs[r.url().split('/').pop()]=r.status(); });
+await p.goto(url); await p.waitForFunction(()=>window.__testiMap&&window.__wallMap&&window.__wallMap.go,null,{timeout:120000}); await p.waitForFunction(()=>window.eggs&&window.eggs.world,null,{timeout:120000}); await p.waitForTimeout(6000);
+const r = await p.evaluate(async()=>{ const S=__testiMap, out={counts:S.counts,count:S.count};
+  const i0=S.kinds.findIndex((k,i)=>k!=='collector'&&!S.rooms[i]); S.show(i0); const c=document.getElementById('testiCard'); out.nullCard=c.innerText; out.nullBtn=!!c.querySelector('button'); out.nullGo=S.go(i0); S.show(-1);
+  const i1=S.kinds.findIndex((k,i)=>k==='mural'&&S.rooms[i]); S.show(i1); out.roomCard=c.innerText; const bt=c.querySelector('button'); out.room=S.rooms[i1]; bt.click(); out.went=S.went; out.active=!!__wallMap.active; out.speed=__wallMap.active&&__wallMap.active.speed; return out; });
+console.log(JSON.stringify({dev,...r,imgs,errs})); await b.close();

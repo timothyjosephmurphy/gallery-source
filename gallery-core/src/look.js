@@ -15,11 +15,12 @@ const coarse = matchMedia('(pointer: coarse)').matches || navigator.maxTouchPoin
 const saved = (() => { try { return localStorage.getItem('tjmPlayQ'); } catch (e) { return null; } })();
 const TIERS = ['low', 'medium', 'high'];
 // phones/tablets: Low; desktop: Medium. High is opt-in only (?q=high or the HQ toggle).
-export const TIER = TIERS.includes(qs.get('q')) ? qs.get('q') : TIERS.includes(saved) ? saved : coarse ? 'low' : 'medium';
+// #804: touch/coarse is Low unless the URL says ?q= (a saved Medium/High no longer overrides it; tap-to-cycle passes ?q= for its session)
+export const TIER = TIERS.includes(qs.get('q')) ? qs.get('q') : coarse ? 'low' : TIERS.includes(saved) ? saved : 'medium';
 export const HIGH = TIER === 'high', MEDIUM = TIER === 'medium', LOW = TIER === 'low';
 export const EXEMPT = 1; // layer for true-colour objects
 export const nextTier = t => TIERS[(TIERS.indexOf(t) + 1) % 3];
-export function setTier(t) { try { localStorage.setItem('tjmPlayQ', t); } catch (e) {} const u = new URL(location.href); u.searchParams.delete('q'); location.replace(u); }
+export function setTier(t) { try { localStorage.setItem('tjmPlayQ', t); } catch (e) {} const u = new URL(location.href); if (coarse) u.searchParams.set('q', t); else u.searchParams.delete('q'); location.replace(u); } // #804: touch keeps the chosen tier for this session via ?q=
 
 export function makeRenderer(canvas) {
   const r = new THREE.WebGLRenderer({ canvas, antialias: true, preserveDrawingBuffer: true, powerPreference: 'high-performance' });

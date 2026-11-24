@@ -1,0 +1,88 @@
+{
+  "issue": 288,
+  "preview_only": true,
+  "approved": false,
+  "note": "No text baked. Pair header-banner with group-labels-354 or room signs.",
+  "assets": {
+    "threshold-glow": {
+      "png": "threshold-glow.png",
+      "desktop": "threshold-glow.desktop.webp",
+      "phone": "threshold-glow.phone.webp",
+      "px": [
+        1024,
+        512
+      ],
+      "phone_px": [
+        512,
+        256
+      ],
+      "blend": "additive (THREE.AdditiveBlending, depthWrite:false, toneMapped:false); premultiplied:false",
+      "world_size_m": [
+        3.0,
+        1.5
+      ],
+      "uv": "v=1 (top edge) on door threshold line; spills into the room toward v=0. Lay as floor decal y+0.005.",
+      "intensity": {
+        "day": 0.45,
+        "dusk": 0.8,
+        "night": 1.0
+      },
+      "pairs": "Ramp it with window-glows-358 and the horizon night state; at night set the doorway interior lamp to ~#F7CC3A at matching strength"
+    },
+    "arch-reveal": {
+      "png": "arch-reveal.png",
+      "desktop": "arch-reveal.desktop.webp",
+      "phone": "arch-reveal.phone.webp",
+      "px": [
+        1024,
+        64
+      ],
+      "phone_px": [
+        512,
+        32
+      ],
+      "blend": "normal, opaque",
+      "tile": "RepeatWrapping in U (seamless at 64px period)",
+      "world_size_m": [
+        4.0,
+        0.25
+      ],
+      "uv": "U runs along the inner jamb + arch path; v=1 gilt edge faces the opening, grout edge faces the wall",
+      "intensity": {
+        "day": 1.0,
+        "night": "emissive 0.15 of OCHRE optional"
+      }
+    },
+    "header-banner": {
+      "png": "header-banner.png",
+      "desktop": "header-banner.desktop.webp",
+      "phone": "header-banner.phone.webp",
+      "px": [
+        1024,
+        192
+      ],
+      "phone_px": [
+        512,
+        96
+      ],
+      "blend": "normal, opaque",
+      "world_size_m": [
+        2.4,
+        0.45
+      ],
+      "labelRect_px": [
+        60,
+        48,
+        964,
+        144
+      ],
+      "labelRect_uv": {
+        "u0": 0.0586,
+        "v0": 0.25,
+        "u1": 0.9414,
+        "v1": 0.75
+      },
+      "uv": "Center above the door lintel; group-labels-354 plaques (4:1) fit labelRect when scaled to ~0.9 m wide, or leave empty"
+    }
+  }
+}

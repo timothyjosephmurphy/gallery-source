@@ -1,0 +1,174 @@
+{
+ "w": 1.6,
+ "h": 0.4,
+ "labels": [
+  {
+   "id": "bitcoiners",
+   "title": "Bitcoiners",
+   "desktop": "label-bitcoiners.desktop.webp",
+   "phone": "label-bitcoiners.phone.webp",
+   "hang": "#353 Bitcoiners 4x4",
+   "members": [
+    "older-work-bitcoin-voices-original-3",
+    "older-work-bitcoin-voices-original-4",
+    "older-work-bitcoin-voices-original-1",
+    "older-work-bitcoin-voices-original-2",
+    "older-work-yakes-todd-dickerson-original-2",
+    "older-work-yakes-todd-dickerson-original-1",
+    "older-work-yakes-todd-dickerson-original-3",
+    "older-work-rochard-martinez-original-1",
+    "older-work-ammous-livera-original-1",
+    "older-work-ammous-livera-original-2",
+    "older-work-nakamoto-hayek-original-1",
+    "older-work-nakamoto-hayek-original-2",
+    "older-work-fernandez-moran-pysh-original-1",
+    "older-work-fernandez-moran-pysh-original-2",
+    "older-work-fernandez-moran-pysh-original-3",
+    "older-work-rochard-martinez-original-2"
+   ]
+  },
+  {
+   "id": "festival-burning-man",
+   "title": "Festival · Burning Man",
+   "desktop": "label-festival-burning-man.desktop.webp",
+   "phone": "label-festival-burning-man.phone.webp",
+   "door": "room-04",
+   "note": "room-04 inner door header (no single Festival hang)"
+  },
+  {
+   "id": "bass-coast-sunrises",
+   "title": "Bass Coast Sunrises",
+   "desktop": "label-bass-coast-sunrises.desktop.webp",
+   "phone": "label-bass-coast-sunrises.phone.webp",
+   "hang": "#354 Temples + Bass Coast sunrises (right 2x2)",
+   "members": [
+    "archived-painting-433",
+    "archived-painting-438",
+    "archived-painting-436",
+    "archived-painting-437"
+   ]
+  },
+  {
+   "id": "temples",
+   "title": "Temples",
+   "desktop": "label-temples.desktop.webp",
+   "phone": "label-temples.phone.webp",
+   "hang": "#354 Temples + Bass Coast sunrises (left 2x2)",
+   "members": [
+    "archived-painting-19",
+    "archived-painting-20",
+    "burning-man-temple-2022-flame",
+    "burning-man-temple-2022-pink"
+   ]
+  },
+  {
+   "id": "father-paul",
+   "title": "Father Paul",
+   "desktop": "label-father-paul.desktop.webp",
+   "phone": "label-father-paul.phone.webp",
+   "hang": "#354 Father Paul",
+   "members": [
+    "book-art-0a80f9a5da0d39edc80f",
+    "book-art-82127d1886ae57d5cb6e",
+    "archived-painting-img-1555",
+    "grandpa-howard"
+   ]
+  },
+  {
+   "id": "reiki",
+   "title": "Reiki",
+   "desktop": "label-reiki.desktop.webp",
+   "phone": "label-reiki.phone.webp",
+   "skip": "no Reiki hang/room/art in hang-overrides or catalog"
+  },
+  {
+   "id": "bounty-of-satoshi",
+   "title": "Bounty of Satoshi",
+   "desktop": "label-bounty-of-satoshi.desktop.webp",
+   "phone": "label-bounty-of-satoshi.phone.webp",
+   "hang": "#354 Bounty of Satoshi",
+   "members": [
+    "archived-painting-img-1612",
+    "painting-phoenix-rising",
+    "painting-festival-portrait"
+   ]
+  },
+  {
+   "id": "ukraine",
+   "title": "Ukraine",
+   "desktop": "label-ukraine.desktop.webp",
+   "phone": "label-ukraine.phone.webp",
+   "hang": "#354 Ukraine trio",
+   "members": [
+    "painting-sunflower-woman",
+    "painting-figures-in-wheatfield",
+    "girl-wearing-flower-crown"
+   ]
+  },
+  {
+   "id": "small-watercolors",
+   "title": "Small Watercolors",
+   "desktop": "label-small-watercolors.desktop.webp",
+   "phone": "label-small-watercolors.phone.webp",
+   "hang": "#354 $75 watercolors grid",
+   "members": [
+    "older-work-mountain-layers-original-1",
+    "older-work-mountain-layers-original-2",
+    "older-work-mountain-layers-original-3",
+    "older-work-mountain-layers-original-4",
+    "older-work-beach-sunsets-original-1",
+    "older-work-beach-sunsets-original-2",
+    "older-work-beach-sunsets-original-3",
+    "older-work-lake-hillside-color-wheel-original-1",
+    "older-work-lake-hillside-color-wheel-original-2",
+    "older-work-lake-hillside-color-wheel-original-3"
+   ]
+  },
+  {
+   "id": "attendees",
+   "title": "Attendees",
+   "desktop": "label-attendees.desktop.webp",
+   "phone": "label-attendees.phone.webp",
+   "hang": "#354 Attendees 2x2 (Bitcoiners)",
+   "members": [
+    "book-art-044d157c01c7bb07eeab",
+    "book-art-4afb5cab4bdbe1ff6845",
+    "book-art-4d53927ad111f0259402",
+    "book-art-6ef848d3ccb6b48184ab",
+    "book-art-0ee2717bc04e65d0507e",
+    "book-art-deb92de6e72f7b3ce951"
+   ]
+  },
+  {
+   "id": "landscapes-by-size",
+   "title": "Landscapes by Size",
+   "desktop": "label-landscapes-by-size.desktop.webp",
+   "phone": "label-landscapes-by-size.phone.webp",
+   "door": "room-01",
+   "note": "room-01 \"Landscapes\" inner door header (no Landscapes-by-size hang)"
+  },
+  {
+   "id": "forest-triptych",
+   "title": "Forest Triptych",
+   "desktop": "label-forest-triptych.desktop.webp",
+   "phone": "label-forest-triptych.phone.webp",
+   "hang": "#354 Forest Triptych stack",
+   "members": [
+    "older-work-forest-triptych-original-1",
+    "older-work-forest-triptych-original-2",
+    "older-work-forest-triptych-original-3"
+   ]
+  },
+  {
+   "id": "hummingbirds",
+   "title": "Hummingbirds",
+   "desktop": "label-hummingbirds.desktop.webp",
+   "phone": "label-hummingbirds.phone.webp",
+   "hang": "#354 Hummingbirds stack",
+   "members": [
+    "book-art-b7a9cd259d8ac51a236b",
+    "older-work-hummingbird-feeder-190"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "ticket": "Gallery #352",
+ "uv": {
+  "wrapS": "RepeatWrapping (seamless horizontally)",
+  "wrapT": "ClampToEdge"
+ },
+ "layers": [
+  {
+   "name": "distant-range",
+   "desktop": "horizon-distant-range.webp",
+   "phone": "horizon-distant-range.phone.webp",
+   "master": "horizon-distant-range.png",
+   "baked": "horizon-distant-range_baked.webp",
+   "size": [
+    2048,
+    512
+   ],
+   "phoneSize": [
+    1024,
+    256
+   ],
+   "alpha": true,
+   "order": 0,
+   "suggest": {
+    "type": "cylinder band or billboard",
+    "radiusMult": 1.0,
+    "fog": false,
+    "depthWrite": false
+   }
+  },
+  {
+   "name": "mid-valley",
+   "desktop": "horizon-mid-valley.webp",
+   "phone": "horizon-mid-valley.phone.webp",
+   "master": "horizon-mid-valley.png",
+   "baked": "horizon-mid-valley_baked.webp",
+   "size": [
+    2048,
+    512
+   ],
+   "phoneSize": [
+    1024,
+    256
+   ],
+   "alpha": true,
+   "order": 1,
+   "suggest": {
+    "type": "cylinder band or billboard",
+    "radiusMult": 0.7,
+    "depthWrite": false
+   }
+  }
+ ]
+}

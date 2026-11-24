@@ -1,0 +1,10 @@
+import { chromium } from 'playwright-core';
+const url = process.argv[2] || 'http://localhost:4338/play/?tour=0';
+const b = await chromium.launch({ executablePath: '/usr/bin/google-chrome', args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] });
+const p = await (await b.newContext({ viewport: { width: 844, height: 390 }, isMobile: true, hasTouch: true })).newPage(); await p.addInitScript(() => { window.__noNav = 1; });
+await p.goto(url); await p.waitForFunction(() => window.game && game.tags && game.tags.ready, null, { timeout: 180000 }); await p.waitForTimeout(2000);
+const st = () => p.evaluate(() => Object.fromEntries(['#hud', '#touch', '#tfire', '.mm-wrap'].map(s => { const e = document.querySelector(s); return [s, e ? getComputedStyle(e).display : 'none-el']; }).concat([['tourHud', !!window.__tourHud], ['on', window.__tourOn], ['ring', (document.getElementById('tourRing')||{style:{}}).style.display]])));
+console.log('before', JSON.stringify(await st()));
+await p.evaluate(() => { window.__tourOn = true; }); await p.waitForTimeout(1500); console.log('tour', JSON.stringify(await st())); await p.screenshot({ path: '/tmp/hud738-tour.png' });
+await p.evaluate(() => { window.__tourOn = false; }); await p.waitForTimeout(1500); console.log('after', JSON.stringify(await st())); await p.screenshot({ path: '/tmp/hud738-after.png' });
+await b.close();

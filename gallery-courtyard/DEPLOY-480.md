@@ -1,0 +1,8 @@
+# #480 anon478Box static merge DEPLOYED Mon Oct 26 2026 ~8:50 PM PT
+Deployment 95f22ebf-bed4-4512-811b-691e8fedf52c on preview-251 (replaces 5b368ab8). Entry index-BvD5bQSx.js.
+- Census (tests/_left480.mjs, LIVE 5b368ab8): hang478Part leftovers = 2x310 hidden #479 originals + ~310 singletons, each its own MeshBasicMaterial+map on the shared plane geo = plaques (unique textures; not instanceable without an atlas). anon478 = 95 meshes, almost all unique-material planes/circles/cylinders (book pages, covers, glows, signs). Only shared-material sets: book lecterns col/foot/slab on core 'stone' (12) and one arch posts+lintel (3).
+- Change (play-tags/src/tags.js only, after name478): merge480 groups visible anon478Box by material, sets >=3 -> world-baked mergeGeometries (pos/normal/uv) -> 'anon480Merge', raycast off, matrixAutoUpdate off, shadows copied. Originals hidden only; Mesh.raycast ignores .visible so books.js click hits (col/slab) still work. Runs immediately and again in afterPlayable (idempotent via S.done).
+- Fail soft: console.warn('[480 merge]'), window.__m480.err, originals re-shown, merges hidden. OK: window.__m480 = {draws:2, pieces:15, done:true}.
+- Draw calls LIVE A/B (_drawscout swiftshader 1280x800, 2 runs each): 5b368ab8 spawn 277/277 dense 474 median 187 -> 95f22ebf spawn 272/244 dense 409 median 188. Dense -65 (lectern room, incl. shadow passes); spawn is timing-noisy (+/-30). Same-frame toggle on LIVE: 338 -> 305.
+- tagsaudit local + LIVE desktop/phone PASS; builderErrs/softWarnings/pageErrors []. Logs /tmp/au/t480-*.log. Probe tests/_v480.mjs.
+- Rollback: /tmp/tags.js.pre480, /tmp/execute.pre480.js (re-run to restore 5b368ab8).

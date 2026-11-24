@@ -1,0 +1,67 @@
+{
+ "tracker": "#357",
+ "supersedes_look_of": "#296 light shafts (maps only; lighting code is Gallery's)",
+ "cards": {
+  "shaft-wedge-apricot-dawn-desktop": {
+   "file": "shaft-wedge-apricot-dawn-desktop.webp",
+   "aspect": "1:2 (w:h), aperture at top edge, fades toward bottom"
+  },
+  "shaft-wedge-apricot-dawn-phone": {
+   "file": "shaft-wedge-apricot-dawn-phone.webp",
+   "aspect": "1:2 (w:h), aperture at top edge, fades toward bottom"
+  },
+  "shaft-slits-apricot-dawn-desktop": {
+   "file": "shaft-slits-apricot-dawn-desktop.webp",
+   "aspect": "1:2 (w:h), aperture at top edge, fades toward bottom"
+  },
+  "shaft-slits-apricot-dawn-phone": {
+   "file": "shaft-slits-apricot-dawn-phone.webp",
+   "aspect": "1:2 (w:h), aperture at top edge, fades toward bottom"
+  },
+  "shaft-wedge-daylight-cool-desktop": {
+   "file": "shaft-wedge-daylight-cool-desktop.webp",
+   "aspect": "1:2 (w:h), aperture at top edge, fades toward bottom"
+  },
+  "shaft-wedge-daylight-cool-phone": {
+   "file": "shaft-wedge-daylight-cool-phone.webp",
+   "aspect": "1:2 (w:h), aperture at top edge, fades toward bottom"
+  },
+  "shaft-slits-daylight-cool-desktop": {
+   "file": "shaft-slits-daylight-cool-desktop.webp",
+   "aspect": "1:2 (w:h), aperture at top edge, fades toward bottom"
+  },
+  "shaft-slits-daylight-cool-phone": {
+   "file": "shaft-slits-daylight-cool-phone.webp",
+   "aspect": "1:2 (w:h), aperture at top edge, fades toward bottom"
+  }
+ },
+ "dust": {
+  "file": "dust-motes-4x4.webp",
+  "grid": [
+   4,
+   4
+  ],
+  "sprite_px": 64,
+  "count_hint": "20-40 per shaft",
+  "opacity": [
+   0.05,
+   0.15
+  ],
+  "drift_speed_mps": [
+   0.01,
+   0.04
+  ]
+ },
+ "suggested": {
+  "opacity_range": [
+   0.08,
+   0.22
+  ],
+  "opacity_default": 0.14,
+  "note": "#296 opacity unknown to Visual; target well under it, roughly half or less",
+  "blending": "additive (THREE.AdditiveBlending), depthWrite false, toneMapped true",
+  "fade": "opacity *= smoothstep(0.05,0.35,sunElevationRad) * (1-smoothstep(1.0,1.35,sunElevationRad))",
+  "tint": "apricot-dawn when sun elevation < ~20deg, crossfade to daylight-cool above",
+  "align": "orient card long axis along -sunDirection; billboard around that axis only"
+ }
+}

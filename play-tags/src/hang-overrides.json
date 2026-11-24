@@ -27,7 +27,10 @@
   "burning-man-temple-2022-daytime",
   "meditating-at-denny-blaine-on-solstice-2015",
   "painting-clouds-over-water",
-  "lake-in-the-north-cascades"
+  "lake-in-the-north-cascades",
+  "book-art-311b1c39d98767f359b5",
+  "archived-painting-2",
+  "book-art-87cf2a732259b313f5ab"
  ],
  "walls": {
   "room-10/0": {
@@ -411,11 +414,11 @@
   },
   {
    "id": "painting-portrait-with-hat",
-   "wall": "room-12/4",
+   "wall": "room-11/0",
    "s": 1.49,
    "y": 1.219,
    "plaqueS": 2.04,
-   "note": "#315 (TJ): Sunrise on Rainier with Eagle 60x22 in, top of the pair (replaces the #299 72 in enlargement)",
+   "note": "#838 (#788 TJ): room-11 wall 0 beside Sunrise on Rainier, same width",
    "col": "rainier-pair",
    "pos": 1
   },
@@ -597,16 +600,6 @@
    "note": "#1022 Painting #4 at its true 24 in width needs a wider wall than room-01/3 offers (door and columns); moved to the roomy room-09/5 (Sunset) so room-01/2 keeps its 1.5x sizes"
   },
   {
-   "id": "archived-painting-2",
-   "wall": "room-12/4",
-   "s": 1.49,
-   "y": 1.219,
-   "plaqueS": 2.04,
-   "col": "rainier-pair",
-   "pos": 2,
-   "note": "#315 (TJ): Painting #2 kept (not a duplicate), 60 in wide like Sunrise, own proportions (4191x1069 px), below it"
-  },
-  {
    "id": "archived-painting-249",
    "wall": "room-03/1",
    "s": 0.901,
@@ -618,7 +611,7 @@
  "assets": [
   {
    "id": "lisa-climbing-tahoma-at-sunrise-from-denny-blaine",
-   "img": "art/lisa-climbing-tahoma-cropped-288.webp",
+   "img": "art/lisa-climbing-tahoma-cropped-288-b512.webp",
    "hi": null,
    "w": 1.733,
    "h": 0.727,
@@ -626,9 +619,10 @@
   },
   {
    "id": "sunset-in-el-zonte-el-salvador",
-   "w": 0.597,
-   "h": 1.219,
-   "note": "TJ-directed size override (Oct 22): scaled uniformly from 0.348x0.711 to match the height of Sunrise from Punta El Zonte Hostel (0.619x1.219); 0.022 m narrower (aspect differs)."
+   "w": 0.821,
+   "h": 1.6764,
+   "note": "TJ-directed size override (Oct 22): scaled uniformly from 0.348x0.711 to match the height of Sunrise from Punta El Zonte Hostel (0.619x1.219); 0.022 m narrower (aspect differs).",
+   "sizeNote": "TJ Oct 29: matched height of Sunset at Kihei (1.6764), aspect kept"
   },
   {
    "id": "painting-insect-garden",
@@ -678,11 +672,11 @@
   },
   {
    "id": "book-art-596837cb5ff533c620dd",
-   "w": 0.1863,
+   "img": "art/book-art-596837cb5ff533c620dd-b512-317.webp",
+   "hi": null,
+   "w": 0.1934,
    "h": 0.3217,
-   "note": "#1022 Catherine 2x2: 12.67 in true = 19 in tall at the 1.5x preview scale (TJ asked ~18-20 in), width from aspect",
-   "img": "img/play/preview-302/catherine-cream/596837cb5ff533c620dd.webp",
-   "hi": null
+   "note": "#317-wave2: white-border crop from gallery-courtyard/white-border-crops-317-wave2 (after 1962x3263, crop [0, 125, 1962, 3388]); true size kept (long side 0.3217 m, short side from crop aspect, never stretched)"
   },
   {
    "id": "book-art-7bce6e3509027d1f7a0b",
@@ -706,19 +700,21 @@
   },
   {
    "id": "painting-portrait-with-hat",
-   "w": 1.524,
-   "h": 0.4255,
-   "note": "#315: 60 in wide; height follows the image (3.58:1, so 60 x 16.8 in, not the listed 60 x 22: never stretched)"
+   "w": 2.7432,
+   "h": 0.7658,
+   "note": "#838 (#788 TJ): width matches Sunrise on Rainier reference (2.7432 m), aspect kept"
   },
   {
    "id": "archived-painting-2",
+   "img": "art/archived-painting-2-b512-317.webp",
+   "hi": null,
    "w": 1.524,
-   "h": 0.3887,
-   "note": "#315: 60 in wide, aspect 4191x1069"
+   "h": 0.3435,
+   "note": "#317-wave2: white-border crop from gallery-courtyard/white-border-crops-317-wave2 (after 4191x944, crop [0, 125, 4191, 1069]); true size kept (long side 1.524 m, short side from crop aspect, never stretched)"
   },
   {
    "id": "book-art-a2e53a8418a8d84f3dc5",
-   "img": "art/book-art-a2e53a8418a8d84f3dc5-317.webp",
+   "img": "art/book-art-a2e53a8418a8d84f3dc5-b512-317.webp",
    "hi": null,
    "w": 0.381,
    "h": 0.295,
@@ -726,7 +722,7 @@
   },
   {
    "id": "book-art-e3293c73dbb01f94b39b",
-   "img": "art/book-art-e3293c73dbb01f94b39b-317.webp",
+   "img": "art/book-art-e3293c73dbb01f94b39b-b512-317.webp",
    "hi": null,
    "w": 0.381,
    "h": 0.3077,
@@ -814,11 +810,12 @@
   },
   {
    "id": "older-work-forest-triptych-original-3",
-   "img": "img/display/older-work-forest-triptych-3-480.webp",
-   "hi": "https://img.tjm.art/display/older-work-forest-triptych-3-960.webp",
-   "w": 0.1714,
+   "img": "art/older-work-forest-triptych-3-846-480.webp",
+   "hi": "art/older-work-forest-triptych-3-846-960.webp",
+   "w": 0.1676,
    "h": 0.762,
-   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 7.75x30.00 in; image aspect 0.225, fitted inside at true size, never stretched (listed vs image aspect differs 15%, listed size needs TJ confirmation)"
+   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 7.75x30.00 in; image aspect 0.225, fitted inside at true size, never stretched (listed vs image aspect differs 15%, listed size needs TJ confirmation)",
+   "note846": "#846: left white margin cropped (~30px of 1369 master)."
   },
   {
    "id": "older-work-hayek-stark-gomez-el-bawab-original-1",
@@ -966,11 +963,11 @@
   },
   {
    "id": "older-work-portraits-319-329-original-4",
-   "img": "img/display/older-work-portraits-319-329-4-480.webp",
-   "hi": "https://img.tjm.art/display/older-work-portraits-319-329-4-960.webp",
-   "w": 0.2157,
+   "img": "art/older-work-portraits-319-329-original-4-b512-317.webp",
+   "hi": null,
+   "w": 0.2385,
    "h": 0.2731,
-   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 9.00x10.75 in; image aspect 0.790, fitted inside at true size, never stretched"
+   "note": "#317-wave2: white-border crop from gallery-courtyard/white-border-crops-317-wave2 (after 1600x1832, crop [0, 192, 1600, 2024]); true size kept (long side 0.2731 m, short side from crop aspect, never stretched)"
   },
   {
    "id": "older-work-ridge-strips-unindexed-original-1",
@@ -1014,11 +1011,11 @@
   },
   {
    "id": "older-work-ridge-strips-unindexed-original-6",
-   "img": "img/display/older-work-ridge-strips-unindexed-6-480.webp",
-   "hi": "https://img.tjm.art/display/older-work-ridge-strips-unindexed-6-960.webp",
+   "img": "art/older-work-ridge-strips-unindexed-original-6-b512-317.webp",
+   "hi": null,
    "w": 0.3048,
-   "h": 0.101,
-   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 12.00x4.50 in; image aspect 3.019, fitted inside at true size, never stretched (listed vs image aspect differs 12%, listed size needs TJ confirmation)"
+   "h": 0.0964,
+   "note": "#317-wave2: white-border crop from gallery-courtyard/white-border-crops-317-wave2 (after 1600x506, crop [0, 24, 1600, 530]); true size kept (long side 0.3048 m, short side from crop aspect, never stretched)"
   },
   {
    "id": "older-work-ridge-strips-unindexed-original-7",
@@ -1086,11 +1083,11 @@
   },
   {
    "id": "older-work-yakes-todd-dickerson-original-2",
-   "img": "img/display/older-work-yakes-todd-dickerson-2-480.webp",
-   "hi": "https://img.tjm.art/display/older-work-yakes-todd-dickerson-2-960.webp",
-   "w": 0.1904,
+   "img": "art/older-work-yakes-todd-dickerson-original-2-b512-317.webp",
+   "hi": null,
+   "w": 0.1831,
    "h": 0.2731,
-   "note": "#317/#318: real display image (not the 1200x630 social card). Listed 9.00x10.75 in; image aspect 0.697, fitted inside at true size, never stretched (listed vs image aspect differs 20%, listed size needs TJ confirmation)"
+   "note": "#317-wave2: white-border crop from gallery-courtyard/white-border-crops-317-wave2 (after 1538x2294, crop [62, 0, 1600, 2294]); true size kept (long side 0.2731 m, short side from crop aspect, never stretched)"
   },
   {
    "id": "older-work-yakes-todd-dickerson-original-3",
@@ -1099,6 +1096,38 @@
    "w": 0.2286,
    "h": 0.2698,
    "note": "#317/#318: real display image (not the 1200x630 social card). Listed 9.00x10.75 in; image aspect 0.847, fitted inside at true size, never stretched"
+  },
+  {
+   "id": "archived-painting-301",
+   "img": "art/archived-painting-301-317.webp",
+   "hi": "https://img.tjm.art/gallery-hi/archived-painting-301-hi-317.webp",
+   "note": "#317: white side borders cropped (crops in gallery-courtyard/white-border-crops-317); size unchanged; listed side kept, other side follows cropped aspect",
+   "h": 0.6096,
+   "w": 0.5327
+  },
+  {
+   "id": "archived-painting-img-1555",
+   "img": "art/archived-painting-img-1555-317.webp",
+   "hi": "https://img.tjm.art/gallery-hi/archived-painting-img-1555-hi-317.webp",
+   "note": "#317: white side borders cropped (crops in gallery-courtyard/white-border-crops-317); size unchanged; listed side kept, other side follows cropped aspect",
+   "w": 0.305,
+   "h": 0.2418
+  },
+  {
+   "id": "archived-painting-73",
+   "img": "art/archived-painting-73-b512-317.webp",
+   "hi": null,
+   "w": 0.2125,
+   "h": 0.305,
+   "note": "#317-wave2: white-border crop from gallery-courtyard/white-border-crops-317-wave2 (after 4372x6276, crop [0, 731, 4372, 7007]); true size kept (long side 0.305 m = default-12in, x1.5 preview scale applied downstream, short side from crop aspect, never stretched)"
+  },
+  {
+   "id": "book-art-74a736000a32427842b1",
+   "img": "art/book-art-74a736000a32427842b1-b512-317.webp",
+   "hi": null,
+   "w": 0.889,
+   "h": 0.7827,
+   "note": "#317-wave2: white-border crop from gallery-courtyard/white-border-crops-317-wave2 (after 3342x2942, crop [0, 37, 3342, 2979]); true size kept (long side 0.889 m, short side from crop aspect, never stretched)"
   }
  ],
  "notes": [
@@ -1116,34 +1145,6 @@
  ],
  "stayOutNote": "#300: these three had no wall room before the wider doors either; they stay out as at preview-251",
  "rows": [
-  {
-   "name": "#318 Forest Triptych",
-   "wall": "room-02/5",
-   "reserve": [
-    0.95,
-    99
-   ],
-   "span": [
-    0.95,
-    2.17
-   ],
-   "rows": [
-    [
-     [
-      "older-work-forest-triptych-original-1",
-      "older-work-forest-triptych-original-2",
-      "older-work-forest-triptych-original-3"
-     ]
-    ]
-   ],
-   "y": [
-    1.219
-   ],
-   "gap": 0.03,
-   "inner": 0.1,
-   "pg": 0.04,
-   "note": "three panels at true size side by side, same height, even 10 cm gap, one plaque after the third panel"
-  },
   {
    "name": "#319 Strawberry Point",
    "wall": "room-03/1",
@@ -1208,34 +1209,430 @@
    "note": "all 15 on one wall in two rows (plaque beside each)"
   },
   {
-   "name": "#320 Ukraine",
+   "name": "#354 Forest Triptych stack",
+   "wall": "room-02/5",
+   "reserve": [
+    0.95,
+    99
+   ],
+   "rows": [
+    [
+     [
+      "older-work-forest-triptych-original-1"
+     ]
+    ],
+    [
+     [
+      "older-work-forest-triptych-original-2"
+     ]
+    ],
+    [
+     [
+      "older-work-forest-triptych-original-3"
+     ]
+    ]
+   ],
+   "y": [
+    2.55,
+    1.65,
+    0.75
+   ],
+   "note": "TJ Oct 26 walk (#353/#354): triptych stacked vertically. SUPERSEDED Oct 27 B2a: tools/b2a.py (run after apply-overrides) hangs #318 as one row, #742 trio on room-07/5",
+   "span": [
+    1.45,
+    2.11
+   ]
+  },
+  {
+   "name": "#354 Bounty of Satoshi",
+   "wall": "room-02/1",
+   "reserve": "all",
+   "rows": [
+    [
+     [
+      "archived-painting-img-1612"
+     ],
+     [
+      "painting-phoenix-rising"
+     ],
+     [
+      "painting-festival-portrait"
+     ]
+    ]
+   ],
+   "y": [
+    1.6
+   ],
+   "note": "TJ Oct 26 walk (#353/#354): Bounty of Satoshi on one wall (Revelation stays out)"
+  },
+  {
+   "name": "#354 Ukraine trio",
    "wall": "room-11/5",
    "reserve": "all",
    "rows": [
     [
      [
+      "painting-sunflower-woman"
+     ],
+     [
       "painting-figures-in-wheatfield"
      ],
      [
-      "honeybadger-and-cub-with-genesis-block"
-     ],
-     [
-      "coined-in-watercolor-film-poster"
-     ],
-     [
-      "warszawska-syrenka"
-     ],
-     [
-      "painting-sunflower-woman"
+      "girl-wearing-flower-crown"
      ]
     ]
    ],
    "y": [
-    1.219
+    1.45
    ],
-   "gap": 0.02,
-   "pg": 0.0,
-   "note": "all 5 Ukraine works in one row (Mother of Kyiv at the left end, trio, Vision of Ukraine at Peace)"
+   "gap": 0.05,
+   "note": "TJ Oct 26 walk (#353/#354): Vision / Mother of Kyiv / Girl Wearing Flower Crown in a row"
+  },
+  {
+   "name": "#353 Bitcoiners 4x4",
+   "wall": "room-07/4",
+   "reserve": "all",
+   "rows": [
+    [
+     [
+      "older-work-bitcoin-voices-original-3"
+     ],
+     [
+      "older-work-bitcoin-voices-original-4"
+     ],
+     [
+      "older-work-bitcoin-voices-original-1"
+     ],
+     [
+      "older-work-bitcoin-voices-original-2"
+     ]
+    ],
+    [
+     [
+      "older-work-yakes-todd-dickerson-original-2"
+     ],
+     [
+      "older-work-yakes-todd-dickerson-original-1"
+     ],
+     [
+      "older-work-yakes-todd-dickerson-original-3"
+     ],
+     [
+      "older-work-rochard-martinez-original-1"
+     ]
+    ],
+    [
+     [
+      "older-work-ammous-livera-original-1"
+     ],
+     [
+      "older-work-ammous-livera-original-2"
+     ],
+     [
+      "older-work-nakamoto-hayek-original-1"
+     ],
+     [
+      "older-work-nakamoto-hayek-original-2"
+     ]
+    ],
+    [
+     [
+      "older-work-fernandez-moran-pysh-original-1"
+     ],
+     [
+      "older-work-fernandez-moran-pysh-original-2"
+     ],
+     [
+      "older-work-fernandez-moran-pysh-original-3"
+     ],
+     [
+      "older-work-rochard-martinez-original-2"
+     ]
+    ]
+   ],
+   "y": [
+    2.65,
+    1.95,
+    1.38,
+    0.72
+   ],
+   "gap": 0.06,
+   "note": "TJ Oct 26 walk (#353/#354): Bitcoiner portraits 4x4 in the Bitcoiners gallery; Todd/Yakes/Dickerson out of festival room-04"
+  },
+  {
+   "name": "#354 Temples + Bass Coast sunrises",
+   "wall": "room-04/4",
+   "reserve": "all",
+   "rows": [
+    [
+     [
+      "archived-painting-19"
+     ],
+     [
+      "archived-painting-20"
+     ],
+     [
+      "archived-painting-433"
+     ],
+     [
+      "archived-painting-438"
+     ]
+    ],
+    [
+     [
+      "burning-man-temple-2022-flame"
+     ],
+     [
+      "burning-man-temple-2022-pink"
+     ],
+     [
+      "archived-painting-436"
+     ],
+     [
+      "archived-painting-437"
+     ]
+    ]
+   ],
+   "y": [
+    2.25,
+    1.4
+   ],
+   "gap": 0.08,
+   "note": "TJ Oct 26 walk (#353/#354): temple 2x2 with the Bass Coast sunrise grid beside it (only 4 Bass Coast sunrises exist -> 2x2)"
+  },
+  {
+   "name": "#354 Rainier stack + ridge strips",
+   "wall": "room-12/4",
+   "reserve": "all",
+   "rows": [
+    [
+     [
+      "lisa-climbing-tahoma-at-sunrise-from-denny-blaine"
+     ],
+     [
+      "older-work-sunset-ridge-strips-original-1"
+     ],
+     [
+      "older-work-sunset-ridge-strips-original-2"
+     ],
+     [
+      "older-work-sunset-ridge-strips-original-3"
+     ],
+     [
+      "older-work-sunset-ridge-strips-original-4"
+     ]
+    ],
+    [
+     [
+      "sunrise-on-tahoma-from-denny-blaine"
+     ],
+     [
+      "older-work-sunset-ridge-strips-original-5"
+     ],
+     [
+      "older-work-sunset-ridge-strips-original-6"
+     ],
+     [
+      "older-work-ridge-strips-unindexed-original-1"
+     ],
+     [
+      "older-work-ridge-strips-unindexed-original-3"
+     ]
+    ],
+    [
+     [
+      "painting-portrait-with-hat"
+     ],
+     [
+      "older-work-ridge-strips-unindexed-original-4"
+     ],
+     [
+      "older-work-ridge-strips-unindexed-original-2"
+     ],
+     [
+      "older-work-ridge-strips-unindexed-original-5"
+     ],
+     [
+      "older-work-ridge-strips-unindexed-original-6"
+     ],
+     [
+      "older-work-ridge-strips-unindexed-original-7"
+     ]
+    ]
+   ],
+   "y": [
+    2.6,
+    1.9,
+    1.3
+   ],
+   "gap": 0.03,
+   "note": "TJ Oct 26 walk (#353/#354): three Rainiers stacked (weaker duplicate archived-painting-2 dropped), all ridge strips with them; eagle plaque beside Sunrise on Rainier with Eagle"
+  },
+  {
+   "name": "#354 Father Paul",
+   "wall": "room-05/0",
+   "reserve": "all",
+   "rows": [
+    [
+     [
+      "book-art-0a80f9a5da0d39edc80f"
+     ],
+     [
+      "book-art-82127d1886ae57d5cb6e"
+     ],
+     [
+      "archived-painting-img-1555"
+     ],
+     [
+      "grandpa-howard"
+     ]
+    ]
+   ],
+   "y": [
+    1.5
+   ],
+   "gap": 0.08,
+   "note": "TJ Oct 26 walk (#353/#354): Dad Meditating in Yellowstone hangs with Father Paul (beside Ruth)"
+  },
+  {
+   "name": "#354 $75 watercolors grid",
+   "wall": "room-09/3",
+   "reserve": "all",
+   "rows": [
+    [
+     [
+      "older-work-mountain-layers-original-1"
+     ],
+     [
+      "older-work-mountain-layers-original-2"
+     ],
+     [
+      "older-work-mountain-layers-original-3"
+     ],
+     [
+      "older-work-mountain-layers-original-4"
+     ]
+    ],
+    [
+     [
+      "older-work-beach-sunsets-original-1"
+     ],
+     [
+      "older-work-beach-sunsets-original-2"
+     ],
+     [
+      "older-work-beach-sunsets-original-3"
+     ]
+    ],
+    [
+     [
+      "older-work-lake-hillside-color-wheel-original-1"
+     ],
+     [
+      "older-work-lake-hillside-color-wheel-original-2"
+     ],
+     [
+      "older-work-lake-hillside-color-wheel-original-3"
+     ]
+    ]
+   ],
+   "y": [
+    2.25,
+    1.75,
+    1.25
+   ],
+   "gap": 0.06,
+   "note": "TJ Oct 26 walk (#353/#354): small $75 watercolors in one grid"
+  },
+  {
+   "name": "#354 Hummingbirds stack",
+   "wall": "room-09/1",
+   "reserve": "all",
+   "rows": [
+    [
+     [
+      "book-art-b7a9cd259d8ac51a236b"
+     ]
+    ]
+   ],
+   "y": [
+    1.85
+   ],
+   "note": "TJ Oct 26 walk (#353/#354): Rescued Hummingbird over Hummingbird Feeder 190 | #834 Feeder 190 parked"
+  },
+  {
+   "name": "#354 Attendees 2x2 (Bitcoiners)",
+   "wall": "room-10/3",
+   "reserve": "all",
+   "rows": [
+    [
+     [
+      "book-art-044d157c01c7bb07eeab"
+     ],
+     [
+      "book-art-4afb5cab4bdbe1ff6845"
+     ],
+     [
+      "book-art-4d53927ad111f0259402"
+     ],
+     [
+      "book-art-6ef848d3ccb6b48184ab"
+     ]
+    ],
+    [
+     [
+      "book-art-0ee2717bc04e65d0507e"
+     ],
+     [
+      "book-art-deb92de6e72f7b3ce951"
+     ]
+    ]
+   ],
+   "y": [
+    1.9,
+    1.2
+   ],
+   "gap": 0.06,
+   "note": "TJ Oct 26 walk (#353/#354): small attendee portraits as a 2x2 (Carla + Walker frame it either side)"
+  },
+  {
+   "name": "#354 Blank wall fill (room-12/0)",
+   "wall": "room-12/0",
+   "reserve": "all",
+   "rows": [
+    [
+     [
+      "archived-painting-53"
+     ],
+     [
+      "painting-moonlit-water"
+     ]
+    ]
+   ],
+   "y": [
+    1.6
+   ],
+   "gap": 0.03,
+   "note": "TJ Oct 26: no dead empty wall after Lisa joined the Rainier stack; Denny Blaine self-portrait + Moonrise over the Cascades"
   }
- ]
+ ],
+ "labels": {
+  "room-02": "Bounty of Satoshi · Brekkie Bitcoin B · Forest Triptych",
+  "room-04": "Festival · Burning Man Temples · Bass Coast",
+  "room-05": "Family · Father Paul",
+  "room-07": "Bitcoiners · Portrait Grid",
+  "room-09": "Sunset · Hummingbirds",
+  "room-11": "Portrait · Ukraine",
+  "room-12": "Tahoma / Rainier · Denny Blaine · Seattle"
+ },
+ "eaglePlaque": {
+  "nextTo": "painting-portrait-with-hat",
+  "side": "left",
+  "note": "TJ Oct 26 walk (#353/#354): brass plaque from the Rainier-with-Eagle detail beside that painting"
+ },
+ "paulRoom": {
+  "radius": 6.0,
+  "rows": 2,
+  "note": "#356 smaller annex, double-stacked grid"
+ }
 }

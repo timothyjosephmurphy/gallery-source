@@ -1,0 +1,175 @@
+{
+ "issue": 813,
+ "source": "https://bitcoinfilmfest.com/26/",
+ "screening": "https://indeehub.studio/screening-room",
+ "home": "https://indeehub.studio/",
+ "faq": "https://bitcoinfilmfest.com/26/press/faq.html",
+ "default": "coined",
+ "films": [
+  {
+   "id": "bitchamler",
+   "title": "Bitchamler — Freedom on the River",
+   "meta": "~25 min",
+   "blurb": "Screened in the BFF’26 cinema programme, Warsaw.",
+   "mode": "gated",
+   "ih": "https://indeehub.studio/screening-room",
+   "ihPage": false
+  },
+  {
+   "id": "bitcoin-castle",
+   "title": "Bitcoin Castle / Schloss Bitcoin",
+   "meta": "Bruno Schiebel · ~28 min · Golden Rabbit Best Movie + Audience Award",
+   "blurb": "The festival’s Best Movie and Audience Award winner.",
+   "mode": "gated",
+   "ih": "https://indeehub.studio/film/f498ceb5-eb81-4535-8f30-813cc954726f",
+   "ihPage": true
+  },
+  {
+   "id": "motorcycle-diaries",
+   "title": "Bitcoin Motorcycle Diaries",
+   "meta": "Bitcoin Video Magazine · ~60 min (festival chapter)",
+   "blurb": "Screened in the BFF’26 cinema programme, Warsaw.",
+   "mode": "gated",
+   "ih": "https://indeehub.studio/screening-room",
+   "ihPage": false
+  },
+  {
+   "id": "coined",
+   "title": "Coined in Watercolor",
+   "meta": "Gavin Robertson · ~12 min",
+   "blurb": "TJ Murphy paints his way all in. Free here in the Kinoteka.",
+   "mode": "chunks",
+   "ih": "https://indeehub.studio/film/coined-in-watercolor",
+   "ihPage": true,
+   "yt": "i7tvzE_bqM8"
+  },
+  {
+   "id": "crying-baby",
+   "title": "Crying Baby, Dancing Bee",
+   "meta": "~11 min",
+   "blurb": "Screened in the BFF’26 cinema programme, Warsaw.",
+   "mode": "gated",
+   "ih": "https://indeehub.studio/screening-room",
+   "ihPage": false
+  },
+  {
+   "id": "crypto-castle",
+   "title": "Crypto Castle",
+   "meta": "Viv Ford · ~9 min",
+   "blurb": "Screened in the BFF’26 cinema programme, Warsaw.",
+   "mode": "gated",
+   "ih": "https://indeehub.studio/screening-room",
+   "ihPage": false
+  },
+  {
+   "id": "finding-home-4",
+   "title": "Finding Home Ep. 4",
+   "meta": "Avi Burra · ~32 min",
+   "blurb": "Screened in the BFF’26 cinema programme, Warsaw.",
+   "mode": "gated",
+   "ih": "https://indeehub.studio/film/finding-home",
+   "ihPage": true
+  },
+  {
+   "id": "finding-satoshi",
+   "title": "Finding Satoshi",
+   "meta": "Miele & Tooley · ~101 min (festival screened the trailer)",
+   "blurb": "A feature-length search for the creator of bitcoin.",
+   "mode": "gated",
+   "ih": "https://indeehub.studio/screening-room",
+   "ihPage": false
+  },
+  {
+   "id": "bitcoin-beach",
+   "title": "From El Salvador to Global Mission / Bitcoin Beach",
+   "meta": "~30 min",
+   "blurb": "Screened in the BFF’26 cinema programme, Warsaw.",
+   "mode": "gated",
+   "ih": "https://indeehub.studio/screening-room",
+   "ihPage": false
+  },
+  {
+   "id": "hummingbird",
+   "title": "Hummingbird — The Bitcoin Jungle Story",
+   "meta": "HODL · ~75 min",
+   "blurb": "Costa Rica, a jungle community and a circular economy. Full film, free here.",
+   "mode": "yt",
+   "yt": "63WbA7slCdg",
+   "ih": "https://indeehub.studio/film/hummingbird",
+   "ihPage": true
+  },
+  {
+   "id": "legend-of-landi",
+   "title": "Legend of Landi",
+   "meta": "BFF’26 cinema programme",
+   "blurb": "Screened in the BFF’26 cinema programme, Warsaw.",
+   "mode": "gated",
+   "ih": "https://indeehub.studio/screening-room",
+   "ihPage": false
+  },
+  {
+   "id": "little-honeybadger",
+   "title": "Little Honeybadger",
+   "meta": "BFF’26 cinema programme",
+   "blurb": "Screened in the BFF’26 cinema programme, Warsaw.",
+   "mode": "gated",
+   "ih": "https://indeehub.studio/screening-room",
+   "ihPage": false
+  },
+  {
+   "id": "maxisclub-3",
+   "title": "MaxisClub Ep. 3",
+   "meta": "Redy · ~23 min · Golden Rabbit Best Short",
+   "blurb": "The festival’s best short.",
+   "mode": "gated",
+   "ih": "https://indeehub.studio/screening-room",
+   "ihPage": false
+  },
+  {
+   "id": "satoshi",
+   "title": "Satoshi",
+   "meta": "BFF’26 cinema programme",
+   "blurb": "Screened in the BFF’26 cinema programme, Warsaw.",
+   "mode": "gated",
+   "ih": "https://indeehub.studio/screening-room",
+   "ihPage": false
+  },
+  {
+   "id": "satoshis-last-will",
+   "title": "Satoshi’s Last Will",
+   "meta": "BFF’26 cinema programme",
+   "blurb": "Screened in the BFF’26 cinema programme, Warsaw.",
+   "mode": "gated",
+   "ih": "https://indeehub.studio/screening-room",
+   "ihPage": false
+  },
+  {
+   "id": "seeding-bitcoin",
+   "title": "Seeding Bitcoin",
+   "meta": "Satoshi Labs",
+   "blurb": "Screened in the BFF’26 cinema programme, Warsaw.",
+   "mode": "gated",
+   "ih": "https://indeehub.studio/film/0e163a08-820d-4dd4-882b-f2df05f53ddf",
+   "ihPage": true
+  },
+  {
+   "id": "self-custody",
+   "title": "Self Custody",
+   "meta": "Garrett Patten / Adrian Grenier · ~31 min",
+   "blurb": "Why holding your own keys matters. Trailer free; full film on IndeeHub, Prime and Tubi.",
+   "mode": "gated",
+   "ih": "https://indeehub.studio/screening-room",
+   "ihPage": false,
+   "trailer": "vo6yEr00cXk"
+  },
+  {
+   "id": "south-of-market",
+   "title": "South of Market",
+   "meta": "BFF’26 cinema programme",
+   "blurb": "Screened in the BFF’26 cinema programme, Warsaw.",
+   "mode": "gated",
+   "ih": "https://indeehub.studio/screening-room",
+   "ihPage": false
+  }
+ ]
+}

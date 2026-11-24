@@ -1,165 +1,385 @@
 {
-  "voice": "Paula",
-  "speed": 1.15,
-  "model": "eleven_v3",
+  "pack": "hex-tour-maeve-walk-2026-11-04-stops",
+  "voice": "Maeve soft Irish",
+  "base_url": "https://img.tjm.art/play/tour/maeve-walk-5-stops/",
+  "clip_count": 53,
+  "spoken_total_s": 219.402,
   "clips": [
     {
       "order": 1,
-      "file": "01-offer.mp3",
-      "section": "Offer",
-      "room_stop": "Offer (before tour)",
-      "type": "offer",
-      "transcript": "I can show you around. If you'd like a tour, tap me now, and I will guide you through the galleries. You can always walk around using the controls.",
-      "duration_s": 7.6
-    },
-    {
-      "order": 1.5,
-      "file": "00-controls.mp3",
-      "section": "Opening: controls",
-      "room_stop": "Tour start",
-      "type": "controls",
-      "transcript": "Before we start: you can always walk around with the controls while I'm talking. When it's time for the next stop, I'll bring you along.",
-      "duration_s": 6.64
+      "file": "00-welcome.mp3",
+      "type": "walk",
+      "transcript": "Welcome. I'll lead you through the gallery.",
+      "duration_s": 2.351
     },
     {
       "order": 2,
-      "file": "02-intro.mp3",
-      "section": "Stop 1: Intro",
-      "room_stop": "Stop 1 / Intro",
-      "type": "stop",
-      "transcript": "Welcome. I'm so glad you're here.\nThese are paintings by TJ Murphy, an artist based in Seattle.\nIn his words: \"I first started painting from sitting on the beach at Denny Blaine and sketching Mount Rainier.\"\nHe did a bunch of pen and ink sketches.\nThen he picked up watercolor, to try and capture the luminosity of the light in the sky.\nIn 2020 he got more serious about it. He had some time, and started doing bigger work.",
-      "duration_s": 32.63
+      "file": "walk-00-to-01.mp3",
+      "type": "walk",
+      "transcript": "Come with me — to the mountain where it all began.",
+      "duration_s": 3.553
     },
     {
       "order": 3,
-      "file": "03-walk-intro-rainier.mp3",
-      "section": "Walk: Intro to Rainier",
-      "room_stop": "Intro -> Rainier",
-      "type": "walk",
-      "transcript": "Come with me. We'll start with the mountain, where it all began.",
-      "duration_s": 3.81
+      "file": "stop-01-rainier-cluster.mp3",
+      "type": "stop",
+      "transcript": "This is Rainier — the first thing that inspired TJ to learn to paint. The changing light of the sky.",
+      "duration_s": 7.158
     },
     {
       "order": 4,
-      "file": "04-rainier.mp3",
-      "section": "Stop 2: Rainier gallery",
-      "room_stop": "Stop 2 / Rainier",
-      "type": "stop",
-      "transcript": "Here's Rainier over the lake at sunrise, seen from Denny Blaine, near TJ's home.\nThat's TJ on the rocks, wrapped in his meditation blanket.\nHis friend Lisa brought it back from Tanzania, on his birthday. Red and blue Maasai cloth.\nNow this one. The blanket's still there, but TJ has disappeared.\nIn his words: \"It's still a self-portrait. I'm just not in it. I'm everything in it.\"",
-      "duration_s": 25.18
+      "file": "walk-01-to-02.mp3",
+      "type": "walk",
+      "transcript": "And along the wall — the sunsets.",
+      "duration_s": 2.926
     },
     {
       "order": 5,
-      "file": "05-walk-rainier-elsalvador.mp3",
-      "section": "Walk: Rainier to El Salvador",
-      "room_stop": "Rainier -> El Salvador",
-      "type": "walk",
-      "transcript": "Most mornings he sits out on his balcony before dawn, in that same blanket.\nNext, somewhere much warmer.",
-      "duration_s": 7.03
+      "file": "stop-02-portrait-sunsets.mp3",
+      "type": "stop",
+      "transcript": "Three sunsets — and in the middle, one standing tall, the light pouring down.",
+      "duration_s": 6.113
     },
     {
       "order": 6,
-      "file": "06-elsalvador.mp3",
-      "section": "Stop 3: El Salvador",
-      "room_stop": "Stop 3 / El Salvador",
-      "type": "stop",
-      "transcript": "Welcome to El Salvador.\nThese Atami sunsets are from TJ's first visit, in 2022.\nThis one is a sunset in El Zonte, from 2023.\nHe stayed at a hostel on the corner where the river meets the beach.\nHe woke before dawn to meditate and watch the light come.\nThe surfers were already paddling out, and the big round stones tumbled with every wave.\nThe tropical air makes the light especially luminous.",
-      "duration_s": 27.95
+      "file": "walk-02-to-03.mp3",
+      "type": "walk",
+      "transcript": "And next, the warm light of El Salvador —",
+      "duration_s": 3.396
     },
     {
       "order": 7,
-      "file": "07-walk-elsalvador-portraits.mp3",
-      "section": "Walk: El Salvador to Portraits",
-      "room_stop": "El Salvador -> Portraits",
-      "type": "walk",
-      "transcript": "He painted that one later, in his Seattle studio, from photos he took on the trip.\nNow, from places to family.",
-      "duration_s": 7.34
+      "file": "stop-03-chase-toole.mp3",
+      "type": "stop",
+      "transcript": "El Salvador — past, present, and future. Made together with Chase Toole.",
+      "duration_s": 5.721
     },
     {
       "order": 8,
-      "file": "08-portraits.mp3",
-      "section": "Stop 4: Portraits",
-      "room_stop": "Stop 4 / Portraits",
-      "type": "stop",
-      "transcript": "On this wall, side by side, are TJ's dad and mom.\nThis is his dad, Paul Murphy.\nThey've been painting together since COVID. His dad picked up a brush shortly after TJ did, for the first time in his life.\nTJ also illustrated twelve poems for his dad's book, Reflections on Time.\nAnd his dad gave him a bass he bought the Christmas TJ got a guitar, at about eight, and never really played.\nHis dad said, \"I think that bass is a lot happier with you.\"\nAnd this is his mom, Ruth.\nHe painted her while they were hanging out at her house in Florida. She has a beautiful smile and bright eyes.",
-      "duration_s": 37.62
-    },
-    {
-      "order": 8.5,
-      "file": "08b-grandpa.mp3",
-      "section": "Stop 4b: Grandpa Howard",
-      "room_stop": "Stop 4b / Family",
-      "type": "stop",
-      "transcript": "And this is TJ's grandfather, Howard.\nTJ painted it for Grandpa Howard's memorial, and made one for each of Howard's children, as a gift to remember him by.\nHoward was a saintly man, and a true follower of Jesus.\nEvery year he went on mission trips to Costa Rica, where he built schools and helped the indigenous community build what they needed.\nHe was peaceful, calm, and patient. A true example.",
-      "duration_s": 23.67
+      "file": "walk-03-to-04.mp3",
+      "type": "walk",
+      "transcript": "Now — the festival room.",
+      "duration_s": 2.116
     },
     {
       "order": 9,
-      "file": "09-walk-portraits-bitcoiners.mp3",
-      "section": "Walk: Portraits to Bitcoiners",
-      "room_stop": "Portraits -> Bitcoiners",
-      "type": "walk",
-      "transcript": "TJ's usual medium these days is watercolor pastel.\nThrough here, you may recognize a few faces, if you know Bitcoin.",
-      "duration_s": 7.47
+      "file": "stop-04-festival-sunrises.mp3",
+      "type": "stop",
+      "transcript": "Bass Coast sunrises — dancing into dawn. And Burning Man — the temples, and the Mayan Warrior.",
+      "duration_s": 7.967
     },
     {
       "order": 10,
-      "file": "10-bitcoiners.mp3",
-      "section": "Stop 5: Bitcoiners",
-      "room_stop": "Stop 5 / Bitcoiners",
-      "type": "stop",
-      "transcript": "These are the Bitcoiners.\nIn TJ's words: \"When I started going to Bitcoin conferences, I did a bunch of portraits of the speakers as a conversation starter.\"\n\"I've handed probably 20 or 30 out, and it's got me invited to some fun parties.\"\nAnd over here is Ser at Pacific Bitcoin Festival.",
-      "duration_s": 16.35
+      "file": "walk-04-to-05.mp3",
+      "type": "walk",
+      "transcript": "And the people —",
+      "duration_s": 1.411
     },
     {
       "order": 11,
-      "file": "11-walk-bitcoiners-friends.mp3",
-      "section": "Walk: Bitcoiners to Friends",
-      "room_stop": "Bitcoiners -> Friends",
-      "type": "walk",
-      "transcript": "Next, a room of friends.",
-      "duration_s": 1.83
+      "file": "stop-05-festival-portraits.mp3",
+      "type": "stop",
+      "transcript": "Festival friends — a striped hat, a fan, and a cellist, playing for the crowd.",
+      "duration_s": 5.486
     },
     {
       "order": 12,
-      "file": "12a-friends.mp3",
-      "section": "Stop 6: Friends",
-      "room_stop": "Stop 6 / Friends",
-      "type": "stop",
-      "transcript": "TJ's paintings are full of the people in his life.\nHis friend Craig came down to the beach and took the photos for his self-portrait.",
-      "duration_s": 8.23
-    },
-    {
-      "order": 12.5,
-      "file": "12b-kayak.mp3",
-      "section": "Stop 6b: Sucia and Patos",
-      "room_stop": "Stop 6b / Kayak sunsets",
-      "type": "stop",
-      "transcript": "In 2023 he went kayaking with friends out to Sucia and Patos.\nHis first time in an ocean kayak. The current nearly pulled them to the other island.\nHe calls it humbling. And beautiful.",
-      "duration_s": 14.68
+      "file": "walk-05-to-06.mp3",
+      "type": "walk",
+      "transcript": "A little further along —",
+      "duration_s": 1.881
     },
     {
       "order": 13,
-      "file": "13-walk-friends-mural.mp3",
-      "section": "Walk: Friends to the Friends Club mural",
-      "room_stop": "Friends -> Friends Club mural",
-      "type": "walk",
-      "transcript": "Let's head out to the courtyard for our last stop.\nIt's a big one. You can't miss it.",
-      "duration_s": 4.78
+      "file": "stop-06-festival-column.mp3",
+      "type": "stop",
+      "transcript": "More mornings from Bass Coast — stacked up the wall, all that colour at the edge.",
+      "duration_s": 5.486
     },
     {
       "order": 14,
-      "file": "14-friends-club-mural.mp3",
-      "section": "Stop 7: Friends Club mural",
-      "room_stop": "Stop 7 / Friends Club mural (courtyard)",
+      "file": "walk-06-to-07.mp3",
+      "type": "walk",
+      "transcript": "Back to El Salvador now — to the beach.",
+      "duration_s": 2.847
+    },
+    {
+      "order": 15,
+      "file": "stop-07-el-salvador-beach.mp3",
       "type": "stop",
-      "transcript": "This is the Friends Club mural, a 40 by 9 foot shipping container in Lillooet, British Columbia.\nTJ met Kara and Paul, who organize the Friends Club festival, at a Provibers reunion in 2026.\nNearing three in the morning, Kara asked, \"Do you do murals?\"\nHe'd done one, some twenty years earlier.\nHe painted this one as a gift, because he likes these people.\nEd the Spaceman floats down the river on a raft, with Tobias the dog and Billy Buff the chin-man.\nThe Lady on the right points him to the festival on the far hill.\nIn TJ's words: \"We trusted in each other, and what emerged was magnificent.\"\nThat's the end of our tour. Thank you so much for walking with me.\nOriginal paintings and portrait commissions are available through Vermillion Aurora Productions.\nFeel free to keep exploring. I'll be right here if you need me.",
-      "duration_s": 53.55
+      "transcript": "El Salvador — painting on the beach, meditating, watching the surfers. Soft light over the water.",
+      "duration_s": 7.889
+    },
+    {
+      "order": 16,
+      "file": "walk-07-to-08.mp3",
+      "type": "walk",
+      "transcript": "On into the sunsets.",
+      "duration_s": 2.038
+    },
+    {
+      "order": 17,
+      "file": "stop-08-sunset-figure.mp3",
+      "type": "stop",
+      "transcript": "Two sunsets standing guard — and between them, a figure, alone in the glow.",
+      "duration_s": 5.878
+    },
+    {
+      "order": 18,
+      "file": "walk-08-to-09.mp3",
+      "type": "walk",
+      "transcript": "And here —",
+      "duration_s": 1.149
+    },
+    {
+      "order": 19,
+      "file": "stop-09-sunset-four.mp3",
+      "type": "stop",
+      "transcript": "Four more evenings — and down below, the sun, still bright and yellow.",
+      "duration_s": 5.407
+    },
+    {
+      "order": 20,
+      "file": "stop-10-strawberry-point.mp3",
+      "type": "stop",
+      "transcript": "The Strawberry Point backpacking trip — little paintings, one for each stretch of the trail.",
+      "duration_s": 5.642
+    },
+    {
+      "order": 21,
+      "file": "walk-10-to-11.mp3",
+      "type": "walk",
+      "transcript": "And the mountains —",
+      "duration_s": 1.646
+    },
+    {
+      "order": 22,
+      "file": "stop-11-mexico-volcanoes.mp3",
+      "type": "stop",
+      "transcript": "Long views of mountains and volcanoes — stretched wide across the wall.",
+      "duration_s": 5.068
+    },
+    {
+      "order": 23,
+      "file": "walk-11-to-12.mp3",
+      "type": "walk",
+      "transcript": "Now — faces.",
+      "duration_s": 1.724
+    },
+    {
+      "order": 24,
+      "file": "stop-12-tahoma-portraits-a.mp3",
+      "type": "stop",
+      "transcript": "Portraits of friends — here a bearded face, and beside him, colour set free.",
+      "duration_s": 5.878
+    },
+    {
+      "order": 25,
+      "file": "walk-12-to-13.mp3",
+      "type": "walk",
+      "transcript": "And here —",
+      "duration_s": 1.149
+    },
+    {
+      "order": 26,
+      "file": "stop-13-tahoma-portraits-b.mp3",
+      "type": "stop",
+      "transcript": "A woman in blue, in the garden.",
+      "duration_s": 2.429
+    },
+    {
+      "order": 27,
+      "file": "walk-13-to-14.mp3",
+      "type": "walk",
+      "transcript": "Inside — paintings for Ukraine.",
+      "duration_s": 2.769
+    },
+    {
+      "order": 28,
+      "file": "stop-14-ukraine.mp3",
+      "type": "stop",
+      "transcript": "These Ukraine paintings were auctioned at TJ's first show. The great monument — and a girl wearing a flower crown.",
+      "duration_s": 7.706
+    },
+    {
+      "order": 29,
+      "file": "walk-14-to-15.mp3",
+      "type": "walk",
+      "transcript": "On, into the landscapes.",
+      "duration_s": 2.351
+    },
+    {
+      "order": 30,
+      "file": "stop-15-landscapes-a.mp3",
+      "type": "stop",
+      "transcript": "Open land, and big sky.",
+      "duration_s": 2.847
+    },
+    {
+      "order": 31,
+      "file": "walk-15-to-16.mp3",
+      "type": "walk",
+      "transcript": "Round the corner —",
+      "duration_s": 1.489
+    },
+    {
+      "order": 32,
+      "file": "stop-16-landscapes-lily.mp3",
+      "type": "stop",
+      "transcript": "Tall views on the left — and on the right, a lily, painted on a painting date.",
+      "duration_s": 5.251
+    },
+    {
+      "order": 33,
+      "file": "walk-16-to-17.mp3",
+      "type": "walk",
+      "transcript": "And on — to the Bounty of Satoshi.",
+      "duration_s": 3.004
+    },
+    {
+      "order": 34,
+      "file": "stop-17-revelation.mp3",
+      "type": "stop",
+      "transcript": "The Bounty of Satoshi. And here, in the middle — Revelation.",
+      "duration_s": 4.833
+    },
+    {
+      "order": 35,
+      "file": "walk-17-to-18.mp3",
+      "type": "walk",
+      "transcript": "And now — the Bitcoiners.",
+      "duration_s": 2.194
+    },
+    {
+      "order": 36,
+      "file": "stop-18-bitcoiners-grid.mp3",
+      "type": "stop",
+      "transcript": "The Bitcoiners — portraits TJ handed out at Bitcoin gatherings, all along this wall.",
+      "duration_s": 5.642
+    },
+    {
+      "order": 37,
+      "file": "walk-18-to-19.mp3",
+      "type": "walk",
+      "transcript": "And here, even more —",
+      "duration_s": 2.273
+    },
+    {
+      "order": 38,
+      "file": "stop-19-bitcoiners-network.mp3",
+      "type": "stop",
+      "transcript": "A whole network of faces — linked together, line by line.",
+      "duration_s": 4.676
+    },
+    {
+      "order": 39,
+      "file": "walk-19-to-20.mp3",
+      "type": "walk",
+      "transcript": "Outside — Berlin.",
+      "duration_s": 2.116
+    },
+    {
+      "order": 40,
+      "file": "stop-20-court-berlin.mp3",
+      "type": "stop",
+      "transcript": "The Berlin mural — TJ's sign for the Bitcoin Community Center in Berlín, El Salvador.",
+      "duration_s": 6.034
+    },
+    {
+      "order": 41,
+      "file": "walk-20-to-21.mp3",
+      "type": "walk",
+      "transcript": "Back inside —",
+      "duration_s": 1.489
+    },
+    {
+      "order": 42,
+      "file": "stop-21-bitcoiners-surreal.mp3",
+      "type": "stop",
+      "transcript": "Dreamlike pieces — strange, and bright.",
+      "duration_s": 3.709
+    },
+    {
+      "order": 43,
+      "file": "walk-21-to-22.mp3",
+      "type": "walk",
+      "transcript": "And here —",
+      "duration_s": 1.149
+    },
+    {
+      "order": 44,
+      "file": "stop-22-bitcoiners-speakers.mp3",
+      "type": "stop",
+      "transcript": "Voices from the stage — right through to the cowboy hat at the mic.",
+      "duration_s": 4.284
+    },
+    {
+      "order": 45,
+      "file": "walk-22-to-23.mp3",
+      "type": "walk",
+      "transcript": "And one last poster, before the film —",
+      "duration_s": 2.847
+    },
+    {
+      "order": 46,
+      "file": "stop-23a-honeybadger.mp3",
+      "type": "stop",
+      "transcript": "Honeybadger and Cub with Genesis Block — the gentle side of the fierce protector.",
+      "duration_s": 5.642
+    },
+    {
+      "order": 47,
+      "file": "stop-23b-coined.mp3",
+      "type": "stop",
+      "transcript": "This watercolor poster was made for the film we're about to see — in Warsaw. Coined in Watercolor.",
+      "duration_s": 6.687
+    },
+    {
+      "order": 48,
+      "file": "walk-23-to-book.mp3",
+      "type": "walk",
+      "transcript": "But first — TJ's book.",
+      "duration_s": 2.273
+    },
+    {
+      "order": 49,
+      "file": "book-a-open.mp3",
+      "type": "stop",
+      "transcript": "On this plinth — TJ's book, Reflections on Time. Let me open one.",
+      "duration_s": 5.407,
+      "act": "bookA"
+    },
+    {
+      "order": 50,
+      "file": "book-b-pages.mp3",
+      "type": "stop",
+      "transcript": "Each page is a painting… turn the page, and there's the next… and the next. Tap any copy to flip through yourself.",
+      "duration_s": 7.889,
+      "act": "bookB",
+      "same": 1
+    },
+    {
+      "order": 51,
+      "file": "book-c-close.mp3",
+      "type": "stop",
+      "transcript": "The books are available for sale. And now —",
+      "duration_s": 3.082,
+      "act": "bookC",
+      "same": 1
+    },
+    {
+      "order": 52,
+      "file": "walk-book-to-24.mp3",
+      "type": "walk",
+      "transcript": "Out across the plaza now, and up the steps — to Kinoteka.",
+      "duration_s": 4.206
+    },
+    {
+      "order": 53,
+      "file": "stop-24-kinoteka.mp3",
+      "type": "stop",
+      "transcript": "Here — Kinoteka. On your right, the film-picker kiosk — choose films from the Bitcoin Film Festival. Thank you for coming with me. Explore as long as you like — I'm nearby if you need me.",
+      "duration_s": 13.244
     }
-  ],
-  "total_duration_s": 319.82,
-  "full_preview_duration_s_with_gaps": 332.82,
-  "full_preview_duration_s_measured": 332.33,
-  "tempo": 1.25,
-  "tempo_method": "ffmpeg atempo=1.25 (pitch preserved), issue #286"
+  ]
 }

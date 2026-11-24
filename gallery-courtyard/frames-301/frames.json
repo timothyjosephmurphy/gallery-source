@@ -1,0 +1,63 @@
+{
+ "issue": "studio-tracker#301",
+ "style": "museum black satin lacquer, original procedural",
+ "strip": {
+  "size": [
+   2048,
+   256
+  ],
+  "phone": [
+   1024,
+   128
+  ],
+  "u": "along moulding, tiles; scale U by world length (~1 repeat per 0.6 m)",
+  "v": "across profile 0=back/wall -> 1=canvas lip"
+ },
+ "uv_bands": {
+  "back": [
+   0,
+   0.1
+  ],
+  "outer_bevel": [
+   0.1,
+   0.34
+  ],
+  "face": [
+   0.34,
+   0.72
+  ],
+  "step_cove": [
+   0.72,
+   0.88
+  ],
+  "liner_lip": [
+   0.88,
+   1.0
+  ]
+ },
+ "maps": {
+  "albedo": "frame-black.webp",
+  "normal": "frame-black_n.webp (OpenGL +Y)",
+  "roughness": "frame-black_r.webp",
+  "ao": "frame-black_ao.webp",
+  "liner_optional": "frame-liner-gold.webp (map to v .88-1.0, metalness .6 rough .45)",
+  "contact_shadow": "frame-contact-shadow.png/.webp (RGBA, 9-slice quad 1-2 mm off wall, multiply/alpha, slight downward bias)"
+ },
+ "phone_suffix": ".phone.webp",
+ "material": {
+  "metalness": 0.0,
+  "roughness_scale": 1.0,
+  "normalScale": [
+   1,
+   1
+  ],
+  "envMapIntensity": 0.6
+ },
+ "profile_mm": {
+  "face_width": 55,
+  "depth_off_wall": 38,
+  "liner_width": 8,
+  "bevel": 14
+ },
+ "instancing": "One shared InstancedMesh (Gallery geometry); per-instance scale -> fix corner miters by building frame from 4 mitred sides or keep UV in world mm so texture does not stretch; no per-frame lights; contact shadow as second instanced quad sharing one material."
+}

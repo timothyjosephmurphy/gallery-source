@@ -1,0 +1,3 @@
+# exhibitions-pins-349 (studio-tracker #477)
+Exhibition pin: an indigo `#2E3F7A` diamond badge with a teal `#2A9D8F` ring, a slate `#3A3432` outline and a cream square centre, on a short stem. Collector pins are terracotta teardrops; this one is clearly a different shape and colour but uses the same paper/slate/cream palette.
+Hover is a lighter indigo at 1.1×. Selected is teal at 1.18× with ochre sparkles. Run `python3 make.py` to regenerate everything here. legend.png shows the Collector and Exhibition pins side by side. preview.png shows both sheets plus the legend. Art only. exhibitions-349.json is not edited or wired.

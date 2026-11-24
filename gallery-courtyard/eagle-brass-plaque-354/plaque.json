@@ -1,0 +1,29 @@
+{
+  "id": "eagle-brass-plaque",
+  "issue": 354,
+  "kind": "procedural-plate",
+  "hang_next_to": "painting-portrait-with-hat",
+  "source_painting": {
+    "slug": "painting-portrait-with-hat",
+    "title": "Sunrise on Rainier with Eagle",
+    "refs": [
+      "/workspace/vm-540/gallery-images/sunrise-on-rainier-with-eagle-full-2026.jpg",
+      "/workspace/vm-540/static/display/sunrise-on-rainier-with-eagle-full-2026-9da0e29055-1600.webp"
+    ]
+  },
+  "pixel_size": [
+    1600,
+    640
+  ],
+  "suggested_world_size_m": [
+    0.4,
+    0.16
+  ],
+  "ocr_caption": null,
+  "caption_status": "no painted plaque/legible text in painting; Gallery/Writer must set caption text",
+  "files": {
+    "master": "eagle-brass-plaque.png",
+    "desktop": "eagle-brass-plaque.desktop.webp",
+    "phone": "eagle-brass-plaque.phone.webp"
+  }
+}

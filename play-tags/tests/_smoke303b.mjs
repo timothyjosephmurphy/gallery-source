@@ -1,0 +1,10 @@
+import { chromium } from 'playwright-core';
+const [url, dev = 'desktop'] = process.argv.slice(2);
+const b = await chromium.launch({ executablePath: '/usr/bin/google-chrome', args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] });
+const o = dev === 'phone' ? { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 } : { viewport: { width: 1280, height: 800 } };
+const p = await (await b.newContext(o)).newPage(); const errs = []; p.on('pageerror', e => errs.push(e.message));
+p.on('console', m => { if (/shader|WebGL|THREE/i.test(m.text())) errs.push(m.text().slice(0, 300)); });
+await p.goto(url); await p.waitForFunction(() => window.game && game.tags && game.tags.ready && window.__o303, null, { timeout: 120000 }); await p.waitForTimeout(12000);
+const r = await p.evaluate(() => { const ct = game.tags.world.rooms.find(r => r.kind === 'court'); game.view(ct.center[0] + 9, ct.center[1] + 4, ct.center[0], ct.center[1]); return { base: window.__o303.base, mats: window.__o303.mats, errs: window.__o303.errs }; });
+await p.waitForTimeout(4000); await p.screenshot({ path: `/tmp/b303-${dev}.png` });
+console.log(JSON.stringify({ ...r, errs2: errs })); console.log(r.errs.length || errs.length || Object.keys(r.base).length < 3 ? 'SMOKE303B FAIL' : 'SMOKE303B PASS'); await b.close();

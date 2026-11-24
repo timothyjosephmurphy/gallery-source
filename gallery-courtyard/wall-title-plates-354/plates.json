@@ -1,0 +1,59 @@
+[
+  {
+    "id": "reiki",
+    "title": "Reiki",
+    "fileDesktop": "plate-reiki.desktop.webp",
+    "filePhone": "plate-reiki.phone.webp",
+    "filePng": "plate-reiki.png",
+    "widthPx": 1536,
+    "heightPx": 384,
+    "suggestedUse": "Large wall title plate; Gallery assigns wall. ~2.0x0.5 m, centered above the group grid",
+    "worldSizeM": [
+      2.0,
+      0.5
+    ],
+    "phonePx": [
+      768,
+      192
+    ],
+    "smallLabel": "../group-labels-354/label-reiki.png"
+  },
+  {
+    "id": "bounty-of-satoshi",
+    "title": "Bounty of Satoshi",
+    "fileDesktop": "plate-bounty-of-satoshi.desktop.webp",
+    "filePhone": "plate-bounty-of-satoshi.phone.webp",
+    "filePng": "plate-bounty-of-satoshi.png",
+    "widthPx": 1536,
+    "heightPx": 384,
+    "suggestedUse": "Large wall title plate; Gallery assigns wall. ~2.0x0.5 m, centered above the group grid",
+    "worldSizeM": [
+      2.0,
+      0.5
+    ],
+    "phonePx": [
+      768,
+      192
+    ],
+    "smallLabel": "../group-labels-354/label-bounty-of-satoshi.png"
+  },
+  {
+    "id": "ukraine",
+    "title": "Ukraine",
+    "fileDesktop": "plate-ukraine.desktop.webp",
+    "filePhone": "plate-ukraine.phone.webp",
+    "filePng": "plate-ukraine.png",
+    "widthPx": 1536,
+    "heightPx": 384,
+    "suggestedUse": "Large wall title plate; Gallery assigns wall. ~2.0x0.5 m, centered above the group grid",
+    "worldSizeM": [
+      2.0,
+      0.5
+    ],
+    "phonePx": [
+      768,
+      192
+    ],
+    "smallLabel": "../group-labels-354/label-ukraine.png"
+  }
+]

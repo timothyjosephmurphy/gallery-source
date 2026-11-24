@@ -1,0 +1,39 @@
+{
+ "tracker": "#349 (studio-tracker #477)",
+ "sheet": "pins-sheet.png",
+ "sheet_phone": "pins-sheet-64.png",
+ "cell_px": 128,
+ "cells": 3,
+ "states": [
+  "default",
+  "hover",
+  "selected"
+ ],
+ "sizes_m": {
+  "default": 0.14,
+  "hover": 0.16,
+  "selected": 0.18,
+  "phone_min": 0.16
+ },
+ "colors": {
+  "pin": "#2E3F7A",
+  "pin_hover": "#3F55A0",
+  "pin_sel": "#1F8A8A",
+  "ring": "#2A9D8F",
+  "edge": "#3A3432",
+  "dot": "#F3E6D8",
+  "spark": "#F7CC3A",
+  "paper": "#F3E6D8"
+ },
+ "anchor": {
+  "x": 0.5,
+  "y": 0.97,
+  "note": "tip at bottom-centre (UV y from top). Sprite center = (0.5, 0.03) in three.js bottom-origin"
+ },
+ "shape": "diamond badge on stem",
+ "dest": [
+  "/img/play/preview-251/testimap/",
+  "/img/play/preview-251/exhibitions-pins/"
+ ],
+ "gated_on": "exhibitions-349.json approved:true"
+}

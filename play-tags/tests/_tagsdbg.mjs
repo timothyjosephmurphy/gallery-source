@@ -28,7 +28,7 @@ const r = await p.evaluate(async () => {
     const hit = ray.intersectObjects(g.scene.children, true).find(solid);
     if (hit) { let o = hit.object, ok = false; while (o) { if (o === pl || o === a.q.group) { ok = true; break; } o = o.parent; } if (!ok && hit.distance < ray.far - 0.12) out.blocked.push(a.q.data.id + ' by ' + (hit.object.name || hit.object.type)); } }
   // painting backed by a wall (egg audit 'floating'): a ray straight back from the painting meets a wall within 15 cm
-  const walls = []; g.scene.traverse(o => { if (o.isMesh && o.geometry && o.geometry.type === 'BoxGeometry' && /roomWall|muralWall/.test(o.name)) walls.push(o); });
+  const walls = []; if ((window.__wallRecs || []).length) { const bg = new T.BoxGeometry(1, 1, 1), bm = new T.MeshBasicMaterial(); for (const w of window.__wallRecs) { const m = new T.Mesh(bg, bm); m.position.set(...w.pos); m.rotation.y = w.ry; m.scale.set(w.L, w.h, w.th); m.updateMatrixWorld(true); walls.push(m); } } else g.scene.traverse(o => { if (o.isMesh && o.geometry && o.geometry.type === 'BoxGeometry' && /roomWall|muralWall/.test(o.name)) walls.push(o); }); /* #wallrec */
   for (const a of info) { ray.set(a.c.clone().addScaledVector(a.n, 0.1), a.n.clone().negate()); ray.far = 0.35; if (!ray.intersectObjects(walls, false).length) out.floating.push(a.q.data.id); }
   // reachable on foot from the start
   const S = 0.25, st = g.camera.position, key = (x, z) => Math.round(x / S) + ',' + Math.round(z / S), seen = new Set([key(st.x, st.z)]), Q = [[Math.round(st.x / S), Math.round(st.z / S)]];

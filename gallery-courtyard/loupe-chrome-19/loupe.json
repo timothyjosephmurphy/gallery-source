@@ -1,0 +1,151 @@
+{
+  "issue": 19,
+  "preview_only": true,
+  "approved": false,
+  "note": "Gallery owns interaction; no text baked. px rects top-left origin, uv v-up (matches #337/#19 plaques).",
+  "material_hint": "CSS/DOM or MeshBasicMaterial({transparent:true, depthTest:false, toneMapped:false})",
+  "assets": {
+    "lens-ring-desktop": {
+      "file": "lens-ring-desktop.webp",
+      "png": "lens-ring-desktop.png",
+      "px": [
+        512,
+        512
+      ],
+      "center_px": [
+        256.0,
+        256.0
+      ],
+      "glass_radius_px": 198.0,
+      "rim_outer_radius_px": 252.0,
+      "hint": "Render magnified art in a circle of glass_radius under the ring; the rim covers its edge."
+    },
+    "reticle-desktop": {
+      "file": "reticle-desktop.webp",
+      "png": "reticle-desktop.png",
+      "px": [
+        512,
+        512
+      ],
+      "center_px": [
+        256.0,
+        256.0
+      ],
+      "opacity_suggest": 0.8,
+      "hint": "Draw centered over lens-ring, same size."
+    },
+    "back-chip-desktop": {
+      "file": "back-chip-desktop.webp",
+      "png": "back-chip-desktop.png",
+      "px": [
+        256,
+        80
+      ],
+      "labelRect_px": [
+        76,
+        18,
+        224,
+        62
+      ],
+      "labelRect_uv": {
+        "u0": 0.2969,
+        "v0": 0.225,
+        "u1": 0.875,
+        "v1": 0.775
+      },
+      "glyph": "baked chevron at left; label 'Back' at runtime",
+      "ink": "#F7DC8C",
+      "text_px_suggest": 29,
+      "hit_px": [
+        0,
+        0,
+        256,
+        80
+      ]
+    },
+    "lens-ring-phone": {
+      "file": "lens-ring-phone.webp",
+      "png": "lens-ring-phone.png",
+      "px": [
+        256,
+        256
+      ],
+      "center_px": [
+        128.0,
+        128.0
+      ],
+      "glass_radius_px": 99.0,
+      "rim_outer_radius_px": 126.0,
+      "hint": "Render magnified art in a circle of glass_radius under the ring; the rim covers its edge."
+    },
+    "reticle-phone": {
+      "file": "reticle-phone.webp",
+      "png": "reticle-phone.png",
+      "px": [
+        256,
+        256
+      ],
+      "center_px": [
+        128.0,
+        128.0
+      ],
+      "opacity_suggest": 0.8,
+      "hint": "Draw centered over lens-ring, same size."
+    },
+    "back-chip-phone": {
+      "file": "back-chip-phone.webp",
+      "png": "back-chip-phone.png",
+      "px": [
+        128,
+        40
+      ],
+      "labelRect_px": [
+        38,
+        9,
+        112,
+        31
+      ],
+      "labelRect_uv": {
+        "u0": 0.2969,
+        "v0": 0.225,
+        "u1": 0.875,
+        "v1": 0.775
+      },
+      "glyph": "baked chevron at left; label 'Back' at runtime",
+      "ink": "#F7DC8C",
+      "text_px_suggest": 14,
+      "hit_px": [
+        0,
+        0,
+        128,
+        40
+      ]
+    },
+    "cursor-loupe-128": {
+      "file": "cursor-loupe-128.webp",
+      "png": "cursor-loupe-128.png",
+      "px": [
+        128,
+        128
+      ],
+      "hotspot_px": [
+        51,
+        51
+      ],
+      "css": "cursor: url(cursor-loupe-128.png) 51 51, zoom-in;"
+    },
+    "cursor-loupe-64": {
+      "file": "cursor-loupe-64.webp",
+      "png": "cursor-loupe-64.png",
+      "px": [
+        64,
+        64
+      ],
+      "hotspot_px": [
+        26,
+        26
+      ],
+      "css": "cursor: url(cursor-loupe-64.png) 26 26, zoom-in;"
+    }
+  }
+}

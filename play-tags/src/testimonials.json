@@ -1,8 +1,19 @@
 {
  "source": "https://tjm.art/testimonials/api/approved",
- "fetchedAt": "2026-10-23T19:59:22.391Z",
- "updatedAt": "2026-10-20T16:33:05.126Z",
+ "fetchedAt": "2026-11-24T23:49:18.224Z",
+ "updatedAt": "2026-11-13T02:15:42.634Z",
  "items": [
+  {
+   "id": "t-20261113-ab702b43918c",
+   "name": "Daniel Goldsmith",
+   "city": "Freeland, Washington",
+   "pin": [
+    48.01,
+    -122.52
+   ],
+   "painting": "",
+   "quote": "Hard to explain time off in the army during the Vietnam era. TJ captured it perfectly."
+  },
   {
    "id": "t-20261018-21557b4ee6b8",
    "name": "Jack M.",

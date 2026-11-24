@@ -64,8 +64,8 @@ for (rid, k), E in rows.items():
             else: q['plaqueAt'] = {**q['plaqueAt'], 's': ms + d, 'x': q['plaqueAt']['x'] + d * t[0], 'z': q['plaqueAt']['z'] + d * t[1]}
     moved += 1
 print('re-spaced walls', moved)
-lay = {'hall': {'height': 4.2, 'doorHeight': 2.6}, 'rooms': [], 'hallways': [], 'signs': [], 'groupSigns': [],
-       'start': {'x': 2.6, 'z': 1.9, 'yaw': -2.307},  # #278: beside the central checkout pillar, facing its portal  # off the hologram dais, facing the checkout facing the checkout across the core,
+lay = {'hall': {'height': 4.2, 'doorHeight': 3.5}, 'rooms': [], 'hallways': [], 'signs': [], 'groupSigns': [],
+       'start': {'x': 0.5, 'z': -28.2, 'yaw': -0.8},  # #803 #351: START courtyard facing the gallery wall map  # #351 refine: maps gathering view  # #351 (TJ Oct 26): far side of the courtyard facing the wall map (#291); the checkout is behind you  # #278: beside the central checkout pillar, facing its portal  # off the hologram dais, facing the checkout facing the checkout across the core,
        'nave': {'minX': -48, 'maxX': 30, 'minZ': -30, 'maxZ': 42}, 'corr': [], 'tags': L}
 out = json.dumps({'layout': lay, 'paintings': P, 'plaques': []}, ensure_ascii=False)
 assert not re.search(r'\bDMT\b', out)
