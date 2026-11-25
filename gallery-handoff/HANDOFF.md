@@ -1,3 +1,15 @@
+## Update (Nov 24, 2026)
+
+The public repository `timothyjosephmurphy/gallery-source` is now the source of truth for the walkable 3D gallery at https://tjm.art/play/. It holds the full gallery source, including the Kinoteka Neural Dance annex. The standalone Neural Dance simulation app (`/neural-dance/*`) lives in the separate `neural-dance` repository.
+
+Deploys to `tjm.art/play` or any preview ship only from commits that have been pushed to `gallery-source` and, for a live ship, tagged. Do not patch build outputs after the fact, and do not promote a preview without TJ's own OK in the Gallery chat. The full audit must pass before deploy. Paintings stay true size. Plaques stay on hold until TJ says otherwise.
+
+Secrets (`LAYOUT_SAVE_KEY` and other keys, tokens, and `.env*` files) stay in environment variables. Do not commit private journal material, anything tagged `[PRIVATE]`, or files over 25 MB.
+
+The build and deploy path in section 1 below for "TJM Gallery" (copy into vermillionaurora `static/play/`) is historical. Current practice is: edit `play-tags/`, `nd-annex/`, or `gallery-core/` in `gallery-source`, run `npm run build` and `python3 deploy/gen.py`, commit, push, tag if live, and deploy that tree to the Pages project.
+
+---
+
 # Gallery assistant handoff
 
 For the new **Gallery** assistant that owns TJ Murphy's 3D web galleries.
@@ -39,7 +51,7 @@ Primary sources: `/workspace/museum-eggs/` (esp. `CHANGES-2026-10-18.md`, `INTEG
 **Typical egg test loop**
 ```
 cd /workspace/museum-eggs/harness-uffizi && npx vite --port 5191 --strictPort --host 127.0.0.1
-node tests/eggaudit.mjs  http://127.0.0.1:5191/play/ desktop   # must pass; also checks DMT not in DOM
+node tests/eggaudit.mjs  http://127.0.0.1:5191/play/ desktop   # must pass; also checks the forbidden three-letter acronym is not in the DOM
 node tests/eggbehave.mjs http://127.0.0.1:5191/play/ desktop
 ```
 Museum Pages previews: `tests/audit.mjs`, `live.mjs`, `realm.mjs`, `extras.mjs`, `shots.mjs`, `fps.mjs`. Montreal: `tests/audit.mjs`, `loops.mjs`, `features.mjs`, `pianist.mjs`, `move.mjs`.
@@ -73,7 +85,7 @@ Issue **#29** body: *"Cake room, plaque, Untitled #4 in play. Starship in Orsay,
 1. **True size** for paintings — never enlarge past real dimensions / pixel budget (see layout scripts and Montreal hanging rules).
 2. **Audit must pass** before deploy (`eggaudit` / gallery `audit.mjs`; Montreal also `loops.mjs` — no dead ends).
 3. **No dead ends** in room graphs; every hallway on a loop.
-4. The word **`DMT` appears nowhere** (PR #600; `eggaudit` checks DOM).
+4. The forbidden three-letter drug acronym appears nowhere (PR #600; `eggaudit` checks the DOM).
 5. **Original designs only** — procedural architecture, synthesized audio, no copied game assets.
 6. **No layout PUT or DELETE** against the layouts Worker (read/GET only unless TJ explicitly asks).
 7. **Never move Chase's `/play/media/` folder** (Montreal loads art from `/play/media/art|art-mid|art-hi/`).

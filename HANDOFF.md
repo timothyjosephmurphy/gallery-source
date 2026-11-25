@@ -1,8 +1,8 @@
-## 0) Update (Nov 24, 2026): Public Source of Truth & Version-Control Deploy Rule
+## 0) Update (Nov 24, 2026): Public source of truth, annex included, version-control deploy rule
 
-- **Repository visibility:** `timothyjosephmurphy/gallery-source` is **public** and is the single source of truth for the live 3D gallery at `https://tjm.art/play/`.
-- **Deploy rule (hard):** Deploys to `tjm.art/play` (or previews) **must ship strictly from committed, pushed commits** in `gallery-source`. Never patch `dist/`, `_worker.js`, or `tour-wire*` output folders out-of-band after a build. Make edits in `play-tags/` / `gallery-core/`, run `npm run build` + `python3 deploy/gen.py`, commit and push first, then deploy from the committed tree (and tag live deploys, e.g. `live-899` / `live-876`).
-- **Exclusions (public repo):** Never commit secrets (`LAYOUT_SAVE_KEY`, `.env*`, API tokens), private journal project files, files >25 MB, or private Neural Dance source code (`annex871` / `/neural-dance/` app). Only the `/tjm/neural-dance/` iframe embed URL is kept.
+- **Repository:** `timothyjosephmurphy/gallery-source` is public and is the source of truth for the live 3D gallery at `https://tjm.art/play/`. It holds the full gallery source, including the Kinoteka Neural Dance annex (`nd-annex/`, bundled as `/play/assets/annex871-r899.js`). The standalone Neural Dance simulation app (`/neural-dance/*`) lives in the separate `neural-dance` repository. The gallery keeps the `/tjm/neural-dance/` embed URL for the projection wall.
+- **Deploy rule (hard):** Deploys to `tjm.art/play` (or previews) ship only from commits that have been pushed to this repository. Live ships are tagged (for example `live-899` / `live-876`). Never patch `dist/`, `_worker.js`, or `tour-wire*` output folders after a build. Make edits in `play-tags/`, `nd-annex/`, or `gallery-core/`, run `npm run build` and `python3 deploy/gen.py`, commit and push, tag if shipping live, then deploy from that tree. Do not promote a preview without TJ's own OK in the Gallery chat. The full audit must pass first. Paintings stay true size. Plaques stay on hold until TJ says otherwise.
+- **Secrets and other exclusions:** Secrets stay in environment variables. `LAYOUT_SAVE_KEY` is read from `process.env.LAYOUT_SAVE_KEY`; never hardcode it, and never commit `.env*` files, API tokens, or Worker secrets. Do not commit private journal material, anything tagged `[PRIVATE]`, or files over 25 MB.
 
 ---
 
@@ -74,7 +74,7 @@ Audits in `play-tags/tests/` (Playwright, run against a local or preview URL, de
 8. The **Relay Gate repo is public**. Make no public Relay Gate mentions beyond what is already published (README and spec on GitHub). Do not post, tweet, announce or contact anyone.
 9. Do not send emails, messages or posts, create purchases, or contact people on TJ's behalf. Draft only.
 10. True size for paintings: never stretch. (Preview-only exceptions TJ approved: preview paintings hang at 1.5x display scale, `MUSEUM.artScale = 1.5`; a few named pairs are enlarged per `gallery-handoff/tj-fixes-1022.md`.) One painting per frame. No overlaps. Plaques beside each painting at 1.45 m, never blocked.
-11. No dead ends: every room and hallway is on a loop. The word "DMT" appears nowhere in the shipped build.
+11. No dead ends: every room and hallway is on a loop. The forbidden three-letter drug acronym appears nowhere in the shipped build.
 12. Original designs only (procedural geometry, synthesized audio, own models). Phone performance matters: LOD tiers, silent when muted.
 13. Do not PUT or DELETE the layouts Worker (`tjm-play-layouts`). Read only.
 14. Do not use `pkill` by pattern; stop only your own process by PID.
