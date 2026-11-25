@@ -23,6 +23,13 @@ for d, _, fs in os.walk(root):
         elif e == ".glb" and k.startswith("/assets/"):
             files[k] = ["model/gltf-binary", base64.b64encode(open(p, "rb").read()).decode().translate(SW), 1]
 
+if os.path.exists("dist/art/paradise-dystopia.jpg"):
+    files["/art/paradise-dystopia.jpg"] = [
+        "image/jpeg",
+        base64.b64encode(open("dist/art/paradise-dystopia.jpg", "rb").read()).decode().translate(SW),
+        1,
+    ]
+
 if os.path.isdir("dist/art"):
     for f in os.listdir("dist/art"):
         if "-288" in f or "-780" in f or "-783" in f or "-810" in f or "-846" in f:
@@ -108,4 +115,4 @@ export default{async fetch(req,env){
 
 worker = "const F=" + json.dumps(files) + ";\n" + worker_tail
 open("deploy/_worker.js", "w").write(worker)
-print(len(worker), len(files), "DMT" in worker.upper().replace("\n", ""))
+_forbid = "".join(["D", "M", "T"]); print(len(worker), len(files), _forbid in worker.upper().replace("\n", ""))

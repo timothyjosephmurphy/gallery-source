@@ -8,3 +8,4 @@ dist*
 play-tags/deploy/_worker.js
 play-tags/deploy/execute.js
 play-tags/tests/*.pre-builderr
+play-tags/public/assets/annex871-r899.js

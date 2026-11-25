@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Neural Dance: capture room → energy room | TJ Murphy</title>
+<meta name="description" content="Two-room Neural Dance simulation: shadow dancers with RGB blink-code pins filmed by two iPhones 10 ft up and 60 degrees apart; the sensor data is piped into a second room where every tracked dancer becomes a ball of energy.">
+<link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+<canvas id="gl"></canvas>
+<header id="top">
+  <h1>Neural Dance <span>Room 1 capture → Room 2 energy sprites</span></h1>
+  <div id="pill" role="status" aria-live="off">Room 1 → Room 2 Pipe: starting…</div>
+  <div id="tele"></div>
+</header>
+<aside id="panel">
+  <button id="panelToggle" aria-expanded="true">Controls</button>
+  <div id="panelBody">
+    <section>
+      <h2>Room 1 · Crowd</h2>
+      <label>Dancers <output id="ndOut">14</output><input id="nd" type="range" min="1" max="25" value="14"></label>
+      <div class="row"><button id="dancing" class="on">Dancing</button><button id="audio">Synth beat</button><button id="mic">Live mic</button></div>
+      <label>BPM <output id="bpmOut">124</output><input id="bpm" type="range" min="80" max="160" value="124"></label>
+      <p class="hint">Drag a dancer across the floor to move them.</p>
+    </section>
+    <section>
+      <h2>Room 1 · iPhone rig</h2>
+      <label>Shutter <output id="shOut">1/500 s</output><input id="shutter" type="range" min="0" max="5" step="1" value="0"></label>
+      <label>Clock skew B vs A <output id="skOut">0 ms</output><input id="skew" type="range" min="0" max="20" step="1" value="0"></label>
+      <div class="row"><button id="sync" class="on">Timestamp sync + interpolation</button></div>
+      <div class="readout" id="rigH">Height: 10.0 ft (3.05 m)</div>
+      <div class="readout" id="rigS">Outer edge tangent to ±5 m wall</div>
+      <div class="hint" id="rigP"></div>
+      <label>Phone height <output id="hOut">10.0 ft</output><input id="rigHeight" type="range" min="7" max="13" step="0.5" value="10"></label>
+      <label>Lateral spacing (each phone from centre) <output id="xOut">3.20 m</output><input id="rigSpacing" type="range" min="2.4" max="4.2" step="0.05" value="3.2"></label>
+      <label>Wall setback (from the back wall) <output id="zOut">0.40 m</output><input id="rigSetback" type="range" min="0.2" max="1.2" step="0.05" value="0.4"></label>
+      <p class="hint">Yaw is re-solved at every setting: equal inward angle, outer frustum face touches its outside wall, inner edges cross on the centreline.</p>
+      <div class="row"><button id="inspector" class="on">Packet inspector</button></div>
+    </section>
+    <section>
+      <h2>Room 2 · Show</h2>
+      <div class="row"><button id="rays">Stereo rays</button><button id="frustum" class="on">Frustums</button><button id="beam" class="on">Projector beam</button></div>
+      <div class="row"><button id="wave">Crowd Light Wave (Phase 2)</button>
+      <select id="waveKind"><option value="radial">Radial beat ripple</option><option value="sweep">Left-to-right sweep</option><option value="spiral">Spiral vortex</option></select></div>
+      <div class="row"><button id="beacons" class="on">Interleave ID beacons</button></div>
+      <label>3D Dancer Spotlights <select id="movers"><option value="top">Follow Top Movers</option><option value="chase">Beat Chase</option><option value="all">All-Dancer Beams</option><option value="off">Off</option></select></label>
+      <p class="hint">Room 2 sees only NeuralDanceFramePackets from the pipe. Moving heads aim at the energy balls; lost lock: hold 0.6 s, then fade.</p>
+    </section>
+    <section>
+      <h2>View</h2>
+      <div class="row" id="views"><button data-v="walk">1 · Balcony walk (WASD)</button><button data-v="panorama">2 · Balcony panorama (both rooms)</button><button data-v="overview">3 · Overhead cutaway (both rooms)</button><button data-v="room1">4 · Room 1 · Capture floor</button><button data-v="room2">5 · Room 2 · Energy sprites</button><button data-v="painting">6 · Painting close-up</button><button data-v="a">iPhone A sensor</button><button data-v="b">iPhone B sensor</button></div>
+      <div class="row"><button id="walk">Walk (WASD)</button></div>
+      <p class="hint">WASD stroll balcony · drag to look · 1–6 views · N hides lab</p>
+    </section>
+  </div>
+</aside>
+<div id="sensors">
+  <figure><canvas id="sensA" width="640" height="360"></canvas><figcaption>iPhone A sensor <span id="capA"></span></figcaption></figure>
+  <figure><canvas id="sensB" width="640" height="360"></canvas><figcaption>iPhone B sensor <span id="capB"></span></figcaption></figure>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

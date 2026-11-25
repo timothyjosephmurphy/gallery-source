@@ -1,0 +1,14 @@
+{
+  "name": "nd-annex",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node test/nd871.test.mjs && node test/nd869.test.mjs && node test/sim-math.test.mjs"
+  },
+  "dependencies": {
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.21"
+  }
+}

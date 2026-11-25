@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node tools/testimonials.mjs && node tools/doorcheck.mjs && vite build",
+    "build:annex": "node tools/build-annex.mjs",
+    "build": "node tools/build-annex.mjs && node tools/testimonials.mjs && node tools/doorcheck.mjs && vite build",
     "preview": "vite preview --port 4173",
     "check": "node tools/doorcheck.mjs"
   },

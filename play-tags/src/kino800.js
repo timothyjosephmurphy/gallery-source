@@ -10,7 +10,10 @@ export function installKino800(root, T, low) {
   const K = oc.kino800, D = K.D, F = K.f, U = K.t, S = { inside: false, playing: false, chunk: 0, err: null, enters: 0 };
   const uv = (x, z) => { const dx = x - D[0], dz = z - D[1]; return [dx * U[0] + dz * U[1], dx * F[0] + dz * F[1]]; };
   // floor: ramp up the steps, raised landing + hall (read by gallery-core floorH via window.__floorH800)
-  window.__floorH800 = (x, z) => { const [u, v] = uv(x, z); if (v < 7 || v > 25.2 || Math.abs(u) > 6.2) return null;
+  // Annex balcony (u -5.9..-9.6) is at hall height, matching the live 899 kino800 hook so /play/?room=neural-dance stands on the balcony.
+  window.__floorH800 = (x, z) => { const [u, v] = uv(x, z);
+    if (u < -5.9 && u > -9.6 && v > 7.2 && v < 31.8) return K.rise;
+    if (v < 7 || v > 25.2 || Math.abs(u) > 6.2) return null;
     if (v < 9.6) return Math.abs(u) <= 3.6 ? K.rise * (v - 7) / 2.6 : null; if (v < 11 && Math.abs(u) > 3.6) return null; return K.rise; };
   const G = new THREE.Group(); G.name = 'kino800'; G.position.set(D[0], 0, D[1]); G.rotation.y = Math.atan2(F[0], F[1]); root.add(G); // local x = u, z = v
   const TL = new THREE.TextureLoader(), ash = TL.load(K.film.base + 'ashlar.webp'); ash.colorSpace = THREE.SRGBColorSpace; ash.wrapS = ash.wrapT = THREE.MirroredRepeatWrapping;
