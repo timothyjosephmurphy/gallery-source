@@ -1,7 +1,7 @@
 # DEFER-MAIN-SCOUT: what is still in `main` (Tue Oct 27 2026 ~12:40 AM PT)
 LIVE 56a62895 (index-C6VDMZMR.js) was not changed. Doc only, nothing shipped.
 Method: `vite build --sourcemap --outDir /tmp/dmscout` from /workspace/play-tags (same build as #489: main 771.23 kB / 204.8 gz, vendor-three 808.6 kB). Minified bytes were attributed to source files through the sourcemap (/tmp/smsz.py).
-NOTE: /workspace/gallery-source-staging/play-tags is a STALE handoff copy with no vendor-three. Don't build from it.
+NOTE: /workspace/gallery-source-staging/play-tags is a STALE copy with no vendor-three. Don't build from it.
 
 ## main 771 KB broken down (minified bytes)
 | source | bytes | boot-critical? | verdict |

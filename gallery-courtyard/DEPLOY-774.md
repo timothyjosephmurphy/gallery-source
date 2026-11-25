@@ -36,6 +36,6 @@ LIVE world dump: 13 rooms (12 at r=8.75 + annex r=6), hub, 1 outer court, 0 'cou
 Hang index rebuilt: gallery-tj-feedback/hang-index/hex-hang-index.csv/.xlsx (272 paintings, 12 rooms).
 
 ## Rollback
-Re-run /tmp/execute.js.765 (restores f18b22c7 / index-Dm6pypi0.js) through the Cloudflare connector `execute` (TJ account 3c1fddf0…).
+Re-run /tmp/execute.js.765 (restores f18b22c7 / index-Dm6pypi0.js) through the Cloudflare connector `execute`.
 Source: backups are in /tmp/pre774/ (catalog.json = local pre-774, catalog.live765.json, outer-slots.json, tags-world.js, tags.js, testimap.js, doorcheck.mjs, outerslots.mjs, horizon352.js, gallery-core-main.js, glows358.js is not backed up — revert its #774 line).
 /tmp/execute.js.774b = this deploy.

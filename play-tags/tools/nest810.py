@@ -1,4 +1,4 @@
-# #810 (TJ Oct 28 2026; refs gallery-handoff/berlin-es-court-refs-2026-10-28): Bitcoin Courtyard (courtyard-btc) remodelled after the real
+# #810 (TJ Oct 28 2026; refs notes/berlin-es-court-refs-2026-10-28): Bitcoin Courtyard (courtyard-btc) remodelled after the real
 # Berlin, El Salvador court (src/berlinCourt810.js). Absorbs the Berlin-ES mural skew fix: the mural texture is now the rectified, frontal
 # sign (art/berlin-es-sign-810.webp, cropped + perspective-corrected from TJ's photo 01), true sign size ~3.05 x 0.87 m, resting on the
 # block row (bottom 0.62 m) with its plane parallel to and 0.20 m off the wall line (was 0.14 m, a skewed hero photo + #790 painted wall).

@@ -17,7 +17,7 @@ Aspect changed from 0.700 to 0.638 (the new master is taller and narrower).
 ## Deploy
 - Build includes the #465 stickerBot306 beam-aim fix (main-DugwC-B0.js, stickerBot306-z857ribW.js)
 - tagsaudit desktop PASS, phone PASS (/tmp/hb/ta-*.log). gen.py → _worker.js 2,802,491 B; splice → execute.js 2,869,478 B
-- Cloudflare execute, account 3c1fddf0…, tjm-tag-gallery-preview, branch preview-251. Deployment **86c3189d-8143-4229-90fa-30c58668ae52** replaces 61358e16.
+- Cloudflare execute, tjm-tag-gallery-preview, branch preview-251. Deployment **86c3189d-8143-4229-90fa-30c58668ae52** replaces 61358e16.
 - Verified live: main has the new hi key and the sticker chunk has aimFrom.
-- Website handoff: preview proxies /play/art/ to tjm.art/play/art/, which still serves the old 179×256 (5,402 B). The low-res base thumb shows the old art until hi loads, until Website ships vermillionaurora/static/play/art/honeybadger-and-cub-with-genesis-block.webp (already regenerated).
+- Website note: preview proxies /play/art/ to tjm.art/play/art/, which still serves the old 179×256 (5,402 B). The low-res base thumb shows the old art until hi loads, until Website ships vermillionaurora/static/play/art/honeybadger-and-cub-with-genesis-block.webp (already regenerated).
 - Rollback: restore /tmp/hb/catalog*.pre + realdims.json.pre, rebuild, gen, splice, execute.

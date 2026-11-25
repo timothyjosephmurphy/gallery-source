@@ -3,7 +3,7 @@
 Queue: after #817; batch with Paul doorway widen / #818 entrance pack. Fix-only / signage.
 
 ## Scope
-Add “Kinoteka” on the lintel / awning face of the tall PAUL MURPHY–style facade (four white pillars, protruding awning). Shot: `gallery-handoff/kinoteka-lintel-sign-tj-2026-10-28.png` (gold crosshair on that lintel).
+Add “Kinoteka” on the lintel / awning face of the tall PAUL MURPHY–style facade (four white pillars, protruding awning). Shot: `notes/kinoteka-lintel-sign-tj-2026-10-28.png` (gold crosshair on that lintel).
 
 Match gallery entrance-sign style (same family as PAUL MURPHY arch lettering). Keep entrance signs; no on-wall tile/group plaques.
 

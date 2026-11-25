@@ -39,7 +39,7 @@ Next lean: roomFloor 13 (1 mat) merge; doorGlow/doorLight/rayGlow/walkRay share-
 
 Rules: no deploy without audit, no pinging TJ, SM batches only, cap retries at 3, one deploy at a time.
 
-## Visual #470 ostrich bump (~waiting handoff)
+## Visual #470 ostrich bump (~waiting on the next pass)
 Pack: gallery-courtyard/ostrich-bump-470/ — feather n/r/ao 2048+phone1024, skin strips, materials.json. Wire after #465. No remesh/deploy from Visual.
 
 - Oct 26 ~4:55 PM PT: #465 code + audit done, UNDEPLOYED (honeybadger refresh has the next slot). LIVE still 61358e16. See DEPLOY-465.md.

@@ -1,4 +1,4 @@
-# Tag gallery (studio-tracker #251): handoff for the Gallery bot
+# Tag gallery (studio-tracker #251): layout notes
 
 Status (Oct 21, 2026, about 12:35 PM PT): v3 layout and diagram done (pavilion in the centre, a ring of 6 walkable courtyards with open colonnades, 12 rooms sized to their paintings; see DESIGN.md). v1 and v2 files are kept as *-v1 and *-v2 (and tools/*_v2.py). **TJ asked to approve the diagram before any 3D build.** There is no 3D scene and no deploy yet. The tags are a proposal (#250) and TJ has not approved them, so nothing here is public.
 

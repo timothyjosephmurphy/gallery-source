@@ -9,7 +9,7 @@ Result: **PASS → deployed (1 deploy)**
   - NOTE: `window.__frames` gets overwritten by the render loop's frame counter (`window.__frames=(window.__frames||0)+1` in main), so `__frames.variants` is not readable at runtime. That bug was already there; counts were read from scene meshes. Fix idea for later: rename the counter.
 - Build OK (entry index-CUD-ylP_.js). tagsaudit desktop PASS, phone PASS (n=310, all lists empty, forbid 0, mute silent).
 - gen.py → _worker.js 2,802,366 B; splice → execute.js 2,869,253 B.
-- Cloudflare execute, account 3c1fddf0…, project tjm-tag-gallery-preview, branch preview-251, env preview.
+- Cloudflare execute, project tjm-tag-gallery-preview, branch preview-251, env preview.
 - Deployment id 1e2ce12b-5632-4268-b454-356b615683ec (replaces 48909dcf)
 - URLs: https://1e2ce12b.tjm-tag-gallery-preview.pages.dev/play/ · https://preview-251.tjm-tag-gallery-preview.pages.dev/play/ (200, serves index-CUD-ylP_.js; frames-variants maple/copper 200 via /img)
 - Rollback: cp /tmp/frames.js.pre-wave2 play-tags/src/frames.js, rebuild, redeploy.

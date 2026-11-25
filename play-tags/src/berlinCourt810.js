@@ -1,4 +1,4 @@
-// #810 (TJ Oct 28 2026; refs gallery-handoff/berlin-es-court-refs-2026-10-28/01..07): Bitcoin Courtyard remodelled after the real
+// #810 (TJ Oct 28 2026; refs notes/berlin-es-court-refs-2026-10-28/01..07): Bitcoin Courtyard remodelled after the real
 // Berlin, El Salvador court: weathered concrete court with yellow lines, white hoop + chain-ish net, one-storey white building with a
 // corrugated roof, yellow lattice gate, barred windows, pipe + meter box, a row of big white concrete blocks with the orange
 // "Berlin / El Salvador" sign resting on them (rectified photo, plane flush with the wall -> fixes the #790 skew), soccer goal + ball,

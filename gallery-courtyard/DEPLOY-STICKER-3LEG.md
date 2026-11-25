@@ -9,7 +9,7 @@ Result: **PASS → deployed (1 deploy)**
 - Build OK (entry index-Cyq1Nst5.js). Headless (vite preview :4318): state "ready", legsFound 3, no page errors.
 - tagsaudit: desktop PASS, phone PASS (n=310, all lists empty, forbid 0, mute silent).
 - gen.py → _worker.js 2,801,767 B (sticker306: 2 glb + 3 webp); splice → execute.js 2,868,590 B.
-- Cloudflare execute, account 3c1fddf0…, project tjm-tag-gallery-preview, branch preview-251, env preview.
+- Cloudflare execute, project tjm-tag-gallery-preview, branch preview-251, env preview.
 - Deployment id 48909dcf-6353-4f5d-a191-5c28f6dad6e2 (replaces 342b1d3c defer-testimap)
 - URLs: https://48909dcf.tjm-tag-gallery-preview.pages.dev/play/ · https://preview-251.tjm-tag-gallery-preview.pages.dev/play/ (200; glb 200 85,016 B; serves index-Cyq1Nst5.js)
 - Rollback: restore the /tmp backups, rebuild, redeploy.

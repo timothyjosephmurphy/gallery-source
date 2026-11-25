@@ -7,7 +7,7 @@ Result: **PASS → deployed (1 deploy)**
 - Build: `npm run build` OK (doorcheck PASS); dist/assets/main--A9FxLw9.js (contains stickerWalls307)
 - tagsaudit (vite preview :4317/play/): desktop PASS, phone PASS. n=310, no size/overlap/plaqueY/blocked/unreachable/floating/doorway/hud issues, forbid 0, mute silent
 - gen.py → _worker.js 2,778,201 B (forbid False), packs /sticker306/ ×4; splice.py → execute.js 2,844,999 B
-- Cloudflare execute, account 3c1fddf0…, project tjm-tag-gallery-preview, branch preview-251, env preview
+- Cloudflare execute, project tjm-tag-gallery-preview, branch preview-251, env preview
 - Deployment id 7d48b326-77d4-4585-b8cc-747d1a5661bc
 - URL: https://7d48b326.tjm-tag-gallery-preview.pages.dev/play/ (200)
 - Branch alias: https://preview-251.tjm-tag-gallery-preview.pages.dev/play/ (200)

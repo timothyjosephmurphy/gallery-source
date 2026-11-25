@@ -52,5 +52,5 @@ Base: /tmp/pre775/catalog.json (honeycomb B2a). Steps:
 - As-built images: hex-plan-honeycomb-nest/as-built-777.png and as-built-777-arch.png.
 
 ## Rollback
-- Re-run /tmp/execute.js.775 (dodec 6b31d47a / index-CmsLV6zs.js) or /tmp/execute.js.B2a (honeycomb d701a4a8) through the Cloudflare `execute` connector (account 3c1fddf0…).
+- Re-run /tmp/execute.js.775 (dodec 6b31d47a / index-CmsLV6zs.js) or /tmp/execute.js.B2a (honeycomb d701a4a8) through the Cloudflare `execute` connector.
 - Source: /tmp/pre777/ holds the pre-777 src (catalog, outer-slots, tags-world, testimap, glows358, stickerBot306, tags.js, horizon352, gallery-core-main.js, doorcheck/outerslots, stale module-colliders).

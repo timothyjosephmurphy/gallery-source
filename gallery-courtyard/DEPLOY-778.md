@@ -45,7 +45,7 @@ It replaces f38faa50 / index-DwPGvnP1.js (#777, R=8.75, no START). Scope: hex/ta
 1. `cp /tmp/pre778/catalog.json src/catalog.json; cp /tmp/pre778/testimap.js src/testimap.js`
 2. `python3 tools/nest778.py && python3 tools/nest778.py art`
 3. `npm run build`, then tagsaudit desktop and phone
-4. `python3 deploy/gen.py && python3 deploy/splice.py`, then the Cloudflare `execute` connector (account 3c1fddf0…). The deploy file is saved as /tmp/execute.js.778.
+4. `python3 deploy/gen.py && python3 deploy/splice.py`, then the Cloudflare `execute` connector. The deploy file is saved as /tmp/execute.js.778.
 
 Code touched: src/tags-world.js (wallRot, door key), tools/doorcheck.mjs (entry exemption), src/testimap.js, src/stickerBot306.js, src/outer-slots.json and src/catalog.json (both generated), tools/nest778.py (new).
 

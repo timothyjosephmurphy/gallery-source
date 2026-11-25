@@ -1,5 +1,5 @@
 # #355 wall-map escort captions (temporary text, no VO)
-Mon Oct 26 2026 PT. Source lines: gallery-handoff/map-escort-lines-355.md. Room ids: tag-gallery/data/layout.json.
+Mon Oct 26 2026 PT. Source lines: notes/map-escort-lines-355.md. Room ids: tag-gallery/data/layout.json.
 
 - New: src/escortCaptions355.js (LINES by room id, GENERIC fallback, fixed bottom caption ~3.2 s, `window.__escortCaption` for tests).
 - wallmap.js: imports it; `go()` calls `showEscortCaption(id)` once the escort actually starts.

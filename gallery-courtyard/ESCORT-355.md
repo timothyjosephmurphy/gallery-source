@@ -4,7 +4,7 @@ Scout only; no src edits (#304 deploy may be mid-splice). Nothing deployed.
 ## Exists
 - `play-tags/src/wallmap.js` `go(id)` (L40): map tap (L50) → duck guide escorts along walk paths (#380 run pace); logs `S.escorts`. **No audio call.**
 - `play-tags/src/tour.js`: Kylie tour audio from `img.tjm.art/play/tour/286k/` (Paula `/286/` fallback), single `Audio()` routed via THREE.PositionalAudio on the guide bot, iOS unlock on first gesture. Reusable for escort clips.
-- Copy: `gallery-handoff/map-escort-lines-355.md` (also on #355) — 15 lines, "Okay, I'll take you to the {X} gallery."
+- Copy: `notes/map-escort-lines-355.md` (also on #355) — 15 lines, "Okay, I'll take you to the {X} gallery."
 - Kylie assets: `music/guide-bot-voice-28/australian-kylie/` = 17 tour clips only (00–14). `ride.js` is text-only.
 
 ## Missing

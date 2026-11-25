@@ -4,7 +4,7 @@ Queue: after #816 welcome LIVE → #817 fountain/tiles. One deploy at a time. To
 
 ## Scope
 1. After Roadster flies away, the **second** time the view comes back around to the START entrance: play a far-distance animation of Starship being caught by the tower in the background.
-2. Trim/fix the awning protruding into the gallery at the entrance. Shot: `gallery-handoff/start-awning-starship-tj-2026-10-28.png` (FESTIVAL / courtyard view).
+2. Trim/fix the awning protruding into the gallery at the entrance. Shot: `notes/start-awning-starship-tj-2026-10-28.png` (FESTIVAL / courtyard view).
 
 ## Notes for build
 - Roadster live path: `src/roadster797.js` (install as roadster785; nest note roadster795 thrusters+lookFlyaway).

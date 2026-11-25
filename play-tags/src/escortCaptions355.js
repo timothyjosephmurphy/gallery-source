@@ -1,4 +1,4 @@
-// #355: temporary text captions for wall-map escorts (no audio yet; lines from gallery-handoff/map-escort-lines-355.md).
+// #355: temporary text captions for wall-map escorts (no audio yet; lines from notes/map-escort-lines-355.md).
 // Keyed by room id (tag-gallery/data/layout.json). Ambiguous rooms fall back to GENERIC (see ESCORT-355.md).
 export const GENERIC = "Okay, I'll take you there.";
 export const LINES = {

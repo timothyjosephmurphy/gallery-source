@@ -8,7 +8,7 @@ Result: **PASS → deployed (1 deploy)**
 - Build: `npm run build` (testimonials + doorcheck + vite) OK
 - tagsaudit (vite preview :4317/play/): desktop PASS, phone PASS — n=310, no size/overlap/plaqueY/blocked/unreachable/floating/doorway, doorsUnreachable none, forbid 0, mute silent, no page errors, colliders 99
 - gen.py → deploy/_worker.js 2,778,209 B; splice.py → deploy/execute.js 2,845,007 B
-- Cloudflare execute, account 3c1fddf0…, project tjm-tag-gallery-preview, branch preview-251
+- Cloudflare execute, project tjm-tag-gallery-preview, branch preview-251
 - Deployment id 843208d6-c8ff-4eee-8919-f60ed425a8ad
 - URL: https://843208d6.tjm-tag-gallery-preview.pages.dev/play/ (200)
 - Branch alias: https://preview-251.tjm-tag-gallery-preview.pages.dev/play/ (200; serves index-Cd68mLbH.js)

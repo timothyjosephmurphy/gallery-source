@@ -40,7 +40,7 @@ Wire suggestion: `MeshBasicMaterial` / `MeshStandardMaterial` with `map` + `alph
 ## Paths
 
 Root: `/workspace/visual/hex-landscape-2026-10-30/`  
-Also mirrored note under `/workspace/gallery-handoff/HEX-LANDSCAPE-2026-10-30.md`.
+Also mirrored note under `/workspace/notes/HEX-LANDSCAPE-2026-10-30.md`.
 
 ## Provenance
 

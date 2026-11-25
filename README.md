@@ -40,7 +40,7 @@ These are features that exist in the source today.
 | `tag-gallery/` | Layout design docs and data (`data/layout.json`, `works.json`, `tools/`). |
 | `gallery-courtyard/` | Courtyard textures, signs, `data/*.json`, `hq-assets/`. |
 | `ostrich-robot/` | Guide bot GLBs (`ostrich-lod0.glb`, `ostrich-lod1.glb`), `build.py`, `NOTES.md`. |
-| `gallery-handoff/` | Historical build notes. |
+| `notes/` | Historical build notes. |
 | `LARGE_FILES.md` | Build outputs, R2-hosted media, and files omitted because they are over 25 MB or are secrets. |
 
 ## Build and deploy
@@ -61,3 +61,5 @@ python3 deploy/gen.py
 `deploy/gen.py` packages `dist/` (HTML, JS, CSS, the web manifest, `.glb` assets, and selected inline images and audio) into `play-tags/deploy/_worker.js` (gitignored) for Cloudflare Pages. The worker serves `/play/kinoteka` and `/play/kinoteka/` as the `/play/` index in place, maps `/play/kinoteka/...` to `/play/...`, and leaves `/play/` itself alone. The standalone Neural Dance app is built from the `neural-dance` repository. This worker fetches `/tjm/neural-dance/` from tjm.art when the projection wall uses that embed.
 
 `play-tags/tools/_check832.mjs` and `_check833.mjs` read the layout-save key from `LAYOUT_SAVE_KEY`. Never hardcode a key in a tracked file.
+
+Local development, from `play-tags/`: `npm run dev` (Vite) or `npm run preview` (port 4173). Audits live in `play-tags/tests/` and run with Playwright against a local or preview URL, for example `node tests/tagsaudit.mjs http://localhost:4173/play/ desktop`. To regenerate the hex layout after a tag change, see `tag-gallery/NOTES.md`.

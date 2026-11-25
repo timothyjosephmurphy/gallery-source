@@ -29,6 +29,6 @@ doorcheck PASS: 16 nodes, 0 dead ends, 0 bridges, 27 doors, 0 problems. tagsaudi
 Hang index rebuilt: gallery-tj-feedback/hang-index/hex-hang-index.csv/.xlsx (267 paintings, 12 rooms).
 
 ## Rollback
-Re-run /tmp/execute.js.B2a through the Cloudflare connector `execute` (account 3c1fddf0…). This restores the honeycomb B2a (d701a4a8 / index-hyGyZTSi.js).
+Re-run /tmp/execute.js.B2a through the Cloudflare connector `execute`. This restores the honeycomb B2a (d701a4a8 / index-hyGyZTSi.js).
 Source: cp /tmp/pre775/{catalog.json,outer-slots.json,tags-world.js,testimap.js,glows358.js,stickerBot306.js} back into src/, and /tmp/pre775/{doorcheck.mjs,outerslots.mjs,module-colliders.json} into tools/.
 /tmp/execute.js.775 = this deploy.
