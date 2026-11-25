@@ -40,7 +40,7 @@ These are features that exist in the source today.
 | `tag-gallery/` | Layout design docs and data (`data/layout.json`, `works.json`, `tools/`). |
 | `gallery-courtyard/` | Courtyard textures, signs, `data/*.json`, `hq-assets/`. |
 | `ostrich-robot/` | Guide bot GLBs (`ostrich-lod0.glb`, `ostrich-lod1.glb`), `build.py`, `NOTES.md`. |
-| `gallery-handoff/` | Historical notes and handoff docs. |
+| `gallery-handoff/` | Historical build notes. |
 | `LARGE_FILES.md` | Build outputs, R2-hosted media, and files omitted because they are over 25 MB or are secrets. |
 
 ## Build and deploy
