@@ -13,7 +13,7 @@ Result: **PASS → deployed (1 deploy)**
   - older-work-ridge-strips-unindexed-original-6 0.3048×0.101 → 0.3048×0.0964
   - older-work-yakes-todd-dickerson-original-2 0.1904×0.2731 → 0.1831×0.2731
 - tools/rd317.py (backup /tmp/rd317.py.pre317w2): entries noted `#317-wave2` now read real px from public/<img> instead of the old bordered real317 w480 sizes. realdims now matches the crops.
-- apply-overrides.py OK (310 paintings, 57 hung). Build OK (index-C69A3LmR.js). tagsaudit desktop PASS, phone PASS (n=310, all lists empty, dmt 0, mute silent).
+- apply-overrides.py OK (310 paintings, 57 hung). Build OK (index-C69A3LmR.js). tagsaudit desktop PASS, phone PASS (n=310, all lists empty, forbid 0, mute silent).
 - gen.py → _worker.js 2,801,961 B; splice → execute.js 2,868,828 B. Cloudflare execute, account 3c1fddf0…, tjm-tag-gallery-preview, branch preview-251.
 - Deployment id 48a0fdf4-049e-4743-b768-63d4cc09b2ee (replaces 1e2ce12b)
 - URLs: https://48a0fdf4.tjm-tag-gallery-preview.pages.dev/play/ · https://preview-251.tjm-tag-gallery-preview.pages.dev/play/ (200, index-C69A3LmR.js; all 7 /play/art/<id>-317.webp 200 via rewrite)

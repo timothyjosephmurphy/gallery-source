@@ -18,4 +18,4 @@ await p.click('#k813p button.f[data-id="hummingbird"]'); await p.waitForTimeout(
 await p.click('#k813p button.f[data-id="coined"]').catch(async () => { await p.click('#k813b'); await p.click('#k813p button.f[data-id="coined"]'); }); await p.waitForTimeout(5000); R.back = await st();
 const tBefore = R.back.t; await view([0, 40], [0, 50], 4000); R.out = await st(); await view([0, 15], [0, 24.8], 7000); R.reenter = await st();
 R.resumeOK = R.reenter.film === "coined" && R.out.res.coined.t > 1 && R.reenter.t >= R.out.res.coined.chunk * 48 + R.out.res.coined.t - 1; R.tBefore = tBefore;
-R.dmt = await p.evaluate(() => /dmt/i.test(document.body.innerText)); R.errs = errs; console.log(JSON.stringify(R)); await b.close();
+R.forbid = await p.evaluate(() => new RegExp(String.fromCharCode(68, 77, 84), 'i').test(document.body.innerText)); R.errs = errs; console.log(JSON.stringify(R)); await b.close();

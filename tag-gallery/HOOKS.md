@@ -27,7 +27,7 @@ Units are metres on the x-z plane, with y up. The floor is y=0, the room walls a
 Player pose: `game.player()` returns `{x, z, y, yaw}`. Yaw is in radians, 0 = facing +z, and increases toward +x.
 
 ## Expected module APIs (comment on #251 if you change these)
-- minimap.js: `createMinimap({ rooms, doors, getPlayer, parent = document.body }) -> { update(), setVisible(bool), dispose() }`. The gallery calls `update()` every frame. It must work at 390x844, and the word DMT must not appear.
+- minimap.js: `createMinimap({ rooms, doors, getPlayer, parent = document.body }) -> { update(), setVisible(bool), dispose() }`. The gallery calls `update()` every frame. It must work at 390x844, and the forbidden three-letter acronym must not appear.
 - garden/index.js:
   - `buildDomes(tags) -> { group, colliders }`: one dome per `rooms[kind=='room']`, set above wallH.
   - `buildGarden(tags) -> { group, colliders }`: props for the `court` and `outer` rooms and the hub band.

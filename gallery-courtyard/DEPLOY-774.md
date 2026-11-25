@@ -31,7 +31,7 @@ There was an intermediate deployment bac0c040-720b-456d-abf7-bd05cbe5efe5 (index
 - This build also ships src/hangIndex773.js (#773 labels, off unless ?hangIndex=1). It was already in src.
 
 ## Verify
-doorcheck PASS. tagsaudit PASS on local desktop+phone and on LIVE desktop+phone (5b9a3c55): 311 works, 0 overlaps, 0 blocked, 0 unreachable, 0 doorway intrusions, DMT 0, mute silent.
+doorcheck PASS. tagsaudit PASS on local desktop+phone and on LIVE desktop+phone (5b9a3c55): 311 works, 0 overlaps, 0 blocked, 0 unreachable, 0 doorway intrusions, forbid 0, mute silent.
 LIVE world dump: 13 rooms (12 at r=8.75 + annex r=6), hub, 1 outer court, 0 'court' kind. Plan image: gallery-tj-feedback/hex-plan-774/as-built-774.png.
 Hang index rebuilt: gallery-tj-feedback/hang-index/hex-hang-index.csv/.xlsx (272 paintings, 12 rooms).
 

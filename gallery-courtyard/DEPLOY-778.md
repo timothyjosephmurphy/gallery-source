@@ -39,7 +39,7 @@ It replaces f38faa50 / index-DwPGvnP1.js (#777, R=8.75, no START). Scope: hex/ta
 - The Friends outer court is not built. Neural Dance, the big FC mural and its plate, and the Austin four are still parked.
 
 ## Verify
-- tagsaudit PASS on local desktop and phone: 268 works, 0 size, 0 overlap, 0 blocked, 0 unreachable, 0 floating, 0 doorway, DMT 0, mute silent, 0 builder or page errors. module-colliders.json was regenerated.
+- tagsaudit PASS on local desktop and phone: 268 works, 0 size, 0 overlap, 0 blocked, 0 unreachable, 0 floating, 0 doorway, forbid 0, mute silent, 0 builder or page errors. module-colliders.json was regenerated.
 
 ## Pipeline
 1. `cp /tmp/pre778/catalog.json src/catalog.json; cp /tmp/pre778/testimap.js src/testimap.js`

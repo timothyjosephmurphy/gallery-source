@@ -1,6 +1,6 @@
 // #251 browser audit for the tag gallery (desktop | phone 390x844). Ports the #243 hang audit (true size, frame overlaps,
 // plaques at 1.45 m and unblocked, every view spot reachable on foot) and the egg audit's 'painting backed by a wall' check,
-// plus: doorway intrusion by any runtime object (eggs, guide bot, gates), DMT nowhere, silent when muted, minimap clear of the HUD.
+// plus: doorway intrusion by any runtime object (eggs, guide bot, gates), the forbidden word nowhere, silent when muted, minimap clear of the HUD.
 // Writes the dome/garden colliders to tools/module-colliders.json so the build's doorcheck covers them too.
 import { chromium } from 'playwright-core'; import fs from 'node:fs';
 const [url, dev = 'desktop'] = process.argv.slice(2);
@@ -14,7 +14,7 @@ await p.addInitScript(() => { const A = window.AudioContext; window.__ctxs = [];
   window.__level = () => (window.__ctxs || []).map(c => { if (c.state !== 'running') return 0; const a = new Float32Array(2048); c.__meter.getFloatTimeDomainData(a); let m = 0; for (const v of a) m = Math.max(m, Math.abs(v)); return m; }); });
 await p.goto(url); await p.waitForFunction(() => window.game && game.tags && game.tags.ready && game.nPaintings > 50 && window.eggs, null, { timeout: 120000 }); await p.waitForTimeout(9000);
 const r = await p.evaluate(async () => {
-  const g = game, T = g.THREE, P = g.paintings, V = (x = 0, y = 0, z = 0) => new T.Vector3(x, y, z), out = { n: P.length, size: [], overlap: [], plaqueY: [], blocked: [], unreachable: [], floating: [], doorway: [], dmt: 0, mute: null, hud: [] };
+  const g = game, T = g.THREE, P = g.paintings, V = (x = 0, y = 0, z = 0) => new T.Vector3(x, y, z), out = { n: P.length, size: [], overlap: [], plaqueY: [], blocked: [], unreachable: [], floating: [], doorway: [], forbid: 0, mute: null, hud: [] };
   g.scene.updateMatrixWorld(true);
   const info = P.map(q => { const n = V(q.data.ix, 0, q.data.iz).normalize(); return { q, c: q.group.getWorldPosition(V()), n, t: V(-n.z, 0, n.x) }; });
   // true size: the shown image is never larger than the listed size and keeps its own aspect (fit inside, never stretched)
@@ -46,7 +46,7 @@ const r = await p.evaluate(async () => {
       const u = (cx - d.x) * tx + (cz - d.z) * tz, v = (cx - d.x) * d.nx + (cz - d.z) * d.nz; if (Math.abs(u) - hw < d.width / 2 - 0.05 && Math.abs(v) - hw < 1.0 && !(d.oneSided && v < 0.75 /* the gate's own arch, portal and step */)) out.doorway.push(`${(o.name || o.type) + '<' + (o.parent && (o.parent.name || o.parent.type)) + '<' + (o.parent && o.parent.parent && (o.parent.parent.name || o.parent.parent.type))}@${cx.toFixed(1)},${cz.toFixed(1)} in ${d.room}->${d.to}`); } }
   out.doorway = [...new Set(out.doorway)];
   out.colliders = g.tags.allColliders ? g.tags.allColliders() : [];
-  out.dmt = /\bDMT\b/.test(document.documentElement.outerHTML + document.body.innerText) ? 1 : 0;
+  out.forbid = new RegExp('\\b' + String.fromCharCode(68, 77, 84) + '\\b').test(document.documentElement.outerHTML + document.body.innerText) ? 1 : 0;
   out.murals = g.tags.report.murals;
   return out; });
 // mute: tap to start the fountain sound, press M (mute), then every audio context must be suspended / closed or fully gained down
@@ -60,5 +60,5 @@ r.hud = await p.evaluate(() => { const mm = document.querySelector('.mm-wrap'); 
     const q = e.getBoundingClientRect(); if (q.width < 4 || q.height < 4 || q.width > innerWidth * 0.9) continue; if (q.left < a.right - 2 && q.right > a.left + 2 && q.top < a.bottom - 2 && q.bottom > a.top + 2) hits.push((e.id || e.className || e.tagName) + ''); }
   return hits.slice(0, 10); });
 fs.writeFileSync(new URL('../tools/module-colliders.json', import.meta.url), JSON.stringify(r.colliders)); const nCol = r.colliders.length; delete r.colliders;
-r.pageErrors = errs; r.pass = !r.size.length && !r.overlap.length && !r.plaqueY.length && !r.blocked.length && !r.unreachable.length && !r.floating.length && !r.doorway.length && !r.doorsUnreachable.length && !r.dmt && r.mute.silent && !r.hud.length && !errs.length;
+r.pageErrors = errs; r.pass = !r.size.length && !r.overlap.length && !r.plaqueY.length && !r.blocked.length && !r.unreachable.length && !r.floating.length && !r.doorway.length && !r.doorsUnreachable.length && !r.forbid && r.mute.silent && !r.hud.length && !errs.length;
 console.log(JSON.stringify({ ...r, colliders: nCol }, null, 0).slice(0, 6000)); console.log(r.pass ? `TAGSAUDIT ${dev} PASS` : `TAGSAUDIT ${dev} FAIL`); await b.close();

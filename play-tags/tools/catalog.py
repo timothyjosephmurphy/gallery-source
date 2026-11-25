@@ -68,7 +68,7 @@ lay = {'hall': {'height': 4.2, 'doorHeight': 3.5}, 'rooms': [], 'hallways': [], 
        'start': {'x': 0.5, 'z': -28.2, 'yaw': -0.8},  # #803 #351: START courtyard facing the gallery wall map  # #351 refine: maps gathering view  # #351 (TJ Oct 26): far side of the courtyard facing the wall map (#291); the checkout is behind you  # #278: beside the central checkout pillar, facing its portal  # off the hologram dais, facing the checkout facing the checkout across the core,
        'nave': {'minX': -48, 'maxX': 30, 'minZ': -30, 'maxZ': 42}, 'corr': [], 'tags': L}
 out = json.dumps({'layout': lay, 'paintings': P, 'plaques': []}, ensure_ascii=False)
-assert not re.search(r'\bDMT\b', out)
+_forbid = ''.join(chr(c) for c in (68, 77, 84)); assert not re.search(r'\b' + re.escape(_forbid) + r'\b', out)
 open('src/catalog.json', 'w').write(out); json.dump(mism, open('mismatch.json', 'w'), indent=1, ensure_ascii=False)
 print(len(P), 'paintings', len(mism), 'size/aspect mismatches')
 import subprocess, os; os.path.exists("src/catalog.base.json") and os.remove("src/catalog.base.json"); subprocess.run(['python3', 'tools/apply-overrides.py'], check=True)  # #288 overrides

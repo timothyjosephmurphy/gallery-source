@@ -7,6 +7,7 @@
 // ~1.2 s after both leave; clicking (desktop) or tapping (phone) the label adds that medium print to the cart.
 import { chromium } from 'playwright-core';
 import { readFileSync } from 'node:fs';
+import { hasForbidWord } from './forbid-word.mjs';
 const SHOP = JSON.parse(readFileSync('/workspace/gallery-core/src/shop.json', 'utf8')).shop;
 const [URL_, DEV = 'desktop', SHOT = ''] = process.argv.slice(2), phone = DEV === 'phone';
 const b = await chromium.launch({ executablePath: '/usr/bin/google-chrome', args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] });
@@ -111,7 +112,7 @@ ok('scanning the preview adds that print (not the original) and it reaches the s
 const snd = await p.evaluate(() => [__snd.osc - __s0.osc, __snd.src - __s0.src]);
 ok('silent when muted', snd[0] === 0 && snd[1] === 0, JSON.stringify(snd));
 const bodyTxt = await p.evaluate(() => document.body.innerText + JSON.stringify(window.__shopScan.state.skipped));
-ok('no forbidden word', !/\bDMT\b/.test(bodyTxt));
+ok('no forbidden word', !hasForbidWord(bodyTxt));
 ok('no page errors', !errs.length, errs.slice(0, 3).join(' | '));
 for (const r of res) console.log(r.join(' · ').slice(0, 300));
 console.log('SKIPPED', JSON.stringify(P.skipped)); console.log('PLAQUE_Y', Math.min(...P.plaques), Math.max(...P.plaques));

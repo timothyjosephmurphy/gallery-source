@@ -17,4 +17,4 @@ R.advice = await p.evaluate(() => ({ on: __advice.active, i: __advice.state.i, s
 await p.keyboard.press('Escape'); await p.waitForTimeout(400); R.adviceStopped = await p.evaluate(() => !__advice.active);
 await raise(); await p.waitForFunction(() => Object.values(eggs.eggs).find(e => e && e.name === 'checkoutRun').signs.k >= 1, null, { timeout: 20000 }).catch(() => {}); R.ckSign = await signXY('checkout'); await hit(R.ckSign.x, R.ckSign.y); await p.waitForTimeout(1500); R.checkoutRun = await p.evaluate(() => { const c = Object.values(eggs.eggs).find(e => e && e.name === 'checkoutRun'); const r = c.running; c.stop(); return { r, lastPick: c.state.lastPick }; });
 R.rideAsk = await p.evaluate(() => eggs.eggs.guide.ask('take me on a ride')); await p.waitForTimeout(800); R.rideOn = await p.evaluate(() => !!(window.__ride && __ride.active));
-R.dmt = await p.evaluate(() => /dmt/i.test(document.body.innerText)); R.errs = errs; console.log(JSON.stringify(R)); await b.close();
+R.forbid = await p.evaluate(() => new RegExp(String.fromCharCode(68, 77, 84), 'i').test(document.body.innerText)); R.errs = errs; console.log(JSON.stringify(R)); await b.close();

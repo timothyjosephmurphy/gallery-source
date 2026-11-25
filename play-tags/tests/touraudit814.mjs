@@ -1,7 +1,7 @@
 // #267 tour audit: walks the whole guided tour headless (desktop | phone 390x844) at ?tourrate=8. Checks: welcome hologram plays
 // with Skip + captions, offer clip + controls overlay, tapping the bot starts the tour, every clip in manifest order, every stop
 // reached on open floor; #286: the controls line shows the controls overlay (phone thumbs / desktop keys), each stop glides close to
-// 3-4 of its paintings in turn (focused on screen, near), control comes back, and a wandering player is glided back onto the route; countdown ring, captions, silent when muted, exit any time, DMT nowhere.
+// 3-4 of its paintings in turn (focused on screen, near), control comes back, and a wandering player is glided back onto the route; countdown ring, captions, silent when muted, exit any time, the forbidden word nowhere.
 import { chromium } from 'playwright-core'; import fs from 'node:fs';
 const [url, dev = 'desktop'] = process.argv.slice(2);
 const MAN = JSON.parse(fs.readFileSync(new URL('../src/tour-manifest.json', import.meta.url))); MAN.clips = MAN.clips.filter(c => !c.skip814); const ORDER = MAN.clips.slice().sort((a, b) => a.seq - b.seq).filter(c => c.file).map(c => c.file); /* #814 route by seq; silent stop has no file */
@@ -42,7 +42,7 @@ for (let i = 0; i < 6000; i++) { await p.waitForTimeout(150); const s = await p.
   if (s.step === 6 && muteChecked === null) { await p.evaluate(() => window.__holoToggle && window.__holoToggle()); muteChecked = await p.waitForFunction(() => __tour.state.audioMuted && __tour.state.videoMuted, null, { timeout: 3000 }).then(() => true, () => false); await p.evaluate(() => window.__holoToggle && window.__holoToggle()); }
   if (s.clip === '02-intro.mp3') { introW.kinds.add(s.kind); introW.pos.push(await p.evaluate(() => [game.camera.position.x, game.camera.position.z])); }
   if (s.phase !== 'tour') break; }
-const end = await p.evaluate(() => ({ ...__tour.state, frozen: !!game.freeze, reading: !!window.__reading, dmt: /DMT/.test(document.body.innerText + document.title) }));
+const end = await p.evaluate(() => ({ ...__tour.state, frozen: !!game.freeze, reading: !!window.__reading, forbid: new RegExp(String.fromCharCode(68, 77, 84)).test(document.body.innerText + document.title) }));
 { const P = introW.pos, mv = P.length > 1 ? Math.hypot(P[P.length - 1][0] - P[0][0], P[P.length - 1][1] - P[0][1]) : 0; introW.moved = +mv.toFixed(1); if (MAN.clips.some(c => c.file === '02-intro.mp3') && (!introW.kinds.has('walk') || introW.kinds.has('stop') || mv < 1.5)) fails.push('preamble not narrated on the first walk ' + JSON.stringify({ kinds: [...introW.kinds], moved: mv })); }
 if (end.phase !== 'ended') fails.push('tour did not end: ' + end.phase);
 if (JSON.stringify(end.log.filter(f => f !== '01-offer.mp3')) !== JSON.stringify(ORDER.filter(f => f !== '01-offer.mp3')) /* #809: tapping Tour during Maeve's welcome line skips the offer line */) fails.push('clip order ' + end.log.join(','));
@@ -58,7 +58,7 @@ const pull = end.pulls.find(x => x.from > 3); if (!wandered || wandered.at == nu
 if (end.glides.some(g => g.L > 1 && g.frames < 4)) fails.push('a stop move looked like a teleport ' + JSON.stringify(end.glides.filter(g => g.frames < 4)));
 if (stops.length !== want.length) fails.push('sampled stops ' + stops.map(s => s.order));
 if (end.errors.length) fails.push('tour errors ' + end.errors); if (end.frozen || end.reading) fails.push('controls not released at the end');
-if (muteChecked !== true) fails.push('not silent when muted'); if (rings.size < 5) fails.push('countdown ring did not count'); if (caps.size < 10 /* #814 shorter route */) fails.push('few captions: ' + caps.size); if (end.dmt) fails.push('DMT in DOM');
+if (muteChecked !== true) fails.push('not silent when muted'); if (rings.size < 5) fails.push('countdown ring did not count'); if (caps.size < 10 /* #814 shorter route */) fails.push('few captions: ' + caps.size); if (end.forbid) fails.push('forbidden word in DOM');
 // exit any time: restart, exit mid-walk
 await p.evaluate(() => { __tour.S.phase = 'offer'; __tour.start(); }); await p.waitForTimeout(1500);
 const ex = await p.evaluate(() => { __tour.exit(); const c = game.camera.position; return { phase: __tour.phase, frozen: !!game.freeze, walk: !!eggs.world.walkable(c.x, c.z), ring: getComputedStyle(document.getElementById('tourRing')).display }; });

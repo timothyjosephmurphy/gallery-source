@@ -32,5 +32,5 @@ await p.screenshot({ path: `${out}/tour-lead.png` });
 const tl = []; for (let k = 0; k < 120; k++) { await p.waitForTimeout(250); const s = await p.evaluate(() => { const s = __tour.state; return { step: s.step, kind: s.kind, clip: s.clip, frozen: s.frozen, focus: s.focus, vo: !!window.__tourVO, err: s.errors.length }; }); tl.push(s); if (s.step >= 3) break; if (s.kind === 'stop' && s.focus && !tl.shot) { tl.shot = 1; await p.screenshot({ path: `${out}/tour-stop1.png` }); } }
 res.tour = { lead: { moved: lead.moved, kind: lead.st.kind, clip: lead.st.clip, frozen: lead.st.frozen }, timeline: tl.filter((s, i) => i === 0 || JSON.stringify(s) !== JSON.stringify(tl[i - 1])), end: await p.evaluate(() => { const s = __tour.state; return { errors: s.errors, visited: s.visited, log: s.log, focusLog: s.focusLog, glides: s.glides }; }) };
 res.holoDuringTour = await p.evaluate(() => ({ videosPlaying: [...document.querySelectorAll('video')].filter(v => !v.paused && !v.muted).length }));
-res.dmt = await p.evaluate(() => /DMT/.test(document.body.innerText + document.title)); res.errs = errs;
+res.forbid = await p.evaluate(() => new RegExp(String.fromCharCode(68, 77, 84)).test(document.body.innerText + document.title)); res.errs = errs;
 console.log(JSON.stringify(res, null, 1)); await b.close();

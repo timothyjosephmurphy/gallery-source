@@ -47,7 +47,7 @@ Base: /tmp/pre775/catalog.json (honeycomb B2a). Steps:
 
 ## Verify
 - doorcheck PASS: 0 problems, 19 doors, 13 nodes, 0 dead ends, 0 bridges.
-- tagsaudit PASS on local desktop+phone and LIVE desktop+phone. Results: 268 works, 0 size, 0 overlap, 0 blocked, 0 unreachable, 0 floating, 0 doorway, DMT 0, mute silent, 0 builder or page errors.
+- tagsaudit PASS on local desktop+phone and LIVE desktop+phone. Results: 268 works, 0 size, 0 overlap, 0 blocked, 0 unreachable, 0 floating, 0 doorway, forbid 0, mute silent, 0 builder or page errors.
 - LIVE ping: 18 non-gate doors, all 8.25 m wide, 12 rooms, 0 outer courts or courts.
 - As-built images: hex-plan-honeycomb-nest/as-built-777.png and as-built-777-arch.png.
 
